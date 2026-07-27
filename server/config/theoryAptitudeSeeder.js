@@ -1327,11 +1327,16 @@ What is a key effect of Artificial Intelligence according to the passage?`;
         shortcuts,
         quizQuestions: generateQuizQuestions(catId, title, 50),
         xpReward: 50,
-        order: i + 1
+        order: i + 1,
+        slug: title.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+        year_level: ['1st', '2nd', '3rd', '4th'],
+        target_role: 'Software Engineer',
+        is_placement_prep: true
       });
     }
   }
 
+  await AptitudeTopic.deleteMany({});
   await AptitudeTopic.insertMany(topicsData);
   console.log(`Seeded ${topicsData.length} aptitude topics successfully.`);
 };

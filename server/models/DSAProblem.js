@@ -54,6 +54,23 @@ const DSAProblemSchema = new mongoose.Schema({
       expectedOutput: String
     }
   ],
+  slug: {
+    type: String,
+    required: true,
+    unique: true
+  },
+  year_level: {
+    type: [String],
+    default: ["2nd", "3rd", "4th"]
+  },
+  target_role: {
+    type: String,
+    default: 'Software Engineer'
+  },
+  is_placement_prep: {
+    type: Boolean,
+    default: true
+  },
   createdAt: {
     type: Date,
     default: Date.now

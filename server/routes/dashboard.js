@@ -336,72 +336,136 @@ router.post('/ai-chat', protect, async (req, res) => {
       return res.status(400).json({ message: 'Message is required' });
     }
 
-    const { callGemini } = require('../utils/gemini');
+    const VectorDocument = require('../models/VectorDocument');
+    const Course = require('../models/Course');
+    const AptitudeTopic = require('../models/AptitudeTopic');
+    const { getEmbedding, callGemini } = require('../utils/gemini');
 
-    // 1. Simple local database search (Retrieval)
-    const userQuery = message.toLowerCase();
-    const lessons = await Lesson.find();
-    let contextMatches = [];
+    // 1. Compile the active Database Context dynamically
+    const courses = await Course.find();
+    const aptTopics = await AptitudeTopic.find();
 
-    // Search lesson titles & content for query matching
-    for (const lesson of lessons) {
-      if (lesson.title.toLowerCase().includes(userQuery) || lesson.content.toLowerCase().includes(userQuery)) {
-        contextMatches.push(`Lesson: ${lesson.title}\nContent:\n${lesson.content.substring(0, 400)}...`);
-        if (contextMatches.length >= 3) break; // limit context size
-      }
-    }
-
-    // 2. Supplementary technical templates (LangChain, LLMs, Wikipedia links)
-    const keywords = ['langchain', 'llm', 'vector', 'rag', 'chunk', 'embedding', 'semantic', 'wikipedia'];
-    const supplementaryContexts = {
-      langchain: "LangChain is an open-source framework designed to simplify the creation of applications using large language models (LLMs). It provides tools for chaining prompts, managing agents, and linking external data sources via Retrieval-Augmented Generation (RAG).",
-      llm: "Large Language Models (LLMs) are deep learning models trained on massive text datasets (e.g., GPT-4, Gemini 1.5). They parse, predict, and generate natural language responses.",
-      vector: "Vector databases (like Pinecone, Chroma, and Milvus) store high-dimensional mathematical embeddings of text snippets, enabling semantic search and similarity matching in RAG pipelines.",
-      rag: "Retrieval-Augmented Generation (RAG) retrieves relevant facts and documents from a local knowledge base (e.g., vector database, file system) and appends them to the LLM prompt context to guarantee factual, non-hallucinated responses.",
-      chunk: "Chunking divides large text documents into smaller, coherent paragraphs (by sentence count, character length, or semantic boundary) before creating embeddings for vector storage.",
-      wikipedia: "Wikipedia links can be integrated in RAG workflows to query external online encyclopedias to provide supplementary real-world context for general knowledge concepts."
+    const dbContext = {
+      courses: courses.map(c => ({
+        id: c._id.toString(),
+        title: c.title,
+        slug: c.slug || c.title.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+        level: c.difficulty,
+        recommended_years: c.year_level || [],
+        description: c.description
+      })),
+      tasks_and_practice: [
+        ...aptTopics.map(t => ({
+          id: t._id.toString(),
+          title: t.title,
+          category: t.category === 'quant' ? 'Quantitative Aptitude' : t.category === 'logical' ? 'Logical Reasoning' : 'Verbal Ability',
+          slug: t.slug || t.title.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+          topics: [t.title],
+          description: t.desc
+        })),
+        {
+          id: "t_daily_coding",
+          title: "Daily Coding Challenges",
+          category: "Practice",
+          slug: "daily-coding-challenges",
+          description: "Hands-on problem solving in our interactive code sandbox."
+        }
+      ]
     };
 
-    for (const keyword of keywords) {
-      if (userQuery.includes(keyword) && supplementaryContexts[keyword]) {
-        contextMatches.push(`Topic: ${keyword.toUpperCase()}\nContext: ${supplementaryContexts[keyword]}`);
+    // 2. Get vector embedding of query & perform similarity search
+    const queryEmbedding = await getEmbedding(message);
+    const vectorDocs = await VectorDocument.find({});
+    
+    const scoredDocs = vectorDocs.map(doc => {
+      let score = 0;
+      if (doc.embedding && doc.embedding.length > 0) {
+        let dotProduct = 0;
+        let normA = 0;
+        let normB = 0;
+        for (let i = 0; i < doc.embedding.length; i++) {
+          dotProduct += doc.embedding[i] * queryEmbedding[i];
+          normA += doc.embedding[i] * doc.embedding[i];
+          normB += queryEmbedding[i] * queryEmbedding[i];
+        }
+        if (normA > 0 && normB > 0) {
+          score = dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));
+        }
       }
-    }
+      return { doc, score };
+    });
 
-    const compiledContext = contextMatches.join('\n\n');
+    // Take top 5 scoring documents
+    scoredDocs.sort((a, b) => b.score - a.score);
+    const topMatches = scoredDocs.slice(0, 5).map(item => item.doc);
 
-    // 3. Construct LLM prompt
-    const prompt = `You are a helpful AI Career Planner, Doubt Solver, and Tutor. The student has asked: "${message}".
-       
-Here is retrieved context from our syllabus files and technical documentation:
-${compiledContext || "No specific local syllabus matches found."}
+    // 3. Setup prompt instructions
+    const systemInstruction = `ACADEMIC & CAREER RAG ASSISTANT
 
-Provide a clear, educational, and structured answer or step-by-step study roadmap/plan.
-- If the student asks about timelines, career advice, graduation schedules (e.g. "I have 1 year left"), or study paths, design a clear roadmap:
-  * Reference our site's active sections.
-  * You MUST link to our Course syllabus page using relative markdown syntax: [View Courses](/courses)
-  * You MUST link to our coding sandbox using: [Practice DSA](/dsa)
-  * You MUST link to core computer science theories using: [Study CS Theory](/theory)
-  * You MUST link to Aptitude quizzes using: [Prep Aptitude](/aptitude)
-  * You MUST link to Notes downloads using: [Get PDF Notes](/notes)
-- Keep all links relative as specified above (e.g., [Text](/path)) so they redirect inside our web portal.
-- Keep your tone encouraging, professional, and practical. Use markdown list formats.`;
+You are the official AI Academic & Placement Advisor for "Hemanth Learning Platform".
+Your core task is to guide students (e.g., 1st to 4th-year engineering students) on career preparation, placement strategies, and skill development.
+
+==================================================
+CRITICAL RAG CONSTRAINTS (STRICTLY ENFORCED)
+==================================================
+1. EXCLUSIVE CATALOG RULE:
+   - You MUST ONLY recommend courses, modules, tasks, and practice sets that exist within the provided [DATABASE_CONTEXT] below.
+   - NEVER suggest or refer to external platforms (such as Coursera, Udemy, LeetCode, W3Schools, or IndiaBIX directly) unless explicitly present in [DATABASE_CONTEXT].
+   - If a requested topic is missing from [DATABASE_CONTEXT], state:
+     "We currently do not offer a course on [Topic] on our platform, but here are related modules you can take:" followed by closest match in context.
+
+2. ACADEMIC YEAR GUIDANCE RULES:
+   When a student states their current academic year (e.g., "I am in 3rd year, what should I do?"), follow this structured 3-tier roadmap:
+   - Phase 1: Core Tech Skills (Frontend/Backend/Programming from our Course Catalog).
+   - Phase 2: Aptitude & Reasoning Prep (Quantitative, Verbal, Logical from our Task Catalog).
+   - Phase 3: Placement Action Plan (Projects, Mock Tests, Weekly Streaks).
+
+3. RESPONSE FORMATTING:
+   - Output structured Markdown with headers, clean bullet points, and actionable steps.
+   - Provide direct internal links to platform courses using the markdown format: \`[Course Title](/courses?course=course-slug)\` or \`[Task Category](/aptitude?topic=task-slug)\` or \`[Practice DSA](/dsa)\` or \`[Mock Interview](/mock-interview)\` or \`[Resume Builder](/resume-ats)\` or \`[Notes](/notes)\`.
+
+==================================================
+STUDENT INFO (FOR CUSTOM ROADMAPS)
+==================================================
+Current Academic Year: ${req.user.yearOfStudy || '3rd Year'}
+Current Branch: ${req.user.branch || 'Computer Science & Engineering'}
+Current XP: ${req.user.xp || 0} XP
+Login Streak: ${req.user.streak || 0} Days
+`;
+
+    const prompt = `The student has queried: "${message}".
+
+==================================================
+RETRIEVED DATABASE CONTEXT (CATALOG AVAILABLE)
+==================================================
+[DATABASE_CONTEXT]
+${JSON.stringify(dbContext, null, 2)}
+
+==================================================
+RELEVANT SYLLABUS & ROADMAP NOTES (VECTOR RETRIEVAL)
+==================================================
+${topMatches.map(m => `- [${m.type.toUpperCase()}] ${m.title}: ${m.content}`).join('\n')}
+
+==================================================
+GUIDANCE INSTRUCTIONS
+==================================================
+Please formulate a structured response. Ground your answers strictly on the catalog, syllabus, and career notes above.`;
 
     let aiResponse = "";
     if (process.env.GEMINI_API_KEY) {
       try {
-        aiResponse = await callGemini(prompt, "You are a specialized AI Tutor teaching core CS and AI engineering.");
+        aiResponse = await callGemini(prompt, systemInstruction);
       } catch (err) {
         console.error('Gemini call failed for Doubt Solver, using local RAG fallback:', err);
-        aiResponse = generateLocalDoubtFallback(userQuery, contextMatches);
+        aiResponse = generateLocalDoubtFallback(message.toLowerCase(), topMatches, req.user);
       }
     } else {
-      aiResponse = generateLocalDoubtFallback(userQuery, contextMatches);
+      aiResponse = generateLocalDoubtFallback(message.toLowerCase(), topMatches, req.user);
     }
 
     res.json({
       message: aiResponse,
-      contextRetrieved: contextMatches.length > 0
+      contextRetrieved: topMatches.length > 0
     });
 
   } catch (error) {
@@ -409,20 +473,99 @@ Provide a clear, educational, and structured answer or step-by-step study roadma
   }
 });
 
-function generateLocalDoubtFallback(query, contextMatches) {
-  if (contextMatches.length > 0) {
-    return `### Doubt Resolver (Local RAG Mode)\n\nBased on your query, here is relevant context fetched from our course syllabus:\n\n${contextMatches.join('\n\n')}\n\n*For further reading, you can visit the Wikipedia article or LangChain docs for these topics.*`;
+function generateLocalDoubtFallback(query, contextMatches, user) {
+  const userYear = user ? user.yearOfStudy : '3rd Year';
+
+  if (query.includes('first year') || query.includes('1st year')) {
+    return `### 1st-Year Study Plan (Local RAG Offline Mode)
+
+Welcome! For your 1st year, focus on building programming basics and computer fundamentals:
+
+*   **Phase 1: Core Tech Skills**: Start with **[C Programming](/courses?course=c-programming)** and **[Python](/courses?course=python)**.
+*   **Phase 2: Aptitude Prep**: Brush up basic quantitative arithmetic in **[Prep Aptitude](/aptitude)**.
+*   **Phase 3: Placement Action Plan**: Build small script utilities, practice basic logic on **[Practice DSA](/dsa)**, and study Git version control.
+
+*References: 1st Year Study Plan*`;
+  }
+
+  if (query.includes('second year') || query.includes('2nd year')) {
+    return `### 2nd-Year Study Plan (Local RAG Offline Mode)
+
+In your 2nd year, study object-oriented principles, relational databases, and core frontend web dev:
+
+*   **Phase 1: Core Tech Skills**: Learn OOP and Java in **[Java](/courses?course=java)** and study SQL query structures in **[SQL](/courses?course=sql)**.
+*   **Phase 2: Aptitude Prep**: Solve verbal and logical topics in **[Prep Aptitude](/aptitude)**.
+*   **Phase 3: Placement Action Plan**: Start practicing medium problems on **[Practice DSA](/dsa)** and save revision notes.
+
+*References: 2nd Year Study Plan*`;
   }
   
-  if (query.includes('langchain')) {
-    return `### Introduction to LangChain\n\nLangChain is a framework that helps build LLM applications. Key modules include:\n1. **Chains**: Sequences of calls to models/prompts.\n2. **Agents**: Let the LLM decide which tools to execute.\n3. **Retrieval**: Links vector stores to model inputs (RAG).\n\n*Wikipedia Reference: [LangChain](https://en.wikipedia.org/wiki/LangChain)*`;
+  if (query.includes('third year') || query.includes('3rd year') || (query.includes('learn') && userYear === '3rd Year')) {
+    return `### 3rd-Year Placement Prep Plan (Local RAG Offline Mode)
+
+As a 3rd-year engineering student, here is your structured placement roadmap:
+
+*   **Phase 1: Core Tech Skills**: Enroll in **[Data Structures & Algorithms with Java](/courses?course=dsa-java)** and **[Database Management Systems (DBMS) & SQL Masterclass](/courses?course=dbms-sql)**.
+*   **Phase 2: Aptitude & Reasoning Prep**: Solve Quantitative and Logical modules in **[Prep Aptitude](/aptitude)** (e.g. Time & Work, Profit & Loss).
+*   **Phase 3: Placement Action Plan**: Work on full-stack web applications, solve **[Daily Coding Challenges](/daily-problems)**, and build a resume on **[Resume Builder](/resume-ats)**.
+
+*References: 3rd Year Study Plan / Placement Prep*`;
   }
 
-  if (query.includes('rag')) {
-    return `### Retrieval-Augmented Generation (RAG)\n\nRAG improves LLM outputs by appending factual information retrieved from external databases before calling the model. This eliminates hallucinations.\n\n*Wikipedia Reference: [Retrieval-Augmented Generation](https://en.wikipedia.org/wiki/Retrieval-augmented_generation)*`;
+  if (query.includes('fourth year') || query.includes('4th year')) {
+    return `### 4th-Year Placement Prep Plan (Local RAG Offline Mode)
+
+In your final year, focus on advanced technologies, deployment, system design, and mock interviews:
+
+*   **Phase 1: Core Tech Skills**: Complete **[Core CS Fundamentals (OS, Networks, System Design)](/courses?course=core-cs-fundamentals)**.
+*   **Phase 2: Aptitude Prep**: Solve advanced reasoning mock papers on **[Prep Aptitude](/aptitude)**.
+*   **Phase 3: Placement Action Plan**: Take mock assessments at **[Mock Interview Setup](/mock-interview)** and refine your resume on **[Resume Builder](/resume-ats)**.
+
+*References: 4th Year Study Plan*`;
   }
 
-  return `### AI Doubt Solver\n\nI couldn't find a direct syllabus match for your query. However, you can review our syllabus chapters on Operating Systems, DBMS, Generative AI, or LangChain to find relevant notes. Please try asking about specific concepts like "Banker's Algorithm", "ACID properties", "LangChain", or "RAG models"!`;
+  if (query.includes('ai engineer') || query.includes('artificial intelligence')) {
+    return `### How to Become an AI Engineer (Local RAG Offline Mode)
+
+Follow this study path for AI roles:
+
+*   **Phase 1: Core Tech Skills**: Master Python syntax in **[Python](/courses?course=python)** and explore machine learning basics.
+*   **Phase 2: AI & LLMs**: Complete **[Generative AI](/courses?course=generative-ai)** to learn prompt engineering, vector databases, and RAG models.
+*   **Phase 3: Placement Action Plan**: Build RAG chatbots, host them, and outline your code templates in your resume.
+
+*References: How to become an AI Engineer*`;
+  }
+
+  if (query.includes('tcs') || query.includes('crack tcs')) {
+    return `### TCS Placement Preparation Guide (Local RAG Offline Mode)
+
+To crack TCS, target these core requirements:
+
+*   **Phase 1: Cognitive Aptitude**: Practice Time & Work and Percentage categories in **[Prep Aptitude](/aptitude)**.
+*   **Phase 2: Coding Assessment**: Solve Easy-to-Medium array and string challenges on **[Practice DSA](/dsa)**.
+*   **Phase 3: Interviews**: Review core CS questions (OS scheduler, DBMS indexes) in **[Study CS Theory](/theory)**.
+
+*References: How to crack TCS*`;
+  }
+  
+  if (contextMatches.length > 0) {
+    return `### Academic Doubt Resolver (Local RAG Offline Mode)
+
+Based on your query, here is relevant context fetched from our course syllabus:
+
+${contextMatches.map(m => `**${m.title}** (${m.type}): ${m.content}`).join('\n\n')}
+
+*Navigate to these modules: [Courses](/courses), [Study CS Theory](/theory), [Prep Aptitude](/aptitude).*`;
+  }
+
+  return `### AI Doubt Solver
+
+I couldn't find a direct syllabus match for your query. 
+
+*   To learn programming, visit **[Courses](/courses)**.
+*   To practice problem-solving, visit **[Practice DSA](/dsa)**.
+*   To study core computer science, visit **[Study CS Theory](/theory)**.
+*   To practice aptitude, visit **[Prep Aptitude](/aptitude)**.`;
 }
 
 // @desc    Get user resume details

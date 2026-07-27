@@ -41,7 +41,9 @@ router.post('/register', async (req, res) => {
         xp: user.xp,
         streak: user.streak,
         rank: user.rank,
-        profilePic: user.profilePic
+        profilePic: user.profilePic,
+        yearOfStudy: user.yearOfStudy,
+        branch: user.branch
       }
     });
   } catch (error) {
@@ -101,7 +103,9 @@ router.post('/login', async (req, res) => {
         xp: user.xp,
         streak: user.streak,
         rank: user.rank,
-        profilePic: user.profilePic
+        profilePic: user.profilePic,
+        yearOfStudy: user.yearOfStudy,
+        branch: user.branch
       }
     });
   } catch (error) {
@@ -166,7 +170,9 @@ router.post('/google', async (req, res) => {
         xp: user.xp,
         streak: user.streak,
         rank: user.rank,
-        profilePic: user.profilePic
+        profilePic: user.profilePic,
+        yearOfStudy: user.yearOfStudy,
+        branch: user.branch
       }
     });
   } catch (error) {
@@ -191,7 +197,41 @@ router.get('/me', protect, async (req, res) => {
       xp: req.user.xp,
       streak: req.user.streak,
       rank: req.user.rank,
-      profilePic: req.user.profilePic
+      profilePic: req.user.profilePic,
+      yearOfStudy: req.user.yearOfStudy,
+      branch: req.user.branch
+    });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// @desc    Update user academic profile (year of study and branch)
+// @route   PUT /api/auth/profile
+router.put('/profile', protect, async (req, res) => {
+  try {
+    const { yearOfStudy, branch } = req.body;
+    const user = await User.findById(req.user._id);
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    if (yearOfStudy) user.yearOfStudy = yearOfStudy;
+    if (branch) user.branch = branch;
+
+    await user.save();
+
+    res.json({
+      _id: user._id,
+      username: user.username,
+      email: user.email,
+      role: user.role,
+      xp: user.xp,
+      streak: user.streak,
+      rank: user.rank,
+      profilePic: user.profilePic,
+      yearOfStudy: user.yearOfStudy,
+      branch: user.branch
     });
   } catch (error) {
     res.status(500).json({ message: error.message });

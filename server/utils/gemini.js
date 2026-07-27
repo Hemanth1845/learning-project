@@ -195,9 +195,61 @@ const callGeminiWithMedia = async (fileBase64, mimeType, prompt) => {
   }
 };
 
+// Generates high-quality embeddings using Gemini API (with deterministic fallback)
+const getEmbedding = async (text) => {
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (!apiKey) {
+    // Return a mock embedding vector if no API key is provided
+    const mock = [];
+    for (let i = 0; i < 768; i++) {
+      mock.push(Math.sin(text.charCodeAt(i % text.length || 0) * (i + 1)));
+    }
+    return mock;
+  }
+
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/text-embedding-004:embedContent?key=${apiKey}`;
+  const body = {
+    model: "models/text-embedding-004",
+    content: {
+      parts: [{ text }]
+    }
+  };
+
+  try {
+    const myFetch = typeof fetch === 'function' ? fetch : global.fetch;
+    const response = await myFetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    });
+
+    const data = await response.json();
+    if (data.embedding && data.embedding.values) {
+      return data.embedding.values;
+    } else {
+      console.warn('Embedding API did not return values, using fallback mock.');
+      const mock = [];
+      for (let i = 0; i < 768; i++) {
+        mock.push(Math.sin(text.charCodeAt(i % text.length || 0) * (i + 1)));
+      }
+      return mock;
+    }
+  } catch (error) {
+    console.error('Error generating embedding from Gemini:', error);
+    const mock = [];
+    for (let i = 0; i < 768; i++) {
+      mock.push(Math.sin(text.charCodeAt(i % text.length || 0) * (i + 1)));
+    }
+    return mock;
+  }
+};
+
 module.exports = {
   callGemini,
   callGeminiWithMedia,
+  getEmbedding,
   getFallbackQuestion,
   getFallbackFeedback,
   extractSkills

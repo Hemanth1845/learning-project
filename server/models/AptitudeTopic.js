@@ -56,6 +56,23 @@ const AptitudeTopicSchema = new mongoose.Schema({
     type: Number,
     default: 0
   },
+  slug: {
+    type: String,
+    required: true,
+    unique: true
+  },
+  year_level: {
+    type: [String],
+    default: ["1st", "2nd", "3rd", "4th"]
+  },
+  target_role: {
+    type: String,
+    default: 'Software Engineer'
+  },
+  is_placement_prep: {
+    type: Boolean,
+    default: true
+  },
   createdAt: {
     type: Date,
     default: Date.now

@@ -56,6 +56,15 @@ const UserSchema = new mongoose.Schema({
     type: [String],
     default: ['education', 'experience', 'projects', 'skills']
   },
+  yearOfStudy: {
+    type: String,
+    enum: ['1st Year', '2nd Year', '3rd Year', '4th Year'],
+    default: '3rd Year'
+  },
+  branch: {
+    type: String,
+    default: 'Computer Science & Engineering'
+  },
   createdAt: {
     type: Date,
     default: Date.now

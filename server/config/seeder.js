@@ -29,33 +29,38 @@ const seedAdmin = async () => {
 };
 
 const seedDSAProblems = async () => {
-  const problemCount = await DSAProblem.countDocuments();
-  if (problemCount === 0) {
-    const problems = [
-      { problemId: 1, title: 'Two Sum', topic: 'Arrays', difficulty: 'Easy', xp: 10, solveUrl: 'https://leetcode.com/problems/two-sum/' },
-      { problemId: 2, title: 'Maximum Subarray', topic: 'Dynamic Programming', difficulty: 'Medium', xp: 30, solveUrl: 'https://leetcode.com/problems/maximum-subarray/' },
-      { problemId: 3, title: 'Binary Search', topic: 'Binary Search', difficulty: 'Easy', xp: 10, solveUrl: 'https://leetcode.com/problems/binary-search/' },
-      { problemId: 4, title: 'Valid Parentheses', topic: 'Stacks & Queues', difficulty: 'Easy', xp: 10, solveUrl: 'https://leetcode.com/problems/valid-parentheses/' },
-      { problemId: 5, title: 'Reverse String', topic: 'Strings', difficulty: 'Easy', xp: 10, solveUrl: 'https://leetcode.com/problems/reverse-string/' },
-      { problemId: 6, title: 'Merge Two Sorted Lists', topic: 'Linked Lists', difficulty: 'Easy', xp: 10, solveUrl: 'https://leetcode.com/problems/merge-two-sorted-lists/' },
-      { problemId: 7, title: 'Climbing Stairs', topic: 'Dynamic Programming', difficulty: 'Easy', xp: 10, solveUrl: 'https://leetcode.com/problems/climbing-stairs/' },
-      { problemId: 8, title: 'Longest Substring Without Repeating Characters', topic: 'Sliding Window', difficulty: 'Medium', xp: 30, solveUrl: 'https://leetcode.com/problems/longest-substring-without-repeating-characters/' },
-      { problemId: 9, title: 'Kth Largest Element in an Array', topic: 'Heaps', difficulty: 'Medium', xp: 30, solveUrl: 'https://leetcode.com/problems/kth-largest-element-in-an-array/' },
-      { problemId: 10, title: '3Sum', topic: 'Arrays', difficulty: 'Medium', xp: 30, solveUrl: 'https://leetcode.com/problems/3sum/' },
-      { problemId: 11, title: 'Valid Anagram', topic: 'Strings', difficulty: 'Easy', xp: 10, solveUrl: 'https://leetcode.com/problems/valid-anagram/' },
-      { problemId: 12, title: 'Invert Binary Tree', topic: 'Trees', difficulty: 'Easy', xp: 10, solveUrl: 'https://leetcode.com/problems/invert-binary-tree/' },
-      { problemId: 13, title: 'Clone Graph', topic: 'Graphs', difficulty: 'Medium', xp: 30, solveUrl: 'https://leetcode.com/problems/clone-graph/' },
-      { problemId: 14, title: 'Implement Trie (Prefix Tree)', topic: 'Tries', difficulty: 'Medium', xp: 30, solveUrl: 'https://leetcode.com/problems/implement-trie-prefix-tree/' },
-      { problemId: 15, title: 'Number of 1 Bits', topic: 'Bit Manipulation', difficulty: 'Easy', xp: 10, solveUrl: 'https://leetcode.com/problems/number-of-1-bits/' },
-      { problemId: 16, title: 'Merge k Sorted Lists', topic: 'Linked Lists', difficulty: 'Hard', xp: 50, solveUrl: 'https://leetcode.com/problems/merge-k-sorted-lists/' },
-      { problemId: 17, title: 'Longest Palindromic Substring', topic: 'Dynamic Programming', difficulty: 'Medium', xp: 30, solveUrl: 'https://leetcode.com/problems/longest-palindromic-substring/' },
-      { problemId: 18, title: 'Edit Distance', topic: 'Dynamic Programming', difficulty: 'Hard', xp: 50, solveUrl: 'https://leetcode.com/problems/edit-distance/' },
-      { problemId: 19, title: 'Container With Most Water', topic: 'Sliding Window', difficulty: 'Medium', xp: 30, solveUrl: 'https://leetcode.com/problems/container-with-most-water/' },
-      { problemId: 20, title: 'Word Search', topic: 'Recursion & Backtracking', difficulty: 'Medium', xp: 30, solveUrl: 'https://leetcode.com/problems/word-search/' }
-    ];
-    await DSAProblem.insertMany(problems);
-    console.log('DSA Problems pre-seeded successfully');
-  }
+  await DSAProblem.deleteMany({});
+  const problems = [
+    { problemId: 1, title: 'Two Sum', topic: 'Arrays', difficulty: 'Easy', xp: 10, solveUrl: 'https://leetcode.com/problems/two-sum/' },
+    { problemId: 2, title: 'Maximum Subarray', topic: 'Dynamic Programming', difficulty: 'Medium', xp: 30, solveUrl: 'https://leetcode.com/problems/maximum-subarray/' },
+    { problemId: 3, title: 'Binary Search', topic: 'Binary Search', difficulty: 'Easy', xp: 10, solveUrl: 'https://leetcode.com/problems/binary-search/' },
+    { problemId: 4, title: 'Valid Parentheses', topic: 'Stacks & Queues', difficulty: 'Easy', xp: 10, solveUrl: 'https://leetcode.com/problems/valid-parentheses/' },
+    { problemId: 5, title: 'Reverse String', topic: 'Strings', difficulty: 'Easy', xp: 10, solveUrl: 'https://leetcode.com/problems/reverse-string/' },
+    { problemId: 6, title: 'Merge Two Sorted Lists', topic: 'Linked Lists', difficulty: 'Easy', xp: 10, solveUrl: 'https://leetcode.com/problems/merge-two-sorted-lists/' },
+    { problemId: 7, title: 'Climbing Stairs', topic: 'Dynamic Programming', difficulty: 'Easy', xp: 10, solveUrl: 'https://leetcode.com/problems/climbing-stairs/' },
+    { problemId: 8, title: 'Longest Substring Without Repeating Characters', topic: 'Sliding Window', difficulty: 'Medium', xp: 30, solveUrl: 'https://leetcode.com/problems/longest-substring-without-repeating-characters/' },
+    { problemId: 9, title: 'Kth Largest Element in an Array', topic: 'Heaps', difficulty: 'Medium', xp: 30, solveUrl: 'https://leetcode.com/problems/kth-largest-element-in-an-array/' },
+    { problemId: 10, title: '3Sum', topic: 'Arrays', difficulty: 'Medium', xp: 30, solveUrl: 'https://leetcode.com/problems/3sum/' },
+    { problemId: 11, title: 'Valid Anagram', topic: 'Strings', difficulty: 'Easy', xp: 10, solveUrl: 'https://leetcode.com/problems/valid-anagram/' },
+    { problemId: 12, title: 'Invert Binary Tree', topic: 'Trees', difficulty: 'Easy', xp: 10, solveUrl: 'https://leetcode.com/problems/invert-binary-tree/' },
+    { problemId: 13, title: 'Clone Graph', topic: 'Graphs', difficulty: 'Medium', xp: 30, solveUrl: 'https://leetcode.com/problems/clone-graph/' },
+    { problemId: 14, title: 'Implement Trie (Prefix Tree)', topic: 'Tries', difficulty: 'Medium', xp: 30, solveUrl: 'https://leetcode.com/problems/implement-trie-prefix-tree/' },
+    { problemId: 15, title: 'Number of 1 Bits', topic: 'Bit Manipulation', difficulty: 'Easy', xp: 10, solveUrl: 'https://leetcode.com/problems/number-of-1-bits/' },
+    { problemId: 16, title: 'Merge k Sorted Lists', topic: 'Linked Lists', difficulty: 'Hard', xp: 50, solveUrl: 'https://leetcode.com/problems/merge-k-sorted-lists/' },
+    { problemId: 17, title: 'Longest Palindromic Substring', topic: 'Dynamic Programming', difficulty: 'Medium', xp: 30, solveUrl: 'https://leetcode.com/problems/longest-palindromic-substring/' },
+    { problemId: 18, title: 'Edit Distance', topic: 'Dynamic Programming', difficulty: 'Hard', xp: 50, solveUrl: 'https://leetcode.com/problems/edit-distance/' },
+    { problemId: 19, title: 'Container With Most Water', topic: 'Sliding Window', difficulty: 'Medium', xp: 30, solveUrl: 'https://leetcode.com/problems/container-with-most-water/' },
+    { problemId: 20, title: 'Word Search', topic: 'Recursion & Backtracking', difficulty: 'Medium', xp: 30, solveUrl: 'https://leetcode.com/problems/word-search/' }
+  ];
+  const problemsWithRAG = problems.map(p => ({
+    ...p,
+    slug: p.title.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+    year_level: ['2nd', '3rd', '4th'],
+    target_role: 'Software Engineer',
+    is_placement_prep: true
+  }));
+  await DSAProblem.insertMany(problemsWithRAG);
+  console.log('DSA Problems pre-seeded successfully');
 };
 
 const seedCoursesAndLessons = async () => {
@@ -65,14 +70,19 @@ const seedCoursesAndLessons = async () => {
 
   // Define courses
   const coursesData = [
-    { title: 'Operating Systems', description: 'Core principles of OS: Processes, Memory Management, File Systems, and CPU Scheduling.', category: 'Core CS', difficulty: 'Medium', thumbnail: 'https://images.unsplash.com/photo-1618401471353-b98aedd07871?auto=format&fit=crop&q=80&w=400' },
-    { title: 'Computer Networks', description: 'Deep dive into computer network layers, protocols, TCP/IP, routing algorithms, and network security.', category: 'Core CS', difficulty: 'Medium', thumbnail: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=400' },
-    { title: 'DBMS', description: 'Database Management Systems, relational models, ER diagrams, normalization (1NF to BCNF) and transactions.', category: 'Core CS', difficulty: 'Medium', thumbnail: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&q=80&w=400' },
-    { title: 'SQL', description: 'Master relational databases using SQL queries: Joins, Aggregations, Subqueries, Indexes, and Optimization.', category: 'Core CS', difficulty: 'Easy', thumbnail: 'https://images.unsplash.com/photo-1607799279861-4dd421887fb3?auto=format&fit=crop&q=80&w=400' },
-    { title: 'C Programming', description: 'Fundamentals of C, pointers, memory allocation, structures, and low-level optimization.', category: 'Programming', difficulty: 'Easy', thumbnail: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&q=80&w=400' },
-    { title: 'Python', description: 'Learn Python syntax, OOP concepts, libraries (NumPy, Pandas), and advanced decorators.', category: 'Programming', difficulty: 'Easy', thumbnail: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=400' },
-    { title: 'Java', description: 'Object-Oriented Programming in Java, JVM architecture, multithreading, and collections framework.', category: 'Programming', difficulty: 'Medium', thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=400' },
-    { title: 'Generative AI', description: 'Introduction to LLMs, prompt engineering, fine-tuning, RAG architecture, and Gemini API integration.', category: 'AI', difficulty: 'Hard', thumbnail: 'https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&q=80&w=400' }
+    { title: 'Operating Systems', description: 'Core principles of OS: Processes, Memory Management, File Systems, and CPU Scheduling.', category: 'Core CS', difficulty: 'Medium', thumbnail: 'https://images.unsplash.com/photo-1618401471353-b98aedd07871?auto=format&fit=crop&q=80&w=400', slug: 'operating-systems', year_level: ['3rd'], target_role: 'System Engineer', is_placement_prep: true },
+    { title: 'Computer Networks', description: 'Deep dive into computer network layers, protocols, TCP/IP, routing algorithms, and network security.', category: 'Core CS', difficulty: 'Medium', thumbnail: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=400', slug: 'computer-networks', year_level: ['3rd'], target_role: 'Network Administrator', is_placement_prep: true },
+    { title: 'DBMS', description: 'Database Management Systems, relational models, ER diagrams, normalization (1NF to BCNF) and transactions.', category: 'Core CS', difficulty: 'Medium', thumbnail: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&q=80&w=400', slug: 'dbms', year_level: ['2nd', '3rd'], target_role: 'Database Developer', is_placement_prep: true },
+    { title: 'SQL', description: 'Master relational databases using SQL queries: Joins, Aggregations, Subqueries, Indexes, and Optimization.', category: 'Core CS', difficulty: 'Easy', thumbnail: 'https://images.unsplash.com/photo-1607799279861-4dd421887fb3?auto=format&fit=crop&q=80&w=400', slug: 'sql', year_level: ['2nd', '3rd'], target_role: 'Database Developer', is_placement_prep: true },
+    { title: 'C Programming', description: 'Fundamentals of C, pointers, memory allocation, structures, and low-level optimization.', category: 'Programming', difficulty: 'Easy', thumbnail: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&q=80&w=400', slug: 'c-programming', year_level: ['1st'], target_role: 'Embedded Software Developer', is_placement_prep: false },
+    { title: 'Python', description: 'Learn Python syntax, OOP concepts, libraries (NumPy, Pandas), and advanced decorators.', category: 'Programming', difficulty: 'Easy', thumbnail: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=400', slug: 'python', year_level: ['1st', '2nd'], target_role: 'Data Scientist', is_placement_prep: true },
+    { title: 'Java', description: 'Object-Oriented Programming in Java, JVM architecture, multithreading, and collections framework.', category: 'Programming', difficulty: 'Medium', thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=400', slug: 'java', year_level: ['1st', '2nd'], target_role: 'Backend Developer', is_placement_prep: true },
+    { title: 'Generative AI', description: 'Introduction to LLMs, prompt engineering, fine-tuning, RAG architecture, and Gemini API integration.', category: 'AI', difficulty: 'Hard', thumbnail: 'https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&q=80&w=400', slug: 'generative-ai', year_level: ['3rd', '4th'], target_role: 'AI Engineer', is_placement_prep: true },
+    // Placements context matching courses:
+    { title: 'Full-Stack Web Development (HTML, CSS, JS, React, Node)', description: 'Learn responsive frontend building with W3-style tutorials and Node.js backend API creation.', category: 'Web Development', difficulty: 'Medium', thumbnail: 'https://images.unsplash.com/photo-1618401471353-b98aedd07871?auto=format&fit=crop&q=80&w=400', slug: 'fullstack-web-dev', year_level: ['2nd', '3rd'], target_role: 'Full-Stack Developer', is_placement_prep: true },
+    { title: 'Data Structures & Algorithms with Java', description: 'Master arrays, linked lists, trees, graphs, and dynamic programming for coding interviews.', category: 'Programming', difficulty: 'Medium', thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=400', slug: 'dsa-java', year_level: ['2nd', '3rd', '4th'], target_role: 'Software Engineer', is_placement_prep: true },
+    { title: 'Database Management Systems (DBMS) & SQL Masterclass', description: 'Learn database normalization, queries, indexing, and transactional SQL.', category: 'Core CS', difficulty: 'Medium', thumbnail: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&q=80&w=400', slug: 'dbms-sql', year_level: ['2nd', '3rd'], target_role: 'Database Administrator', is_placement_prep: true },
+    { title: 'Core CS Fundamentals (OS, Networks, System Design)', description: 'Complete prep for campus recruitment technical interview rounds.', category: 'Core CS', difficulty: 'Medium', thumbnail: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=400', slug: 'core-cs-fundamentals', year_level: ['3rd', '4th'], target_role: 'Software Engineer', is_placement_prep: true }
   ];
 
   const seededCourses = await Course.insertMany(coursesData);
@@ -170,6 +180,10 @@ const runSeeder = async () => {
     // Call theory & aptitude seeder
     const runTheoryAptitudeSeeder = require('./theoryAptitudeSeeder');
     await runTheoryAptitudeSeeder();
+
+    // Call dynamic RAG vector document builder!
+    const { indexDatabaseForRAG } = require('../utils/ragIndexer');
+    await indexDatabaseForRAG();
     
     console.log('Database seeding process finished.');
   } catch (error) {

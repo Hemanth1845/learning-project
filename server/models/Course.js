@@ -27,6 +27,23 @@ const CourseSchema = new mongoose.Schema({
     type: String,
     default: ''
   },
+  slug: {
+    type: String,
+    required: true,
+    unique: true
+  },
+  year_level: {
+    type: [String],
+    default: []
+  },
+  target_role: {
+    type: String,
+    default: ''
+  },
+  is_placement_prep: {
+    type: Boolean,
+    default: false
+  },
   createdAt: {
     type: Date,
     default: Date.now
