@@ -4,6 +4,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 const { protect } = require('../middleware/auth');
+const { logUserActivity } = require('../utils/csvLogger');
 
 const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET || 'supersecretjwttoken', {
@@ -15,7 +16,7 @@ const generateToken = (id) => {
 // @route   POST /api/auth/register
 router.post('/register', async (req, res) => {
   try {
-    const { username, email, password } = req.body;
+    const { username, email, password, phoneNumber, yearOfStudy, branch, selectedCourse } = req.body;
 
     const userExists = await User.findOne({ $or: [{ email }, { username }] });
     if (userExists) {
@@ -27,9 +28,16 @@ router.post('/register', async (req, res) => {
       username,
       email,
       password: hashedPassword,
+      phoneNumber: phoneNumber || '',
+      yearOfStudy: yearOfStudy || '3rd Year',
+      branch: branch || 'Computer Science & Engineering',
+      selectedCourse: selectedCourse || 'Full Stack Development',
       streak: 1,
       lastLoginDate: new Date()
     });
+
+    // Log to CSV sheet
+    logUserActivity(username, email, 'Registration', `New student signed up for track "${selectedCourse}"`);
 
     res.status(201).json({
       token: generateToken(user._id),
@@ -43,7 +51,10 @@ router.post('/register', async (req, res) => {
         rank: user.rank,
         profilePic: user.profilePic,
         yearOfStudy: user.yearOfStudy,
-        branch: user.branch
+        branch: user.branch,
+        phoneNumber: user.phoneNumber,
+        selectedCourse: user.selectedCourse,
+        plan: user.plan
       }
     });
   } catch (error) {
@@ -93,6 +104,9 @@ router.post('/login', async (req, res) => {
     user.lastLoginDate = new Date();
     await user.save();
 
+    // Log to CSV sheet
+    logUserActivity(user.username, user.email, 'Login', `Student logged in successfully`);
+
     res.json({
       token: generateToken(user._id),
       user: {
@@ -105,7 +119,10 @@ router.post('/login', async (req, res) => {
         rank: user.rank,
         profilePic: user.profilePic,
         yearOfStudy: user.yearOfStudy,
-        branch: user.branch
+        branch: user.branch,
+        phoneNumber: user.phoneNumber || '',
+        selectedCourse: user.selectedCourse || '',
+        plan: user.plan
       }
     });
   } catch (error) {
@@ -172,7 +189,8 @@ router.post('/google', async (req, res) => {
         rank: user.rank,
         profilePic: user.profilePic,
         yearOfStudy: user.yearOfStudy,
-        branch: user.branch
+        branch: user.branch,
+        plan: user.plan
       }
     });
   } catch (error) {
@@ -199,7 +217,10 @@ router.get('/me', protect, async (req, res) => {
       rank: req.user.rank,
       profilePic: req.user.profilePic,
       yearOfStudy: req.user.yearOfStudy,
-      branch: req.user.branch
+      branch: req.user.branch,
+      phoneNumber: req.user.phoneNumber || '',
+      selectedCourse: req.user.selectedCourse || '',
+      plan: req.user.plan
     });
   } catch (error) {
     res.status(500).json({ message: error.message });

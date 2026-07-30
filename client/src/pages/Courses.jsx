@@ -243,6 +243,15 @@ const TextbookContentParser = ({ text }) => {
   return <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>{elements}</div>;
 };
 
+const getGoogleDriveEmbedUrl = (url) => {
+  if (!url) return '';
+  const match = url.match(/\/file\/d\/([a-zA-Z0-9_-]+)/) || url.match(/id=([a-zA-Z0-9_-]+)/);
+  if (match && match[1]) {
+    return `https://drive.google.com/file/d/${match[1]}/preview`;
+  }
+  return url;
+};
+
 const Courses = () => {
   const { token, reloadProfile, API_URL } = useContext(AuthContext);
   const location = useLocation();
@@ -250,11 +259,21 @@ const Courses = () => {
   const [activeCourse, setActiveCourse] = useState(null);
   const [lessons, setLessons] = useState([]);
   const [activeLesson, setActiveLesson] = useState(null);
+  const [selectedNoteLesson, setSelectedNoteLesson] = useState(null);
+  const [selectedVideoLesson, setSelectedVideoLesson] = useState(null);
   
   // Quiz states
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [quizResult, setQuizResult] = useState(null);
   const [expandedQAs, setExpandedQAs] = useState({});
+
+  // Sub-tabs & Categories
+  const [activeSubTab, setActiveSubTab] = useState('notes'); // 'notes', 'videos', 'interview', 'project'
+  const [selectedFullStackCat, setSelectedFullStackCat] = useState(null); // 'Frontend', 'Backend', 'Database'
+  const [projectFile, setProjectFile] = useState('');
+  const [projectFileName, setProjectFileName] = useState('');
+  const [projectSubmission, setProjectSubmission] = useState(null);
+  const [projectSubmitting, setProjectSubmitting] = useState(false);
 
   const toggleQA = (idx) => {
     setExpandedQAs(prev => ({
@@ -265,6 +284,64 @@ const Courses = () => {
   
   const [bookmarkedCourses, setBookmarkedCourses] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const fetchProjectSubmission = async (courseId) => {
+    try {
+      const res = await fetch(`${API_URL}/courses/${courseId}/submission`, {
+        headers: { 'Authorization': `Bearer ${token}` }
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setProjectSubmission(data);
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const handleProjectFileUpload = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    setProjectFileName(file.name);
+    const reader = new FileReader();
+    reader.onload = () => {
+      setProjectFile(reader.result); // Base64 content
+    };
+    reader.readAsDataURL(file);
+  };
+
+  const handleProjectSubmit = async (e) => {
+    e.preventDefault();
+    if (!projectFile) {
+      alert('Please select a project file to upload first.');
+      return;
+    }
+    setProjectSubmitting(true);
+    try {
+      const res = await fetch(`${API_URL}/courses/${activeCourse._id}/submit-project`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify({
+          fileUrl: projectFile,
+          fileName: projectFileName
+        })
+      });
+      if (res.ok) {
+        alert('Project submitted successfully for admin review!');
+        fetchProjectSubmission(activeCourse._id);
+      } else {
+        const err = await res.json();
+        alert(err.message || 'Failed to submit project');
+      }
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setProjectSubmitting(false);
+    }
+  };
 
   useEffect(() => {
     if (token) {
@@ -321,17 +398,29 @@ const Courses = () => {
     setActiveCourse(course);
     setLessons([]);
     setActiveLesson(null);
+    setSelectedNoteLesson(null);
+    setSelectedVideoLesson(null);
     setQuizResult(null);
     setSelectedAnswers({});
     setExpandedQAs({});
+    setActiveSubTab('notes');
+    fetchProjectSubmission(course._id);
     try {
       const res = await fetch(`${API_URL}/courses/${course._id}/lessons`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const data = await res.json();
       setLessons(data);
+      if (course.pdfUrl) {
+        setSelectedNoteLesson({ _id: 'course-main-pdf', title: 'Main Course Notes', pdfUrl: course.pdfUrl });
+      } else if (data.length > 0) {
+        const noteLes = data.find(l => l.pdfUrl);
+        if (noteLes) setSelectedNoteLesson(noteLes);
+      }
       if (data.length > 0) {
         handleSelectLesson(course._id, data[0]);
+        const vidLes = data.find(l => l.videoUrl);
+        if (vidLes) setSelectedVideoLesson(vidLes);
       }
     } catch (err) {
       console.error(err);
@@ -470,25 +559,7 @@ const Courses = () => {
             </h2>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
-            {activeCourse.pdfUrl && (
-              <button 
-                onClick={() => window.open(activeCourse.pdfUrl, '_blank')}
-                className="primary-btn"
-                style={{
-                  padding: '8px 16px',
-                  fontSize: '0.82rem',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '6px',
-                  background: 'var(--color-easy)',
-                  borderColor: 'var(--color-easy)',
-                  color: 'black',
-                  fontWeight: 'bold'
-                }}
-              >
-                📖 View Full PDF Notes
-              </button>
-            )}
+            {/* Removed View Full PDF Notes button */}
             {activeCourse.externalLink && (
               <button 
                 onClick={() => window.open(activeCourse.externalLink, '_blank')}
@@ -545,257 +616,422 @@ const Courses = () => {
           </div>
         </div>
 
-        {/* Content Layout Split */}
-        <div style={{ display: 'grid', gridTemplateColumns: '280px 1fr', gap: '24px' }} className="scorecard-panel">
+        {lessons.length > 0 ? (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', width: '100%' }}>
           
-          {/* Sidebar Lesson Tree */}
-          <aside style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            <h3 style={{ fontSize: '1rem', textTransform: 'uppercase', color: 'var(--text-muted)', letterSpacing: '0.5px' }}>Course Syllabus</h3>
-            <div className="syllabus-list">
-              {lessons.map((les) => {
-                const isActive = activeLesson?.lesson?._id === les._id;
-                const isCoreCsCourse = activeCourse.title === 'Operating Systems' || activeCourse.title === 'DBMS' || activeCourse.title === 'Computer Networks';
-                return (
-                  <div 
-                    key={les._id} 
-                    className={`syllabus-item ${isActive ? 'active' : ''} ${les.completed ? 'completed' : ''}`}
-                    onClick={() => handleSelectLesson(activeCourse._id, les)}
-                  >
-                    <div>
-                      <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Lesson {les.order}</div>
-                      <div style={{ fontWeight: 600, color: 'white', fontSize: '0.9rem', marginTop: '2px' }}>{les.title}</div>
-                    </div>
-                    {les.quizCompleted && (
-                      <span style={{ color: 'var(--color-solved)', fontSize: '0.8rem' }}>
-                        {isCoreCsCourse ? '✓ Prep Done' : '🧠 quiz pass'}
-                      </span>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          </aside>
+          {/* Tab Navigation Menu */}
+          <div style={{ display: 'flex', gap: '12px', borderBottom: '1px solid var(--border-glass)', paddingBottom: '12px', flexWrap: 'wrap' }}>
+            <button
+              onClick={() => setActiveSubTab('notes')}
+              className="warroom-btn"
+              style={{
+                background: activeSubTab === 'notes' ? 'var(--accent-gradient)' : 'rgba(255,255,255,0.03)',
+                color: 'white',
+                fontWeight: 'bold',
+                padding: '10px 20px',
+                borderRadius: '6px',
+                border: '1px solid var(--border-glass)'
+              }}
+            >
+              📄 Lecture Notes
+            </button>
+            <button
+              onClick={() => setActiveSubTab('videos')}
+              className="warroom-btn"
+              style={{
+                background: activeSubTab === 'videos' ? 'var(--accent-gradient)' : 'rgba(255,255,255,0.03)',
+                color: 'white',
+                fontWeight: 'bold',
+                padding: '10px 20px',
+                borderRadius: '6px',
+                border: '1px solid var(--border-glass)'
+              }}
+            >
+              🎥 Video Lectures
+            </button>
+            <button
+              onClick={() => setActiveSubTab('interview')}
+              className="warroom-btn"
+              style={{
+                background: activeSubTab === 'interview' ? 'var(--accent-gradient)' : 'rgba(255,255,255,0.03)',
+                color: 'white',
+                fontWeight: 'bold',
+                padding: '10px 20px',
+                borderRadius: '6px',
+                border: '1px solid var(--border-glass)'
+              }}
+            >
+              ❓ Interview Q&As
+            </button>
+            {(activeCourse.category === 'Web Development' || activeCourse.parentCategory) && (
+              <button
+                onClick={() => setActiveSubTab('project')}
+                className="warroom-btn"
+                style={{
+                  background: activeSubTab === 'project' ? 'var(--accent-gradient)' : 'rgba(255,255,255,0.03)',
+                  color: 'white',
+                  fontWeight: 'bold',
+                  padding: '10px 20px',
+                  borderRadius: '6px',
+                  border: '1px solid var(--border-glass)'
+                }}
+              >
+                💻 Project Submission
+              </button>
+            )}
+          </div>
 
-          {/* Main Reading area */}
-          {activeLesson ? (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-              
-              {/* Textbook style white sheet */}
-              <div className="glass-card" style={{ 
-                padding: '40px 48px', 
-                background: '#ffffff', 
-                border: '1px solid #e2e8f0', 
-                boxShadow: '0 4px 20px rgba(0,0,0,0.1)', 
-                borderRadius: '12px',
-                color: '#2d3748'
-              }}>
-                <h1 style={{ 
-                  fontSize: '2rem', 
-                  marginBottom: '24px', 
-                  fontFamily: 'Georgia, serif', 
-                  color: '#111111', 
-                  fontWeight: 700,
-                  borderBottom: '2px solid #e67e22',
-                  paddingBottom: '12px'
-                }}>
-                  {activeLesson.lesson.title}
-                </h1>
+          {/* TAB CONTENT AREAS */}
+
+          {/* 1. NOTES TAB */}
+          {activeSubTab === 'notes' && (() => {
+            const notesLessons = [];
+            if (activeCourse.pdfUrl) {
+              notesLessons.push({ _id: 'course-main-pdf', title: 'Main Course Notes', pdfUrl: activeCourse.pdfUrl });
+            }
+            lessons.forEach(l => {
+              if (l.pdfUrl) {
+                notesLessons.push(l);
+              }
+            });
+
+            return (
+              <div className="glass-card" style={{ padding: '32px 40px', background: '#ffffff', borderRadius: '12px', color: '#2d3748' }}>
+                <h2 style={{ fontSize: '1.7rem', fontFamily: 'Georgia, serif', color: '#111111', borderBottom: '2px solid #e67e22', paddingBottom: '8px', marginBottom: '20px' }}>
+                  📄 Lecture Notes
+                </h2>
                 
-                {/* Notes Container parsed inside Placement Studio Textbook view */}
-                <TextbookContentParser text={activeLesson.lesson.content} />
-
-                {/* Video Lesson (if provided) */}
-                {activeLesson.lesson.videoUrl && (
-                  <div style={{ marginTop: '32px', borderTop: '1px solid #e2e8f0', paddingTop: '24px' }}>
-                    <h3 style={{ fontSize: '1.2rem', color: '#111111', marginBottom: '16px', fontFamily: 'Georgia, serif', fontWeight: 700 }}>📽️ Video Explanation</h3>
-                    <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
-                      <iframe 
-                        src={activeLesson.lesson.videoUrl} 
-                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-                        title={activeLesson.lesson.title}
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      ></iframe>
-                    </div>
+                {/* Notes List selector */}
+                {notesLessons.length > 0 ? (
+                  <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginBottom: '24px' }}>
+                    {notesLessons.map((les, index) => {
+                      const isSelected = selectedNoteLesson?._id === les._id;
+                      return (
+                        <button
+                          key={les._id}
+                          onClick={() => setSelectedNoteLesson(les)}
+                          style={{
+                            padding: '8px 16px',
+                            background: isSelected ? 'var(--accent-gradient)' : '#f3f4f6',
+                            color: isSelected ? 'white' : '#4b5563',
+                            border: '1px solid #e5e7eb',
+                            borderRadius: '20px',
+                            cursor: 'pointer',
+                            fontSize: '0.85rem',
+                            fontWeight: 600
+                          }}
+                        >
+                          Notes {index + 1}: {les.title}
+                        </button>
+                      );
+                    })}
                   </div>
+                ) : (
+                  <div style={{ color: '#718096', padding: '20px 0' }}>No notes available.</div>
+                )}
+
+                {/* PDF Viewer */}
+                {(selectedNoteLesson?.pdfUrl || activeCourse.pdfUrl) ? (
+                  <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid #cbd5e0', position: 'relative' }}>
+                    <div style={{ position: 'absolute', top: 0, right: 0, width: '120px', height: '60px', zIndex: 10, background: 'transparent' }} />
+                    <iframe
+                      src={getGoogleDriveEmbedUrl(selectedNoteLesson?.pdfUrl || activeCourse.pdfUrl)}
+                      width="100%"
+                      height="650px"
+                      style={{ border: 'none' }}
+                      allow="autoplay"
+                    ></iframe>
+                  </div>
+                ) : (
+                  notesLessons.length > 0 && (
+                    <div style={{ padding: '40px', textAlign: 'center', color: '#718096' }}>
+                      Please select a note file from the list above.
+                    </div>
+                  )
                 )}
               </div>
+            );
+          })()}
 
-              {/* Quiz section or Interview Prep block */}
-              {(() => {
-                const isCoreCsCourse = activeCourse.title === 'Operating Systems' || activeCourse.title === 'DBMS' || activeCourse.title === 'Computer Networks';
+          {/* 2. VIDEOS TAB */}
+          {activeSubTab === 'videos' && (() => {
+            const videoLessons = lessons.filter(l => l.videoUrl);
+            return (
+              <div className="glass-card" style={{ padding: '32px' }}>
+                <h2 style={{ fontSize: '1.4rem', color: 'white', marginBottom: '20px' }}>🎥 Embedded Explanation Videos</h2>
                 
-                if (isCoreCsCourse) {
-                  return activeLesson.lesson.interviewQuestions && activeLesson.lesson.interviewQuestions.length > 0 ? (
-                    <div className="quiz-box" style={{ background: 'rgba(255,255,255,0.02)', padding: '24px', border: '1px solid var(--border-glass)', borderRadius: '8px' }}>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-                        <h2 style={{ fontSize: '1.3rem', color: 'white' }}>💬 Technical Interview Q&As</h2>
-                        <span style={{ color: 'var(--color-points)', fontWeight: 600 }}>⚡ 50 XP Reward</span>
-                      </div>
-
-                      {activeLesson.quizCompleted && (
-                        <div style={{ background: 'rgba(16, 185, 129, 0.1)', color: 'var(--color-solved)', padding: '12px', border: '1px solid rgba(16, 185, 129, 0.3)', borderRadius: '8px', fontSize: '0.9rem', marginBottom: '20px' }}>
-                          🎉 You have already completed this lesson's interview preparation module!
-                        </div>
-                      )}
-
-                      <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                        {activeLesson.lesson.interviewQuestions.map((q, idx) => {
-                          const isOpen = !!expandedQAs[idx];
-                          return (
-                            <div 
-                              key={idx} 
-                              style={{ 
-                                background: 'rgba(255,255,255,0.01)', 
-                                border: '1px solid var(--border-glass)', 
-                                borderRadius: '6px',
-                                overflow: 'hidden'
-                              }}
-                            >
-                              <button 
-                                onClick={() => toggleQA(idx)}
-                                style={{
-                                  width: '100%',
-                                  padding: '16px 20px',
-                                  textAlign: 'left',
-                                  background: 'transparent',
-                                  border: 'none',
-                                  color: 'white',
-                                  fontSize: '0.95rem',
-                                  fontWeight: 600,
-                                  cursor: 'pointer',
-                                  display: 'flex',
-                                  justifyContent: 'space-between',
-                                  alignItems: 'center'
-                                }}
-                              >
-                                <span>Q{idx + 1}: {q.question}</span>
-                                <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{isOpen ? '▲ Hide Answer' : '▼ Reveal Answer'}</span>
-                              </button>
-                              
-                              {isOpen && (
-                                <div style={{ 
-                                  padding: '16px 20px', 
-                                  background: 'rgba(59, 130, 246, 0.04)', 
-                                  borderTop: '1px solid var(--border-glass)',
-                                  color: 'var(--text-main)',
-                                  fontSize: '0.9rem',
-                                  lineHeight: '1.6',
-                                  whiteSpace: 'pre-wrap'
-                                }}>
-                                  {q.answer}
-                                </div>
-                              )}
-                            </div>
-                          );
-                        })}
-                      </div>
-
-                      {!activeLesson.quizCompleted && (
-                        <button 
-                          onClick={handleCompleteInterviewPrep} 
-                          className="primary-btn" 
-                          style={{ width: '100%', marginTop: '24px', padding: '12px' }}
-                        >
-                          Mark Interview Prep Complete & Claim +50 XP
-                        </button>
-                      )}
-                    </div>
-                  ) : null;
-                }
-
-                // Standard Quiz Rendering
-                return activeLesson.lesson.quiz ? (
-                  <div className="quiz-box">
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-                      <h2 style={{ fontSize: '1.3rem' }}>📝 Lesson Assessment: {activeLesson.lesson.quiz.title}</h2>
-                      <span style={{ color: 'var(--color-points)', fontWeight: 600 }}>⚡ {activeLesson.lesson.quiz.xpReward || 50} XP Reward</span>
-                    </div>
-
-                    {activeLesson.quizCompleted && !quizResult && (
-                      <div style={{ background: 'rgba(16, 185, 129, 0.1)', color: 'var(--color-solved)', padding: '12px', border: '1px solid rgba(16, 185, 129, 0.3)', borderRadius: '8px', fontSize: '0.9rem', marginBottom: '20px' }}>
-                        🎉 You have already passed this quiz with a score of {activeLesson.quizScore}%!
-                      </div>
-                    )}
-
-                    {activeLesson.lesson.quiz.questions.map((q, qIdx) => {
-                      const isSubmitted = !!quizResult;
-                      const isCorrectOption = (oIdx) => oIdx === q.correctOptionIndex;
-                      const isUserSelected = (oIdx) => selectedAnswers[qIdx] === oIdx;
-
+                {/* Video list selector */}
+                {videoLessons.length > 0 ? (
+                  <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginBottom: '24px' }}>
+                    {videoLessons.map((les, index) => {
+                      const isSelected = selectedVideoLesson?._id === les._id;
                       return (
-                        <div key={q._id} style={{ marginBottom: '24px', borderBottom: '1px solid rgba(255,255,255,0.02)', paddingBottom: '20px' }}>
-                          <h4 style={{ color: 'white', fontWeight: 600, fontSize: '0.98rem' }}>Q{qIdx + 1}: {q.questionText}</h4>
-                          <div style={{ marginTop: '12px' }}>
-                            {q.options.map((option, oIdx) => {
-                              let optionClass = 'quiz-option';
-                              if (isSubmitted) {
-                                if (isCorrectOption(oIdx)) {
-                                  optionClass += ' correct';
-                                } else if (isUserSelected(oIdx) && !isCorrectOption(oIdx)) {
-                                  optionClass += ' wrong';
-                                }
-                              } else if (isUserSelected(oIdx)) {
-                                optionClass += ' selected';
-                              }
+                        <button
+                          key={les._id}
+                          onClick={() => setSelectedVideoLesson(les)}
+                          className="warroom-btn"
+                          style={{
+                            padding: '8px 16px',
+                            background: isSelected ? 'var(--accent-gradient)' : 'rgba(255,255,255,0.03)',
+                            color: 'white',
+                            borderColor: isSelected ? 'var(--accent-secondary)' : 'var(--border-glass)',
+                            borderRadius: '20px',
+                            cursor: 'pointer',
+                            fontSize: '0.85rem',
+                            fontWeight: 600
+                          }}
+                        >
+                          Video {index + 1}: {les.title}
+                        </button>
+                      );
+                    })}
+                  </div>
+                ) : (
+                  !activeCourse.externalLink && <div style={{ color: 'var(--text-muted)', padding: '20px 0' }}>No video lectures available.</div>
+                )}
 
-                              return (
-                                <div 
-                                  key={oIdx} 
-                                  className={optionClass}
-                                  onClick={() => handleOptionClick(qIdx, oIdx)}
-                                >
-                                  {option}
-                                </div>
-                              );
-                            })}
-                          </div>
-                          {isSubmitted && (
-                            <div style={{ marginTop: '12px', fontSize: '0.88rem', color: 'var(--text-muted)', background: 'rgba(255,255,255,0.01)', padding: '10px', borderRadius: '6px' }}>
-                              <strong>Explanation:</strong> {q.explanation}
+                {(selectedVideoLesson?.videoUrl || activeCourse.externalLink) ? (
+                  <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '8px', border: '1px solid var(--border-glass)' }}>
+                    <iframe
+                      src={selectedVideoLesson?.videoUrl || activeCourse.externalLink}
+                      style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                      title={selectedVideoLesson?.title || activeCourse.title}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                ) : (
+                  videoLessons.length > 0 && (
+                    <div style={{ padding: '40px', textAlign: 'center', color: 'var(--text-muted)' }}>
+                      Please select a lecture video from the list above.
+                    </div>
+                  )
+                )}
+              </div>
+            );
+          })()}
+
+          {/* 3. INTERVIEW QUESTIONS TAB */}
+          {activeSubTab === 'interview' && (() => {
+            const allQuestions = [];
+            lessons.forEach(l => {
+              if (l.interviewQuestions && l.interviewQuestions.length > 0) {
+                l.interviewQuestions.forEach(q => {
+                  allQuestions.push({
+                    ...q,
+                    lessonTitle: l.title
+                  });
+                });
+              }
+            });
+
+            return (
+              <div className="quiz-box" style={{ background: 'rgba(255,255,255,0.02)', padding: '24px', border: '1px solid var(--border-glass)', borderRadius: '8px' }}>
+                <h2 style={{ fontSize: '1.3rem', color: 'white', marginBottom: '20px' }}>💬 Technical Interview Q&As</h2>
+                {allQuestions.length > 0 ? (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                    {allQuestions.map((q, idx) => {
+                      const isOpen = !!expandedQAs[idx];
+                      return (
+                        <div key={idx} style={{ background: 'rgba(255,255,255,0.01)', border: '1px solid var(--border-glass)', borderRadius: '6px', overflow: 'hidden' }}>
+                          <button
+                            onClick={() => toggleQA(idx)}
+                            style={{ width: '100%', padding: '16px 20px', textAlign: 'left', background: 'transparent', border: 'none', color: 'white', fontSize: '0.95rem', fontWeight: 600, cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
+                          >
+                            <span>Q{idx + 1}: {q.question} <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginLeft: '10px' }}>({q.lessonTitle})</span></span>
+                            <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{isOpen ? '▲ Hide Answer' : '▼ Reveal Answer'}</span>
+                          </button>
+                          {isOpen && (
+                            <div style={{ padding: '16px 20px', background: 'rgba(59, 130, 246, 0.04)', borderTop: '1px solid var(--border-glass)', color: 'var(--text-main)', fontSize: '0.9rem', lineHeight: '1.6', whiteSpace: 'pre-wrap' }}>
+                              {q.answer}
                             </div>
                           )}
                         </div>
                       );
                     })}
-
-                    {!quizResult ? (
-                      <button onClick={handleQuizSubmit} className="primary-btn" style={{ width: '100%', marginTop: '16px' }}>
-                        Submit Assessment Answers
-                      </button>
-                    ) : (
-                      <div style={{ textAlign: 'center', marginTop: '24px', padding: '16px', background: quizResult.passed ? 'rgba(16, 185, 129, 0.1)' : 'rgba(239, 68, 68, 0.1)', border: `1px solid ${quizResult.passed ? 'var(--color-solved)' : 'var(--color-hard)'}`, borderRadius: '8px' }}>
-                        <h3 style={{ color: quizResult.passed ? 'var(--color-solved)' : 'var(--color-hard)', fontSize: '1.25rem' }}>
-                          {quizResult.passed ? '🎉 Assessment Passed!' : '❌ Assessment Failed'}
-                        </h3>
-                        <p style={{ color: 'var(--text-main)', margin: '8px 0', fontSize: '0.95rem' }}>
-                          You scored {quizResult.score}% ({quizResult.correctCount}/{quizResult.totalQuestions} correct)
-                        </p>
-                        {quizResult.xpEarned > 0 && (
-                          <p style={{ color: 'var(--color-points)', fontWeight: 700, fontSize: '1rem' }}>
-                            ⚡ +{quizResult.xpEarned} XP Earned!
-                          </p>
-                        )}
-                        {!quizResult.passed && (
-                          <button onClick={() => setQuizResult(null)} className="warroom-btn" style={{ marginTop: '12px' }}>
-                            Retry Quiz
-                          </button>
-                        )}
-                      </div>
-                    )}
-
                   </div>
-                ) : null;
-              })()}
+                ) : (
+                  <div style={{ padding: '40px', textAlign: 'center', color: 'var(--text-muted)' }}>
+                    No interview questions added to this course yet.
+                  </div>
+                )}
+              </div>
+            );
+          })()}
 
+          {/* 4. PROJECTS TAB */}
+          {activeSubTab === 'project' && (
+            <div className="glass-card" style={{ padding: '32px' }}>
+              <h2 style={{ fontSize: '1.4rem', color: 'white', marginBottom: '20px' }}>💻 Full-Stack Course Project Workshop</h2>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '24px' }}>
+                Upload your completed source code, build scripts, or project archive. Our administrators will review the structure, run checks, and provide grades/comments.
+              </p>
+
+              <form onSubmit={handleProjectSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px', maxWidth: '500px' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                  <label style={{ fontSize: '0.9rem', color: 'white' }}>Select Project File (.zip, .rar, .js, .html, .css)</label>
+                  <input
+                    type="file"
+                    onChange={handleProjectFileUpload}
+                    style={{ padding: '10px', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--border-glass)', borderRadius: '6px', color: 'white' }}
+                  />
+                </div>
+                <button
+                  type="submit"
+                  disabled={projectSubmitting}
+                  className="primary-btn"
+                  style={{ alignSelf: 'flex-start', padding: '10px 24px' }}
+                >
+                  {projectSubmitting ? 'Uploading Submission...' : 'Submit Project Code'}
+                </button>
+              </form>
+
+              {projectSubmission && (
+                <div style={{ marginTop: '32px', padding: '20px', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--border-glass)', borderRadius: '8px' }}>
+                  <h4 style={{ fontSize: '1.05rem', color: 'white', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                    Active Submission: <span style={{ color: 'var(--accent-secondary)' }}>{projectSubmission.fileName}</span>
+                  </h4>
+                  <div style={{ display: 'flex', gap: '32px', marginTop: '14px', fontSize: '0.9rem' }}>
+                    <div>
+                      <span style={{ color: 'var(--text-muted)' }}>Status: </span>
+                      <span style={{
+                        padding: '3px 8px',
+                        borderRadius: '4px',
+                        fontWeight: 'bold',
+                        fontSize: '0.8rem',
+                        background: projectSubmission.status === 'Approved' ? 'rgba(16, 185, 129, 0.15)' : 'rgba(245, 158, 11, 0.15)',
+                        color: projectSubmission.status === 'Approved' ? 'var(--color-solved)' : '#f59e0b'
+                      }}>
+                        {projectSubmission.status}
+                      </span>
+                    </div>
+                    <div>
+                      <span style={{ color: 'var(--text-muted)' }}>Submitted: </span>
+                      <span style={{ color: 'white' }}>{new Date(projectSubmission.createdAt).toLocaleDateString()}</span>
+                    </div>
+                  </div>
+                  {projectSubmission.remarks && (
+                    <div style={{ marginTop: '16px', padding: '12px', background: 'rgba(255,255,255,0.03)', borderRadius: '6px', borderLeft: '3px solid var(--accent-secondary)' }}>
+                      <strong>Evaluator Remarks:</strong>
+                      <p style={{ color: 'var(--text-main)', fontSize: '0.88rem', marginTop: '6px', margin: 0 }}>{projectSubmission.remarks}</p>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
-          ) : (
-            <div style={{ color: 'var(--text-muted)', padding: '40px', textAlign: 'center' }}>No lessons found for this course.</div>
           )}
 
+          </div>
+        ) : (
+          <div style={{ color: 'var(--text-muted)', padding: '40px', textAlign: 'center' }}>No lessons found for this course.</div>
+        )}
+      </div>
+    );
+  }
+
+  const isFullStackDev = location.search.includes('course=fullstack-web-dev');
+
+  if (isFullStackDev && !activeCourse) {
+    return (
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+        <div>
+          <h2 style={{ fontSize: '1.8rem', fontFamily: 'var(--font-heading)' }}>Full-Stack Development Track</h2>
+          <p style={{ color: 'var(--text-muted)' }}>Select a development layer below to view specialised languages and frameworks.</p>
         </div>
 
+        {selectedFullStackCat === null ? (
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px', marginTop: '16px' }}>
+            
+            {/* Frontend Box */}
+            <div 
+              onClick={() => setSelectedFullStackCat('Frontend')}
+              className="company-card" 
+              style={{ padding: '40px 24px', cursor: 'pointer', textAlign: 'center', background: 'rgba(59, 130, 246, 0.05)', border: '1px solid rgba(59, 130, 246, 0.2)', transition: 'transform 0.2s' }}
+              onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
+              onMouseLeave={(e) => e.currentTarget.style.transform = 'none'}
+            >
+              <div style={{ fontSize: '3rem', marginBottom: '16px' }}>🎨</div>
+              <h3 style={{ fontSize: '1.4rem', color: 'white', fontWeight: 'bold' }}>Frontend Track</h3>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', marginTop: '10px' }}>Learn HTML, CSS, JavaScript, and React to build beautiful responsive user interfaces.</p>
+            </div>
+
+            {/* Backend Box */}
+            <div 
+              onClick={() => setSelectedFullStackCat('Backend')}
+              className="company-card" 
+              style={{ padding: '40px 24px', cursor: 'pointer', textAlign: 'center', background: 'rgba(16, 185, 129, 0.05)', border: '1px solid rgba(16, 185, 129, 0.2)', transition: 'transform 0.2s' }}
+              onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
+              onMouseLeave={(e) => e.currentTarget.style.transform = 'none'}
+            >
+              <div style={{ fontSize: '3rem', marginBottom: '16px' }}>⚙️</div>
+              <h3 style={{ fontSize: '1.4rem', color: 'white', fontWeight: 'bold' }}>Backend Track</h3>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', marginTop: '10px' }}>Master Node.js, Express.js, Spring Boot and modern server architectures.</p>
+            </div>
+
+            {/* Database Box */}
+            <div 
+              onClick={() => setSelectedFullStackCat('Database')}
+              className="company-card" 
+              style={{ padding: '40px 24px', cursor: 'pointer', textAlign: 'center', background: 'rgba(245, 158, 11, 0.05)', border: '1px solid rgba(245, 158, 11, 0.2)', transition: 'transform 0.2s' }}
+              onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
+              onMouseLeave={(e) => e.currentTarget.style.transform = 'none'}
+            >
+              <div style={{ fontSize: '3rem', marginBottom: '16px' }}>💾</div>
+              <h3 style={{ fontSize: '1.4rem', color: 'white', fontWeight: 'bold' }}>Database Track</h3>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', marginTop: '10px' }}>Learn relational databases (MySQL) and NoSQL stores (MongoDB) for robust persistence.</p>
+            </div>
+
+          </div>
+        ) : (
+          <div>
+            <button 
+              onClick={() => setSelectedFullStackCat(null)} 
+              style={{ background: 'transparent', border: 'none', color: 'var(--accent-secondary)', cursor: 'pointer', fontWeight: 600, fontSize: '0.9rem', marginBottom: '20px' }}
+            >
+              ← Back to Tracks
+            </button>
+            <h3 style={{ fontSize: '1.3rem', color: 'white', marginBottom: '16px' }}>{selectedFullStackCat} Courses</h3>
+            
+            <div className="companies-grid">
+              {courses
+                .filter(c => c.parentCategory === selectedFullStackCat)
+                .map((course) => {
+                  const isBookmarked = bookmarkedCourses.includes(course._id);
+                  return (
+                    <div 
+                      key={course._id} 
+                      className="company-card" 
+                      onClick={() => handleSelectCourse(course)}
+                      style={{ minHeight: '220px', cursor: 'pointer' }}
+                    >
+                      <div>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                          <img src={course.thumbnail || 'https://images.unsplash.com/photo-1618401471353-b98aedd07871?auto=format&fit=crop&q=80&w=100'} alt={course.title} style={{ width: '48px', height: '48px', borderRadius: '8px', objectFit: 'cover' }} />
+                          <span className={`difficulty-pill ${course.difficulty.toLowerCase()}`}>
+                            {course.difficulty}
+                          </span>
+                        </div>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                          <h3 className="company-title">{course.title}</h3>
+                        </div>
+                        <p className="company-desc" style={{ marginTop: '8px', height: '45px', overflow: 'hidden' }}>{course.description}</p>
+                      </div>
+                      <div>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', color: 'var(--text-muted)', marginBottom: '8px' }}>
+                          <span>{course.progress || 0}% Complete</span>
+                          <span>📝 {course.totalLessonsCount || 0} Lessons</span>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              {courses.filter(c => c.parentCategory === selectedFullStackCat).length === 0 && (
+                <div style={{ color: 'var(--text-muted)', padding: '20px' }}>No courses added to this track yet.</div>
+              )}
+            </div>
+          </div>
+        )}
       </div>
     );
   }
@@ -813,50 +1049,54 @@ const Courses = () => {
 
       {/* Grid of Courses */}
       <section className="companies-grid">
-        {courses.map((course) => {
-          const isBookmarked = bookmarkedCourses.includes(course._id);
-          return (
-            <div key={course._id} className="company-card" style={{ minHeight: '260px' }}>
-              <div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                  <img src={course.thumbnail || 'https://images.unsplash.com/photo-1618401471353-b98aedd07871?auto=format&fit=crop&q=80&w=100'} alt={course.title} style={{ width: '48px', height: '48px', borderRadius: '8px', objectFit: 'cover' }} />
-                  <span className={`difficulty-pill ${course.difficulty.toLowerCase()}`}>
-                    {course.difficulty}
-                  </span>
-                </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <h3 className="company-title">{course.title}</h3>
-                  <button 
-                    onClick={() => handleToggleBookmark(course._id)} 
-                    style={{ background: 'transparent', border: 'none', color: isBookmarked ? '#f59e0b' : 'var(--text-muted)', fontSize: '1rem', cursor: 'pointer', marginTop: '6px' }}
-                  >
-                    {isBookmarked ? '★' : '☆'}
-                  </button>
-                </div>
-                <p className="company-desc" style={{ marginTop: '8px', height: '60px', overflow: 'hidden' }}>{course.description}</p>
-              </div>
-
-              <div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', color: 'var(--text-muted)', marginBottom: '8px' }}>
-                  <span>Category: {course.category}</span>
-                  <span>{course.progress || 0}% Complete</span>
-                </div>
-                
-                {/* Progress bar */}
-                <div style={{ width: '100%', height: '6px', background: 'rgba(255,255,255,0.05)', borderRadius: '3px', overflow: 'hidden', marginBottom: '16px' }}>
-                  <div style={{ width: `${course.progress || 0}%`, height: '100%', background: 'var(--accent-gradient)' }}></div>
+        {courses
+          .filter(c => !c.parentCategory && !c.title.toLowerCase().includes('fullstack') && !c.title.toLowerCase().includes('full-stack'))
+          .map((course) => {
+            const isBookmarked = bookmarkedCourses.includes(course._id);
+            return (
+              <div 
+                key={course._id} 
+                className="company-card" 
+                onClick={() => handleSelectCourse(course)}
+                style={{ minHeight: '260px', cursor: 'pointer' }}
+              >
+                <div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                    <img src={course.thumbnail || 'https://images.unsplash.com/photo-1618401471353-b98aedd07871?auto=format&fit=crop&q=80&w=100'} alt={course.title} style={{ width: '48px', height: '48px', borderRadius: '8px', objectFit: 'cover' }} />
+                    <span className={`difficulty-pill ${course.difficulty.toLowerCase()}`}>
+                      {course.difficulty}
+                    </span>
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <h3 className="company-title">{course.title}</h3>
+                    <button 
+                      onClick={(e) => { e.stopPropagation(); handleToggleBookmark(course._id); }} 
+                      style={{ background: 'transparent', border: 'none', color: isBookmarked ? '#f59e0b' : 'var(--text-muted)', fontSize: '1rem', cursor: 'pointer', marginTop: '6px' }}
+                    >
+                      {isBookmarked ? '★' : '☆'}
+                    </button>
+                  </div>
+                  <p className="company-desc" style={{ marginTop: '8px', height: '60px', overflow: 'hidden' }}>{course.description}</p>
                 </div>
 
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <span className="resources-count">📝 {course.totalLessonsCount || 0} Lessons</span>
-                  <button onClick={() => handleSelectCourse(course)} className="warroom-btn">
-                    Start Course →
-                  </button>
+                <div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', color: 'var(--text-muted)', marginBottom: '8px' }}>
+                    <span>Category: {course.category}</span>
+                    <span>{course.progress || 0}% Complete</span>
+                  </div>
+                  
+                  {/* Progress bar */}
+                  <div style={{ width: '100%', height: '6px', background: 'rgba(255,255,255,0.05)', borderRadius: '3px', overflow: 'hidden', marginBottom: '16px' }}>
+                    <div style={{ width: `${course.progress || 0}%`, height: '100%', background: 'var(--accent-gradient)' }}></div>
+                  </div>
+
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <span className="resources-count">📝 {course.totalLessonsCount || 0} Lessons</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
       </section>
 
     </div>

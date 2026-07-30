@@ -21,6 +21,10 @@ import AdminDashboard from './pages/AdminDashboard';
 import DailyProblems from './pages/DailyProblems';
 import RequestCourse from './pages/RequestCourse';
 import Compiler from './pages/Compiler';
+import FurtherDoubts from './pages/FurtherDoubts';
+import CommunicationCoach from './pages/CommunicationCoach';
+import Profile from './pages/Profile';
+import Pricing from './pages/Pricing';
 
 // Protected Route Guard for normal users (Students)
 const ProtectedRoute = ({ children }) => {
@@ -74,17 +78,28 @@ const MainLayout = ({ children }) => {
     window.location.href = res.targetUrl;
   };
 
-  // Load and apply persistent theme from local storage
+  // Load and apply persistent theme and CSS Card FX settings from local storage
   const [currentTheme, setCurrentTheme] = useState(() => {
-    const saved = localStorage.getItem('app-theme') || 'aurora';
-    document.body.className = `theme-${saved}`;
+    const saved = localStorage.getItem('app-theme') || 'light';
+    const fxSaved = localStorage.getItem('app-css-settings');
+    const fx = fxSaved ? JSON.parse(fxSaved) : { hoverFx: '3d-tilt', borderRadius: '16px', glassBlur: '8px', globalScale: '1.0', bgEffect: 'birds' };
+    
+    const root = document.documentElement;
+    root.style.setProperty('--card-border-radius', fx.borderRadius);
+    root.style.setProperty('--card-glass-blur', fx.glassBlur);
+    root.style.setProperty('--global-text-scale', fx.globalScale);
+
+    document.body.className = `theme-${saved} fx-${fx.hoverFx} ${fx.bgEffect === 'birds' ? 'bg-birds' : ''}`;
     return saved;
   });
 
   const changeTheme = (themeName) => {
     setCurrentTheme(themeName);
     localStorage.setItem('app-theme', themeName);
-    document.body.className = `theme-${themeName}`;
+    
+    const fxSaved = localStorage.getItem('app-css-settings');
+    const fx = fxSaved ? JSON.parse(fxSaved) : { hoverFx: '3d-tilt', borderRadius: '16px', glassBlur: '8px', globalScale: '1.0', bgEffect: 'birds' };
+    document.body.className = `theme-${themeName} fx-${fx.hoverFx} ${fx.bgEffect === 'birds' ? 'bg-birds' : ''}`;
   };
 
   const isActive = (path) => location.pathname === path ? 'active' : '';
@@ -95,6 +110,12 @@ const MainLayout = ({ children }) => {
 
   return (
     <div className="app-container">
+      {/* Animated Birds Stage */}
+      <div className="birds-stage">
+        <div className="flapping-bird flapping-bird-1"></div>
+        <div className="flapping-bird flapping-bird-2"></div>
+        <div className="flapping-bird flapping-bird-3"></div>
+      </div>
       {/* Sidebar Navigation */}
       <aside className="sidebar">
         <div className="logo-container">
@@ -137,17 +158,30 @@ const MainLayout = ({ children }) => {
               <Link to="/ai-chat" className={`nav-item ${isActive('/ai-chat')}`}>
                 <span>💬</span> AI Chat
               </Link>
-              <Link to="/interviews" className={`nav-item ${isActive('/interviews')}`}>
-                <span>🤖</span> Interviews
-              </Link>
               <Link to="/mock-interview" className={`nav-item ${isActive('/mock-interview')}`}>
                 <span>🎥</span> Mock Interview
+              </Link>
+              <Link to="/communication-coach" className={`nav-item ${isActive('/communication-coach')}`}>
+                <span>🎤</span> Communication Coach
               </Link>
               <Link to="/resume-ats" className={`nav-item ${isActive('/resume-ats')}`}>
                 <span>📄</span> Resume & ATS
               </Link>
               <Link to="/request-course" className={`nav-item ${isActive('/request-course')}`}>
                 <span>💡</span> Request Course
+              </Link>
+              <Link to="/further-doubts" className={`nav-item ${isActive('/further-doubts')}`}>
+                <span>❓</span> Further Doubts
+              </Link>
+
+              <div style={{ margin: '16px 0 8px 12px', fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-muted)', textTransform: 'uppercase' }}>
+                Account
+              </div>
+              <Link to="/profile" className={`nav-item ${isActive('/profile')}`}>
+                <span>👤</span> Profile
+              </Link>
+              <Link to="/pricing" className={`nav-item ${isActive('/pricing')}`}>
+                <span>💳</span> Pricing
               </Link>
             </>
           ) : (
@@ -240,34 +274,32 @@ const MainLayout = ({ children }) => {
                 )}
               </div>
             )}
-            {/* Show Theme Switcher Dropdown ONLY on Dashboard page */}
-            {isDashboard && (
-              <div className="theme-dropdown-container">
-                <button className="theme-dropdown-btn">
-                  🎨 Theme Options ▾
-                </button>
-                <div className="theme-dropdown-menu">
-                  <div className="theme-dropdown-item" onClick={() => changeTheme('aurora')}>
-                    🌌 Aurora Theme
-                  </div>
-                  <div className="theme-dropdown-item" onClick={() => changeTheme('red-black')}>
-                    🔴 Red & Black
-                  </div>
-                  <div className="theme-dropdown-item" onClick={() => changeTheme('golden-amber')}>
-                    🟡 Golden Amber
-                  </div>
-                  <div className="theme-dropdown-item" onClick={() => changeTheme('deep-ocean')}>
-                    🔵 Deep Ocean
-                  </div>
-                  <div className="theme-dropdown-item" onClick={() => changeTheme('rgb')}>
-                    🌈 RGB Gaming
-                  </div>
-                  <div className="theme-dropdown-item" onClick={() => changeTheme('light')}>
-                    ☀️ Clean Light
-                  </div>
+            {/* Show Theme Switcher Dropdown on all pages */}
+            <div className="theme-dropdown-container">
+              <button className="theme-dropdown-btn">
+                🎨 Theme Options ▾
+              </button>
+              <div className="theme-dropdown-menu">
+                <div className="theme-dropdown-item" onClick={() => changeTheme('aurora')}>
+                  🌌 Aurora Theme
+                </div>
+                <div className="theme-dropdown-item" onClick={() => changeTheme('red-black')}>
+                  🔴 Red & Black
+                </div>
+                <div className="theme-dropdown-item" onClick={() => changeTheme('golden-amber')}>
+                  🟡 Golden Amber
+                </div>
+                <div className="theme-dropdown-item" onClick={() => changeTheme('deep-ocean')}>
+                  🔵 Deep Ocean
+                </div>
+                <div className="theme-dropdown-item" onClick={() => changeTheme('rgb')}>
+                  🌈 RGB Gaming
+                </div>
+                <div className="theme-dropdown-item" onClick={() => changeTheme('light')}>
+                  ☀️ Clean Light
                 </div>
               </div>
-            )}
+            </div>
 
             {user && (
               <div className="user-profile-badge">
@@ -319,6 +351,10 @@ function App() {
           <Route path="/mock-interview/call" element={<ProtectedRoute><MainLayout><VideoCallSimulator /></MainLayout></ProtectedRoute>} />
           <Route path="/resume-ats" element={<ProtectedRoute><MainLayout><ResumeATS /></MainLayout></ProtectedRoute>} />
           <Route path="/request-course" element={<ProtectedRoute><MainLayout><RequestCourse /></MainLayout></ProtectedRoute>} />
+          <Route path="/further-doubts" element={<ProtectedRoute><MainLayout><FurtherDoubts /></MainLayout></ProtectedRoute>} />
+          <Route path="/communication-coach" element={<ProtectedRoute><MainLayout><CommunicationCoach /></MainLayout></ProtectedRoute>} />
+          <Route path="/profile" element={<ProtectedRoute><MainLayout><Profile /></MainLayout></ProtectedRoute>} />
+          <Route path="/pricing" element={<ProtectedRoute><MainLayout><Pricing /></MainLayout></ProtectedRoute>} />
 
           {/* Admin Routes */}
           <Route path="/admin-dashboard" element={<AdminRoute><MainLayout><AdminDashboard /></MainLayout></AdminRoute>} />

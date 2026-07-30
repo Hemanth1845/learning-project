@@ -267,12 +267,49 @@ router.get('/admin/users', protect, adminOnly, async (req, res) => {
         rank: u.rank,
         status: u.status || 'active',
         createdAt: u.createdAt,
+        phoneNumber: u.phoneNumber || '',
+        selectedCourse: u.selectedCourse || '',
+        yearOfStudy: u.yearOfStudy || '3rd Year',
+        branch: u.branch || 'Computer Science & Engineering',
         dsaSolvedCount,
         courseProgressList
       });
     }
 
     res.json(usersWithProgress);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// @desc    Export users list to CSV format (Excel compatible)
+// @route   GET /api/dashboard/admin/users/export
+router.get('/admin/users/export', protect, adminOnly, async (req, res) => {
+  try {
+    const users = await User.find({ role: { $ne: 'admin' } }).sort({ createdAt: -1 });
+    
+    let csv = 'ID,Username,Email,Phone Number,Year of Study,Branch,Selected Course,Plan,XP,Streak,Joined Date\n';
+    
+    for (let u of users) {
+      const row = [
+        u._id.toString(),
+        `"${u.username.replace(/"/g, '""')}"`,
+        `"${u.email.replace(/"/g, '""')}"`,
+        `"${(u.phoneNumber || '').replace(/"/g, '""')}"`,
+        `"${(u.yearOfStudy || '').replace(/"/g, '""')}"`,
+        `"${(u.branch || '').replace(/"/g, '""')}"`,
+        `"${(u.selectedCourse || '').replace(/"/g, '""')}"`,
+        `"${(u.plan || '').replace(/"/g, '""')}"`,
+        u.xp,
+        u.streak,
+        u.createdAt ? u.createdAt.toISOString() : ''
+      ];
+      csv += row.join(',') + '\n';
+    }
+    
+    res.setHeader('Content-Type', 'text/csv');
+    res.setHeader('Content-Disposition', 'attachment; filename=users_list.csv');
+    res.send(csv);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -885,6 +922,75 @@ router.get('/search', protect, async (req, res) => {
     });
 
     res.json(results);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// @desc    Update user profile details
+// @route   PUT /api/dashboard/profile/update
+router.put('/profile/update', protect, async (req, res) => {
+  try {
+    const { username, email, password, phoneNumber, selectedCourse, yearOfStudy, branch, profilePic } = req.body;
+    const user = await User.findById(req.user._id);
+    if (!user) return res.status(404).json({ message: 'User not found.' });
+
+    // Validate unique username/email
+    if (username && username !== user.username) {
+      const usernameExists = await User.findOne({ username });
+      if (usernameExists) return res.status(400).json({ message: 'Username is already taken.' });
+      user.username = username;
+    }
+
+    if (email && email !== user.email) {
+      const emailExists = await User.findOne({ email });
+      if (emailExists) return res.status(400).json({ message: 'Email is already in use.' });
+      user.email = email;
+    }
+
+    if (password) {
+      const bcrypt = require('bcryptjs');
+      user.password = await bcrypt.hash(password, 10);
+    }
+
+    if (phoneNumber !== undefined) user.phoneNumber = phoneNumber;
+    if (selectedCourse !== undefined) user.selectedCourse = selectedCourse;
+    if (yearOfStudy !== undefined) user.yearOfStudy = yearOfStudy;
+    if (branch !== undefined) user.branch = branch;
+    if (profilePic !== undefined) user.profilePic = profilePic;
+
+    await user.save();
+    res.json({ success: true });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// @desc    Update user's subscription plan
+// @route   PUT /api/dashboard/plan/update
+router.put('/plan/update', protect, async (req, res) => {
+  try {
+    const { plan } = req.body;
+    if (!['Free', 'Pro', 'Lifetime'].includes(plan)) {
+      return res.status(400).json({ message: 'Invalid subscription plan.' });
+    }
+
+    const user = await User.findById(req.user._id);
+    if (!user) return res.status(404).json({ message: 'User not found.' });
+
+    user.plan = plan;
+    await user.save();
+
+    // Log activity
+    const Activity = require('../models/Activity');
+    await Activity.create({
+      userId: user._id,
+      username: user.username,
+      action: 'Upgraded Membership',
+      details: `Upgraded account to "${plan}" membership plan.`
+    });
+
+    res.json({ success: true, plan: user.plan });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

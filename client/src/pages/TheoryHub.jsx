@@ -383,7 +383,7 @@ const TheoryHub = () => {
                   <span>{activeSubject.icon}</span> {activeSubject.title}
                 </h1>
                 <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', marginTop: '6px' }}>
-                  Complete all chapters to unlock exclusive placement badges and prepare for interviews.
+                  {activeSubject.description || 'Complete all chapters to unlock exclusive placement badges and prepare for interviews.'}
                 </p>
               </div>
               

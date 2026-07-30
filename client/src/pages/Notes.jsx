@@ -81,6 +81,15 @@ const noteContents = {
   - Durability: Saved updates are permanent.`
 };
 
+const getGoogleDriveEmbedUrl = (url) => {
+  if (!url) return '';
+  const match = url.match(/\/file\/d\/([a-zA-Z0-9_-]+)/) || url.match(/id=([a-zA-Z0-9_-]+)/);
+  if (match && match[1]) {
+    return `https://drive.google.com/file/d/${match[1]}/preview`;
+  }
+  return url;
+};
+
 const Notes = () => {
   const { token, API_URL } = useContext(AuthContext);
   const [notes, setNotes] = useState([]);
@@ -436,16 +445,9 @@ const Notes = () => {
                 <button
                   onClick={() => handleOpenViewer(note)}
                   className="primary-btn"
-                  style={{ flex: 1, padding: '8px 12px', fontSize: '0.8rem', background: 'rgba(124, 58, 237, 0.15)', borderColor: '#a78bfa', color: '#a78bfa' }}
+                  style={{ flex: 1, padding: '8px 12px', fontSize: '0.85rem', background: 'rgba(124, 58, 237, 0.15)', borderColor: '#a78bfa', color: '#a78bfa', width: '100%' }}
                 >
                   📖 Preview PDF
-                </button>
-                <button
-                  onClick={(e) => handleDownloadNote(e, note)}
-                  className="secondary-btn"
-                  style={{ padding: '8px 12px', fontSize: '0.8rem' }}
-                >
-                  📥 Download
                 </button>
               </div>
             </div>
@@ -463,7 +465,7 @@ const Notes = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          background: 'rgba(5, 5, 10, 0.95)',
+          background: '#0a0b10',
           zIndex: 1000,
           display: 'flex',
           flexDirection: 'column',
@@ -477,7 +479,7 @@ const Notes = () => {
             alignItems: 'center',
             padding: '16px 24px',
             borderBottom: '1px solid var(--border-glass)',
-            background: 'rgba(13, 13, 23, 0.9)'
+            background: '#0d0e16'
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
               <span style={{ fontSize: '1.4rem' }}>📄</span>
@@ -518,149 +520,6 @@ const Notes = () => {
 
           {/* Reader Work Area (Toolbar + Document split pane) */}
           <div style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
-            
-            {/* LEFT PANE: ADVANCED PDF VIEW CONTROLLER TOOLBAR */}
-            <div style={{
-              width: '240px',
-              borderRight: '1px solid var(--border-glass)',
-              background: 'rgba(10, 10, 20, 0.8)',
-              padding: '20px',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '20px',
-              overflowY: 'auto'
-            }}>
-              {/* Zoom & Rotation */}
-              <div>
-                <strong style={{ fontSize: '0.75rem', color: 'var(--text-muted)', uppercase: true }}>View Settings</strong>
-                <div style={{ display: 'flex', gap: '6px', marginTop: '10px' }}>
-                  <button onClick={() => setPdfZoom(prev => Math.max(50, prev - 10))} style={{ flex: 1, padding: '6px', background: 'rgba(255,255,255,0.05)', border: '1px solid var(--border-glass)', borderRadius: '4px', color: 'white', cursor: 'pointer', fontSize: '0.75rem' }}>A-</button>
-                  <span style={{ fontSize: '0.75rem', alignSelf: 'center', width: '40px', textAlign: 'center' }}>{pdfZoom}%</span>
-                  <button onClick={() => setPdfZoom(prev => Math.min(200, prev + 10))} style={{ flex: 1, padding: '6px', background: 'rgba(255,255,255,0.05)', border: '1px solid var(--border-glass)', borderRadius: '4px', color: 'white', cursor: 'pointer', fontSize: '0.75rem' }}>A+</button>
-                </div>
-                <div style={{ display: 'flex', gap: '6px', marginTop: '8px' }}>
-                  <button onClick={() => setPdfRotate(prev => (prev + 90) % 360)} style={{ flex: 1, padding: '6px', background: 'rgba(255,255,255,0.05)', border: '1px solid var(--border-glass)', borderRadius: '4px', color: 'white', cursor: 'pointer', fontSize: '0.75rem' }}>🔄 Rotate 90°</button>
-                  <button onClick={() => setPdfDarkMode(!pdfDarkMode)} style={{ flex: 1, padding: '6px', background: pdfDarkMode ? 'rgba(124,58,237,0.2)' : 'rgba(255,255,255,0.05)', border: '1px solid var(--border-glass)', borderRadius: '4px', color: 'white', cursor: 'pointer', fontSize: '0.75rem' }}>🌙 Dark Mode</button>
-                </div>
-              </div>
-
-              {/* Navigation & Jump to page */}
-              <div>
-                <strong style={{ fontSize: '0.75rem', color: 'var(--text-muted)', uppercase: true }}>Navigation</strong>
-                <div style={{ display: 'flex', gap: '6px', marginTop: '10px' }}>
-                  <input
-                    type="number"
-                    min="1"
-                    max="5"
-                    value={pdfPageInput}
-                    onChange={(e) => handleUpdatePageProgress(e.target.value)}
-                    style={{
-                      width: '60px',
-                      padding: '6px',
-                      borderRadius: '4px',
-                      background: 'rgba(255,255,255,0.03)',
-                      border: '1px solid var(--border-glass)',
-                      color: 'white',
-                      fontSize: '0.75rem',
-                      textAlign: 'center'
-                    }}
-                  />
-                  <span style={{ fontSize: '0.75rem', alignSelf: 'center' }}>of 5 pages</span>
-                </div>
-                <div style={{ display: 'flex', gap: '6px', marginTop: '8px' }}>
-                  <button disabled={parseInt(pdfPageInput) <= 1} onClick={() => handleUpdatePageProgress(parseInt(pdfPageInput) - 1)} style={{ flex: 1, padding: '6px', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--border-glass)', borderRadius: '4px', color: 'white', cursor: 'pointer', fontSize: '0.75rem' }}>◀ Prev</button>
-                  <button disabled={parseInt(pdfPageInput) >= 5} onClick={() => handleUpdatePageProgress(parseInt(pdfPageInput) + 1)} style={{ flex: 1, padding: '6px', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--border-glass)', borderRadius: '4px', color: 'white', cursor: 'pointer', fontSize: '0.75rem' }}>Next ▶</button>
-                </div>
-              </div>
-
-              {/* Search Inside Document */}
-              <div>
-                <strong style={{ fontSize: '0.75rem', color: 'var(--text-muted)', uppercase: true }}>Search Text</strong>
-                <input
-                  type="text"
-                  placeholder="Find in text..."
-                  value={pdfSearchTerm}
-                  onChange={(e) => setPdfSearchTerm(e.target.value)}
-                  style={{
-                    width: '100%',
-                    padding: '8px',
-                    borderRadius: '4px',
-                    background: 'rgba(255,255,255,0.03)',
-                    border: '1px solid var(--border-glass)',
-                    color: 'white',
-                    fontSize: '0.75rem',
-                    marginTop: '10px'
-                  }}
-                />
-              </div>
-
-              {/* Page Bookmarks */}
-              <div>
-                <strong style={{ fontSize: '0.75rem', color: 'var(--text-muted)', uppercase: true }}>Page Bookmarks</strong>
-                <button
-                  onClick={() => {
-                    const p = parseInt(pdfPageInput);
-                    if (pdfBookmarks.includes(p)) {
-                      setPdfBookmarks(prev => prev.filter(x => x !== p));
-                    } else {
-                      setPdfBookmarks(prev => [...prev, p].sort());
-                    }
-                  }}
-                  style={{
-                    width: '100%',
-                    padding: '8px',
-                    background: 'rgba(255,255,255,0.05)',
-                    border: '1px solid var(--border-glass)',
-                    borderRadius: '4px',
-                    color: 'white',
-                    cursor: 'pointer',
-                    fontSize: '0.75rem',
-                    marginTop: '10px',
-                    textAlign: 'left'
-                  }}
-                >
-                  {pdfBookmarks.includes(parseInt(pdfPageInput)) ? '★ Unbookmark Page' : '☆ Bookmark Page ' + pdfPageInput}
-                </button>
-                <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap', marginTop: '8px' }}>
-                  {pdfBookmarks.map(p => (
-                    <span
-                      key={p}
-                      onClick={() => handleUpdatePageProgress(p)}
-                      style={{ fontSize: '0.65rem', background: '#8b5cf6', padding: '2px 6px', borderRadius: '4px', cursor: 'pointer' }}
-                    >
-                      P. {p}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Document actions */}
-              <div>
-                <strong style={{ fontSize: '0.75rem', color: 'var(--text-muted)', uppercase: true }}>Actions</strong>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '10px' }}>
-                  <button onClick={handleCopyTextSimulated} style={{ padding: '8px', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--border-glass)', borderRadius: '4px', color: 'white', cursor: 'pointer', fontSize: '0.75rem', textAlign: 'left' }}>📋 Copy Page Text</button>
-                  <button onClick={handlePrintSimulated} style={{ padding: '8px', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--border-glass)', borderRadius: '4px', color: 'white', cursor: 'pointer', fontSize: '0.75rem', textAlign: 'left' }}>🖨️ Print Sheet</button>
-                  <button onClick={(e) => handleDownloadNote(e, activeNote)} style={{ padding: '8px', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--border-glass)', borderRadius: '4px', color: 'white', cursor: 'pointer', fontSize: '0.75rem', textAlign: 'left' }}>📥 Download PDF</button>
-                </div>
-              </div>
-
-              {/* Recent Pages */}
-              <div>
-                <strong style={{ fontSize: '0.75rem', color: 'var(--text-muted)', uppercase: true }}>Recent Pages</strong>
-                <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap', marginTop: '10px' }}>
-                  {recentPages.map(p => (
-                    <span
-                      key={p}
-                      onClick={() => handleUpdatePageProgress(p)}
-                      style={{ fontSize: '0.65rem', background: 'rgba(255,255,255,0.08)', padding: '2px 6px', borderRadius: '4px', cursor: 'pointer' }}
-                    >
-                      Page {p}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-            </div>
 
             {/* CENTER PANE: DOCUMENT PREVIEW CONTAINER */}
             <div style={{
@@ -673,45 +532,58 @@ const Notes = () => {
             }}>
               
               {/* Simulated Paper Sheets */}
-              <div style={{
-                width: '100%',
-                maxWidth: '800px',
-                background: pdfDarkMode ? '#1e1e2f' : '#ffffff',
-                border: '1px solid var(--border-glass)',
-                borderRadius: '8px',
-                padding: '48px',
-                boxShadow: '0 10px 25px rgba(0,0,0,0.5)',
-                color: pdfDarkMode ? '#e2e8f0' : '#1e293b',
-                transform: `scale(${pdfZoom / 100}) rotate(${pdfRotate}deg)`,
-                transformOrigin: 'top center',
-                transition: 'transform 0.2s ease, background 0.3s ease',
-                minHeight: '800px'
-              }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid rgba(124,58,237,0.2)', paddingBottom: '12px', marginBottom: '24px', fontSize: '0.75rem', color: 'var(--text-muted)' }}>
-                  <span>Subject: {activeNote.subject}</span>
-                  <span>Page {pdfPageInput} of 5</span>
+              {activeNote.pdfUrl ? (
+                <div style={{ width: '100%', height: '100%', minHeight: '750px', background: '#ffffff', borderRadius: '8px', overflow: 'hidden', border: '1px solid var(--border-glass)', position: 'relative' }}>
+                  <div style={{ position: 'absolute', top: 0, right: 0, width: '120px', height: '60px', zIndex: 10, background: 'transparent' }} />
+                  <iframe
+                    src={getGoogleDriveEmbedUrl(activeNote.pdfUrl)}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 'none', minHeight: '750px' }}
+                    allow="autoplay"
+                  ></iframe>
                 </div>
+              ) : (
+                <div style={{
+                  width: '100%',
+                  maxWidth: '800px',
+                  background: pdfDarkMode ? '#1e1e2f' : '#ffffff',
+                  border: '1px solid var(--border-glass)',
+                  borderRadius: '8px',
+                  padding: '48px',
+                  boxShadow: '0 10px 25px rgba(0,0,0,0.5)',
+                  color: pdfDarkMode ? '#e2e8f0' : '#1e293b',
+                  transform: `scale(${pdfZoom / 100}) rotate(${pdfRotate}deg)`,
+                  transformOrigin: 'top center',
+                  transition: 'transform 0.2s ease, background 0.3s ease',
+                  minHeight: '800px'
+                }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid rgba(124,58,237,0.2)', paddingBottom: '12px', marginBottom: '24px', fontSize: '0.75rem', color: 'var(--text-muted)' }}>
+                    <span>Subject: {activeNote.subject}</span>
+                    <span>Page {pdfPageInput} of 5</span>
+                  </div>
 
-                {/* Highlight/Search highlighting decorator */}
-                <div style={{ fontSize: '1rem', lineHeight: '1.8', fontFamily: 'Georgia, serif', whiteSpace: 'pre-wrap' }}>
-                  {/* We map search terms to highlighted span nodes */}
-                  {(() => {
-                    const textContent = noteContents[activeNote.title] || `Document notes for ${activeNote.title} are currently being populated. Check back in a few seconds.`;
-                    
-                    if (pdfSearchTerm) {
-                      const regex = new RegExp(`(${pdfSearchTerm})`, 'gi');
-                      const parts = textContent.split(regex);
-                      return parts.map((part, idx) => {
-                        const isMatch = part.toLowerCase() === pdfSearchTerm.toLowerCase();
-                        return isMatch 
-                          ? <mark key={idx} style={{ background: '#f59e0b', color: 'black', borderRadius: '2px', padding: '1px 3px' }}>{part}</mark>
-                          : part;
-                      });
-                    }
-                    return textContent;
-                  })()}
+                  {/* Highlight/Search highlighting decorator */}
+                  <div style={{ fontSize: '1rem', lineHeight: '1.8', fontFamily: 'Georgia, serif', whiteSpace: 'pre-wrap' }}>
+                    {/* We map search terms to highlighted span nodes */}
+                    {(() => {
+                      const textContent = noteContents[activeNote.title] || `Document notes for ${activeNote.title} are currently being populated. Check back in a few seconds.`;
+                      
+                      if (pdfSearchTerm) {
+                        const regex = new RegExp(`(${pdfSearchTerm})`, 'gi');
+                        const parts = textContent.split(regex);
+                        return parts.map((part, idx) => {
+                          const isMatch = part.toLowerCase() === pdfSearchTerm.toLowerCase();
+                          return isMatch 
+                            ? <mark key={idx} style={{ background: '#f59e0b', color: 'black', borderRadius: '2px', padding: '1px 3px' }}>{part}</mark>
+                            : part;
+                        });
+                      }
+                      return textContent;
+                    })()}
+                  </div>
                 </div>
-              </div>
+              )}
 
             </div>
 

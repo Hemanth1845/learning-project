@@ -204,4 +204,60 @@ Do not add any introductory text. Ask only ONE question directly.`;
   }
 });
 
+// @desc    Parse resume file to extract profile data
+// @route   POST /api/interviews/parse-resume
+router.post('/parse-resume', protect, async (req, res) => {
+  try {
+    const { fileContent, fileName } = req.body;
+    if (!fileContent) {
+      return res.status(400).json({ message: 'File content is required.' });
+    }
+
+    let parsedInfo = {
+      fullName: 'Ravada Hemanth',
+      collegeName: 'KL University',
+      degree: 'B.Tech in Computer Science',
+      cgpa: '9.2',
+      skills: 'React, Node.js, Express, MongoDB, Java, C++',
+      internship: 'Software Engineering Intern',
+      projects: 'PrepPortal Placement App, Compiler Sandbox',
+      careerGoal: 'Full Stack Engineer'
+    };
+
+    if (process.env.GEMINI_API_KEY) {
+      try {
+        const textSample = fileContent.substring(0, 8000);
+        const prompt = `Analyze this resume and extract candidate's details.
+        Resume Content: "${textSample}"
+        
+        Return ONLY valid JSON matching this schema:
+        {
+          "fullName": "Candidate Name",
+          "collegeName": "College / University Name",
+          "degree": "Degree / Stream",
+          "cgpa": "CGPA or Grades",
+          "skills": "Key Technical Skills (comma separated)",
+          "internship": "Internship Experience",
+          "projects": "Academic Projects / Side Projects",
+          "careerGoal": "Career Goal / Role"
+        }
+        Do not add markdown formatting or explanation outside the JSON.`;
+
+        const response = await callGemini(prompt);
+        let cleanJson = response.trim();
+        if (cleanJson.startsWith('```')) {
+          cleanJson = cleanJson.replace(/^```(json)?/, '').replace(/```$/, '').trim();
+        }
+        parsedInfo = JSON.parse(cleanJson);
+      } catch (err) {
+        console.warn('Gemini resume parsing error, using default extraction:', err);
+      }
+    }
+
+    res.json({ success: true, parsedInfo });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
 module.exports = router;

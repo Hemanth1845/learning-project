@@ -49,6 +49,10 @@ const LessonSchema = new mongoose.Schema({
     type: String,
     default: ''
   },
+  pdfUrl: {
+    type: String,
+    default: ''
+  },
   order: {
     type: Number,
     required: true

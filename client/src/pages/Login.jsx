@@ -95,16 +95,6 @@ const Login = () => {
           </button>
         </form>
 
-        <div style={{ display: 'flex', alignItems: 'center', margin: '24px 0', color: 'var(--text-muted)', fontSize: '0.8rem' }}>
-          <div style={{ flex: 1, height: '1px', background: 'var(--border-glass)' }}></div>
-          <span style={{ padding: '0 12px' }}>OR</span>
-          <div style={{ flex: 1, height: '1px', background: 'var(--border-glass)' }}></div>
-        </div>
-
-        <button onClick={handleGoogleSignIn} className="google-btn" disabled={loading}>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google" style={{ width: '18px', height: '18px' }} />
-          Continue with Google
-        </button>
 
         <p style={{ marginTop: '24px', textAlign: 'center', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
           Don't have an account?{' '}

@@ -65,6 +65,19 @@ const UserSchema = new mongoose.Schema({
     type: String,
     default: 'Computer Science & Engineering'
   },
+  phoneNumber: {
+    type: String,
+    default: ''
+  },
+  selectedCourse: {
+    type: String,
+    default: 'Full Stack Development'
+  },
+  plan: {
+    type: String,
+    enum: ['Free', 'Pro', 'Lifetime'],
+    default: 'Free'
+  },
   createdAt: {
     type: Date,
     default: Date.now

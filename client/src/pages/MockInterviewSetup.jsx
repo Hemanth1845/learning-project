@@ -16,6 +16,60 @@ const MockInterviewSetup = () => {
   // Resume state
   const [resumeText, setResumeText] = useState('');
   const [resumeLoading, setResumeLoading] = useState(false);
+  const [parsedProfile, setParsedProfile] = useState(null);
+  const [uploadError, setUploadError] = useState('');
+  const [voiceOnly, setVoiceOnly] = useState(false);
+
+  const handleResumeFileUpload = async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    setResumeLoading(true);
+    setUploadError('');
+
+    try {
+      const reader = new FileReader();
+      reader.onload = async () => {
+        const fileContent = reader.result;
+        try {
+          const res = await fetch(`${API_URL}/interviews/parse-resume`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify({ fileContent, fileName: file.name })
+          });
+          if (res.ok) {
+            const data = await res.json();
+            if (data.success && data.parsedInfo) {
+              setParsedProfile(data.parsedInfo);
+              const formatted = `Name: ${data.parsedInfo.fullName}
+College: ${data.parsedInfo.collegeName}
+Degree: ${data.parsedInfo.degree}
+CGPA: ${data.parsedInfo.cgpa}
+Skills: ${data.parsedInfo.skills}
+Internship: ${data.parsedInfo.internship}
+Projects: ${data.parsedInfo.projects}
+Career Goal: ${data.parsedInfo.careerGoal}`;
+              setResumeText(formatted);
+            }
+          } else {
+            const err = await res.json();
+            setUploadError(err.message || 'Failed to parse resume');
+          }
+        } catch (err) {
+          console.error(err);
+          setUploadError('Network error parsing resume');
+        } finally {
+          setResumeLoading(false);
+        }
+      };
+      reader.readAsText(file);
+    } catch (err) {
+      console.error(err);
+      setResumeLoading(false);
+    }
+  };
 
   useEffect(() => {
     if (token) {
@@ -90,8 +144,8 @@ ${r.projectBullets || ''}`;
   ];
 
   const handleStartSession = () => {
-    navigate(`/mock-interview/call?mode=${selectedMode}&company=${selectedCompany}&interviewer=${selectedInterviewer}`, {
-      state: { resumeText }
+    navigate(`/mock-interview/call?mode=${selectedMode}&company=${selectedCompany}&interviewer=${selectedInterviewer}&voiceOnly=${voiceOnly}`, {
+      state: { resumeText, parsedProfile }
     });
   };
 
@@ -179,22 +233,43 @@ ${r.projectBullets || ''}`;
           </div>
 
           {selectedMode === 'Resume' && (
-            <div className="glass-card" style={{ marginTop: '12px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-              <h4 style={{ color: 'white', fontWeight: 600, fontSize: '0.98rem' }}>📋 Resume Text for AI Interview</h4>
+            <div className="glass-card" style={{ marginTop: '12px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <h4 style={{ color: 'white', fontWeight: 600, fontSize: '0.98rem' }}>📄 Upload Resume for AI Analysis</h4>
               <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>
-                We pre-loaded your platform resume profile details. Edit or paste custom resume info below:
+                Upload your resume (.txt, .pdf, .docx). Our AI will parse the details and build a custom interview checklist!
               </p>
-              {resumeLoading ? (
-                <div style={{ color: 'var(--accent-secondary)', fontSize: '0.85rem' }}>Loading resume profile...</div>
-              ) : (
-                <textarea 
-                  className="form-input" 
-                  rows="6" 
-                  placeholder="Skills: React, Java... Project: E-Commerce..." 
-                  value={resumeText}
-                  onChange={(e) => setResumeText(e.target.value)}
-                  style={{ resize: 'none', background: 'rgba(0,0,0,0.25)', fontSize: '0.88rem', color: 'white' }}
+              
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                <input 
+                  type="file" 
+                  accept=".txt,.pdf,.docx"
+                  onChange={handleResumeFileUpload} 
+                  style={{
+                    padding: '10px',
+                    background: 'rgba(255,255,255,0.03)',
+                    border: '1px solid var(--border-glass)',
+                    borderRadius: '6px',
+                    color: 'white',
+                    cursor: 'pointer'
+                  }}
                 />
+                {resumeLoading && <span style={{ fontSize: '0.8rem', color: 'var(--accent-secondary)' }}>⏳ Parsing resume contents with Gemini AI...</span>}
+                {uploadError && <span style={{ fontSize: '0.8rem', color: 'var(--color-hard)' }}>❌ {uploadError}</span>}
+              </div>
+
+              {parsedProfile && (
+                <div style={{ marginTop: '12px', background: 'rgba(255,255,255,0.01)', padding: '16px', borderRadius: '8px', border: '1px solid var(--border-glass)' }}>
+                  <h5 style={{ color: 'white', fontSize: '0.9rem', marginBottom: '12px', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '6px' }}>
+                    ✓ Extracted Candidate Information
+                  </h5>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '0.85rem' }}>
+                    <div><strong style={{ color: 'var(--text-muted)' }}>Name:</strong> <span style={{ color: 'white' }}>{parsedProfile.fullName}</span></div>
+                    <div><strong style={{ color: 'var(--text-muted)' }}>College:</strong> <span style={{ color: 'white' }}>{parsedProfile.collegeName}</span></div>
+                    <div><strong style={{ color: 'var(--text-muted)' }}>Degree/Grades:</strong> <span style={{ color: 'white' }}>{parsedProfile.degree} (CGPA: {parsedProfile.cgpa})</span></div>
+                    <div><strong style={{ color: 'var(--text-muted)' }}>Key Skills:</strong> <span style={{ color: 'var(--accent-secondary)' }}>{parsedProfile.skills}</span></div>
+                    <div><strong style={{ color: 'var(--text-muted)' }}>Projects:</strong> <span style={{ color: 'white' }}>{parsedProfile.projects}</span></div>
+                  </div>
+                </div>
               )}
             </div>
           )}
@@ -322,6 +397,15 @@ ${r.projectBullets || ''}`;
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <span style={{ color: 'var(--text-muted)' }}>Duration</span>
                 <span style={{ color: 'var(--accent-secondary)', fontWeight: 700 }}>15 Minutes</span>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: '1px solid var(--border-glass)', paddingTop: '10px', marginTop: '4px' }}>
+                <span style={{ color: 'white', fontSize: '0.85rem', fontWeight: 600 }}>🎙️ Voice-Only Practice Mode</span>
+                <input 
+                  type="checkbox" 
+                  checked={voiceOnly} 
+                  onChange={(e) => setVoiceOnly(e.target.checked)} 
+                  style={{ width: '18px', height: '18px', cursor: 'pointer' }}
+                />
               </div>
             </div>
 

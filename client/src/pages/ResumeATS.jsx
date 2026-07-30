@@ -353,26 +353,46 @@ const ResumeATS = () => {
   const getTemplateStyle = () => {
     switch (selectedTemplate) {
       case 'modern':
-        return {
-          fontFamily: "'Montserrat', sans-serif",
-          color: '#2d3748',
-          borderLeft: '4px solid #7c3aed',
-          borderRadius: '4px'
-        };
+        return { fontFamily: "'Montserrat', sans-serif", color: '#2d3748', borderLeft: '4px solid #7c3aed', paddingLeft: '16px' };
       case 'executive':
-        return {
-          fontFamily: "'Outfit', sans-serif",
-          color: '#0f172a',
-          borderTop: '6px solid #1e3a8a',
-          borderRadius: '0px'
-        };
+        return { fontFamily: "'Outfit', sans-serif", color: '#0f172a', borderTop: '6px solid #1e3a8a', paddingTop: '16px' };
+      case 'photogenic':
+        return { fontFamily: "'Inter', sans-serif", color: '#1e293b', borderTop: '4px solid #10b981', paddingTop: '16px' };
+      case 'minimalist':
+        return { fontFamily: "Arial, sans-serif", color: '#4b5563', fontSize: '0.76rem', lineHeight: '1.3' };
+      case 'tech-giant':
+        return { fontFamily: "'Courier New', monospace", color: '#047857', borderLeft: '6px solid #047857', paddingLeft: '16px' };
+      case 'gradient-flow':
+        return { fontFamily: "'Outfit', sans-serif", color: '#4338ca', borderImage: 'linear-gradient(to right, #4f46e5, #06b6d4) 1', borderTop: '5px solid', paddingTop: '16px' };
+      case 'sidebar-split':
+        return { fontFamily: "'Inter', sans-serif", color: '#1e293b', borderLeft: '4px solid #3b82f6', paddingLeft: '16px' };
+      case 'slate-modern':
+        return { fontFamily: "'Montserrat', sans-serif", color: '#334155', borderTop: '4px solid #475569', paddingTop: '16px' };
+      case 'warm-creative':
+        return { fontFamily: "Georgia, serif", color: '#991b1b', backgroundColor: '#fffdfa', borderLeft: '4px solid #b91c1c', paddingLeft: '16px' };
+      case 'emerald-pro':
+        return { fontFamily: "'Outfit', sans-serif", color: '#065f46', borderLeft: '5px solid #059669', paddingLeft: '16px' };
+      case 'metro-chic':
+        return { fontFamily: "'Montserrat', sans-serif", color: '#111827', borderTop: '5px solid #e11d48', paddingTop: '16px' };
+      case 'academic':
+        return { fontFamily: "Times New Roman, serif", color: '#000000', lineHeight: '1.5' };
+      case 'startup-founder':
+        return { fontFamily: "'Outfit', sans-serif", color: '#111827', borderLeft: '5px solid #d946ef', paddingLeft: '16px' };
+      case 'elegant-serif':
+        return { fontFamily: "Georgia, serif", color: '#1e1b4b', borderBottom: '3px double #312e81', paddingBottom: '16px' };
+      case 'navy-dock':
+        return { fontFamily: "'Inter', sans-serif", color: '#0f172a', borderTop: '6px solid #1e40af', paddingTop: '16px' };
+      case 'future-tech':
+        return { fontFamily: "'Lucida Console', monospace", color: '#0f172a', border: '1px solid #e2e8f0', padding: '20px' };
+      case 'clean-retro':
+        return { fontFamily: "Courier, monospace", color: '#374151', borderTop: '3px dashed #6b7280', paddingTop: '16px' };
+      case 'ruby-premium':
+        return { fontFamily: "'Outfit', sans-serif", color: '#991b1b', borderTop: '5px solid #be123c', paddingTop: '16px' };
+      case 'gold-tier':
+        return { fontFamily: "'Montserrat', sans-serif", color: '#111827', borderTop: '6px solid #d97706', paddingTop: '16px' };
       case 'classic':
       default:
-        return {
-          fontFamily: "Georgia, 'Times New Roman', serif",
-          color: '#111827',
-          borderRadius: '4px'
-        };
+        return { fontFamily: "Georgia, 'Times New Roman', serif", color: '#111827' };
     }
   };
 
@@ -496,6 +516,17 @@ const ResumeATS = () => {
                   onChange={(e) => setResumeData({ ...resumeData, linkedin: e.target.value })} 
                 />
               </div>
+            </div>
+
+            <div className="form-group">
+              <label>Custom Profile Photo (Base64/Image URL for templates with photo)</label>
+              <input 
+                type="text" 
+                className="form-input" 
+                value={resumeData.photo || ''} 
+                onChange={(e) => setResumeData({ ...resumeData, photo: e.target.value })} 
+                placeholder="Pasted image URL or Base64 data..."
+              />
             </div>
 
             {/* Dynamic sections render in form */}
@@ -633,24 +664,33 @@ const ResumeATS = () => {
 
               {/* Template selector buttons */}
               <div style={{ display: 'flex', gap: '8px' }}>
-                {['classic', 'modern', 'executive'].map((t) => (
-                  <button
-                    key={t}
-                    onClick={() => setSelectedTemplate(t)}
-                    className="filter-tag"
-                    style={{
-                      flex: 1,
-                      textAlign: 'center',
-                      borderColor: selectedTemplate === t ? 'var(--accent-secondary)' : 'var(--border-glass)',
-                      background: selectedTemplate === t ? 'rgba(0, 242, 254, 0.1)' : 'transparent',
-                      color: selectedTemplate === t ? 'white' : 'var(--text-muted)',
-                      textTransform: 'capitalize',
-                      fontSize: '0.8rem'
-                    }}
-                  >
-                    🎨 {t} Template
-                  </button>
-                ))}
+                <select
+                  value={selectedTemplate}
+                  onChange={(e) => setSelectedTemplate(e.target.value)}
+                  className="form-input"
+                  style={{ flex: 1, background: 'rgba(255,255,255,0.05)', color: 'white', border: '1px solid var(--border-glass)', borderRadius: '6px', fontSize: '0.85rem', padding: '8px 12px' }}
+                >
+                  <option value="classic">🎨 Classic Georgia Serif</option>
+                  <option value="modern">🎨 Modern Indigo Left-Accent</option>
+                  <option value="executive">🎨 Executive Blue Top-Border</option>
+                  <option value="photogenic">🎨 Photogenic Emerald Photo-Frame</option>
+                  <option value="minimalist">🎨 Minimalist Clean Gray</option>
+                  <option value="tech-giant">🎨 Tech-Giant Teal Monospace</option>
+                  <option value="gradient-flow">🎨 Gradient-Flow Indigo/Cyan Border</option>
+                  <option value="sidebar-split">🎨 Sidebar-Split Two-Column Grid</option>
+                  <option value="slate-modern">🎨 Slate-Modern Dark Grey</option>
+                  <option value="warm-creative">🎨 Warm-Creative Off-White Crimson</option>
+                  <option value="emerald-pro">🎨 Emerald-Pro Green Left-Accent</option>
+                  <option value="metro-chic">🎨 Metro-Chic Rose Bold Header</option>
+                  <option value="academic">🎨 Academic Traditional spacing</option>
+                  <option value="startup-founder">🎨 Startup-Founder Magenta Left-Accent</option>
+                  <option value="elegant-serif">🎨 Elegant-Serif Double Underline</option>
+                  <option value="navy-dock">🎨 Navy-Dock Dark Blue Top</option>
+                  <option value="future-tech">🎨 Future-Tech Monospace Grid</option>
+                  <option value="clean-retro">🎨 Clean-Retro Dashed Separator</option>
+                  <option value="ruby-premium">🎨 Ruby-Premium Deep Red Accents</option>
+                  <option value="gold-tier">🎨 Gold-Tier Orange Accent Strip</option>
+                </select>
               </div>
             </div>
 
@@ -671,11 +711,20 @@ const ResumeATS = () => {
               }}
             >
               {/* Header */}
-              <div style={{ textAlign: 'center', borderBottom: '1px solid #1f2937', paddingBottom: '10px', marginBottom: '14px' }}>
-                <h2 style={{ fontSize: '1.8rem', fontWeight: 'bold', margin: 0, color: 'inherit' }}>{resumeData.name}</h2>
-                <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', flexWrap: 'wrap', marginTop: '6px', fontSize: '0.75rem', color: '#4b5563' }}>
-                  <span>{resumeData.email}</span> | <span>{resumeData.phone}</span> | <span>{resumeData.github}</span> | <span>{resumeData.linkedin}</span>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #1f2937', paddingBottom: '14px', marginBottom: '14px' }}>
+                <div style={{ textAlign: ['classic', 'minimalist', 'academic'].includes(selectedTemplate) ? 'center' : 'left', flex: 1 }}>
+                  <h2 style={{ fontSize: '1.8rem', fontWeight: 'bold', margin: 0, color: 'inherit' }}>{resumeData.name}</h2>
+                  <div style={{ display: 'flex', justifyContent: ['classic', 'minimalist', 'academic'].includes(selectedTemplate) ? 'center' : 'flex-start', gap: '8px', flexWrap: 'wrap', marginTop: '6px', fontSize: '0.75rem', color: '#4b5563' }}>
+                    <span>{resumeData.email}</span> | <span>{resumeData.phone}</span> | <span>{resumeData.github}</span> | <span>{resumeData.linkedin}</span>
+                  </div>
                 </div>
+                {(selectedTemplate === 'photogenic' || selectedTemplate === 'sidebar-split' || resumeData.photo) && (
+                  <img 
+                    src={resumeData.photo || 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=200'} 
+                    alt="Profile Photo" 
+                    style={{ width: '68px', height: '68px', borderRadius: '50%', border: '2px solid #374151', objectFit: 'cover', marginLeft: '12px' }}
+                  />
+                )}
               </div>
 
               {/* Education */}

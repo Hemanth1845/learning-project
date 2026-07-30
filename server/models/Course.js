@@ -14,6 +14,10 @@ const CourseSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  parentCategory: {
+    type: String, // 'Frontend', 'Backend', 'Database'
+    default: ''
+  },
   difficulty: {
     type: String,
     enum: ['Easy', 'Medium', 'Hard'],

@@ -12,9 +12,11 @@ const VideoCallSimulator = () => {
   const mode = query.get('mode') || 'DSA';
   const company = query.get('company') || 'General';
   const interviewerId = query.get('interviewer') || 'Priya';
+  const voiceOnly = query.get('voiceOnly') === 'true';
 
   // Get passed resume context
   const stateResumeText = location.state?.resumeText || '';
+  const parsedProfile = location.state?.parsedProfile || null;
 
   const interviewer = {
     Priya: { name: 'Priya', role: 'Senior Tech Lead', avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=250' },
@@ -41,53 +43,57 @@ const VideoCallSimulator = () => {
     fillers: 0,
     pauses: 0,
     eyeContact: 'Good',
-    smile: 'Detected',
-    introChecks: {
-      name: false,
-      college: false,
-      degree: false,
-      gpa: false,
-      skills: false,
-      internship: false,
-      projects: false,
-      goal: false
-    }
+    smile: 'Detected'
   });
 
   const videoRef = useRef(null);
   const recognitionRef = useRef(null);
 
   // Dynamic question constructor based on resume text
-  const generateResumeQuestions = (text) => {
-    const textLower = (text || '').toLowerCase();
-    const qs = [
-      "Welcome! Let's start with your self-introduction. Please introduce yourself, mention your college, degree, and some key highlights of your resume."
-    ];
-
-    if (textLower.includes('project') || textLower.includes('e-learning') || textLower.includes('portal') || textLower.includes('ats')) {
-      qs.push("I see you've listed some MERN stack projects on your resume, like an E-Learning Portal or AI Resume tool. Could you explain the technical architecture, key challenges, and how you integrated the AI APIs?");
+  const generateResumeQuestions = (profile, text) => {
+    const qs = [];
+    if (profile) {
+      qs.push(`Welcome ${profile.fullName || 'there'}! Let's start with your self-introduction. Please introduce yourself and mention your experience at ${profile.collegeName || 'your university'} pursuing ${profile.degree || 'your degree'}.`);
+      if (profile.projects) {
+        qs.push(`I see you've listed some amazing projects like: "${profile.projects}". Can you detail the technical architecture, the challenges you faced, and your engineering choices for these?`);
+      } else {
+        qs.push("Could you detail the most challenging software project you've listed on your resume? What made it difficult, and what engineering choices did you make?");
+      }
+      if (profile.skills) {
+        qs.push(`Your profile highlights skills in: ${profile.skills}. If you had to explain to a junior developer how some of these tools work under the hood, how would you describe their core design patterns?`);
+      } else {
+        qs.push("Given the skills and languages on your resume, how do you typically manage asynchronous operations, memory leaks, and concurrency in your code?");
+      }
+      if (profile.internship && profile.internship !== 'None') {
+        qs.push(`You mentioned your internship at ${profile.internship}. What was the most impactful feature you shipped there, and how did you measure its success?`);
+      } else {
+        qs.push("Conflict resolution is a big part of engineering. Tell me about a time when you had a technical disagreement with a teammate on a project. How was it resolved?");
+      }
+      qs.push(`Thank you. Finally, what specific aspects of your career goal: "${profile.careerGoal || 'Software Engineer'}" align with this opportunity at ${company}?`);
     } else {
-      qs.push("Could you detail the most challenging software project you've listed on your resume? What made it difficult, and what engineering choices did you make?");
+      const textLower = (text || '').toLowerCase();
+      qs.push("Welcome! Let's start with your self-introduction. Please introduce yourself, mention your college, degree, and some key highlights of your resume.");
+      if (textLower.includes('project') || textLower.includes('e-learning') || textLower.includes('portal') || textLower.includes('ats')) {
+        qs.push("I see you've listed some MERN stack projects on your resume, like an E-Learning Portal or AI Resume tool. Could you explain the technical architecture, key challenges, and how you integrated the AI APIs?");
+      } else {
+        qs.push("Could you detail the most challenging software project you've listed on your resume? What made it difficult, and what engineering choices did you make?");
+      }
+      if (textLower.includes('mongodb') || textLower.includes('sql') || textLower.includes('database') || textLower.includes('postgresql')) {
+        qs.push("Database design is crucial. Since your resume lists experience with database systems, how do you handle indexing, normalization, and choosing between SQL and NoSQL databases like MongoDB?");
+      } else if (textLower.includes('react') || textLower.includes('node') || textLower.includes('express') || textLower.includes('javascript')) {
+        qs.push("You've highlighted modern web technologies like React and Node.js. Can you explain how JWT authentication works, how you secure REST APIs, and what strategies you use to decrease page load times?");
+      } else {
+        qs.push("Given the skills and languages on your resume, how do you typically manage asynchronous operations, memory leaks, and concurrency in your code?");
+      }
+      qs.push("Conflict resolution is a big part of engineering. Tell me about a time when you had a technical disagreement with a teammate on a project. How was it resolved?");
+      qs.push(`Thank you. Finally, what specific aspects of your background make you the perfect candidate for this role at ${company}?`);
     }
-
-    if (textLower.includes('mongodb') || textLower.includes('sql') || textLower.includes('database') || textLower.includes('postgresql')) {
-      qs.push("Database design is crucial. Since your resume lists experience with database systems, how do you handle indexing, normalization, and choosing between SQL and NoSQL databases like MongoDB?");
-    } else if (textLower.includes('react') || textLower.includes('node') || textLower.includes('express') || textLower.includes('javascript')) {
-      qs.push("You've highlighted modern web technologies like React and Node.js. Can you explain how JWT authentication works, how you secure REST APIs, and what strategies you use to decrease page load times?");
-    } else {
-      qs.push("Given the skills and languages on your resume, how do you typically manage asynchronous operations, memory leaks, and concurrency in your code?");
-    }
-
-    qs.push("Conflict resolution is a big part of engineering. Tell me about a time when you had a technical disagreement with a teammate on a project. How was it resolved?");
-
-    qs.push(`Thank you. Finally, what specific aspects of your background make you the perfect candidate for this role at ${company}?`);
-
     return qs;
   };
 
   const getQuestionsList = () => {
     if (mode === 'Resume') {
-      return generateResumeQuestions(stateResumeText);
+      return generateResumeQuestions(parsedProfile, stateResumeText);
     }
     return {
       DSA: [
@@ -124,15 +130,16 @@ const VideoCallSimulator = () => {
 
   const startCamera = async () => {
     try {
-      const mediaStream = await navigator.mediaDevices.getUserMedia({
-        video: true,
+      const constraints = {
+        video: !voiceOnly,
         audio: true
-      });
+      };
+      const mediaStream = await navigator.mediaDevices.getUserMedia(constraints);
       setStream(mediaStream);
-      if (videoRef.current) {
+      if (!voiceOnly && videoRef.current) {
         videoRef.current.srcObject = mediaStream;
       }
-      setCameraOn(true);
+      setCameraOn(!voiceOnly);
       setMicOn(true);
     } catch (err) {
       console.warn('Webcam or Mic blocked / unavailable:', err);
@@ -187,18 +194,6 @@ const VideoCallSimulator = () => {
         else if (wordCount > 160) speed = 'Too Fast';
       }
 
-      // Check checklist
-      const checks = {
-        name: text.includes('name is') || text.includes('i am ') || text.includes('myself') || text.includes('hemanth') || text.includes('kumar'),
-        college: text.includes('college') || text.includes('university') || text.includes('institute') || text.includes('school') || text.includes('btech') || text.includes('b.tech'),
-        degree: text.includes('pursuing') || text.includes('degree') || text.includes('engineering') || text.includes('cse') || text.includes('btech') || text.includes('b.tech'),
-        gpa: text.includes('gpa') || text.includes('cgpa') || text.includes('percentage') || text.includes('grade') || text.includes('percent') || text.includes('pointer') || /\d\.\d/.test(text),
-        skills: text.includes('skills') || text.includes('know') || text.includes('proficient') || text.includes('react') || text.includes('java') || text.includes('python') || text.includes('html') || text.includes('css'),
-        internship: text.includes('intern') || text.includes('internship') || text.includes('worked at') || text.includes('experience'),
-        projects: text.includes('project') || text.includes('built') || text.includes('portal') || text.includes('developed') || text.includes('system') || text.includes('application'),
-        goal: text.includes('goal') || text.includes('career') || text.includes('aim') || text.includes('future') || text.includes('placement') || text.includes('secure')
-      };
-
       // Confidence drops with fillers and pauses
       const confidence = Math.max(40, Math.min(99, 90 - fillers * 6 - pauses * 10));
       const grammar = Math.max(50, Math.min(100, 96 - fillers * 2));
@@ -209,8 +204,7 @@ const VideoCallSimulator = () => {
         speed,
         grammar,
         fillers,
-        pauses,
-        introChecks: checks
+        pauses
       }));
     }
   }, [transcriptText]);
@@ -445,26 +439,28 @@ const VideoCallSimulator = () => {
             </div>
 
             {/* User Webcam Frame & Controls Stack */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '16px' }}>
-              <div className="glass-card" style={{ height: '140px', padding: 0, overflow: 'hidden', position: 'relative', background: '#11141a', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                {cameraOn ? (
-                  <video 
-                    ref={videoRef} 
-                    autoPlay 
-                    playsInline 
-                    muted 
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
-                  />
-                ) : (
-                  <div style={{ textAlign: 'center', color: 'var(--text-muted)' }}>
-                    <span style={{ fontSize: '1.5rem' }}>🚫</span>
-                    <div style={{ fontSize: '0.75rem', marginTop: '4px' }}>Webcam Off</div>
+            <div style={{ display: 'grid', gridTemplateColumns: voiceOnly ? '1fr' : '1fr 2fr', gap: '16px' }}>
+              {!voiceOnly && (
+                <div className="glass-card" style={{ height: '140px', padding: 0, overflow: 'hidden', position: 'relative', background: '#11141a', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  {cameraOn ? (
+                    <video 
+                      ref={videoRef} 
+                      autoPlay 
+                      playsInline 
+                      muted 
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                    />
+                  ) : (
+                    <div style={{ textAlign: 'center', color: 'var(--text-muted)' }}>
+                      <span style={{ fontSize: '1.5rem' }}>🚫</span>
+                      <div style={{ fontSize: '0.75rem', marginTop: '4px' }}>Webcam Off</div>
+                    </div>
+                  )}
+                  <div style={{ position: 'absolute', bottom: '6px', left: '6px', background: 'rgba(0,0,0,0.6)', padding: '2px 6px', borderRadius: '4px', fontSize: '0.65rem', color: 'white' }}>
+                    You (Candidate)
                   </div>
-                )}
-                <div style={{ position: 'absolute', bottom: '6px', left: '6px', background: 'rgba(0,0,0,0.6)', padding: '2px 6px', borderRadius: '4px', fontSize: '0.65rem', color: 'white' }}>
-                  You (Candidate)
                 </div>
-              </div>
+              )}
 
               {/* Video Controller Controls panel */}
               <div className="glass-card" style={{ display: 'flex', flexDirection: 'column', justifySelf: 'stretch', justifyContent: 'center', gap: '12px', padding: '12px' }}>
@@ -488,25 +484,27 @@ const VideoCallSimulator = () => {
                   >
                     {micOn ? '🎙️' : '🚫'}
                   </button>
-                  <button 
-                    onClick={toggleCamera}
-                    className="warroom-btn"
-                    style={{ 
-                      borderRadius: '50%', 
-                      width: '42px', 
-                      height: '42px', 
-                      display: 'flex', 
-                      alignItems: 'center', 
-                      justifyContent: 'center',
-                      fontSize: '1rem',
-                      background: cameraOn ? 'rgba(255,255,255,0.05)' : 'rgba(239,68,68,0.2)',
-                      borderColor: cameraOn ? 'var(--border-glass)' : '#ef4444',
-                      color: cameraOn ? 'white' : '#ef4444'
-                    }}
-                    title={cameraOn ? 'Turn Camera Off' : 'Turn Camera On'}
-                  >
-                    {cameraOn ? '📹' : '❌'}
-                  </button>
+                  {!voiceOnly && (
+                    <button 
+                      onClick={toggleCamera}
+                      className="warroom-btn"
+                      style={{ 
+                        borderRadius: '50%', 
+                        width: '42px', 
+                        height: '42px', 
+                        display: 'flex', 
+                        alignItems: 'center', 
+                        justifyContent: 'center',
+                        fontSize: '1rem',
+                        background: cameraOn ? 'rgba(255,255,255,0.05)' : 'rgba(239,68,68,0.2)',
+                        borderColor: cameraOn ? 'var(--border-glass)' : '#ef4444',
+                        color: cameraOn ? 'white' : '#ef4444'
+                      }}
+                      title={cameraOn ? 'Turn Camera Off' : 'Turn Camera On'}
+                    >
+                      {cameraOn ? '📹' : '❌'}
+                    </button>
+                  )}
                   <button 
                     onClick={() => { stopCameraStream(); navigate('/mock-interview'); }}
                     className="warroom-btn"
@@ -635,46 +633,19 @@ const VideoCallSimulator = () => {
             </div>
 
             {/* Conditional Introduction Analysis card */}
-            {currentRound === 0 ? (
-              <div className="glass-card" style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+            {parsedProfile ? (
+              <div className="glass-card" style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 <h4 style={{ fontSize: '0.95rem', color: 'white', borderBottom: '1px solid var(--border-glass)', paddingBottom: '8px' }}>
-                  📋 Self-Introduction Checklist
+                  📋 Candidate Profile Focus
                 </h4>
-                
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', fontSize: '0.8rem' }}>
-                  <div style={{ color: metrics.introChecks.name ? '#10b981' : '#ef4444', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                    <span>{metrics.introChecks.name ? '✅' : '❌'}</span> Full Name
-                  </div>
-                  <div style={{ color: metrics.introChecks.college ? '#10b981' : '#ef4444', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                    <span>{metrics.introChecks.college ? '✅' : '❌'}</span> College Name
-                  </div>
-                  <div style={{ color: metrics.introChecks.degree ? '#10b981' : '#ef4444', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                    <span>{metrics.introChecks.degree ? '✅' : '❌'}</span> Degree / Stream
-                  </div>
-                  <div style={{ color: metrics.introChecks.gpa ? '#10b981' : '#ef4444', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                    <span>{metrics.introChecks.gpa ? '✅' : '❌'}</span> CGPA / Grades
-                  </div>
-                  <div style={{ color: metrics.introChecks.skills ? '#10b981' : '#ef4444', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                    <span>{metrics.introChecks.skills ? '✅' : '❌'}</span> Key Technical Skills
-                  </div>
-                  <div style={{ color: metrics.introChecks.internship ? '#10b981' : '#ef4444', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                    <span>{metrics.introChecks.internship ? '✅' : '❌'}</span> Internship Experience
-                  </div>
-                  <div style={{ color: metrics.introChecks.projects ? '#10b981' : '#ef4444', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                    <span>{metrics.introChecks.projects ? '✅' : '❌'}</span> Academic Projects
-                  </div>
-                  <div style={{ color: metrics.introChecks.goal ? '#10b981' : '#ef4444', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                    <span>{metrics.introChecks.goal ? '✅' : '❌'}</span> Career Goal
-                  </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '0.8rem' }}>
+                  <div><span style={{ color: 'var(--text-muted)' }}>Name:</span> <strong style={{ color: 'white' }}>{parsedProfile.fullName}</strong></div>
+                  <div><span style={{ color: 'var(--text-muted)' }}>College:</span> <strong style={{ color: 'white' }}>{parsedProfile.collegeName}</strong></div>
+                  <div><span style={{ color: 'var(--text-muted)' }}>Degree:</span> <strong style={{ color: 'white' }}>{parsedProfile.degree}</strong></div>
+                  <div><span style={{ color: 'var(--text-muted)' }}>Skills Match:</span> <strong style={{ color: 'var(--accent-secondary)' }}>{parsedProfile.skills}</strong></div>
                 </div>
-
-                <div style={{ marginTop: '12px', borderTop: '1px solid var(--border-glass)', paddingTop: '12px' }}>
-                  <h5 style={{ color: 'var(--accent-secondary)', fontSize: '0.85rem', marginBottom: '6px', fontWeight: 600 }}>
-                    💡 Correct Introduction Format:
-                  </h5>
-                  <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)', lineHeight: '1.4', background: 'rgba(0,0,0,0.2)', padding: '10px', borderRadius: '4px' }}>
-                    "Hi Priya, my name is [Name]. I am pursuing B.Tech in CSE at [College] with a CGPA of [GPA]. I am proficient in [Skills]. I recently completed an internship at [Internship] focusing on full stack modules. I have built [Projects] using React & Node. My career goal is to secure a software engineering role."
-                  </p>
+                <div style={{ borderTop: '1px solid var(--border-glass)', paddingTop: '10px', marginTop: '4px', fontSize: '0.75rem', color: 'var(--text-muted)' }}>
+                  Tip: Make sure to mention details from your projects ("{parsedProfile.projects?.substring(0, 40)}...") during the conversation!
                 </div>
               </div>
             ) : (
@@ -683,14 +654,12 @@ const VideoCallSimulator = () => {
                   📋 Resume Match Focus
                 </h4>
                 <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', lineHeight: '1.4' }}>
-                  The AI interviewer is evaluating technical concepts listed in your resume:
+                  The AI interviewer is evaluating concepts based on your uploaded resume text:
                 </p>
                 <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginTop: '4px' }}>
                   <span style={{ fontSize: '0.7rem', background: 'rgba(0, 242, 254, 0.08)', border: '1px solid var(--accent-secondary)', padding: '2px 8px', borderRadius: '4px', color: 'var(--accent-secondary)' }}>MERN Stack</span>
-                  <span style={{ fontSize: '0.7rem', background: 'rgba(0, 242, 254, 0.08)', border: '1px solid var(--accent-secondary)', padding: '2px 8px', borderRadius: '4px', color: 'var(--accent-secondary)' }}>React.js</span>
-                  <span style={{ fontSize: '0.7rem', background: 'rgba(0, 242, 254, 0.08)', border: '1px solid var(--accent-secondary)', padding: '2px 8px', borderRadius: '4px', color: 'var(--accent-secondary)' }}>Node.js</span>
-                  <span style={{ fontSize: '0.7rem', background: 'rgba(0, 242, 254, 0.08)', border: '1px solid var(--accent-secondary)', padding: '2px 8px', borderRadius: '4px', color: 'var(--accent-secondary)' }}>Databases</span>
-                  <span style={{ fontSize: '0.7rem', background: 'rgba(0, 242, 254, 0.08)', border: '1px solid var(--accent-secondary)', padding: '2px 8px', borderRadius: '4px', color: 'var(--accent-secondary)' }}>JWT Security</span>
+                  <span style={{ fontSize: '0.7rem', background: 'rgba(0, 242, 254, 0.08)', border: '1px solid var(--accent-secondary)', padding: '2px 8px', borderRadius: '4px', color: 'var(--accent-secondary)' }}>Engineering Projects</span>
+                  <span style={{ fontSize: '0.7rem', background: 'rgba(0, 242, 254, 0.08)', border: '1px solid var(--accent-secondary)', padding: '2px 8px', borderRadius: '4px', color: 'var(--accent-secondary)' }}>Technical Skills</span>
                 </div>
                 <div style={{ borderTop: '1px solid var(--border-glass)', paddingTop: '10px', marginTop: '4px', fontSize: '0.75rem', color: 'var(--text-muted)' }}>
                   Tip: Use the STAR method (Situation, Task, Action, Result) to explain project challenges.

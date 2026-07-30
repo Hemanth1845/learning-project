@@ -174,8 +174,8 @@ router.post('/chapters/:id/bookmark', protect, async (req, res) => {
 // @route   POST /api/theory/subjects
 router.post('/subjects', protect, adminOnly, async (req, res) => {
   try {
-    const { id, title, icon, order } = req.body;
-    const newSubj = await TheorySubject.create({ id, title, icon, order });
+    const { id, title, icon, order, description } = req.body;
+    const newSubj = await TheorySubject.create({ id, title, icon, order, description });
     res.status(201).json(newSubj);
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -231,6 +231,23 @@ router.delete('/subjects/:id', protect, adminOnly, async (req, res) => {
     const TheoryChapter = require('../models/TheoryChapter');
     await TheoryChapter.deleteMany({ subjectId: req.params.id });
     res.json({ message: 'Subject and its chapters deleted successfully' });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// @desc    Update theory subject
+// @route   PUT /api/theory/subjects/:id
+router.put('/subjects/:id', protect, adminOnly, async (req, res) => {
+  try {
+    const { title, icon, order, description } = req.body;
+    const updated = await TheorySubject.findOneAndUpdate(
+      { id: req.params.id },
+      { title, icon, order, description },
+      { new: true }
+    );
+    if (!updated) return res.status(404).json({ message: 'Subject not found' });
+    res.json(updated);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

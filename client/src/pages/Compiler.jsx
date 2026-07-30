@@ -47,7 +47,8 @@ const boilerplates = {
   javascript: `// JavaScript (Node.js) Environment\nconsole.log("Hello, World!");\n\n// Reading from Stdin Example:\n// const fs = require('fs');\n// const input = fs.readFileSync(0, 'utf-8');\n// console.log("Input received:", input);`,
   python: `# Python 3 Environment\nprint("Hello, World!")\n\n# Reading from Stdin Example:\n# import sys\n# lines = sys.stdin.read().split()\n# print("Inputs:", lines)`,
   java: `// Java 21 Environment\n// Keep class name as "Solution" for compilation\nimport java.util.*;\n\npublic class Solution {\n    public static void main(String[] args) {\n        System.out.println("Hello, World!");\n        \n        // Reading from Stdin Example:\n        // Scanner sc = new Scanner(System.in);\n        // if (sc.hasNext()) {\n        //     System.out.println("Input: " + sc.next());\n        // }\n    }\n}`,
-  cpp: `// C++ (GCC) Environment\n#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << "Hello, World!" << endl;\n    return 0;\n}`
+  cpp: `// C++ (GCC) Environment\n#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << "Hello, World!" << endl;\n    return 0;\n}`,
+  c: `// C (GCC) Environment\n#include <stdio.h>\n\nint main() {\n    printf("Hello, World!\\n");\n    return 0;\n}`
 };
 
 const themes = {
@@ -229,10 +230,11 @@ const Compiler = () => {
               className="form-input"
               style={{ background: 'rgba(0,0,0,0.3)', height: '36px', padding: '0 12px', fontSize: '0.85rem', width: '170px' }}
             >
-              <option value="javascript">JavaScript (Node)</option>
-              <option value="python">Python 3</option>
-              <option value="java">Java 21</option>
+              <option value="c">C (GCC)</option>
               <option value="cpp">C++ (GCC)</option>
+              <option value="java">Java 21</option>
+              <option value="python">Python 3</option>
+              <option value="javascript">JavaScript (Node)</option>
             </select>
           </div>
 

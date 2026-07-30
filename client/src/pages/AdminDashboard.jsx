@@ -39,12 +39,13 @@ const AdminDashboard = () => {
     id: null, subjectId: '', title: '', order: 1, content: '',
     cppCode: '', javaCode: '', pythonCode: '',
     interviewTips: '', commonMistakes: '',
-    questionText: '', answerText: '', pdfUrl: ''
+    questionText: '', answerText: '', pdfUrl: '',
+    diagramUrl: ''
   });
 
   // Theory Subject creation states
   const [showSubjectModal, setShowSubjectModal] = useState(false);
-  const [subjectForm, setSubjectForm] = useState({ id: '', title: '', icon: '📖', order: 1 });
+  const [subjectForm, setSubjectForm] = useState({ id: '', title: '', icon: '📖', order: 1, description: '', mode: 'create' });
 
   // Aptitude states
   const [aptitudeData, setAptitudeData] = useState(null);
@@ -64,16 +65,40 @@ const AdminDashboard = () => {
   const [courseRequests, setCourseRequests] = useState([]);
   const [requestsLoading, setRequestsLoading] = useState(false);
 
+  // User doubts states
+  const [doubtsList, setDoubtsList] = useState([]);
+  const [doubtsLoading, setDoubtsLoading] = useState(false);
+  const [selectedDoubtDetail, setSelectedDoubtDetail] = useState(null);
+
+  // Live Activity Feed states
+  const [activitiesList, setActivitiesList] = useState([]);
+  const [activitiesLoading, setActivitiesLoading] = useState(false);
+
+  // Card FX Settings
+  const [cssSettings, setCssSettings] = useState(() => {
+    const saved = localStorage.getItem('app-css-settings');
+    return saved ? JSON.parse(saved) : {
+      hoverFx: '3d-tilt',
+      borderRadius: '16px',
+      glassBlur: '8px',
+      globalScale: '1.0'
+    };
+  });
+
+  // Project submissions states
+  const [submissions, setSubmissions] = useState([]);
+  const [submissionsLoading, setSubmissionsLoading] = useState(false);
+
   // Modals visibility
   const [showCourseModal, setShowCourseModal] = useState(false);
   const [showLessonModal, setShowLessonModal] = useState(false);
   
   // Course form states
-  const [courseForm, setCourseForm] = useState({ id: null, title: '', description: '', category: 'Core CS', difficulty: 'Easy', thumbnail: '', pdfUrl: '', externalLink: '', practicePageUrl: '' });
+  const [courseForm, setCourseForm] = useState({ id: null, title: '', description: '', category: 'Core CS', parentCategory: '', difficulty: 'Easy', thumbnail: '', pdfUrl: '', externalLink: '', practicePageUrl: '' });
   
   // Lesson form states
   const [lessonForm, setLessonForm] = useState({
-    id: null, title: '', content: '', videoUrl: '', order: 1,
+    id: null, title: '', content: '', videoUrl: '', pdfUrl: '', order: 1,
     quizTitle: '', quizReward: 50,
     questions: []
   });
@@ -107,6 +132,12 @@ const AdminDashboard = () => {
         fetchAptitudeData();
       } else if (activeTab === 'requests') {
         fetchCourseRequests();
+      } else if (activeTab === 'projects') {
+        fetchSubmissions();
+      } else if (activeTab === 'doubts') {
+        fetchDoubts();
+      } else if (activeTab === 'live-feed') {
+        fetchActivities();
       }
     }
   }, [token, activeTab]);
@@ -135,6 +166,37 @@ const AdminDashboard = () => {
       console.error(err);
     } finally {
       setUsersLoading(false);
+    }
+  };
+
+  const applyGlobalCssSettings = (settings) => {
+    const root = document.documentElement;
+    root.style.setProperty('--card-border-radius', settings.borderRadius);
+    root.style.setProperty('--card-glass-blur', settings.glassBlur);
+    root.style.setProperty('--global-text-scale', settings.globalScale);
+    
+    document.body.classList.remove('fx-glow', 'fx-3d-tilt', 'fx-float', 'fx-none');
+    document.body.classList.add(`fx-${settings.hoverFx}`);
+
+    if (settings.bgEffect === 'birds') {
+      document.body.classList.add('bg-birds');
+    } else {
+      document.body.classList.remove('bg-birds');
+    }
+  };
+
+  const fetchActivities = async () => {
+    setActivitiesLoading(true);
+    try {
+      const res = await fetch(`${API_URL}/courses/activities`, {
+        headers: { 'Authorization': `Bearer ${token}` }
+      });
+      const data = await res.json();
+      setActivitiesList(data || []);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setActivitiesLoading(false);
     }
   };
 
@@ -189,7 +251,8 @@ const AdminDashboard = () => {
       id: null, subjectId: selectedTheorySubjectId || (theorySubjects[0]?.id || ''), title: '', order: 1, content: '',
       cppCode: '', javaCode: '', pythonCode: '',
       interviewTips: '', commonMistakes: '',
-      questionText: '', answerText: '', pdfUrl: ''
+      questionText: '', answerText: '', pdfUrl: '',
+      diagramUrl: ''
     });
     setShowTheoryModal(true);
   };
@@ -208,7 +271,8 @@ const AdminDashboard = () => {
       commonMistakes: ch.commonMistakes || '',
       questionText: ch.realInterviewQuestions?.[0]?.question || '',
       answerText: ch.realInterviewQuestions?.[0]?.answer || '',
-      pdfUrl: ch.notesUrl || ''
+      pdfUrl: ch.notesUrl || '',
+      diagramUrl: ch.diagramUrl || ''
     });
     setShowTheoryModal(true);
   };
@@ -228,6 +292,7 @@ const AdminDashboard = () => {
         { language: 'java', code: theoryForm.javaCode },
         { language: 'python', code: theoryForm.pythonCode }
       ],
+      diagramUrl: theoryForm.diagramUrl,
       interviewTips: theoryForm.interviewTips,
       commonMistakes: theoryForm.commonMistakes,
       realInterviewQuestions: theoryForm.questionText ? [{
@@ -263,6 +328,29 @@ const AdminDashboard = () => {
     }
   };
 
+  const handleExportUsersCSV = async () => {
+    try {
+      const res = await fetch(`${API_URL}/dashboard/admin/users/export`, {
+        headers: { 'Authorization': `Bearer ${token}` }
+      });
+      if (res.ok) {
+        const blob = await res.blob();
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'placement_prep_users.csv';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      } else {
+        alert('Export failed.');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Error exporting users.');
+    }
+  };
+
   const handleDeleteTheoryChapter = async (chId) => {
     if (!window.confirm('Delete this theory chapter?')) return;
     try {
@@ -280,18 +368,28 @@ const AdminDashboard = () => {
 
   const handleSaveTheorySubject = async (e) => {
     e.preventDefault();
+    const isEdit = subjectForm.mode === 'edit';
+    const url = isEdit ? `${API_URL}/theory/subjects/${subjectForm.id}` : `${API_URL}/theory/subjects`;
+    const method = isEdit ? 'PUT' : 'POST';
+
     try {
-      const res = await fetch(`${API_URL}/theory/subjects`, {
-        method: 'POST',
+      const res = await fetch(url, {
+        method,
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`
         },
-        body: JSON.stringify(subjectForm)
+        body: JSON.stringify({
+          id: subjectForm.id,
+          title: subjectForm.title,
+          icon: subjectForm.icon,
+          order: subjectForm.order,
+          description: subjectForm.description
+        })
       });
       if (res.ok) {
         setShowSubjectModal(false);
-        setSubjectForm({ id: '', title: '', icon: '📖', order: 1 });
+        setSubjectForm({ id: '', title: '', icon: '📖', order: 1, description: '', mode: 'create' });
         fetchTheoryData();
       } else {
         const err = await res.json();
@@ -416,6 +514,44 @@ const AdminDashboard = () => {
     }
   };
 
+  // PROJECT SUBMISSIONS CRUD
+  const fetchSubmissions = async () => {
+    setSubmissionsLoading(true);
+    try {
+      const res = await fetch(`${API_URL}/courses/submissions/all`, {
+        headers: { 'Authorization': `Bearer ${token}` }
+      });
+      const data = await res.json();
+      setSubmissions(data || []);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setSubmissionsLoading(false);
+    }
+  };
+
+  const handleEvaluateSubmission = async (subId, status, remarks) => {
+    try {
+      const res = await fetch(`${API_URL}/courses/submissions/${subId}/evaluate`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify({ status, remarks })
+      });
+      if (res.ok) {
+        alert('Evaluation saved successfully!');
+        fetchSubmissions();
+      } else {
+        const err = await res.json();
+        alert(err.message || 'Failed to evaluate project');
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   // COURSE REQUESTS CRUD
   const fetchCourseRequests = async () => {
     setRequestsLoading(true);
@@ -459,6 +595,45 @@ const AdminDashboard = () => {
       });
       if (res.ok) {
         fetchCourseRequests();
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const fetchDoubts = async () => {
+    setDoubtsLoading(true);
+    try {
+      const res = await fetch(`${API_URL}/courses/doubts/all`, {
+        headers: { 'Authorization': `Bearer ${token}` }
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setDoubtsList(data || []);
+      }
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setDoubtsLoading(false);
+    }
+  };
+
+  const handleResolveDoubt = async (doubtId, replyText) => {
+    if (!replyText.trim()) return alert('Please enter a response reply.');
+    try {
+      const res = await fetch(`${API_URL}/courses/doubts/${doubtId}/resolve`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify({ reply: replyText })
+      });
+      if (res.ok) {
+        alert('Reply posted and doubt resolved!');
+        fetchDoubts();
+      } else {
+        alert('Failed to submit reply.');
       }
     } catch (err) {
       console.error(err);
@@ -618,6 +793,7 @@ const AdminDashboard = () => {
       title: course.title,
       description: course.description,
       category: course.category,
+      parentCategory: course.parentCategory || '',
       difficulty: course.difficulty,
       thumbnail: course.thumbnail || '',
       pdfUrl: course.pdfUrl || '',
@@ -693,6 +869,7 @@ const AdminDashboard = () => {
       title: lesson.title,
       content: lesson.content,
       videoUrl: lesson.videoUrl || '',
+      pdfUrl: lesson.pdfUrl || '',
       order: lesson.order,
       quizTitle: lesson.quiz?.title || '',
       quizReward: lesson.quiz?.xpReward || 50,
@@ -737,6 +914,7 @@ const AdminDashboard = () => {
       title: lessonForm.title,
       content: lessonForm.content,
       videoUrl: lessonForm.videoUrl,
+      pdfUrl: lessonForm.pdfUrl,
       order: lessonForm.order,
       quiz
     };
@@ -947,11 +1125,39 @@ const AdminDashboard = () => {
             📋 Course Requests
           </button>
           <button 
+            className={`filter-tag ${activeTab === 'projects' ? 'active' : ''}`}
+            onClick={() => setActiveTab('projects')}
+            style={{ padding: '10px 20px', fontSize: '0.9rem', fontWeight: 600 }}
+          >
+            💻 Project Submissions
+          </button>
+          <button 
+            className={`filter-tag ${activeTab === 'doubts' ? 'active' : ''}`}
+            onClick={() => setActiveTab('doubts')}
+            style={{ padding: '10px 20px', fontSize: '0.9rem', fontWeight: 600 }}
+          >
+            ❓ User Doubts
+          </button>
+          <button 
             className={`filter-tag ${activeTab === 'users' ? 'active' : ''}`}
             onClick={() => setActiveTab('users')}
             style={{ padding: '10px 20px', fontSize: '0.9rem', fontWeight: 600 }}
           >
             👥 User Management
+          </button>
+          <button 
+            className={`filter-tag ${activeTab === 'css-fx' ? 'active' : ''}`}
+            onClick={() => setActiveTab('css-fx')}
+            style={{ padding: '10px 20px', fontSize: '0.9rem', fontWeight: 600 }}
+          >
+            🎨 Card FX Controller
+          </button>
+          <button 
+            className={`filter-tag ${activeTab === 'live-feed' ? 'active' : ''}`}
+            onClick={() => setActiveTab('live-feed')}
+            style={{ padding: '10px 20px', fontSize: '0.9rem', fontWeight: 600 }}
+          >
+            📊 Live Activity Feed
           </button>
         </div>
       </div>
@@ -1139,9 +1345,18 @@ const AdminDashboard = () => {
       {/* RENDER USERS REGULATION TAB */}
       {activeTab === 'users' && (
         <section className="glass-card" style={{ padding: '0px', overflow: 'hidden' }}>
-          <div style={{ padding: '24px', borderBottom: '1px solid var(--border-glass)' }}>
-            <h3 style={{ fontSize: '1.25rem', color: 'white' }}>Registered Users Regulation</h3>
-            <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginTop: '4px' }}>Track student placement preparation progress and block/suspend inactive or abusive accounts.</p>
+          <div style={{ padding: '24px', borderBottom: '1px solid var(--border-glass)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div>
+              <h3 style={{ fontSize: '1.25rem', color: 'white' }}>Registered Users Regulation</h3>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginTop: '4px' }}>Track student placement preparation progress and block/suspend inactive or abusive accounts.</p>
+            </div>
+            <button 
+              onClick={handleExportUsersCSV} 
+              className="primary-btn" 
+              style={{ padding: '10px 20px', fontSize: '0.88rem', background: 'var(--accent-gradient)' }}
+            >
+              📥 Export to Excel/CSV
+            </button>
           </div>
 
           {usersLoading ? (
@@ -1349,6 +1564,442 @@ const AdminDashboard = () => {
         </div>
       )}
 
+      {/* RENDER PROJECT SUBMISSIONS TAB */}
+      {activeTab === 'projects' && (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+          <div style={{ padding: '24px', borderBottom: '1px solid var(--border-glass)' }} className="glass-card">
+            <h3 style={{ fontSize: '1.25rem', color: 'white' }}>Full-Stack Project Evaluations</h3>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginTop: '4px' }}>
+              Inspect files uploaded by students, test code structure/run status, and assign remarks.
+            </p>
+          </div>
+
+          <section className="glass-card" style={{ padding: '0px', overflow: 'hidden' }}>
+            {submissionsLoading ? (
+              <div style={{ color: 'white', padding: '40px', textAlign: 'center' }}>Querying project database...</div>
+            ) : (
+              <div className="table-container">
+                <table className="custom-table">
+                  <thead>
+                    <tr>
+                      <th>Student</th>
+                      <th>Course</th>
+                      <th>Filename</th>
+                      <th>Submitted Date</th>
+                      <th>Status</th>
+                      <th>Remarks</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {submissions.length > 0 ? (
+                      submissions.map((sub) => (
+                        <tr key={sub._id}>
+                          <td style={{ fontWeight: 600, color: 'white' }}>{sub.username}</td>
+                          <td>
+                            {courses.find(c => c._id === sub.courseId)?.title || 'Full Stack Sub-Course'}
+                          </td>
+                          <td>
+                            <a
+                              href={sub.fileUrl}
+                              download={sub.fileName}
+                              style={{ color: 'var(--accent-secondary)', textDecoration: 'underline' }}
+                            >
+                              📁 {sub.fileName}
+                            </a>
+                          </td>
+                          <td>{new Date(sub.createdAt).toLocaleDateString()}</td>
+                          <td>
+                            <span style={{
+                              padding: '4px 8px',
+                              borderRadius: '4px',
+                              fontWeight: 'bold',
+                              fontSize: '0.78rem',
+                              background: sub.status === 'Approved' ? 'rgba(16, 185, 129, 0.15)' : sub.status === 'Rejected' ? 'rgba(239, 68, 68, 0.15)' : 'rgba(245, 158, 11, 0.15)',
+                              color: sub.status === 'Approved' ? 'var(--color-solved)' : sub.status === 'Rejected' ? 'var(--color-hard)' : '#f59e0b'
+                            }}>
+                              {sub.status}
+                            </span>
+                          </td>
+                          <td>
+                            <input
+                              type="text"
+                              placeholder="Add feedback remarks..."
+                              defaultValue={sub.remarks}
+                              onBlur={(e) => handleEvaluateSubmission(sub._id, sub.status, e.target.value)}
+                              style={{
+                                width: '100%',
+                                background: 'rgba(255,255,255,0.03)',
+                                border: '1px solid var(--border-glass)',
+                                borderRadius: '4px',
+                                padding: '6px 10px',
+                                color: 'white',
+                                fontSize: '0.82rem'
+                              }}
+                            />
+                          </td>
+                          <td>
+                            <select
+                              value={sub.status}
+                              onChange={(e) => handleEvaluateSubmission(sub._id, e.target.value, sub.remarks)}
+                              style={{
+                                background: 'rgba(0,0,0,0.3)',
+                                border: '1px solid var(--border-glass)',
+                                borderRadius: '4px',
+                                padding: '6px 10px',
+                                color: 'white',
+                                fontSize: '0.8rem'
+                              }}
+                            >
+                              <option value="Pending">Pending</option>
+                              <option value="Approved">Approved</option>
+                              <option value="Rejected">Rejected</option>
+                              <option value="Needs Improvement">Needs Improvement</option>
+                            </select>
+                          </td>
+                        </tr>
+                      ))
+                    ) : (
+                      <tr>
+                        <td colSpan="7" style={{ textAlign: 'center', color: 'var(--text-muted)', padding: '32px' }}>
+                          No project files uploaded yet.
+                        </td>
+                      </tr>
+                    )}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </section>
+        </div>
+      )}
+
+      {/* RENDER USER DOUBTS TAB */}
+      {activeTab === 'doubts' && (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+          <div style={{ padding: '24px', borderBottom: '1px solid var(--border-glass)' }} className="glass-card">
+            <h3 style={{ fontSize: '1.25rem', color: 'white' }}>User Technical Doubts Resolution</h3>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginTop: '4px' }}>
+              Address questions submitted by students regarding courses, chapters, or practice problems.
+            </p>
+          </div>
+
+          <section className="glass-card" style={{ padding: '0px', overflow: 'hidden' }}>
+            {doubtsLoading ? (
+              <div style={{ color: 'white', padding: '40px', textAlign: 'center' }}>Querying doubts database...</div>
+            ) : (
+              <div className="table-container">
+                <table className="custom-table">
+                  <thead>
+                    <tr>
+                      <th>Student</th>
+                      <th>Subject / Topic</th>
+                      <th>Doubt Details</th>
+                      <th>Status</th>
+                      <th>Instructor Reply</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {doubtsList.length > 0 ? (
+                      doubtsList.map((d) => (
+                        <tr key={d._id}>
+                          <td style={{ fontWeight: 600, color: 'white' }}>{d.username}</td>
+                          <td style={{ fontWeight: 600, color: 'var(--accent-secondary)' }}>{d.subject}</td>
+                          <td 
+                            style={{ maxWidth: '300px', whiteSpace: 'normal', wordBreak: 'break-word', color: 'var(--text-muted)', cursor: 'pointer', textDecoration: 'underline' }}
+                            onClick={() => setSelectedDoubtDetail(d)}
+                            title="Click to view full details"
+                          >
+                            {d.doubtText.substring(0, 80)}{d.doubtText.length > 80 ? '...' : ''}
+                          </td>
+                          <td>
+                            <span style={{
+                              padding: '4px 8px',
+                              borderRadius: '4px',
+                              fontWeight: 'bold',
+                              fontSize: '0.78rem',
+                              background: d.status === 'Resolved' ? 'rgba(16, 185, 129, 0.15)' : 'rgba(245, 158, 11, 0.15)',
+                              color: d.status === 'Resolved' ? 'var(--color-solved)' : '#f59e0b'
+                            }}>
+                              {d.status}
+                            </span>
+                          </td>
+                          <td>
+                            {d.status === 'Resolved' ? (
+                              <span style={{ color: 'white' }}>{d.reply}</span>
+                            ) : (
+                              <input
+                                type="text"
+                                placeholder="Type instructor response..."
+                                id={`reply-input-${d._id}`}
+                                style={{
+                                  width: '100%',
+                                  background: 'rgba(255,255,255,0.03)',
+                                  border: '1px solid var(--border-glass)',
+                                  borderRadius: '4px',
+                                  padding: '6px 10px',
+                                  color: 'white',
+                                  fontSize: '0.82rem'
+                                }}
+                              />
+                            )}
+                          </td>
+                          <td>
+                            {d.status !== 'Resolved' && (
+                              <button
+                                onClick={() => {
+                                  const val = document.getElementById(`reply-input-${d._id}`).value;
+                                  handleResolveDoubt(d._id, val);
+                                }}
+                                className="primary-btn"
+                                style={{ padding: '6px 14px', fontSize: '0.8rem' }}
+                              >
+                                Send Reply
+                              </button>
+                            )}
+                          </td>
+                        </tr>
+                      ))
+                    ) : (
+                      <tr>
+                        <td colSpan="6" style={{ textAlign: 'center', color: 'var(--text-muted)', padding: '32px' }}>
+                          No technical doubts submitted yet.
+                        </td>
+                      </tr>
+                    )}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </section>
+        </div>
+      )}
+      {activeTab === 'css-fx' && (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+          <div style={{ padding: '24px', borderBottom: '1px solid var(--border-glass)' }} className="glass-card">
+            <h3 style={{ fontSize: '1.25rem', color: 'white' }}>🎨 Card FX & CSS Box Controller</h3>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginTop: '4px' }}>
+              Regulate box glow effects, 3D tilt behaviors, border styling, and global reading typography.
+            </p>
+          </div>
+
+          <div className="glass-card" style={{ maxWidth: '600px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+            <div className="form-group">
+              <label>Select Card Hover Animation</label>
+              <select 
+                className="form-input"
+                value={cssSettings.hoverFx}
+                onChange={(e) => setCssSettings({ ...cssSettings, hoverFx: e.target.value })}
+              >
+                <option value="3d-tilt">🔄 3D Perspective Tilt Rotation</option>
+                <option value="glow">✨ Pulsing Neon Hover Glow</option>
+                <option value="float">🚀 Translate Upward Floating</option>
+                <option value="none">⏹ Static (No Animation)</option>
+              </select>
+            </div>
+
+            <div className="form-group">
+              <label>Card Corner Border Radius</label>
+              <select 
+                className="form-input"
+                value={cssSettings.borderRadius}
+                onChange={(e) => setCssSettings({ ...cssSettings, borderRadius: e.target.value })}
+              >
+                <option value="0px">Sharp Edges (0px)</option>
+                <option value="8px">Subtle Rounded (8px)</option>
+                <option value="16px">Premium Curved (16px)</option>
+                <option value="24px">Double Curved (24px)</option>
+              </select>
+            </div>
+
+            <div className="form-group">
+              <label>Backdrop Blur Glassmorphism Intensity</label>
+              <select 
+                className="form-input"
+                value={cssSettings.glassBlur}
+                onChange={(e) => setCssSettings({ ...cssSettings, glassBlur: e.target.value })}
+              >
+                <option value="0px">None (Solid background)</option>
+                <option value="4px">Light Blur (4px)</option>
+                <option value="8px">Standard Glass Blur (8px)</option>
+                <option value="16px">Heavy Glass Blur (16px)</option>
+              </select>
+            </div>
+
+            <div className="form-group">
+              <label>Global Reading Text Size Scale</label>
+              <select 
+                className="form-input"
+                value={cssSettings.globalScale}
+                onChange={(e) => setCssSettings({ ...cssSettings, globalScale: e.target.value })}
+              >
+                <option value="0.9">Compact (90%)</option>
+                <option value="1.0">Standard Regular (100%)</option>
+                <option value="1.15">Comfortable Reading (+15%)</option>
+                <option value="1.3">Highly Visible Reading (+30%)</option>
+              </select>
+            </div>
+
+            <div className="form-group">
+              <label>Select Background Animation Effect</label>
+              <select 
+                className="form-input"
+                value={cssSettings.bgEffect || 'none'}
+                onChange={(e) => setCssSettings({ ...cssSettings, bgEffect: e.target.value })}
+              >
+                <option value="none">⏹ None (Solid Clean Background)</option>
+                <option value="birds">🦅 Animated Wing-Flapping Birds Flight</option>
+              </select>
+            </div>
+
+            <button 
+              onClick={() => {
+                localStorage.setItem('app-css-settings', JSON.stringify(cssSettings));
+                applyGlobalCssSettings(cssSettings);
+                alert('CSS Card styles and text size configurations successfully updated!');
+              }} 
+              className="primary-btn"
+              style={{ padding: '10px 24px', alignSelf: 'flex-start' }}
+            >
+              Apply Settings Globally
+            </button>
+          </div>
+        </div>
+      )}
+
+      {activeTab === 'live-feed' && (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div>
+              <h3 style={{ fontSize: '1.25rem', color: 'white' }}>📊 Live Activity Feed & Notifications</h3>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginTop: '4px' }}>
+                Monitor latest placements preparations, doubt uploads, and syllabus completions of students in real-time.
+              </p>
+            </div>
+            <button onClick={fetchActivities} className="warroom-btn" style={{ padding: '10px 20px', fontSize: '0.88rem' }}>
+              🔄 Refresh Feed
+            </button>
+          </div>
+
+          <section className="glass-card" style={{ padding: '0px', overflow: 'hidden' }}>
+            {activitiesLoading ? (
+              <div style={{ color: 'white', padding: '40px', textAlign: 'center' }}>Synchronizing user activities stream...</div>
+            ) : (
+              <div className="table-container">
+                <table className="custom-table">
+                  <thead>
+                    <tr>
+                      <th>Time</th>
+                      <th>Student</th>
+                      <th>Action</th>
+                      <th>Details</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {activitiesList.length > 0 ? (
+                      activitiesList.map((act) => (
+                        <tr key={act._id}>
+                          <td style={{ color: 'var(--text-muted)', fontSize: '0.82rem' }}>
+                            {new Date(act.createdAt).toLocaleString()}
+                          </td>
+                          <td style={{ fontWeight: 600, color: 'white' }}>{act.username}</td>
+                          <td>
+                            <span 
+                              className="difficulty-pill"
+                              style={{
+                                background: act.action.includes('Doubt') ? 'rgba(239, 68, 68, 0.15)' : act.action.includes('Upgrade') ? 'rgba(16, 185, 129, 0.15)' : 'rgba(59, 130, 246, 0.15)',
+                                color: act.action.includes('Doubt') ? 'var(--color-hard)' : act.action.includes('Upgrade') ? 'var(--color-solved)' : 'var(--accent-secondary)'
+                              }}
+                            >
+                              {act.action}
+                            </span>
+                          </td>
+                          <td style={{ color: 'var(--text-main)', fontSize: '0.88rem' }}>{act.details}</td>
+                        </tr>
+                      ))
+                    ) : (
+                      <tr>
+                        <td colSpan="4" style={{ textAlign: 'center', color: 'var(--text-muted)', padding: '32px' }}>
+                          No student activity logs recorded yet.
+                        </td>
+                      </tr>
+                    )}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </section>
+        </div>
+      )}
+
+      {/* DOUBT DETAILS DIALOG MODAL */}
+      {selectedDoubtDetail && (
+        <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', background: 'rgba(0,0,0,0.85)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 100000 }}>
+          <div className="glass-card" style={{ maxWidth: '550px', width: '90%', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--border-glass)', paddingBottom: '12px' }}>
+              <h3 style={{ fontSize: '1.2rem', color: 'white' }}>❓ Student Doubt Details</h3>
+              <button 
+                onClick={() => setSelectedDoubtDetail(null)} 
+                style={{ background: 'transparent', border: 'none', color: '#9ca3af', fontSize: '1.4rem', cursor: 'pointer' }}
+              >
+                ✕
+              </button>
+            </div>
+
+            <div>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '16px' }}>
+                <div>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Student Username</span>
+                  <strong style={{ display: 'block', color: 'white', marginTop: '4px' }}>{selectedDoubtDetail.username}</strong>
+                </div>
+                <div>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Subject Class</span>
+                  <strong style={{ display: 'block', color: 'var(--accent-secondary)', marginTop: '4px' }}>{selectedDoubtDetail.subject}</strong>
+                </div>
+              </div>
+
+              <div className="form-group" style={{ marginBottom: '16px' }}>
+                <label>Question Content</label>
+                <div style={{ padding: '16px', background: 'rgba(0,0,0,0.2)', border: '1px solid var(--border-glass)', borderRadius: '6px', color: 'white', fontSize: '0.9rem', lineHeight: '1.6', whiteSpace: 'pre-wrap' }}>
+                  {selectedDoubtDetail.doubtText}
+                </div>
+              </div>
+
+              {selectedDoubtDetail.status === 'Resolved' ? (
+                <div className="form-group">
+                  <label style={{ color: 'var(--color-solved)' }}>✓ Posted Reply Response</label>
+                  <div style={{ padding: '16px', background: 'rgba(16, 185, 129, 0.05)', border: '1px solid rgba(16, 185, 129, 0.1)', borderRadius: '6px', color: 'var(--text-main)', fontSize: '0.9rem', lineHeight: '1.6' }}>
+                    {selectedDoubtDetail.reply}
+                  </div>
+                </div>
+              ) : (
+                <div className="form-group" style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                  <label>Type Resolve Response</label>
+                  <textarea
+                    id="modal-reply-input"
+                    className="form-input"
+                    rows="4"
+                    placeholder="Enter technical explanation response..."
+                  />
+                  <button 
+                    onClick={() => {
+                      const val = document.getElementById('modal-reply-input').value;
+                      handleResolveDoubt(selectedDoubtDetail._id, val);
+                      setSelectedDoubtDetail(null);
+                    }}
+                    className="primary-btn" 
+                    style={{ padding: '10px 24px', alignSelf: 'flex-end' }}
+                  >
+                    Post Response & Resolve
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* COURSE CREATION/EDIT MODAL */}
       {showCourseModal && (
         <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', background: 'rgba(0,0,0,0.8)', display: 'flex', alignItems: 'center', justifySelf: 'center', justifyContent: 'center', zIndex: 1000 }}>
@@ -1377,7 +2028,7 @@ const AdminDashboard = () => {
                 />
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '16px' }}>
                 <div className="form-group">
                   <label>Category</label>
                   <select 
@@ -1388,6 +2039,20 @@ const AdminDashboard = () => {
                     <option value="Core CS">Core CS</option>
                     <option value="Programming">Programming</option>
                     <option value="AI">AI</option>
+                    <option value="Web Development">Web Development</option>
+                  </select>
+                </div>
+                <div className="form-group">
+                  <label>Sub-Category</label>
+                  <select 
+                    className="form-input"
+                    value={courseForm.parentCategory || ''}
+                    onChange={(e) => setCourseForm({ ...courseForm, parentCategory: e.target.value })}
+                  >
+                    <option value="">None</option>
+                    <option value="Frontend">Frontend</option>
+                    <option value="Backend">Backend</option>
+                    <option value="Database">Database</option>
                   </select>
                 </div>
                 <div className="form-group">
@@ -1510,6 +2175,17 @@ const AdminDashboard = () => {
                   placeholder="https://www.youtube.com/embed/..."
                   value={lessonForm.videoUrl}
                   onChange={(e) => setLessonForm({ ...lessonForm, videoUrl: e.target.value })}
+                />
+              </div>
+
+              <div className="form-group">
+                <label>Curriculum/Notes PDF Link</label>
+                <input 
+                  type="text" 
+                  className="form-input" 
+                  placeholder="e.g. Google Drive PDF preview link"
+                  value={lessonForm.pdfUrl || ''}
+                  onChange={(e) => setLessonForm({ ...lessonForm, pdfUrl: e.target.value })}
                 />
               </div>
 
@@ -2036,7 +2712,7 @@ const AdminDashboard = () => {
               </select>
               <button 
                 onClick={() => {
-                  setSubjectForm({ id: '', title: '', icon: '📖', order: theorySubjects.length + 1 });
+                  setSubjectForm({ id: '', title: '', icon: '📖', order: theorySubjects.length + 1, description: '', mode: 'create' });
                   setShowSubjectModal(true);
                 }} 
                 className="warroom-btn" 
@@ -2044,15 +2720,39 @@ const AdminDashboard = () => {
               >
                 + Add Subject
               </button>
-              {selectedTheorySubjectId && (
-                <button 
-                  onClick={() => handleDeleteTheorySubject(selectedTheorySubjectId)} 
-                  className="warroom-btn" 
-                  style={{ padding: '6px 12px', fontSize: '0.8rem', color: 'var(--color-hard)', borderColor: 'rgba(239,68,68,0.2)' }}
-                >
-                  Delete Subject
-                </button>
-              )}
+              {selectedTheorySubjectId && (() => {
+                const currentSub = theorySubjects.find(s => s.id === selectedTheorySubjectId);
+                return (
+                  <>
+                    <button
+                      onClick={() => {
+                        if (currentSub) {
+                          setSubjectForm({
+                            id: currentSub.id,
+                            title: currentSub.title,
+                            icon: currentSub.icon,
+                            order: currentSub.order,
+                            description: currentSub.description || '',
+                            mode: 'edit'
+                          });
+                          setShowSubjectModal(true);
+                        }
+                      }}
+                      className="warroom-btn"
+                      style={{ padding: '6px 12px', fontSize: '0.8rem', color: 'var(--color-points)', borderColor: 'rgba(245,158,11,0.2)' }}
+                    >
+                      Edit Subject
+                    </button>
+                    <button 
+                      onClick={() => handleDeleteTheorySubject(selectedTheorySubjectId)} 
+                      className="warroom-btn" 
+                      style={{ padding: '6px 12px', fontSize: '0.8rem', color: 'var(--color-hard)', borderColor: 'rgba(239,68,68,0.2)' }}
+                    >
+                      Delete Subject
+                    </button>
+                  </>
+                );
+              })()}
             </div>
             <button onClick={handleOpenAddTheory} className="primary-btn" style={{ padding: '10px 20px', fontSize: '0.9rem' }}>
               + Add New Chapter
@@ -2238,7 +2938,7 @@ const AdminDashboard = () => {
               </div>
 
               <div className="form-group">
-                <label>Markdown Content</label>
+                <label>Lessons Paragraph / Markdown Content</label>
                 <textarea
                   className="form-input"
                   style={{ minHeight: '150px', fontFamily: 'monospace' }}
@@ -2322,6 +3022,17 @@ const AdminDashboard = () => {
                   className="form-input"
                   value={theoryForm.pdfUrl}
                   onChange={(e) => setTheoryForm({ ...theoryForm, pdfUrl: e.target.value })}
+                />
+              </div>
+
+              <div className="form-group">
+                <label>Block Diagram Image URL / Asset Link</label>
+                <input
+                  type="text"
+                  className="form-input"
+                  placeholder="e.g. https://images.unsplash.com/photo-... or custom image path"
+                  value={theoryForm.diagramUrl}
+                  onChange={(e) => setTheoryForm({ ...theoryForm, diagramUrl: e.target.value })}
                 />
               </div>
 
@@ -2576,7 +3287,7 @@ const AdminDashboard = () => {
       {showSubjectModal && (
         <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', background: 'rgba(0,0,0,0.8)', display: 'flex', alignItems: 'center', justifySelf: 'center', justifyContent: 'center', zIndex: 10000 }}>
           <div className="glass-card" style={{ maxWidth: '450px', width: '90%', display: 'flex', flexDirection: 'column', gap: '20px' }}>
-            <h2>Create New Theory Course/Subject</h2>
+            <h2>{subjectForm.mode === 'edit' ? 'Edit Theory Course/Subject' : 'Create New Theory Course/Subject'}</h2>
             <form onSubmit={handleSaveTheorySubject} className="auth-form" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               <div className="form-group">
                 <label>Subject ID * (e.g. system-design, dbms)</label>
@@ -2586,6 +3297,7 @@ const AdminDashboard = () => {
                   value={subjectForm.id}
                   onChange={(e) => setSubjectForm({ ...subjectForm, id: e.target.value })}
                   placeholder="e.g. system-design"
+                  disabled={subjectForm.mode === 'edit'}
                   required
                 />
               </div>
@@ -2599,6 +3311,17 @@ const AdminDashboard = () => {
                   onChange={(e) => setSubjectForm({ ...subjectForm, title: e.target.value })}
                   placeholder="e.g. System Design"
                   required
+                />
+              </div>
+
+              <div className="form-group">
+                <label>Subject Description</label>
+                <textarea
+                  className="form-input"
+                  rows="3"
+                  value={subjectForm.description}
+                  onChange={(e) => setSubjectForm({ ...subjectForm, description: e.target.value })}
+                  placeholder="Describe what this theory course covers..."
                 />
               </div>
 
@@ -2631,7 +3354,7 @@ const AdminDashboard = () => {
                   Cancel
                 </button>
                 <button type="submit" className="primary-btn" style={{ padding: '8px 24px', fontSize: '0.9rem' }}>
-                  Create Subject
+                  {subjectForm.mode === 'edit' ? 'Save Changes' : 'Create Subject'}
                 </button>
               </div>
             </form>

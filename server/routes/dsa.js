@@ -174,6 +174,30 @@ router.post('/compiler/run', protect, async (req, res) => {
         if (fs.existsSync(cppFile)) fs.unlinkSync(cppFile);
         if (fs.existsSync(exeFile)) fs.unlinkSync(exeFile);
       }
+    } else if (language === 'c') {
+      const cFile = path.join(tempDir, 'solution.c');
+      const exeFile = path.join(tempDir, `sol_${Date.now()}` + (process.platform === 'win32' ? '.exe' : ''));
+      try {
+        fs.writeFileSync(cFile, code);
+        // Compile
+        execSync(`gcc -O3 "${cFile}" -o "${exeFile}"`, { encoding: 'utf-8', timeout: 6000 });
+        // Run
+        const output = execSync(`"${exeFile}"`, {
+          input: cleanInput,
+          encoding: 'utf-8',
+          timeout: 4000
+        });
+        res.json({ success: true, output, error: '' });
+      } catch (err) {
+        res.json({
+          success: false,
+          output: err.stdout || '',
+          error: err.stderr || err.message || 'C compilation failed (please verify gcc is installed).'
+        });
+      } finally {
+        if (fs.existsSync(cFile)) fs.unlinkSync(cFile);
+        if (fs.existsSync(exeFile)) fs.unlinkSync(exeFile);
+      }
     } else {
       res.json({ success: false, output: '', error: 'Unsupported language requested.' });
     }

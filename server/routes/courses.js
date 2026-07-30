@@ -260,16 +260,19 @@ router.post('/:courseId/lessons/:lessonId/interview-prep/complete', protect, asy
 // @route   POST /api/courses
 router.post('/', protect, adminOnly, async (req, res) => {
   try {
-    const { title, description, category, difficulty, thumbnail, pdfUrl, externalLink, practicePageUrl } = req.body;
+    const { title, description, category, parentCategory, difficulty, thumbnail, pdfUrl, externalLink, practicePageUrl } = req.body;
+    const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
     const newCourse = await Course.create({
       title,
       description,
       category,
+      parentCategory: parentCategory || '',
       difficulty,
       thumbnail,
       pdfUrl: pdfUrl || '',
       externalLink: externalLink || '',
-      practicePageUrl: practicePageUrl || ''
+      practicePageUrl: practicePageUrl || '',
+      slug
     });
     res.status(201).json(newCourse);
   } catch (error) {
@@ -281,13 +284,14 @@ router.post('/', protect, adminOnly, async (req, res) => {
 // @route   PUT /api/courses/:id
 router.put('/:id', protect, adminOnly, async (req, res) => {
   try {
-    const { title, description, category, difficulty, thumbnail, pdfUrl, externalLink, practicePageUrl } = req.body;
+    const { title, description, category, parentCategory, difficulty, thumbnail, pdfUrl, externalLink, practicePageUrl } = req.body;
     const course = await Course.findById(req.params.id);
     if (!course) return res.status(404).json({ message: 'Course not found' });
 
     course.title = title || course.title;
     course.description = description || course.description;
     course.category = category || course.category;
+    course.parentCategory = parentCategory !== undefined ? parentCategory : course.parentCategory;
     course.difficulty = difficulty || course.difficulty;
     course.thumbnail = thumbnail || course.thumbnail;
     course.pdfUrl = pdfUrl !== undefined ? pdfUrl : course.pdfUrl;
@@ -322,13 +326,14 @@ router.delete('/:id', protect, adminOnly, async (req, res) => {
 // @route   POST /api/courses/:courseId/lessons
 router.post('/:courseId/lessons', protect, adminOnly, async (req, res) => {
   try {
-    const { title, content, videoUrl, order, quiz } = req.body;
+    const { title, content, videoUrl, pdfUrl, order, quiz } = req.body;
     
     const newLesson = await Lesson.create({
       courseId: req.params.courseId,
       title,
       content,
       videoUrl,
+      pdfUrl: pdfUrl || '',
       order,
       quiz: quiz || null
     });
@@ -343,13 +348,14 @@ router.post('/:courseId/lessons', protect, adminOnly, async (req, res) => {
 // @route   PUT /api/courses/:courseId/lessons/:lessonId
 router.put('/:courseId/lessons/:lessonId', protect, adminOnly, async (req, res) => {
   try {
-    const { title, content, videoUrl, order, quiz } = req.body;
+    const { title, content, videoUrl, pdfUrl, order, quiz } = req.body;
     const lesson = await Lesson.findById(req.params.lessonId);
     if (!lesson) return res.status(404).json({ message: 'Lesson not found' });
 
     lesson.title = title || lesson.title;
     lesson.content = content || lesson.content;
     lesson.videoUrl = videoUrl || lesson.videoUrl;
+    lesson.pdfUrl = pdfUrl !== undefined ? pdfUrl : lesson.pdfUrl;
     lesson.order = order !== undefined ? order : lesson.order;
     lesson.quiz = quiz !== undefined ? quiz : lesson.quiz;
 
@@ -476,6 +482,181 @@ router.delete('/requests/:id', protect, adminOnly, async (req, res) => {
 
     await request.deleteOne();
     res.json({ message: 'Course request deleted successfully.' });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// @desc    Submit project code/files for evaluation
+// @route   POST /api/courses/:courseId/submit-project
+router.post('/:courseId/submit-project', protect, async (req, res) => {
+  try {
+    const { fileUrl, fileName } = req.body;
+    if (!fileUrl) {
+      return res.status(400).json({ message: 'Project submission file/URL is required.' });
+    }
+
+    const ProjectSubmission = require('../models/ProjectSubmission');
+    // Check if submission already exists
+    let submission = await ProjectSubmission.findOne({ userId: req.user._id, courseId: req.params.courseId });
+    if (submission) {
+      submission.fileUrl = fileUrl;
+      submission.fileName = fileName || submission.fileName;
+      submission.status = 'Pending';
+      await submission.save();
+    } else {
+      submission = await ProjectSubmission.create({
+        userId: req.user._id,
+        username: req.user.username,
+        courseId: req.params.courseId,
+        fileUrl,
+        fileName: fileName || 'project-submission.zip',
+        status: 'Pending'
+      });
+    }
+
+    // Log user activity
+    const Activity = require('../models/Activity');
+    await Activity.create({
+      userId: req.user._id,
+      username: req.user.username,
+      action: 'Submitted Project',
+      details: `Uploaded project archive "${fileName || 'project-submission.zip'}"`
+    });
+
+    res.status(201).json(submission);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// @desc    Get user's project submission for a course
+// @route   GET /api/courses/:courseId/submission
+router.get('/:courseId/submission', protect, async (req, res) => {
+  try {
+    const ProjectSubmission = require('../models/ProjectSubmission');
+    const submission = await ProjectSubmission.findOne({ userId: req.user._id, courseId: req.params.courseId });
+    res.json(submission || null);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// @desc    Get all project submissions (Admin only)
+// @route   GET /api/courses/submissions/all
+router.get('/submissions/all', protect, adminOnly, async (req, res) => {
+  try {
+    const ProjectSubmission = require('../models/ProjectSubmission');
+    const submissions = await ProjectSubmission.find({}).sort({ createdAt: -1 });
+    res.json(submissions);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// @desc    Evaluate project submission (Admin only)
+// @route   PUT /api/courses/submissions/:submissionId/evaluate
+router.put('/submissions/:submissionId/evaluate', protect, adminOnly, async (req, res) => {
+  try {
+    const { status, remarks } = req.body;
+    if (!['Approved', 'Rejected', 'Needs Improvement'].includes(status)) {
+      return res.status(400).json({ message: 'Invalid status evaluation value.' });
+    }
+
+    const ProjectSubmission = require('../models/ProjectSubmission');
+    const submission = await ProjectSubmission.findById(req.params.submissionId);
+    if (!submission) {
+      return res.status(404).json({ message: 'Submission not found.' });
+    }
+
+    submission.status = status;
+    submission.remarks = remarks || '';
+    await submission.save();
+
+    res.json(submission);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// @desc    Submit user doubt
+// @route   POST /api/courses/doubts
+router.post('/doubts', protect, async (req, res) => {
+  try {
+    const { subject, doubtText } = req.body;
+    const Doubt = require('../models/Doubt');
+    const newDoubt = await Doubt.create({
+      userId: req.user._id,
+      username: req.user.username,
+      subject,
+      doubtText
+    });
+    
+    // Log user activity
+    const Activity = require('../models/Activity');
+    await Activity.create({
+      userId: req.user._id,
+      username: req.user.username,
+      action: 'Submitted Doubt',
+      details: `Asked doubt on topic "${subject}": ${doubtText.substring(0, 60)}...`
+    });
+
+    res.status(201).json(newDoubt);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// @desc    Get user's own doubts
+// @route   GET /api/courses/doubts/my
+router.get('/doubts/my', protect, async (req, res) => {
+  try {
+    const Doubt = require('../models/Doubt');
+    const myDoubts = await Doubt.find({ userId: req.user._id }).sort({ createdAt: -1 });
+    res.json(myDoubts);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// @desc    Get all doubts (Admin only)
+// @route   GET /api/courses/doubts/all
+router.get('/doubts/all', protect, adminOnly, async (req, res) => {
+  try {
+    const Doubt = require('../models/Doubt');
+    const allDoubts = await Doubt.find({}).sort({ createdAt: -1 });
+    res.json(allDoubts);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// @desc    Resolve user doubt with a reply (Admin only)
+// @route   PUT /api/courses/doubts/:id/resolve
+router.put('/doubts/:id/resolve', protect, adminOnly, async (req, res) => {
+  try {
+    const { reply } = req.body;
+    const Doubt = require('../models/Doubt');
+    const doubt = await Doubt.findById(req.params.id);
+    if (!doubt) {
+      return res.status(404).json({ message: 'Doubt not found.' });
+    }
+    doubt.reply = reply;
+    doubt.status = 'Resolved';
+    await doubt.save();
+    res.json(doubt);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// @desc    Get user activity logs (Admin only)
+// @route   GET /api/courses/activities
+router.get('/activities', protect, adminOnly, async (req, res) => {
+  try {
+    const Activity = require('../models/Activity');
+    const activities = await Activity.find({}).sort({ createdAt: -1 }).limit(100);
+    res.json(activities);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

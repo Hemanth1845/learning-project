@@ -210,9 +210,9 @@ body.theme-light {
   --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
   --text-gradient: linear-gradient(135deg, #0f172a 0%, #334155 100%);
   
-  --text-main: #475569;
-  --text-bright: #0f172a;
-  --text-muted: #94a3b8;
+  --text-main: #111827; /* Dark charcoal/black for absolute clarity */
+  --text-bright: #000000; /* Rich pure black */
+  --text-muted: #4b5563; /* Dark gray for secondary details */
   
   --color-easy: #059669;
   --color-medium: #d97706;
@@ -1174,4 +1174,114 @@ a {
   .scorecard-panel {
     grid-template-columns: 1fr;
   }
+}
+
+/* Card FX Settings & Animations */
+:root {
+  --card-border-radius: 16px;
+  --card-glass-blur: 8px;
+  --global-text-scale: 1.0;
+}
+
+body {
+  font-size: calc(1rem * var(--global-text-scale));
+}
+
+.glass-card, .company-card, .company-card-item, .topic-card-item, .theory-sidebar-item {
+  border-radius: var(--card-border-radius) !important;
+  backdrop-filter: blur(var(--card-glass-blur)) !important;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease !important;
+}
+
+/* 3D Tilt Hover effect */
+body.fx-3d-tilt .glass-card:hover,
+body.fx-3d-tilt .company-card:hover,
+body.fx-3d-tilt .topic-card-item:hover,
+body.fx-3d-tilt .theory-sidebar-item:hover {
+  transform: perspective(1000px) rotateX(4deg) rotateY(-4deg) translateY(-4deg) !important;
+  box-shadow: -8px 12px 25px rgba(0,0,0,0.4), 0 0 15px rgba(99, 102, 241, 0.15) !important;
+}
+
+/* Neon Glow Hover effect */
+body.fx-glow .glass-card:hover,
+body.fx-glow .company-card:hover,
+body.fx-glow .topic-card-item:hover,
+body.fx-glow .theory-sidebar-item:hover {
+  box-shadow: 0 0 25px var(--accent-primary) !important;
+  border-color: var(--accent-primary) !important;
+  transform: scale(1.02) !important;
+}
+
+/* Floating animation */
+body.fx-float .glass-card:hover,
+body.fx-float .company-card:hover,
+body.fx-float .topic-card-item:hover,
+body.fx-float .theory-sidebar-item:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5) !important;
+}
+
+/* No animation */
+body.fx-none .glass-card:hover,
+body.fx-none .company-card:hover,
+body.fx-none .topic-card-item:hover,
+body.fx-none .theory-sidebar-item:hover {
+  transform: none !important;
+}
+
+/* Flapping Birds Animated Background */
+.birds-stage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  display: none; /* Controlled dynamically */
+}
+
+body.bg-birds .birds-stage {
+  display: block;
+}
+
+.flapping-bird {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%236366f1' stroke-width='6' stroke-linecap='round'><path d='M10,50 Q30,20 50,50 Q70,20 90,50'/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 40px;
+  position: absolute;
+  opacity: 0.15;
+}
+
+.flapping-bird-1 {
+  top: 15%;
+  animation: bird-fly-across-1 15s linear infinite, bird-flap 0.6s ease-in-out infinite alternate;
+}
+
+.flapping-bird-2 {
+  top: 35%;
+  animation: bird-fly-across-2 22s linear infinite, bird-flap 0.8s ease-in-out infinite alternate;
+}
+
+.flapping-bird-3 {
+  top: 55%;
+  animation: bird-fly-across-1 18s linear infinite, bird-flap 0.7s ease-in-out infinite alternate;
+}
+
+@keyframes bird-flap {
+  0% { transform: scaleY(0.9) translateY(0); }
+  100% { transform: scaleY(0.2) translateY(-8px); }
+}
+
+@keyframes bird-fly-across-1 {
+  0% { left: -10vw; }
+  100% { left: 110vw; }
+}
+
+@keyframes bird-fly-across-2 {
+  0% { left: -15vw; }
+  100% { left: 110vw; }
 }
