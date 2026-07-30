@@ -25,6 +25,7 @@ import FurtherDoubts from './pages/FurtherDoubts';
 import CommunicationCoach from './pages/CommunicationCoach';
 import Profile from './pages/Profile';
 import Pricing from './pages/Pricing';
+import SplashIntro from './components/SplashIntro';
 
 // Protected Route Guard for normal users (Students)
 const ProtectedRoute = ({ children }) => {
@@ -323,8 +324,18 @@ const MainLayout = ({ children }) => {
 };
 
 function App() {
+  const [showSplash, setShowSplash] = useState(() => {
+    return !sessionStorage.getItem('splashShown');
+  });
+
+  const handleSplashComplete = () => {
+    sessionStorage.setItem('splashShown', 'true');
+    setShowSplash(false);
+  };
+
   return (
     <AuthProvider>
+      {showSplash && <SplashIntro onComplete={handleSplashComplete} />}
       <Router>
         <Routes>
           {/* Public Routes */}
