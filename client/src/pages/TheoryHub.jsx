@@ -1,6 +1,17 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 
+const renderFormattedText = (text) => {
+  if (!text) return '';
+  const parts = text.split('**');
+  return parts.map((part, index) => {
+    if (index % 2 === 1) {
+      return <strong key={index} style={{ color: 'white', fontWeight: 700 }}>{part}</strong>;
+    }
+    return part;
+  });
+};
+
 const MarkdownViewer = ({ content }) => {
   if (!content) return null;
   
@@ -9,6 +20,8 @@ const MarkdownViewer = ({ content }) => {
   let listItems = [];
   let inTable = false;
   let tableRows = [];
+  let inCodeBlock = false;
+  let codeBlockLines = [];
   
   const flushList = (key) => {
     if (listItems.length > 0) {
@@ -22,14 +35,48 @@ const MarkdownViewer = ({ content }) => {
   };
 
   for (let i = 0; i < lines.length; i++) {
-    const line = lines[i].trim();
+    const line = lines[i];
+    const trimmed = line.trim();
 
-    if (line.startsWith('|')) {
+    // Code block handling
+    if (inCodeBlock) {
+      if (trimmed.startsWith('```')) {
+        inCodeBlock = false;
+        rendered.push(
+          <pre key={`code-${i}`} style={{
+            background: 'rgba(0, 0, 0, 0.4)',
+            border: '1px solid var(--border-glass)',
+            padding: '16px',
+            borderRadius: '6px',
+            overflowX: 'auto',
+            fontSize: '0.88rem',
+            color: '#c9d1d9',
+            fontFamily: 'monospace',
+            marginBottom: '16px',
+            whiteSpace: 'pre'
+          }}>
+            <code>{codeBlockLines.join('\n')}</code>
+          </pre>
+        );
+        codeBlockLines = [];
+      } else {
+        codeBlockLines.push(lines[i]);
+      }
+      continue;
+    }
+
+    if (trimmed.startsWith('```')) {
+      flushList(i);
+      inCodeBlock = true;
+      continue;
+    }
+
+    if (trimmed.startsWith('|')) {
       flushList(i);
       inTable = true;
-      tableRows.push(line);
+      tableRows.push(trimmed);
       continue;
-    } else if (inTable && !line.startsWith('|')) {
+    } else if (inTable && !trimmed.startsWith('|')) {
       inTable = false;
       if (tableRows.length > 0) {
         const headers = tableRows[0].split('|').map(h => h.trim()).filter(h => h);
@@ -56,18 +103,21 @@ const MarkdownViewer = ({ content }) => {
       }
     }
 
-    if (line.startsWith('###')) {
+    if (trimmed.startsWith('---')) {
       flushList(i);
-      rendered.push(<h4 key={i} style={{ fontSize: '1.25rem', color: 'white', marginTop: '24px', marginBottom: '12px', fontWeight: 700 }}>{line.replace('###', '').trim()}</h4>);
-    } else if (line.startsWith('##')) {
+      rendered.push(<hr key={i} style={{ border: 'none', borderTop: '1px solid rgba(255, 255, 255, 0.08)', margin: '24px 0' }} />);
+    } else if (trimmed.startsWith('###')) {
       flushList(i);
-      rendered.push(<h3 key={i} style={{ fontSize: '1.4rem', color: 'white', marginTop: '28px', marginBottom: '14px', fontWeight: 700, borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '8px' }}>{line.replace('##', '').trim()}</h3>);
-    } else if (line.startsWith('#')) {
+      rendered.push(<h4 key={i} style={{ fontSize: '1.25rem', color: 'white', marginTop: '24px', marginBottom: '12px', fontWeight: 700 }}>{trimmed.replace('###', '').trim()}</h4>);
+    } else if (trimmed.startsWith('##')) {
       flushList(i);
-      rendered.push(<h2 key={i} style={{ fontSize: '1.7rem', color: 'white', marginTop: '32px', marginBottom: '16px', fontWeight: 800 }}>{line.replace('#', '').trim()}</h2>);
-    } else if (line.startsWith('-') || line.startsWith('*')) {
-      listItems.push(<li key={`li-${i}`} style={{ color: 'var(--text-main)', fontSize: '0.92rem', lineHeight: '1.6' }}>{line.substring(1).trim()}</li>);
-    } else if (line.startsWith('> [!TIP]')) {
+      rendered.push(<h3 key={i} style={{ fontSize: '1.4rem', color: 'white', marginTop: '28px', marginBottom: '14px', fontWeight: 700, borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '8px' }}>{trimmed.replace('##', '').trim()}</h3>);
+    } else if (trimmed.startsWith('#')) {
+      flushList(i);
+      rendered.push(<h2 key={i} style={{ fontSize: '1.7rem', color: 'white', marginTop: '32px', marginBottom: '16px', fontWeight: 800 }}>{trimmed.replace('#', '').trim()}</h2>);
+    } else if (trimmed.startsWith('-') || trimmed.startsWith('*')) {
+      listItems.push(<li key={`li-${i}`} style={{ color: 'var(--text-main)', fontSize: '0.92rem', lineHeight: '1.6' }}>{renderFormattedText(trimmed.substring(1).trim())}</li>);
+    } else if (trimmed.startsWith('> [!TIP]')) {
       flushList(i);
       let tipContent = '';
       let j = i + 1;
@@ -79,10 +129,10 @@ const MarkdownViewer = ({ content }) => {
       rendered.push(
         <div key={i} style={{ padding: '16px', background: 'rgba(46, 204, 113, 0.08)', borderLeft: '4px solid #2ecc71', borderRadius: '4px', margin: '20px 0', display: 'flex', flexDirection: 'column', gap: '4px' }}>
           <strong style={{ color: '#2ecc71', fontSize: '0.88rem', textTransform: 'uppercase' }}>💡 High-Yield Tip</strong>
-          <p style={{ color: 'var(--text-main)', fontSize: '0.88rem', margin: 0, lineHeight: '1.5' }}>{tipContent}</p>
+          <p style={{ color: 'var(--text-main)', fontSize: '0.88rem', margin: 0, lineHeight: '1.5' }}>{renderFormattedText(tipContent)}</p>
         </div>
       );
-    } else if (line.startsWith('> [!WARNING]') || line.startsWith('> [!CAUTION]')) {
+    } else if (trimmed.startsWith('> [!WARNING]') || trimmed.startsWith('> [!CAUTION]')) {
       flushList(i);
       let warnContent = '';
       let j = i + 1;
@@ -94,12 +144,27 @@ const MarkdownViewer = ({ content }) => {
       rendered.push(
         <div key={i} style={{ padding: '16px', background: 'rgba(231, 76, 60, 0.08)', borderLeft: '4px solid #e74c3c', borderRadius: '4px', margin: '20px 0', display: 'flex', flexDirection: 'column', gap: '4px' }}>
           <strong style={{ color: '#e74c3c', fontSize: '0.88rem', textTransform: 'uppercase' }}>⚠️ Common Pitfall</strong>
-          <p style={{ color: 'var(--text-main)', fontSize: '0.88rem', margin: 0, lineHeight: '1.5' }}>{warnContent}</p>
+          <p style={{ color: 'var(--text-main)', fontSize: '0.88rem', margin: 0, lineHeight: '1.5' }}>{renderFormattedText(warnContent)}</p>
         </div>
       );
-    } else if (line.trim() !== '') {
+    } else if (trimmed.startsWith('> [!NOTE]') || trimmed.startsWith('> [!ANALOGY]')) {
       flushList(i);
-      rendered.push(<p key={i} style={{ color: 'var(--text-main)', fontSize: '0.92rem', lineHeight: '1.6', marginBottom: '16px' }}>{line}</p>);
+      let noteContent = '';
+      let j = i + 1;
+      while (j < lines.length && lines[j].trim().startsWith('>')) {
+        noteContent += lines[j].replace('>', '').replace('[!NOTE]', '').replace('[!ANALOGY]', '').trim() + ' ';
+        j++;
+      }
+      i = j - 1;
+      rendered.push(
+        <div key={i} style={{ padding: '16px', background: 'rgba(230, 126, 34, 0.08)', borderLeft: '4px solid #e67e22', borderRadius: '4px', margin: '20px 0', display: 'flex', flexDirection: 'column', gap: '4px' }}>
+          <strong style={{ color: '#e67e22', fontSize: '0.88rem', textTransform: 'uppercase' }}>💡 Real-Life Analogy</strong>
+          <p style={{ color: 'var(--text-main)', fontSize: '0.88rem', margin: 0, lineHeight: '1.5' }}>{renderFormattedText(noteContent)}</p>
+        </div>
+      );
+    } else if (trimmed !== '') {
+      flushList(i);
+      rendered.push(<p key={i} style={{ color: 'var(--text-main)', fontSize: '0.92rem', lineHeight: '1.6', marginBottom: '16px' }}>{renderFormattedText(line)}</p>);
     }
   }
   flushList(lines.length);

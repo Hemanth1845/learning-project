@@ -222,4 +222,18 @@ router.delete('/chapters/:id', protect, adminOnly, async (req, res) => {
   }
 });
 
+// @desc    Delete theory subject
+// @route   DELETE /api/theory/subjects/:id
+router.delete('/subjects/:id', protect, adminOnly, async (req, res) => {
+  try {
+    const deleted = await TheorySubject.findOneAndDelete({ id: req.params.id });
+    if (!deleted) return res.status(404).json({ message: 'Subject not found' });
+    const TheoryChapter = require('../models/TheoryChapter');
+    await TheoryChapter.deleteMany({ subjectId: req.params.id });
+    res.json({ message: 'Subject and its chapters deleted successfully' });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
 module.exports = router;

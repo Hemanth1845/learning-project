@@ -3,7 +3,7 @@ import { AuthContext } from '../context/AuthContext';
 
 const AdminDashboard = () => {
   const { token, API_URL } = useContext(AuthContext);
-  const [activeTab, setActiveTab] = useState('courses'); // 'courses', 'users', 'dsa', or 'notes'
+  const [activeTab, setActiveTab] = useState('courses'); // 'courses', 'users', 'dsa', 'notes', 'theory', 'aptitude', 'requests'
   
   // Courses states
   const [courses, setCourses] = useState([]);
@@ -22,7 +22,7 @@ const AdminDashboard = () => {
     id: null, title: '', topic: 'Arrays', difficulty: 'Easy', xp: 10, solveUrl: '', videoUrl: '',
     description: '', exampleInput: '', exampleOutput: '', exampleExplanation: '',
     example2Input: '', example2Output: '', example2Explanation: '',
-    testCaseInput: '', testCaseExpectedOutput: ''
+    testCaseInput: '', testCaseExpectedOutput: '', isDaily: false
   });
   
   // Notes states
@@ -33,14 +33,18 @@ const AdminDashboard = () => {
 
   // Theory states
   const [theorySubjects, setTheorySubjects] = useState([]);
-  const [selectedTheorySubjectId, setSelectedTheorySubjectId] = useState('dsa');
+  const [selectedTheorySubjectId, setSelectedTheorySubjectId] = useState('');
   const [showTheoryModal, setShowTheoryModal] = useState(false);
   const [theoryForm, setTheoryForm] = useState({
-    id: null, subjectId: 'dsa', title: '', order: 1, content: '',
+    id: null, subjectId: '', title: '', order: 1, content: '',
     cppCode: '', javaCode: '', pythonCode: '',
     interviewTips: '', commonMistakes: '',
     questionText: '', answerText: '', pdfUrl: ''
   });
+
+  // Theory Subject creation states
+  const [showSubjectModal, setShowSubjectModal] = useState(false);
+  const [subjectForm, setSubjectForm] = useState({ id: '', title: '', icon: '📖', order: 1 });
 
   // Aptitude states
   const [aptitudeData, setAptitudeData] = useState(null);
@@ -49,16 +53,23 @@ const AdminDashboard = () => {
   const [aptitudeForm, setAptitudeForm] = useState({
     id: null, category: 'quant', title: '', difficulty: 'Easy', desc: '', duration: '30 min',
     tags: '', shortcuts: '', xpReward: 50, order: 1,
-    q1: '', q1_o1: '', q1_o2: '', q1_o3: '', q1_o4: '', q1_ans: 0, q1_exp: '',
-    q2: '', q2_o1: '', q2_o2: '', q2_o3: '', q2_o4: '', q2_ans: 0, q2_exp: ''
+    quizQuestions: []
   });
+
+  const [newAptitudeQuestion, setNewAptitudeQuestion] = useState({
+    q: '', options: ['', '', '', ''], correctIdx: 0, explanation: '', difficulty: 'Easy-Medium'
+  });
+
+  // Course requests states
+  const [courseRequests, setCourseRequests] = useState([]);
+  const [requestsLoading, setRequestsLoading] = useState(false);
 
   // Modals visibility
   const [showCourseModal, setShowCourseModal] = useState(false);
   const [showLessonModal, setShowLessonModal] = useState(false);
   
   // Course form states
-  const [courseForm, setCourseForm] = useState({ id: null, title: '', description: '', category: 'Core CS', difficulty: 'Easy', thumbnail: '', pdfUrl: '' });
+  const [courseForm, setCourseForm] = useState({ id: null, title: '', description: '', category: 'Core CS', difficulty: 'Easy', thumbnail: '', pdfUrl: '', externalLink: '', practicePageUrl: '' });
   
   // Lesson form states
   const [lessonForm, setLessonForm] = useState({
@@ -94,6 +105,8 @@ const AdminDashboard = () => {
         fetchTheoryData();
       } else if (activeTab === 'aptitude') {
         fetchAptitudeData();
+      } else if (activeTab === 'requests') {
+        fetchCourseRequests();
       }
     }
   }, [token, activeTab]);
@@ -163,6 +176,9 @@ const AdminDashboard = () => {
       });
       const data = await res.json();
       setTheorySubjects(data || []);
+      if (data && data.length > 0 && !selectedTheorySubjectId) {
+        setSelectedTheorySubjectId(data[0].id);
+      }
     } catch (err) {
       console.error(err);
     }
@@ -170,7 +186,7 @@ const AdminDashboard = () => {
 
   const handleOpenAddTheory = () => {
     setTheoryForm({
-      id: null, subjectId: selectedTheorySubjectId, title: '', order: 1, content: '',
+      id: null, subjectId: selectedTheorySubjectId || (theorySubjects[0]?.id || ''), title: '', order: 1, content: '',
       cppCode: '', javaCode: '', pythonCode: '',
       interviewTips: '', commonMistakes: '',
       questionText: '', answerText: '', pdfUrl: ''
@@ -262,6 +278,46 @@ const AdminDashboard = () => {
     }
   };
 
+  const handleSaveTheorySubject = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await fetch(`${API_URL}/theory/subjects`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify(subjectForm)
+      });
+      if (res.ok) {
+        setShowSubjectModal(false);
+        setSubjectForm({ id: '', title: '', icon: '📖', order: 1 });
+        fetchTheoryData();
+      } else {
+        const err = await res.json();
+        alert(err.message || 'Error saving subject');
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const handleDeleteTheorySubject = async (subId) => {
+    if (!window.confirm('Are you sure you want to delete this theory subject and ALL of its chapters? This is irreversible.')) return;
+    try {
+      const res = await fetch(`${API_URL}/theory/subjects/${subId}`, {
+        method: 'DELETE',
+        headers: { 'Authorization': `Bearer ${token}` }
+      });
+      if (res.ok) {
+        fetchTheoryData();
+        setSelectedTheorySubjectId('');
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   // APTITUDE CRUD
   const fetchAptitudeData = async () => {
     try {
@@ -279,9 +335,9 @@ const AdminDashboard = () => {
     setAptitudeForm({
       id: null, category: selectedAptitudeCat, title: '', difficulty: 'Easy', desc: '', duration: '30 min',
       tags: 'TCS, Infosys', shortcuts: '', xpReward: 50, order: 1,
-      q1: '', q1_o1: '', q1_o2: '', q1_o3: '', q1_o4: '', q1_ans: 0, q1_exp: '',
-      q2: '', q2_o1: '', q2_o2: '', q2_o3: '', q2_o4: '', q2_ans: 0, q2_exp: ''
+      quizQuestions: []
     });
+    setNewAptitudeQuestion({ q: '', options: ['', '', '', ''], correctIdx: 0, explanation: '', difficulty: 'Easy-Medium' });
     setShowAptitudeModal(true);
   };
 
@@ -297,21 +353,9 @@ const AdminDashboard = () => {
       shortcuts: topic.shortcuts?.join('\n') || '',
       xpReward: topic.xpReward || 50,
       order: topic.order || 1,
-      q1: topic.quizQuestions?.[0]?.q || '',
-      q1_o1: topic.quizQuestions?.[0]?.options?.[0] || '',
-      q1_o2: topic.quizQuestions?.[0]?.options?.[1] || '',
-      q1_o3: topic.quizQuestions?.[0]?.options?.[2] || '',
-      q1_o4: topic.quizQuestions?.[0]?.options?.[3] || '',
-      q1_ans: topic.quizQuestions?.[0]?.correctIdx || 0,
-      q1_exp: topic.quizQuestions?.[0]?.explanation || '',
-      q2: topic.quizQuestions?.[1]?.q || '',
-      q2_o1: topic.quizQuestions?.[1]?.options?.[0] || '',
-      q2_o2: topic.quizQuestions?.[1]?.options?.[1] || '',
-      q2_o3: topic.quizQuestions?.[1]?.options?.[2] || '',
-      q2_o4: topic.quizQuestions?.[1]?.options?.[3] || '',
-      q2_ans: topic.quizQuestions?.[1]?.correctIdx || 0,
-      q2_exp: topic.quizQuestions?.[1]?.explanation || ''
+      quizQuestions: topic.quizQuestions || []
     });
+    setNewAptitudeQuestion({ q: '', options: ['', '', '', ''], correctIdx: 0, explanation: '', difficulty: 'Easy-Medium' });
     setShowAptitudeModal(true);
   };
 
@@ -319,24 +363,6 @@ const AdminDashboard = () => {
     e.preventDefault();
     const url = aptitudeForm.id ? `${API_URL}/aptitude/topics/${aptitudeForm.id}` : `${API_URL}/aptitude/topics`;
     const method = aptitudeForm.id ? 'PUT' : 'POST';
-
-    const quizQuestions = [];
-    if (aptitudeForm.q1) {
-      quizQuestions.push({
-        q: aptitudeForm.q1,
-        options: [aptitudeForm.q1_o1, aptitudeForm.q1_o2, aptitudeForm.q1_o3, aptitudeForm.q1_o4],
-        correctIdx: Number(aptitudeForm.q1_ans),
-        explanation: aptitudeForm.q1_exp
-      });
-    }
-    if (aptitudeForm.q2) {
-      quizQuestions.push({
-        q: aptitudeForm.q2,
-        options: [aptitudeForm.q2_o1, aptitudeForm.q2_o2, aptitudeForm.q2_o3, aptitudeForm.q2_o4],
-        correctIdx: Number(aptitudeForm.q2_ans),
-        explanation: aptitudeForm.q2_exp
-      });
-    }
 
     const payload = {
       category: aptitudeForm.category,
@@ -349,7 +375,7 @@ const AdminDashboard = () => {
         { term: `${aptitudeForm.title} Basics`, definition: `Fundamental computational formulas for ${aptitudeForm.title}.` }
       ],
       shortcuts: aptitudeForm.shortcuts.split('\n').map(s => s.trim()).filter(s => s),
-      quizQuestions,
+      quizQuestions: aptitudeForm.quizQuestions,
       xpReward: Number(aptitudeForm.xpReward),
       order: Number(aptitudeForm.order)
     };
@@ -384,6 +410,55 @@ const AdminDashboard = () => {
       });
       if (res.ok) {
         fetchAptitudeData();
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  // COURSE REQUESTS CRUD
+  const fetchCourseRequests = async () => {
+    setRequestsLoading(true);
+    try {
+      const res = await fetch(`${API_URL}/courses/requests/all`, {
+        headers: { 'Authorization': `Bearer ${token}` }
+      });
+      const data = await res.json();
+      setCourseRequests(data || []);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setRequestsLoading(false);
+    }
+  };
+
+  const handleUpdateReqStatus = async (reqId, newStatus) => {
+    try {
+      const res = await fetch(`${API_URL}/courses/requests/${reqId}/status`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify({ status: newStatus })
+      });
+      if (res.ok) {
+        fetchCourseRequests();
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const handleDeleteReq = async (reqId) => {
+    if (!window.confirm('Are you sure you want to delete this course request?')) return;
+    try {
+      const res = await fetch(`${API_URL}/courses/requests/${reqId}`, {
+        method: 'DELETE',
+        headers: { 'Authorization': `Bearer ${token}` }
+      });
+      if (res.ok) {
+        fetchCourseRequests();
       }
     } catch (err) {
       console.error(err);
@@ -533,7 +608,7 @@ const AdminDashboard = () => {
 
   // COURSE CRUD
   const handleOpenAddCourse = () => {
-    setCourseForm({ id: null, title: '', description: '', category: 'Core CS', difficulty: 'Easy', thumbnail: '', pdfUrl: '' });
+    setCourseForm({ id: null, title: '', description: '', category: 'Core CS', difficulty: 'Easy', thumbnail: '', pdfUrl: '', externalLink: '', practicePageUrl: '' });
     setShowCourseModal(true);
   };
 
@@ -545,7 +620,9 @@ const AdminDashboard = () => {
       category: course.category,
       difficulty: course.difficulty,
       thumbnail: course.thumbnail || '',
-      pdfUrl: course.pdfUrl || ''
+      pdfUrl: course.pdfUrl || '',
+      externalLink: course.externalLink || '',
+      practicePageUrl: course.practicePageUrl || ''
     });
     setShowCourseModal(true);
   };
@@ -711,7 +788,7 @@ const AdminDashboard = () => {
       id: null, title: '', topic: 'Arrays', difficulty: 'Easy', xp: 10, solveUrl: '', videoUrl: '',
       description: '', exampleInput: '', exampleOutput: '', exampleExplanation: '',
       example2Input: '', example2Output: '', example2Explanation: '',
-      testCaseInput: '', testCaseExpectedOutput: ''
+      testCaseInput: '', testCaseExpectedOutput: '', isDaily: false
     });
     setShowDsaModal(true);
   };
@@ -733,7 +810,8 @@ const AdminDashboard = () => {
       example2Output: prob.examples?.[1]?.output || '',
       example2Explanation: prob.examples?.[1]?.explanation || '',
       testCaseInput: prob.testCases?.[0]?.input || '',
-      testCaseExpectedOutput: prob.testCases?.[0]?.expectedOutput || ''
+      testCaseExpectedOutput: prob.testCases?.[0]?.expectedOutput || '',
+      isDaily: prob.isDaily || false
     });
     setShowDsaModal(true);
   };
@@ -783,7 +861,8 @@ const AdminDashboard = () => {
           videoUrl: dsaForm.videoUrl,
           description: dsaForm.description,
           examples,
-          testCases
+          testCases,
+          isDaily: dsaForm.isDaily
         })
       });
       if (res.ok) {
@@ -824,7 +903,7 @@ const AdminDashboard = () => {
         </div>
         
         {/* Navigation Tabs */}
-        <div style={{ display: 'flex', gap: '12px' }}>
+        <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
           <button 
             className={`filter-tag ${activeTab === 'courses' ? 'active' : ''}`}
             onClick={() => setActiveTab('courses')}
@@ -859,6 +938,13 @@ const AdminDashboard = () => {
             style={{ padding: '10px 20px', fontSize: '0.9rem', fontWeight: 600 }}
           >
             📈 Aptitude
+          </button>
+          <button 
+            className={`filter-tag ${activeTab === 'requests' ? 'active' : ''}`}
+            onClick={() => setActiveTab('requests')}
+            style={{ padding: '10px 20px', fontSize: '0.9rem', fontWeight: 600 }}
+          >
+            📋 Course Requests
           </button>
           <button 
             className={`filter-tag ${activeTab === 'users' ? 'active' : ''}`}
@@ -999,6 +1085,7 @@ const AdminDashboard = () => {
                       <th>Algorithm Topic</th>
                       <th>Difficulty</th>
                       <th>XP Weight</th>
+                      <th>Daily Challenge</th>
                       <th>LeetCode URL</th>
                       <th>Modify</th>
                     </tr>
@@ -1015,6 +1102,15 @@ const AdminDashboard = () => {
                           </span>
                         </td>
                         <td style={{ fontWeight: 600, color: 'var(--color-points)' }}>⚡ {prob.xp} XP</td>
+                        <td>
+                          {prob.isDaily ? (
+                            <span style={{ fontSize: '0.78rem', background: 'rgba(16, 185, 129, 0.15)', padding: '4px 8px', borderRadius: '4px', color: 'var(--color-solved)', fontWeight: 600 }}>
+                              📆 Active Daily
+                            </span>
+                          ) : (
+                            <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>No</span>
+                          )}
+                        </td>
                         <td>
                           <a href={prob.solveUrl} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-secondary)', fontSize: '0.85rem' }}>
                             Link ↗
@@ -1159,6 +1255,99 @@ const AdminDashboard = () => {
           )}
         </section>
       )}
+      {/* RENDER COURSE REQUESTS TAB */}
+      {activeTab === 'requests' && (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+          <div style={{ padding: '24px', borderBottom: '1px solid var(--border-glass)' }} className="glass-card">
+            <h3 style={{ fontSize: '1.25rem', color: 'white' }}>Course Requests Backlog</h3>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginTop: '4px' }}>Review custom curriculum requests submitted by students. Adjust their state to communicate update statuses.</p>
+          </div>
+
+          <section className="glass-card" style={{ padding: '0px', overflow: 'hidden' }}>
+            {requestsLoading ? (
+              <div style={{ color: 'white', padding: '40px', textAlign: 'center' }}>Loading course requests...</div>
+            ) : (
+              <div className="table-container">
+                <table className="custom-table">
+                  <thead>
+                    <tr>
+                      <th>Student</th>
+                      <th>Requested Course</th>
+                      <th>Category</th>
+                      <th>Priority</th>
+                      <th>Upvotes</th>
+                      <th>Update Status</th>
+                      <th>Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {courseRequests.length > 0 ? (
+                      courseRequests.map((req) => (
+                        <tr key={req._id}>
+                          <td style={{ fontWeight: 600, color: 'white' }}>{req.username}</td>
+                          <td>
+                            <div>
+                              <div style={{ color: 'white', fontWeight: 600 }}>{req.courseName}</div>
+                              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '2px' }}>{req.reason || req.description || 'No description'}</div>
+                            </div>
+                          </td>
+                          <td>{req.category}</td>
+                          <td>
+                            <span 
+                              className="difficulty-pill"
+                              style={{
+                                background: req.priority === 'Urgent' ? 'rgba(239, 68, 68, 0.15)' : req.priority === 'Medium' ? 'rgba(245, 158, 11, 0.15)' : 'rgba(59, 130, 246, 0.15)',
+                                color: req.priority === 'Urgent' ? 'var(--color-hard)' : req.priority === 'Medium' ? 'var(--color-medium)' : 'var(--accent-secondary)'
+                              }}
+                            >
+                              {req.priority}
+                            </span>
+                          </td>
+                          <td style={{ fontWeight: 700, color: 'var(--color-points)' }}>👍 {req.votes?.length || 1} votes</td>
+                          <td>
+                            <select
+                              value={req.status}
+                              onChange={(e) => handleUpdateReqStatus(req._id, e.target.value)}
+                              style={{
+                                background: 'rgba(0,0,0,0.3)',
+                                border: '1px solid var(--border-glass)',
+                                borderRadius: '4px',
+                                padding: '6px 10px',
+                                color: 'white',
+                                fontSize: '0.8rem'
+                              }}
+                            >
+                              <option value="Pending">Pending</option>
+                              <option value="In Progress">In Progress</option>
+                              <option value="Completed">Completed</option>
+                              <option value="Rejected">Rejected</option>
+                            </select>
+                          </td>
+                          <td>
+                            <button 
+                              onClick={() => handleDeleteReq(req._id)} 
+                              className="warroom-btn" 
+                              style={{ background: 'rgba(239,68,68,0.05)', border: '1px solid rgba(239,68,68,0.2)', color: 'var(--color-hard)', padding: '4px 10px', fontSize: '0.8rem' }}
+                            >
+                              Delete
+                            </button>
+                          </td>
+                        </tr>
+                      ))
+                    ) : (
+                      <tr>
+                        <td colSpan="7" style={{ textAlign: 'center', color: 'var(--text-muted)', padding: '32px' }}>
+                          No course requests submitted yet.
+                        </td>
+                      </tr>
+                    )}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </section>
+        </div>
+      )}
 
       {/* COURSE CREATION/EDIT MODAL */}
       {showCourseModal && (
@@ -1233,6 +1422,28 @@ const AdminDashboard = () => {
                   placeholder="e.g. https://example.com/syllabus.pdf or Base64 data"
                   value={courseForm.pdfUrl}
                   onChange={(e) => setCourseForm({ ...courseForm, pdfUrl: e.target.value })}
+                />
+              </div>
+
+              <div className="form-group">
+                <label>External Resource Link (e.g. YouTube Playlist, Documentation)</label>
+                <input 
+                  type="text" 
+                  className="form-input" 
+                  placeholder="https://example.com/resource"
+                  value={courseForm.externalLink}
+                  onChange={(e) => setCourseForm({ ...courseForm, externalLink: e.target.value })}
+                />
+              </div>
+
+              <div className="form-group">
+                <label>Practice Page URL Link</label>
+                <input 
+                  type="text" 
+                  className="form-input" 
+                  placeholder="/compiler or external practice sandbox URL"
+                  value={courseForm.practicePageUrl}
+                  onChange={(e) => setCourseForm({ ...courseForm, practicePageUrl: e.target.value })}
                 />
               </div>
 
@@ -1484,15 +1695,27 @@ const AdminDashboard = () => {
                 </div>
               </div>
 
-              <div className="form-group">
-                <label>YouTube Explainer Video Link (Optional)</label>
-                <input 
-                  type="url" 
-                  className="form-input"
-                  placeholder="https://www.youtube.com/watch?v=..."
-                  value={dsaForm.videoUrl}
-                  onChange={(e) => setDsaForm({ ...dsaForm, videoUrl: e.target.value })}
-                />
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '16px' }}>
+                <div className="form-group">
+                  <label>YouTube Explainer Video Link (Optional)</label>
+                  <input 
+                    type="url" 
+                    className="form-input"
+                    placeholder="https://www.youtube.com/watch?v=..."
+                    value={dsaForm.videoUrl}
+                    onChange={(e) => setDsaForm({ ...dsaForm, videoUrl: e.target.value })}
+                  />
+                </div>
+                <div className="form-group" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                  <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer', color: 'white', fontWeight: 600, marginTop: '20px' }}>
+                    <input 
+                      type="checkbox" 
+                      checked={dsaForm.isDaily} 
+                      onChange={(e) => setDsaForm({ ...dsaForm, isDaily: e.target.checked })} 
+                    />
+                    Mark as Daily Challenge
+                  </label>
+                </div>
               </div>
 
               <div className="form-group">
@@ -1793,7 +2016,7 @@ const AdminDashboard = () => {
       {activeTab === 'theory' && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
+            <div style={{ display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap' }}>
               <h3 style={{ fontSize: '1.25rem', color: 'white' }}>Placement Encyclopedia Chapters</h3>
               <select
                 value={selectedTheorySubjectId}
@@ -1807,14 +2030,29 @@ const AdminDashboard = () => {
                   fontSize: '0.85rem'
                 }}
               >
-                <option value="dsa">DSA Theory</option>
-                <option value="oops">OOPS</option>
-                <option value="os">Operating Systems</option>
-                <option value="dbms">DBMS</option>
-                <option value="cn">Computer Networks</option>
-                <option value="ml">Machine Learning</option>
-                <option value="maths">Mathematics</option>
+                {theorySubjects.map((sub) => (
+                  <option key={sub.id} value={sub.id}>{sub.title}</option>
+                ))}
               </select>
+              <button 
+                onClick={() => {
+                  setSubjectForm({ id: '', title: '', icon: '📖', order: theorySubjects.length + 1 });
+                  setShowSubjectModal(true);
+                }} 
+                className="warroom-btn" 
+                style={{ padding: '6px 12px', fontSize: '0.8rem', color: 'var(--accent-secondary)' }}
+              >
+                + Add Subject
+              </button>
+              {selectedTheorySubjectId && (
+                <button 
+                  onClick={() => handleDeleteTheorySubject(selectedTheorySubjectId)} 
+                  className="warroom-btn" 
+                  style={{ padding: '6px 12px', fontSize: '0.8rem', color: 'var(--color-hard)', borderColor: 'rgba(239,68,68,0.2)' }}
+                >
+                  Delete Subject
+                </button>
+              )}
             </div>
             <button onClick={handleOpenAddTheory} className="primary-btn" style={{ padding: '10px 20px', fontSize: '0.9rem' }}>
               + Add New Chapter
@@ -1971,13 +2209,9 @@ const AdminDashboard = () => {
                     value={theoryForm.subjectId}
                     onChange={(e) => setTheoryForm({ ...theoryForm, subjectId: e.target.value })}
                   >
-                    <option value="dsa">DSA Theory</option>
-                    <option value="oops">OOPS</option>
-                    <option value="os">Operating Systems</option>
-                    <option value="dbms">DBMS</option>
-                    <option value="cn">Computer Networks</option>
-                    <option value="ml">Machine Learning</option>
-                    <option value="maths">Mathematics</option>
+                    {theorySubjects.map((sub) => (
+                      <option key={sub.id} value={sub.id}>{sub.title}</option>
+                    ))}
                   </select>
                 </div>
                 <div className="form-group">
@@ -2211,63 +2445,118 @@ const AdminDashboard = () => {
                 />
               </div>
 
-              {/* Quiz Q1 */}
+              {/* Dynamic Quiz Questions Manager */}
               <div style={{ border: '1px solid var(--border-glass)', padding: '16px', borderRadius: '6px', marginTop: '10px' }}>
-                <h4 style={{ color: 'white', marginBottom: '12px' }}>Quiz Question 1</h4>
-                <div className="form-group">
-                  <label>Question Text</label>
-                  <input
-                    type="text"
-                    className="form-input"
-                    value={aptitudeForm.q1}
-                    onChange={(e) => setAptitudeForm({ ...aptitudeForm, q1: e.target.value })}
-                  />
+                <h4 style={{ color: 'white', marginBottom: '12px' }}>Manage Quiz Questions ({aptitudeForm.quizQuestions?.length || 0})</h4>
+                
+                {/* Questions List */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '16px', maxHeight: '200px', overflowY: 'auto' }}>
+                  {aptitudeForm.quizQuestions && aptitudeForm.quizQuestions.map((q, qIdx) => (
+                    <div key={qIdx} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'rgba(255,255,255,0.03)', padding: '8px 12px', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.05)' }}>
+                      <div style={{ fontSize: '0.85rem' }}>
+                        <span style={{ color: 'var(--accent-secondary)', fontWeight: 600 }}>Q{qIdx + 1}:</span> {q.q} 
+                        <span style={{ marginLeft: '10px', color: 'var(--text-muted)', fontSize: '0.72rem' }}>({q.difficulty || 'Easy-Medium'})</span>
+                      </div>
+                      <button 
+                        type="button" 
+                        onClick={() => setAptitudeForm(prev => ({ ...prev, quizQuestions: prev.quizQuestions.filter((_, i) => i !== qIdx) }))}
+                        className="warroom-btn" 
+                        style={{ padding: '2px 8px', background: 'rgba(239, 68, 68, 0.1)', color: 'var(--color-hard)', borderColor: 'var(--color-hard)' }}
+                      >
+                        Remove
+                      </button>
+                    </div>
+                  ))}
+                  {(!aptitudeForm.quizQuestions || aptitudeForm.quizQuestions.length === 0) && (
+                    <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>No questions added to this topic yet. Add questions below.</span>
+                  )}
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginTop: '8px' }}>
-                  <input type="text" className="form-input" placeholder="Option 1" value={aptitudeForm.q1_o1} onChange={(e) => setAptitudeForm({ ...aptitudeForm, q1_o1: e.target.value })} />
-                  <input type="text" className="form-input" placeholder="Option 2" value={aptitudeForm.q1_o2} onChange={(e) => setAptitudeForm({ ...aptitudeForm, q1_o2: e.target.value })} />
-                  <input type="text" className="form-input" placeholder="Option 3" value={aptitudeForm.q1_o3} onChange={(e) => setAptitudeForm({ ...aptitudeForm, q1_o3: e.target.value })} />
-                  <input type="text" className="form-input" placeholder="Option 4" value={aptitudeForm.q1_o4} onChange={(e) => setAptitudeForm({ ...aptitudeForm, q1_o4: e.target.value })} />
-                </div>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginTop: '12px' }}>
-                  <div className="form-group">
-                    <label>Correct Option Index (0-3)</label>
-                    <input type="number" min="0" max="3" className="form-input" value={aptitudeForm.q1_ans} onChange={(e) => setAptitudeForm({ ...aptitudeForm, q1_ans: e.target.value })} />
-                  </div>
-                  <div className="form-group">
-                    <label>Explanation</label>
-                    <input type="text" className="form-input" value={aptitudeForm.q1_exp} onChange={(e) => setAptitudeForm({ ...aptitudeForm, q1_exp: e.target.value })} />
-                  </div>
-                </div>
-              </div>
 
-              {/* Quiz Q2 */}
-              <div style={{ border: '1px solid var(--border-glass)', padding: '16px', borderRadius: '6px', marginTop: '10px' }}>
-                <h4 style={{ color: 'white', marginBottom: '12px' }}>Quiz Question 2</h4>
-                <div className="form-group">
-                  <label>Question Text</label>
-                  <input
-                    type="text"
-                    className="form-input"
-                    value={aptitudeForm.q2}
-                    onChange={(e) => setAptitudeForm({ ...aptitudeForm, q2: e.target.value })}
-                  />
-                </div>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginTop: '8px' }}>
-                  <input type="text" className="form-input" placeholder="Option 1" value={aptitudeForm.q2_o1} onChange={(e) => setAptitudeForm({ ...aptitudeForm, q2_o1: e.target.value })} />
-                  <input type="text" className="form-input" placeholder="Option 2" value={aptitudeForm.q2_o2} onChange={(e) => setAptitudeForm({ ...aptitudeForm, q2_o2: e.target.value })} />
-                  <input type="text" className="form-input" placeholder="Option 3" value={aptitudeForm.q2_o3} onChange={(e) => setAptitudeForm({ ...aptitudeForm, q2_o3: e.target.value })} />
-                  <input type="text" className="form-input" placeholder="Option 4" value={aptitudeForm.q2_o4} onChange={(e) => setAptitudeForm({ ...aptitudeForm, q2_o4: e.target.value })} />
-                </div>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginTop: '12px' }}>
+                {/* Add New Question Section */}
+                <div style={{ borderTop: '1px solid var(--border-glass)', paddingTop: '16px' }}>
+                  <h5 style={{ color: 'white', marginBottom: '8px', fontSize: '0.88rem' }}>Add a Question</h5>
                   <div className="form-group">
-                    <label>Correct Option Index (0-3)</label>
-                    <input type="number" min="0" max="3" className="form-input" value={aptitudeForm.q2_ans} onChange={(e) => setAptitudeForm({ ...aptitudeForm, q2_ans: e.target.value })} />
+                    <label>Question Scenario</label>
+                    <input
+                      type="text"
+                      className="form-input"
+                      value={newAptitudeQuestion.q}
+                      onChange={(e) => setNewAptitudeQuestion({ ...newAptitudeQuestion, q: e.target.value })}
+                      placeholder="Enter question scenario..."
+                    />
                   </div>
-                  <div className="form-group">
-                    <label>Explanation</label>
-                    <input type="text" className="form-input" value={aptitudeForm.q2_exp} onChange={(e) => setAptitudeForm({ ...aptitudeForm, q2_exp: e.target.value })} />
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginTop: '8px' }}>
+                    <input type="text" className="form-input" placeholder="Option A" value={newAptitudeQuestion.options[0]} onChange={(e) => {
+                      const opts = [...newAptitudeQuestion.options];
+                      opts[0] = e.target.value;
+                      setNewAptitudeQuestion({ ...newAptitudeQuestion, options: opts });
+                    }} />
+                    <input type="text" className="form-input" placeholder="Option B" value={newAptitudeQuestion.options[1]} onChange={(e) => {
+                      const opts = [...newAptitudeQuestion.options];
+                      opts[1] = e.target.value;
+                      setNewAptitudeQuestion({ ...newAptitudeQuestion, options: opts });
+                    }} />
+                    <input type="text" className="form-input" placeholder="Option C" value={newAptitudeQuestion.options[2]} onChange={(e) => {
+                      const opts = [...newAptitudeQuestion.options];
+                      opts[2] = e.target.value;
+                      setNewAptitudeQuestion({ ...newAptitudeQuestion, options: opts });
+                    }} />
+                    <input type="text" className="form-input" placeholder="Option D" value={newAptitudeQuestion.options[3]} onChange={(e) => {
+                      const opts = [...newAptitudeQuestion.options];
+                      opts[3] = e.target.value;
+                      setNewAptitudeQuestion({ ...newAptitudeQuestion, options: opts });
+                    }} />
                   </div>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '12px', marginTop: '12px' }}>
+                    <div className="form-group">
+                      <label>Correct Index (0-3)</label>
+                      <input 
+                        type="number" 
+                        min="0" 
+                        max="3" 
+                        className="form-input" 
+                        value={newAptitudeQuestion.correctIdx} 
+                        onChange={(e) => setNewAptitudeQuestion({ ...newAptitudeQuestion, correctIdx: Number(e.target.value) })} 
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label>Difficulty Tier</label>
+                      <select 
+                        className="form-input"
+                        value={newAptitudeQuestion.difficulty}
+                        onChange={(e) => setNewAptitudeQuestion({ ...newAptitudeQuestion, difficulty: e.target.value })}
+                      >
+                        <option value="Easy-Medium">Easy-Medium</option>
+                        <option value="Hard">Hard</option>
+                      </select>
+                    </div>
+                    <div className="form-group">
+                      <label>Explanation</label>
+                      <input 
+                        type="text" 
+                        className="form-input" 
+                        value={newAptitudeQuestion.explanation} 
+                        onChange={(e) => setNewAptitudeQuestion({ ...newAptitudeQuestion, explanation: e.target.value })} 
+                        placeholder="Detailed steps..."
+                      />
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (!newAptitudeQuestion.q.trim()) return alert('Question Scenario text required');
+                      if (newAptitudeQuestion.options.some(o => !o.trim())) return alert('All 4 options must be filled');
+                      setAptitudeForm(prev => ({
+                        ...prev,
+                        quizQuestions: [...(prev.quizQuestions || []), newAptitudeQuestion]
+                      }));
+                      setNewAptitudeQuestion({ q: '', options: ['', '', '', ''], correctIdx: 0, explanation: '', difficulty: 'Easy-Medium' });
+                    }}
+                    className="warroom-btn"
+                    style={{ width: '100%', marginTop: '14px', background: 'rgba(16, 185, 129, 0.15)', borderColor: 'var(--color-solved)', color: 'var(--color-solved)' }}
+                  >
+                    + Append Question to Topic Quiz
+                  </button>
                 </div>
               </div>
 
@@ -2277,6 +2566,72 @@ const AdminDashboard = () => {
                 </button>
                 <button type="submit" className="primary-btn" style={{ padding: '8px 24px', fontSize: '0.9rem' }}>
                   {aptitudeForm.id ? 'Save Changes' : 'Create Topic'}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+      {/* THEORY SUBJECT CREATION MODAL */}
+      {showSubjectModal && (
+        <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', background: 'rgba(0,0,0,0.8)', display: 'flex', alignItems: 'center', justifySelf: 'center', justifyContent: 'center', zIndex: 10000 }}>
+          <div className="glass-card" style={{ maxWidth: '450px', width: '90%', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+            <h2>Create New Theory Course/Subject</h2>
+            <form onSubmit={handleSaveTheorySubject} className="auth-form" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <div className="form-group">
+                <label>Subject ID * (e.g. system-design, dbms)</label>
+                <input 
+                  type="text" 
+                  className="form-input" 
+                  value={subjectForm.id}
+                  onChange={(e) => setSubjectForm({ ...subjectForm, id: e.target.value })}
+                  placeholder="e.g. system-design"
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <label>Subject Title *</label>
+                <input 
+                  type="text" 
+                  className="form-input" 
+                  value={subjectForm.title}
+                  onChange={(e) => setSubjectForm({ ...subjectForm, title: e.target.value })}
+                  placeholder="e.g. System Design"
+                  required
+                />
+              </div>
+
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+                <div className="form-group">
+                  <label>Icon Emoji *</label>
+                  <input 
+                    type="text" 
+                    className="form-input" 
+                    value={subjectForm.icon}
+                    onChange={(e) => setSubjectForm({ ...subjectForm, icon: e.target.value })}
+                    placeholder="e.g. 🌐"
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label>Order Number *</label>
+                  <input 
+                    type="number" 
+                    className="form-input" 
+                    value={subjectForm.order}
+                    onChange={(e) => setSubjectForm({ ...subjectForm, order: Number(e.target.value) })}
+                    required
+                  />
+                </div>
+              </div>
+
+              <div style={{ display: 'flex', gap: '16px', justifyContent: 'flex-end', marginTop: '12px' }}>
+                <button type="button" onClick={() => setShowSubjectModal(false)} className="warroom-btn" style={{ background: 'transparent', borderColor: 'var(--border-glass)', color: 'white' }}>
+                  Cancel
+                </button>
+                <button type="submit" className="primary-btn" style={{ padding: '8px 24px', fontSize: '0.9rem' }}>
+                  Create Subject
                 </button>
               </div>
             </form>

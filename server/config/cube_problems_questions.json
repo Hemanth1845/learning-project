@@ -1,0 +1,3002 @@
+[
+  {
+    "q": "A solid cube of dimensions 4x4x4 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "8",
+      "16",
+      "16",
+      "4"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 8.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 5x5x5 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "27",
+      "35",
+      "54",
+      "23"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 27.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 6x6x6 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "64",
+      "72",
+      "128",
+      "60"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 64.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 7x7x7 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "125",
+      "133",
+      "250",
+      "121"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 125.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 8x8x8 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "216",
+      "224",
+      "432",
+      "212"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 216.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 3x3x3 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "1",
+      "9",
+      "2",
+      "0"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 1.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 4x4x4 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "8",
+      "16",
+      "16",
+      "4"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 8.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 5x5x5 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "27",
+      "35",
+      "54",
+      "23"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 27.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 6x6x6 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "64",
+      "72",
+      "128",
+      "60"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 64.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 7x7x7 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "125",
+      "133",
+      "250",
+      "121"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 125.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 8x8x8 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "216",
+      "224",
+      "432",
+      "212"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 216.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 3x3x3 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "1",
+      "9",
+      "2",
+      "0"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 1.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 4x4x4 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "8",
+      "16",
+      "16",
+      "4"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 8.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 5x5x5 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "27",
+      "35",
+      "54",
+      "23"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 27.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 6x6x6 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "64",
+      "72",
+      "128",
+      "60"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 64.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 7x7x7 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "125",
+      "133",
+      "250",
+      "121"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 125.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 8x8x8 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "216",
+      "224",
+      "432",
+      "212"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 216.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 3x3x3 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "1",
+      "9",
+      "2",
+      "0"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 1.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 4x4x4 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "8",
+      "16",
+      "16",
+      "4"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 8.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 5x5x5 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "27",
+      "35",
+      "54",
+      "23"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 27.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 6x6x6 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "64",
+      "72",
+      "128",
+      "60"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 64.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 7x7x7 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "125",
+      "133",
+      "250",
+      "121"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 125.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 8x8x8 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "216",
+      "224",
+      "432",
+      "212"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 216.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 3x3x3 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "1",
+      "9",
+      "2",
+      "0"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 1.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 4x4x4 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "8",
+      "16",
+      "16",
+      "4"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 8.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 5x5x5 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "27",
+      "35",
+      "54",
+      "23"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 27.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 6x6x6 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "64",
+      "72",
+      "128",
+      "60"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 64.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 7x7x7 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "125",
+      "133",
+      "250",
+      "121"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 125.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 8x8x8 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "216",
+      "224",
+      "432",
+      "212"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 216.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 3x3x3 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "1",
+      "9",
+      "2",
+      "0"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 1.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 4x4x4 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "8",
+      "16",
+      "16",
+      "4"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 8.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 5x5x5 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "27",
+      "35",
+      "54",
+      "23"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 27.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 6x6x6 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "64",
+      "72",
+      "128",
+      "60"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 64.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 7x7x7 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "125",
+      "133",
+      "250",
+      "121"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 125.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 8x8x8 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "216",
+      "224",
+      "432",
+      "212"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 216.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 3x3x3 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "1",
+      "9",
+      "2",
+      "0"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 1.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 4x4x4 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "8",
+      "16",
+      "16",
+      "4"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 8.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 5x5x5 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "27",
+      "35",
+      "54",
+      "23"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 27.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 6x6x6 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "64",
+      "72",
+      "128",
+      "60"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 64.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 7x7x7 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "125",
+      "133",
+      "250",
+      "121"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 125.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 8x8x8 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "216",
+      "224",
+      "432",
+      "212"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 216.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 3x3x3 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "1",
+      "9",
+      "2",
+      "0"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 1.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 4x4x4 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "8",
+      "16",
+      "16",
+      "4"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 8.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 5x5x5 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "27",
+      "35",
+      "54",
+      "23"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 27.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 6x6x6 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "64",
+      "72",
+      "128",
+      "60"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 64.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 7x7x7 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "125",
+      "133",
+      "250",
+      "121"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 125.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 8x8x8 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "216",
+      "224",
+      "432",
+      "212"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 216.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 3x3x3 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "1",
+      "9",
+      "2",
+      "0"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 1.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 4x4x4 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "8",
+      "16",
+      "16",
+      "4"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 8.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A solid cube of dimensions 5x5x5 is painted green on all outer faces and then cut into 1x1x1 smaller unit cubes. How many of these smaller cubes will have absolutely no painted faces?",
+    "options": [
+      "27",
+      "35",
+      "54",
+      "23"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 27.",
+    "subtopic": "Cube Problems Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A large painted cube with side length 5 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "36",
+      "28",
+      "48",
+      "18"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 36.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 6 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "48",
+      "40",
+      "60",
+      "24"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 48.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 7 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "60",
+      "52",
+      "72",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 60.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 8 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "72",
+      "64",
+      "84",
+      "36"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 72.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 4 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "24",
+      "16",
+      "36",
+      "12"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 24.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 5 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "36",
+      "28",
+      "48",
+      "18"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 36.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 6 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "48",
+      "40",
+      "60",
+      "24"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 48.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 7 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "60",
+      "52",
+      "72",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 60.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 8 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "72",
+      "64",
+      "84",
+      "36"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 72.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 4 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "24",
+      "16",
+      "36",
+      "12"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 24.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 5 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "36",
+      "28",
+      "48",
+      "18"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 36.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 6 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "48",
+      "40",
+      "60",
+      "24"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 48.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 7 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "60",
+      "52",
+      "72",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 60.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 8 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "72",
+      "64",
+      "84",
+      "36"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 72.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 4 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "24",
+      "16",
+      "36",
+      "12"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 24.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 5 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "36",
+      "28",
+      "48",
+      "18"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 36.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 6 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "48",
+      "40",
+      "60",
+      "24"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 48.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 7 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "60",
+      "52",
+      "72",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 60.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 8 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "72",
+      "64",
+      "84",
+      "36"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 72.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 4 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "24",
+      "16",
+      "36",
+      "12"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 24.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 5 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "36",
+      "28",
+      "48",
+      "18"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 36.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 6 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "48",
+      "40",
+      "60",
+      "24"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 48.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 7 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "60",
+      "52",
+      "72",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 60.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 8 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "72",
+      "64",
+      "84",
+      "36"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 72.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 4 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "24",
+      "16",
+      "36",
+      "12"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 24.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 5 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "36",
+      "28",
+      "48",
+      "18"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 36.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 6 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "48",
+      "40",
+      "60",
+      "24"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 48.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 7 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "60",
+      "52",
+      "72",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 60.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 8 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "72",
+      "64",
+      "84",
+      "36"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 72.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 4 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "24",
+      "16",
+      "36",
+      "12"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 24.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 5 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "36",
+      "28",
+      "48",
+      "18"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 36.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 6 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "48",
+      "40",
+      "60",
+      "24"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 48.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 7 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "60",
+      "52",
+      "72",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 60.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 8 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "72",
+      "64",
+      "84",
+      "36"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 72.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 4 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "24",
+      "16",
+      "36",
+      "12"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 24.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 5 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "36",
+      "28",
+      "48",
+      "18"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 36.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 6 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "48",
+      "40",
+      "60",
+      "24"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 48.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 7 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "60",
+      "52",
+      "72",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 60.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 8 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "72",
+      "64",
+      "84",
+      "36"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 72.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 4 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "24",
+      "16",
+      "36",
+      "12"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 24.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 5 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "36",
+      "28",
+      "48",
+      "18"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 36.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 6 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "48",
+      "40",
+      "60",
+      "24"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 48.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 7 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "60",
+      "52",
+      "72",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 60.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 8 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "72",
+      "64",
+      "84",
+      "36"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 72.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 4 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "24",
+      "16",
+      "36",
+      "12"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 24.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 5 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "36",
+      "28",
+      "48",
+      "18"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 36.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 6 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "48",
+      "40",
+      "60",
+      "24"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 48.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 7 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "60",
+      "52",
+      "72",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 60.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 8 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "72",
+      "64",
+      "84",
+      "36"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 72.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 4 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "24",
+      "16",
+      "36",
+      "12"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 24.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 5 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "36",
+      "28",
+      "48",
+      "18"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 36.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 6 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "48",
+      "40",
+      "60",
+      "24"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 48.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 7 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "60",
+      "52",
+      "72",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 60.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 8 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "72",
+      "64",
+      "84",
+      "36"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 72.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 4 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "24",
+      "16",
+      "36",
+      "12"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 24.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 5 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "36",
+      "28",
+      "48",
+      "18"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 36.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 6 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "48",
+      "40",
+      "60",
+      "24"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 48.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 7 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "60",
+      "52",
+      "72",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 60.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 8 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "72",
+      "64",
+      "84",
+      "36"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 72.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 4 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "24",
+      "16",
+      "36",
+      "12"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 24.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 5 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "36",
+      "28",
+      "48",
+      "18"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 36.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 6 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "48",
+      "40",
+      "60",
+      "24"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 48.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 7 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "60",
+      "52",
+      "72",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 60.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 8 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "72",
+      "64",
+      "84",
+      "36"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 72.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 4 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "24",
+      "16",
+      "36",
+      "12"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 24.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 5 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "36",
+      "28",
+      "48",
+      "18"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 36.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 6 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "48",
+      "40",
+      "60",
+      "24"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 48.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 7 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "60",
+      "52",
+      "72",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 60.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 8 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "72",
+      "64",
+      "84",
+      "36"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 72.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 4 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "24",
+      "16",
+      "36",
+      "12"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 24.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 5 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "36",
+      "28",
+      "48",
+      "18"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 36.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 6 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "48",
+      "40",
+      "60",
+      "24"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 48.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 7 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "60",
+      "52",
+      "72",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 60.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 8 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "72",
+      "64",
+      "84",
+      "36"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 72.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 4 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "24",
+      "16",
+      "36",
+      "12"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 24.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 5 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "36",
+      "28",
+      "48",
+      "18"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 36.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 6 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "48",
+      "40",
+      "60",
+      "24"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 48.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 7 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "60",
+      "52",
+      "72",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 60.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 8 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "72",
+      "64",
+      "84",
+      "36"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 72.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 4 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "24",
+      "16",
+      "36",
+      "12"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 24.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 5 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "36",
+      "28",
+      "48",
+      "18"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 36.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 6 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "48",
+      "40",
+      "60",
+      "24"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 48.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 7 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "60",
+      "52",
+      "72",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 60.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 8 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "72",
+      "64",
+      "84",
+      "36"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 72.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 4 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "24",
+      "16",
+      "36",
+      "12"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 24.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 5 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "36",
+      "28",
+      "48",
+      "18"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 36.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 6 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "48",
+      "40",
+      "60",
+      "24"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 48.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 7 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "60",
+      "52",
+      "72",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 60.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 8 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "72",
+      "64",
+      "84",
+      "36"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 72.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 4 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "24",
+      "16",
+      "36",
+      "12"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 24.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 5 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "36",
+      "28",
+      "48",
+      "18"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 36.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 6 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "48",
+      "40",
+      "60",
+      "24"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 48.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 7 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "60",
+      "52",
+      "72",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 60.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 8 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "72",
+      "64",
+      "84",
+      "36"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 72.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 4 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "24",
+      "16",
+      "36",
+      "12"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 24.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 5 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "36",
+      "28",
+      "48",
+      "18"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 36.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 6 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "48",
+      "40",
+      "60",
+      "24"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 48.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 7 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "60",
+      "52",
+      "72",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 60.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 8 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "72",
+      "64",
+      "84",
+      "36"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 72.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A large painted cube with side length 4 cm is sliced cleanly into unit cubes of side length 1 cm. How many of the resulting smaller cubes have exactly two of their faces painted?",
+    "options": [
+      "24",
+      "16",
+      "36",
+      "12"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 24.",
+    "subtopic": "Cube Problems Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  }
+]

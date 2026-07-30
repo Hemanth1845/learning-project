@@ -5,6 +5,7 @@ const Lesson = require('../models/Lesson');
 const DSAProblem = require('../models/DSAProblem');
 const Note = require('../models/Note');
 const { osLessons, dbmsLessons, cnLessons } = require('./coursesQAData');
+const { additionalLessons } = require('./additionalCoursesQAData');
 
 const seedAdmin = async () => {
   const adminExists = await User.findOne({ username: 'admin' });
@@ -124,31 +125,44 @@ const seedCoursesAndLessons = async () => {
     });
   }
 
-  // 4. Create default lessons for other courses
+  // 4. Seed other courses from additionalCoursesQAData.js or fallback to default
   const otherCourses = seededCourses.filter(c => c.title !== 'Operating Systems' && c.title !== 'DBMS' && c.title !== 'Computer Networks');
   for (let c of otherCourses) {
-    await Lesson.create({
-      courseId: c._id,
-      title: `Introduction to ${c.title}`,
-      order: 1,
-      content: `### Welcome to ${c.title}!
+    const customLessons = additionalLessons[c.title];
+    if (customLessons && customLessons.length > 0) {
+      for (let les of customLessons) {
+        await Lesson.create({
+          courseId: c._id,
+          title: les.title,
+          order: les.order,
+          content: les.content,
+          interviewQuestions: les.interviewQuestions
+        });
+      }
+    } else {
+      await Lesson.create({
+        courseId: c._id,
+        title: `Introduction to ${c.title}`,
+        order: 1,
+        content: `### Welcome to ${c.title}!
 In this course, we will explore the key pillars of ${c.title}.
 
 This is an introductory lesson. You will find lecture notes, external code repositories, and quick video guides to build foundational knowledge. Stay tuned for advanced topics!`,
-      videoUrl: 'https://www.youtube.com/embed/tgbNymZ7vqY',
-      quiz: {
-        title: `Intro to ${c.title} Quiz`,
-        xpReward: 50,
-        questions: [
-          {
-            questionText: `What is the main goal of studying ${c.title}?`,
-            options: ['To pass placements and build real-world applications', 'To memorize definitions', 'To avoid coding', 'None of the above'],
-            correctOptionIndex: 0,
-            explanation: `Warm up check on ${c.title} foundations.`
-          }
-        ]
-      }
-    });
+        videoUrl: 'https://www.youtube.com/embed/tgbNymZ7vqY',
+        quiz: {
+          title: `Intro to ${c.title} Quiz`,
+          xpReward: 50,
+          questions: [
+            {
+              questionText: `What is the main goal of studying ${c.title}?`,
+              options: ['To pass placements and build real-world applications', 'To memorize definitions', 'To avoid coding', 'None of the above'],
+              correctOptionIndex: 0,
+              explanation: `Warm up check on ${c.title} foundations.`
+            }
+          ]
+        }
+      });
+    }
   }
 
   console.log('All course lessons, GFG notes, and interview prep questions seeded successfully');

@@ -84,8 +84,61 @@ router.get('/topics/:id', protect, async (req, res) => {
       itemId: topic._id
     });
 
+    // Server-side randomization & shuffling
+    let questions = topic.quizQuestions || [];
+    if (questions.length > 0) {
+      // Split into difficulty tiers
+      const easyMedium = questions.filter(q => q.difficulty === 'Easy-Medium' || !q.difficulty);
+      const hard = questions.filter(q => q.difficulty === 'Hard');
+
+      // Helper to shuffle in place
+      const shuffle = (array) => {
+        const arr = [...array];
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr;
+      };
+
+      let shuffledEasy = shuffle(easyMedium);
+      let shuffledHard = shuffle(hard);
+
+      const bigPools = [
+        'Number System', 'Percentage', 'Profit & Loss',
+        'Missing Number', 'Series', 'Mirror Images',
+        'Paper Folding', 'Cube Problems', 'Data Sufficiency'
+      ];
+      if (bigPools.includes(topic.title)) {
+        shuffledEasy = shuffledEasy.slice(0, 25);
+        shuffledHard = shuffledHard.slice(0, 25);
+      }
+
+      // Recombine with Easy-Medium first, then Hard
+      const combined = [...shuffledEasy, ...shuffledHard];
+
+      // Shuffle options and recalculate correctIdx
+      questions = combined.map(q => {
+        const optionsWithCorrect = q.options.map((opt, idx) => ({
+          text: opt,
+          isCorrect: idx === q.correctIdx
+        }));
+        
+        const shuffledOpts = shuffle(optionsWithCorrect);
+        
+        return {
+          ...q.toObject(),
+          options: shuffledOpts.map(o => o.text),
+          correctIdx: shuffledOpts.findIndex(o => o.isCorrect)
+        };
+      });
+    }
+
+    const topicObj = topic.toObject();
+    topicObj.quizQuestions = questions;
+
     res.json({
-      ...topic.toObject(),
+      ...topicObj,
       completed: !!submission,
       score: submission ? submission.score : 0,
       bookmarked: !!bookmarked
@@ -263,6 +316,116 @@ router.delete('/topics/:id', protect, adminOnly, async (req, res) => {
     await Bookmark.deleteMany({ itemType: 'aptitude', itemId: req.params.id });
 
     res.json({ message: 'Topic deleted successfully' });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+const QuizHistory = require('../models/QuizHistory');
+
+// @desc    Submit detailed quiz history and calculate analytics
+// @route   POST /api/aptitude/topics/:id/history
+router.post('/topics/:id/history', protect, async (req, res) => {
+  try {
+    const { score, totalQuestions, correctAnswers, timeTaken, answers } = req.body;
+    const topicId = req.params.id;
+    const topic = await AptitudeTopic.findById(topicId);
+    if (!topic) return res.status(404).json({ message: 'Topic not found' });
+
+    const accuracy = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 0;
+
+    // Evaluate strong and weak subtopics
+    const subtopicPerformance = {};
+    if (answers && Array.isArray(answers)) {
+      answers.forEach(ans => {
+        const sub = ans.subtopic || 'General Concepts';
+        if (!subtopicPerformance[sub]) {
+          subtopicPerformance[sub] = { total: 0, correct: 0 };
+        }
+        subtopicPerformance[sub].total++;
+        if (ans.correct) {
+          subtopicPerformance[sub].correct++;
+        }
+      });
+    }
+
+    const strongTopics = [];
+    const weakTopics = [];
+
+    Object.keys(subtopicPerformance).forEach(sub => {
+      const perf = subtopicPerformance[sub];
+      const pct = (perf.correct / perf.total) * 100;
+      if (pct >= 80) {
+        strongTopics.push(sub);
+      } else if (pct < 50) {
+        weakTopics.push(sub);
+      }
+    });
+
+    const quizHistory = await QuizHistory.create({
+      userId: req.user._id,
+      topicId,
+      score,
+      totalQuestions,
+      correctAnswers,
+      accuracy,
+      timeTaken,
+      strongTopics,
+      weakTopics
+    });
+
+    // Also update overall topic completion / submission standard record
+    const existing = await Submission.findOne({
+      userId: req.user._id,
+      itemType: 'aptitude',
+      itemId: topicId
+    });
+
+    const xpToEarn = Math.round(topic.xpReward * (score / 100));
+
+    if (existing) {
+      if (score > existing.score) {
+        existing.score = score;
+        existing.xpEarned = xpToEarn;
+        await existing.save();
+      }
+    } else {
+      await Submission.create({
+        userId: req.user._id,
+        itemType: 'aptitude',
+        itemId: topicId,
+        status: 'completed',
+        score,
+        xpEarned: xpToEarn
+      });
+
+      // Add XP to user
+      const user = await User.findById(req.user._id);
+      if (user) {
+        user.xp += xpToEarn;
+        await user.save();
+      }
+    }
+
+    res.status(201).json({
+      success: true,
+      history: quizHistory,
+      xpEarned: xpToEarn
+    });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// @desc    Get quiz history for a specific topic
+// @route   GET /api/aptitude/topics/:id/history
+router.get('/topics/:id/history', protect, async (req, res) => {
+  try {
+    const history = await QuizHistory.find({
+      userId: req.user._id,
+      topicId: req.params.id
+    }).sort({ createdAt: -1 });
+    res.json(history);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

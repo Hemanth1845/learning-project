@@ -1,0 +1,6302 @@
+[
+  {
+    "q": "What is the sum of the first 25 natural numbers?",
+    "options": [
+      "325",
+      "300",
+      "350",
+      "275"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 325. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Which of the following is a prime number?",
+    "options": [
+      "97",
+      "91",
+      "87",
+      "93"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 97. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the LCM of 12, 18, and 24?",
+    "options": [
+      "72",
+      "36",
+      "144",
+      "216"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 72. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the HCF of 36 and 84?",
+    "options": [
+      "12",
+      "18",
+      "24",
+      "6"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 12. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the unit digit of 7²³?",
+    "options": [
+      "3",
+      "7",
+      "9",
+      "1"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 3. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Find the value of √(144) + √(169).",
+    "options": [
+      "25",
+      "23",
+      "27",
+      "21"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 25. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the sum of the first 10 even numbers?",
+    "options": [
+      "110",
+      "100",
+      "120",
+      "90"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 110. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Which number is divisible by 11?",
+    "options": [
+      "121",
+      "111",
+      "131",
+      "141"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 121. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the smallest 3-digit prime number?",
+    "options": [
+      "101",
+      "103",
+      "107",
+      "109"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 101. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the value of (2³)²?",
+    "options": [
+      "64",
+      "32",
+      "128",
+      "256"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 64. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the LCM of 15 and 20?",
+    "options": [
+      "60",
+      "30",
+      "90",
+      "120"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 60. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the HCF of 48 and 72?",
+    "options": [
+      "24",
+      "12",
+      "36",
+      "18"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 24. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the unit digit of 3²⁰?",
+    "options": [
+      "1",
+      "3",
+      "9",
+      "7"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Find the value of ³√(512).",
+    "options": [
+      "8",
+      "16",
+      "4",
+      "32"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 8. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the sum of the first 15 odd numbers?",
+    "options": [
+      "225",
+      "210",
+      "240",
+      "196"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 225. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Which of the following is divisible by 3?",
+    "options": [
+      "12345",
+      "12346",
+      "12347",
+      "12348"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 12345. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the largest 2-digit prime number?",
+    "options": [
+      "97",
+      "89",
+      "93",
+      "99"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 97. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the value of (3²)³?",
+    "options": [
+      "729",
+      "243",
+      "81",
+      "27"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 729. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the LCM of 8, 10, and 12?",
+    "options": [
+      "120",
+      "60",
+      "240",
+      "360"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 120. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the HCF of 54 and 81?",
+    "options": [
+      "27",
+      "9",
+      "18",
+      "36"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 27. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the unit digit of 4⁵⁰?",
+    "options": [
+      "6",
+      "4",
+      "2",
+      "8"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 6. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Find the value of √(196) - √(121).",
+    "options": [
+      "3",
+      "5",
+      "7",
+      "9"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 3. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the sum of the first 12 natural numbers?",
+    "options": [
+      "78",
+      "66",
+      "72",
+      "84"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 78. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Which number is divisible by 6?",
+    "options": [
+      "234",
+      "235",
+      "236",
+      "237"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 234. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the smallest 4-digit prime number?",
+    "options": [
+      "1009",
+      "1001",
+      "1003",
+      "1007"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1009. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the value of (4³) ÷ 4²?",
+    "options": [
+      "16",
+      "4",
+      "64",
+      "256"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 16. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the LCM of 16 and 24?",
+    "options": [
+      "48",
+      "96",
+      "144",
+      "192"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 48. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the HCF of 63 and 105?",
+    "options": [
+      "21",
+      "7",
+      "14",
+      "28"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 21. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the unit digit of 8⁵?",
+    "options": [
+      "8",
+      "2",
+      "4",
+      "6"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 8. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Find the value of ⁴√(256).",
+    "options": [
+      "4",
+      "8",
+      "16",
+      "2"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 4. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the sum of the first 20 even numbers?",
+    "options": [
+      "420",
+      "400",
+      "440",
+      "380"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 420. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Which of the following is divisible by 9?",
+    "options": [
+      "12321",
+      "12322",
+      "12323",
+      "12324"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 12321. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the largest 3-digit prime number?",
+    "options": [
+      "997",
+      "991",
+      "993",
+      "999"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 997. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the value of (5²) × (5³)?",
+    "options": [
+      "3125",
+      "625",
+      "125",
+      "25"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 3125. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the LCM of 14, 21, and 28?",
+    "options": [
+      "84",
+      "42",
+      "126",
+      "168"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 84. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the HCF of 72 and 120?",
+    "options": [
+      "24",
+      "12",
+      "36",
+      "48"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 24. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the unit digit of 9²³?",
+    "options": [
+      "9",
+      "1",
+      "3",
+      "7"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 9. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Find the value of √(400) + √(225).",
+    "options": [
+      "35",
+      "25",
+      "45",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 35. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the sum of the first 18 natural numbers?",
+    "options": [
+      "171",
+      "153",
+      "162",
+      "180"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 171. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Which number is divisible by 7?",
+    "options": [
+      "119",
+      "117",
+      "121",
+      "123"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 119. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the smallest 5-digit prime number?",
+    "options": [
+      "10007",
+      "10001",
+      "10003",
+      "10009"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 10007. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the value of (6³) ÷ 6?",
+    "options": [
+      "216",
+      "36",
+      "1296",
+      "6"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 216. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the LCM of 22 and 33?",
+    "options": [
+      "66",
+      "33",
+      "99",
+      "132"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 66. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the HCF of 84 and 126?",
+    "options": [
+      "42",
+      "21",
+      "28",
+      "56"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 42. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the unit digit of 2⁵⁵?",
+    "options": [
+      "8",
+      "2",
+      "4",
+      "6"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 8. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Find the value of ³√(216).",
+    "options": [
+      "6",
+      "12",
+      "4",
+      "8"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 6. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the sum of the first 25 even numbers?",
+    "options": [
+      "650",
+      "625",
+      "675",
+      "700"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 650. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Which of the following is divisible by 5?",
+    "options": [
+      "12345",
+      "12346",
+      "12347",
+      "12348"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 12345. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the largest 4-digit prime number?",
+    "options": [
+      "9973",
+      "9967",
+      "9971",
+      "9979"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 9973. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the value of (7²) × (7³)?",
+    "options": [
+      "16807",
+      "2401",
+      "343",
+      "49"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 16807. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the LCM of 24, 36, and 48?",
+    "options": [
+      "144",
+      "72",
+      "216",
+      "288"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 144. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the HCF of 96 and 144?",
+    "options": [
+      "48",
+      "24",
+      "72",
+      "36"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 48. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the unit digit of 6⁷⁵?",
+    "options": [
+      "6",
+      "8",
+      "4",
+      "2"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 6. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Find the value of √(625) - √(144).",
+    "options": [
+      "13",
+      "17",
+      "21",
+      "25"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 13. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the sum of the first 22 natural numbers?",
+    "options": [
+      "253",
+      "231",
+      "242",
+      "264"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 253. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Which number is divisible by 13?",
+    "options": [
+      "143",
+      "141",
+      "145",
+      "147"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 143. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the smallest 2-digit composite number?",
+    "options": [
+      "10",
+      "12",
+      "14",
+      "16"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 10. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the value of (8²) + (8³)?",
+    "options": [
+      "576",
+      "64",
+      "512",
+      "448"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 576. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the LCM of 26 and 39?",
+    "options": [
+      "78",
+      "52",
+      "104",
+      "156"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 78. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the HCF of 105 and 140?",
+    "options": [
+      "35",
+      "7",
+      "14",
+      "21"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 35. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the unit digit of 5²³?",
+    "options": [
+      "5",
+      "1",
+      "0",
+      "5"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 5. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Find the value of ⁴√(81).",
+    "options": [
+      "3",
+      "9",
+      "27",
+      "81"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 3. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the sum of the first 30 even numbers?",
+    "options": [
+      "930",
+      "900",
+      "960",
+      "870"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 930. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Which of the following is divisible by 8?",
+    "options": [
+      "12328",
+      "12326",
+      "12324",
+      "12322"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 12328. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the largest 3-digit composite number?",
+    "options": [
+      "999",
+      "998",
+      "997",
+      "996"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 999. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the value of (9²) ÷ 9?",
+    "options": [
+      "9",
+      "81",
+      "729",
+      "3"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 9. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the LCM of 28, 42, and 56?",
+    "options": [
+      "168",
+      "84",
+      "252",
+      "336"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 168. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the HCF of 120 and 180?",
+    "options": [
+      "60",
+      "30",
+      "90",
+      "120"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 60. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the unit digit of 3⁴⁰?",
+    "options": [
+      "1",
+      "3",
+      "9",
+      "7"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Find the value of √(289) + √(361).",
+    "options": [
+      "36",
+      "30",
+      "42",
+      "48"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 36. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the sum of the first 28 natural numbers?",
+    "options": [
+      "406",
+      "378",
+      "392",
+      "420"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 406. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Which number is divisible by 17?",
+    "options": [
+      "119",
+      "117",
+      "121",
+      "123"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 119. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the smallest 3-digit composite number?",
+    "options": [
+      "100",
+      "102",
+      "104",
+      "106"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 100. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the value of (10²) × (10³)?",
+    "options": [
+      "100000",
+      "10000",
+      "1000",
+      "1000000"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 100000. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the LCM of 30 and 45?",
+    "options": [
+      "90",
+      "60",
+      "120",
+      "150"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 90. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the HCF of 84 and 196?",
+    "options": [
+      "28",
+      "14",
+      "42",
+      "56"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 28. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the unit digit of 7³⁰?",
+    "options": [
+      "9",
+      "7",
+      "3",
+      "1"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 9. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Find the value of ³√(343).",
+    "options": [
+      "7",
+      "14",
+      "3.5",
+      "21"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 7. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the sum of the first 35 even numbers?",
+    "options": [
+      "1260",
+      "1190",
+      "1330",
+      "1400"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1260. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Which of the following is divisible by 11?",
+    "options": [
+      "132",
+      "121",
+      "143",
+      "154"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 132. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the largest 2-digit composite number?",
+    "options": [
+      "99",
+      "98",
+      "97",
+      "96"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 99. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the value of (11²) - (11)?",
+    "options": [
+      "110",
+      "121",
+      "99",
+      "132"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 110. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the LCM of 32 and 48?",
+    "options": [
+      "96",
+      "192",
+      "144",
+      "288"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 96. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the HCF of 144 and 216?",
+    "options": [
+      "72",
+      "36",
+      "108",
+      "144"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 72. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the unit digit of 2⁶⁰?",
+    "options": [
+      "6",
+      "2",
+      "4",
+      "8"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 6. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Find the value of √(576) - √(196).",
+    "options": [
+      "10",
+      "14",
+      "18",
+      "6"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 10. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the sum of the first 32 natural numbers?",
+    "options": [
+      "528",
+      "496",
+      "512",
+      "544"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 528. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Which number is divisible by 19?",
+    "options": [
+      "133",
+      "131",
+      "135",
+      "137"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 133. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the smallest 4-digit composite number?",
+    "options": [
+      "1000",
+      "1002",
+      "1004",
+      "1006"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1000. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the value of (12²) + (12)?",
+    "options": [
+      "156",
+      "144",
+      "168",
+      "132"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 156. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the LCM of 34 and 51?",
+    "options": [
+      "102",
+      "68",
+      "136",
+      "204"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 102. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the HCF of 156 and 195?",
+    "options": [
+      "39",
+      "13",
+      "26",
+      "52"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 39. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the unit digit of 4⁸⁰?",
+    "options": [
+      "6",
+      "4",
+      "2",
+      "8"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 6. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Find the value of ⁴√(256) + ³√(216).",
+    "options": [
+      "10",
+      "14",
+      "18",
+      "22"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 10. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the sum of the first 40 even numbers?",
+    "options": [
+      "1640",
+      "1560",
+      "1720",
+      "1800"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1640. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Which of the following is divisible by 7?",
+    "options": [
+      "161",
+      "159",
+      "163",
+      "165"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 161. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the largest 5-digit prime number?",
+    "options": [
+      "99991",
+      "99989",
+      "99987",
+      "99993"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 99991. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the value of (13²) × (13)?",
+    "options": [
+      "2197",
+      "169",
+      "2187",
+      "2197"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 2197. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the LCM of 36 and 54?",
+    "options": [
+      "108",
+      "72",
+      "144",
+      "216"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 108. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the HCF of 168 and 252?",
+    "options": [
+      "84",
+      "42",
+      "126",
+      "168"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 84. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the unit digit of 9⁵⁵?",
+    "options": [
+      "9",
+      "1",
+      "3",
+      "7"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 9. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Find the value of √(784) + √(324).",
+    "options": [
+      "46",
+      "38",
+      "54",
+      "62"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 46. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the sum of the first 42 natural numbers?",
+    "options": [
+      "903",
+      "861",
+      "882",
+      "924"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 903. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Which number is divisible by 23?",
+    "options": [
+      "115",
+      "113",
+      "117",
+      "119"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 115. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the smallest 5-digit composite number?",
+    "options": [
+      "10000",
+      "10002",
+      "10004",
+      "10006"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 10000. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the value of (14²) - (14)?",
+    "options": [
+      "182",
+      "196",
+      "168",
+      "154"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 182. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the LCM of 38 and 57?",
+    "options": [
+      "114",
+      "76",
+      "152",
+      "228"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 114. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the HCF of 180 and 240?",
+    "options": [
+      "60",
+      "30",
+      "90",
+      "120"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 60. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the unit digit of 3⁵⁰?",
+    "options": [
+      "9",
+      "3",
+      "1",
+      "7"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 9. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Find the value of ³√(729) - √(256).",
+    "options": [
+      "7",
+      "9",
+      "11",
+      "5"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 7. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the sum of the first 45 even numbers?",
+    "options": [
+      "2070",
+      "1980",
+      "2160",
+      "2250"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 2070. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Which of the following is divisible by 13?",
+    "options": [
+      "169",
+      "167",
+      "171",
+      "173"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 169. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the largest 4-digit composite number?",
+    "options": [
+      "9999",
+      "9998",
+      "9997",
+      "9996"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 9999. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the value of (15²) + (15)?",
+    "options": [
+      "240",
+      "225",
+      "255",
+      "210"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 240. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the LCM of 40 and 60?",
+    "options": [
+      "120",
+      "80",
+      "160",
+      "240"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 120. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the HCF of 198 and 264?",
+    "options": [
+      "66",
+      "33",
+      "99",
+      "132"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 66. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the unit digit of 8²⁵?",
+    "options": [
+      "8",
+      "2",
+      "4",
+      "6"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 8. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Find the value of √(900) - √(625).",
+    "options": [
+      "5",
+      "15",
+      "25",
+      "35"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 5. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the sum of the first 48 natural numbers?",
+    "options": [
+      "1176",
+      "1128",
+      "1152",
+      "1200"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1176. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Which number is divisible by 29?",
+    "options": [
+      "145",
+      "143",
+      "147",
+      "149"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 145. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the smallest 2-digit prime number?",
+    "options": [
+      "11",
+      "13",
+      "17",
+      "19"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 11. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the value of (16²) ÷ 16?",
+    "options": [
+      "16",
+      "256",
+      "4096",
+      "128"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 16. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the LCM of 42 and 63?",
+    "options": [
+      "126",
+      "84",
+      "168",
+      "252"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 126. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the HCF of 210 and 280?",
+    "options": [
+      "70",
+      "35",
+      "105",
+      "140"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 70. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the unit digit of 7⁴⁰?",
+    "options": [
+      "1",
+      "7",
+      "3",
+      "9"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Find the value of ⁴√(625) + ³√(125).",
+    "options": [
+      "10",
+      "8",
+      "12",
+      "6"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 10. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the sum of the first 50 even numbers?",
+    "options": [
+      "2550",
+      "2450",
+      "2650",
+      "2750"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 2550. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Which of the following is divisible by 17?",
+    "options": [
+      "153",
+      "151",
+      "155",
+      "157"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 153. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the largest 3-digit number divisible by 3?",
+    "options": [
+      "999",
+      "996",
+      "993",
+      "990"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 999. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the value of (17²) - (17)?",
+    "options": [
+      "272",
+      "289",
+      "255",
+      "238"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 272. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the LCM of 44 and 66?",
+    "options": [
+      "132",
+      "88",
+      "176",
+      "264"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 132. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the HCF of 216 and 288?",
+    "options": [
+      "72",
+      "36",
+      "108",
+      "144"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 72. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the unit digit of 2⁸⁰?",
+    "options": [
+      "6",
+      "2",
+      "4",
+      "8"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 6. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Find the value of √(1089) + √(441).",
+    "options": [
+      "54",
+      "48",
+      "60",
+      "42"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 54. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the sum of the first 55 natural numbers?",
+    "options": [
+      "1540",
+      "1485",
+      "1518",
+      "1562"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1540. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Which number is divisible by 31?",
+    "options": [
+      "155",
+      "153",
+      "157",
+      "159"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 155. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the smallest 3-digit number divisible by 7?",
+    "options": [
+      "105",
+      "112",
+      "119",
+      "126"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 105. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the value of (18²) + (18)?",
+    "options": [
+      "342",
+      "324",
+      "360",
+      "306"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 342. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the LCM of 46 and 69?",
+    "options": [
+      "138",
+      "92",
+      "184",
+      "276"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 138. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the HCF of 224 and 336?",
+    "options": [
+      "112",
+      "56",
+      "168",
+      "224"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 112. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the unit digit of 4¹⁰⁰?",
+    "options": [
+      "6",
+      "4",
+      "2",
+      "8"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 6. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Find the value of ³√(1000) - √(100).",
+    "options": [
+      "0",
+      "10",
+      "20",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 0. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the sum of the first 60 even numbers?",
+    "options": [
+      "3660",
+      "3540",
+      "3780",
+      "3900"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 3660. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Which of the following is divisible by 19?",
+    "options": [
+      "171",
+      "169",
+      "173",
+      "175"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 171. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the largest 4-digit number divisible by 11?",
+    "options": [
+      "9999",
+      "9998",
+      "9997",
+      "9996"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 9999. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the value of (19²) - (19)?",
+    "options": [
+      "342",
+      "361",
+      "323",
+      "304"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 342. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the LCM of 48 and 72?",
+    "options": [
+      "144",
+      "96",
+      "192",
+      "288"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 144. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the HCF of 240 and 360?",
+    "options": [
+      "120",
+      "60",
+      "180",
+      "240"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 120. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the unit digit of 5¹⁰⁰?",
+    "options": [
+      "5",
+      "0",
+      "1",
+      "5"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 5. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Find the value of √(1296) - √(324).",
+    "options": [
+      "18",
+      "24",
+      "30",
+      "12"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 18. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Foundational Concepts",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 60,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the sum of all prime numbers between 1 and 50?",
+    "options": [
+      "328",
+      "326",
+      "330",
+      "324"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 328. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "Find the remainder when 2³¹ is divided by 7.",
+    "options": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 2. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the LCM of the smallest prime and the smallest composite number?",
+    "options": [
+      "4",
+      "6",
+      "8",
+      "12"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 4. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "How many numbers between 1 and 100 are divisible by 3?",
+    "options": [
+      "33",
+      "34",
+      "32",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 33. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the value of (√3 + 1)(√3 - 1)?",
+    "options": [
+      "2",
+      "4",
+      "3",
+      "1"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 2. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the sum of the digits of 2⁵ × 5⁵?",
+    "options": [
+      "10",
+      "9",
+      "11",
+      "12"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 10. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "Find the HCF of 0.36 and 0.48.",
+    "options": [
+      "0.12",
+      "0.24",
+      "0.06",
+      "0.18"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 0.12. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the unit digit of 7⁷⁷?",
+    "options": [
+      "7",
+      "9",
+      "3",
+      "1"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 7. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the smallest number divisible by 1 to 10?",
+    "options": [
+      "2520",
+      "5040",
+      "1260",
+      "7560"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 2520. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "Find the value of log₂ 32 + log₃ 27.",
+    "options": [
+      "8",
+      "7",
+      "9",
+      "6"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 8. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the sum of all factors of 60?",
+    "options": [
+      "168",
+      "144",
+      "180",
+      "192"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 168. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "How many prime numbers are there between 1 and 100?",
+    "options": [
+      "25",
+      "24",
+      "26",
+      "23"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 25. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the remainder when 5²⁵ is divided by 13?",
+    "options": [
+      "5",
+      "8",
+      "12",
+      "1"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 5. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the square of the sum of digits of 999?",
+    "options": [
+      "729",
+      "81",
+      "243",
+      "6561"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 729. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "Find the value of (0.6)³ - (0.4)³.",
+    "options": [
+      "0.152",
+      "0.128",
+      "0.216",
+      "0.064"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 0.152. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the LCM of fractions 2/3, 4/9, 5/6?",
+    "options": [
+      "20/3",
+      "10/3",
+      "5/3",
+      "40/3"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 20/3. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the HCF of fractions 2/3, 4/9, 5/6?",
+    "options": [
+      "1/9",
+      "1/3",
+      "2/9",
+      "4/9"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1/9. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the unit digit of 3¹⁰⁰?",
+    "options": [
+      "1",
+      "3",
+      "9",
+      "7"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "How many numbers between 1 and 1000 are divisible by 7?",
+    "options": [
+      "142",
+      "143",
+      "141",
+      "140"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 142. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the sum of the first 50 prime numbers?",
+    "options": [
+      "5117",
+      "5115",
+      "5119",
+      "5121"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 5117. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "Find the value of √(7+4√3).",
+    "options": [
+      "2+√3",
+      "1+√3",
+      "3+√3",
+      "2√3"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 2+√3. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the remainder when 2⁵⁰ is divided by 17?",
+    "options": [
+      "2",
+      "4",
+      "8",
+      "16"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 2. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the product of the first 5 prime numbers?",
+    "options": [
+      "2310",
+      "210",
+      "30030",
+      "23100"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 2310. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the sum of all factors of 72?",
+    "options": [
+      "195",
+      "180",
+      "210",
+      "168"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 195. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "How many 3-digit numbers are divisible by 11?",
+    "options": [
+      "81",
+      "82",
+      "80",
+      "79"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 81. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the value of (0.7)³ + (0.3)³?",
+    "options": [
+      "0.37",
+      "0.343",
+      "0.027",
+      "0.37"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 0.37. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the LCM of 3/4, 5/6, 7/8?",
+    "options": [
+      "105/2",
+      "35/2",
+      "105/4",
+      "35/4"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 105/2. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the HCF of 3/4, 5/6, 7/8?",
+    "options": [
+      "1/24",
+      "1/12",
+      "1/8",
+      "1/6"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1/24. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the unit digit of 9⁹⁹?",
+    "options": [
+      "9",
+      "1",
+      "3",
+      "7"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 9. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "How many numbers between 1 and 500 are divisible by 3 or 5?",
+    "options": [
+      "233",
+      "232",
+      "234",
+      "231"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 233. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the sum of the first 100 natural numbers?",
+    "options": [
+      "5050",
+      "5000",
+      "5100",
+      "4950"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 5050. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "Find the value of (√5+√3)(√5-√3).",
+    "options": [
+      "2",
+      "8",
+      "4",
+      "6"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 2. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the remainder when 3²⁵ is divided by 8?",
+    "options": [
+      "3",
+      "5",
+      "1",
+      "7"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 3. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the smallest number divisible by 2,3,4,5,6,7?",
+    "options": [
+      "420",
+      "840",
+      "210",
+      "1260"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 420. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the sum of all factors of 96?",
+    "options": [
+      "252",
+      "240",
+      "264",
+      "228"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 252. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "How many prime numbers are there between 100 and 200?",
+    "options": [
+      "21",
+      "20",
+      "22",
+      "19"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 21. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the value of log₁₀ 25 + log₁₀ 4?",
+    "options": [
+      "2",
+      "1",
+      "3",
+      "0.5"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 2. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the unit digit of 2²⁰²⁴?",
+    "options": [
+      "6",
+      "2",
+      "4",
+      "8"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 6. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "How many numbers between 1 and 200 are divisible by 6 or 8?",
+    "options": [
+      "50",
+      "49",
+      "51",
+      "48"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 50. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the sum of the first 25 prime numbers?",
+    "options": [
+      "1060",
+      "1058",
+      "1062",
+      "1056"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1060. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "Find the value of √(10+2√21).",
+    "options": [
+      "√7+√3",
+      "√5+√3",
+      "√7+√5",
+      "√21+1"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is √7+√3. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the remainder when 4²⁵ is divided by 9?",
+    "options": [
+      "4",
+      "7",
+      "1",
+      "5"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 4. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the product of all factors of 36?",
+    "options": [
+      "6¹²",
+      "6⁶",
+      "6⁹",
+      "6¹⁵"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 6¹². This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the sum of all 3-digit numbers divisible by 13?",
+    "options": [
+      "37791",
+      "37791",
+      "37791",
+      "37791"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 37791. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "How many numbers between 1 and 300 are divisible by 7 or 11?",
+    "options": [
+      "63",
+      "62",
+      "64",
+      "61"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 63. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the value of (0.9)³ - (0.1)³?",
+    "options": [
+      "0.728",
+      "0.729",
+      "0.001",
+      "0.728"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 0.728. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the LCM of 1/2, 2/3, 3/4?",
+    "options": [
+      "6",
+      "3",
+      "12",
+      "1/4"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 6. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the HCF of 1/2, 2/3, 3/4?",
+    "options": [
+      "1/12",
+      "1/6",
+      "1/4",
+      "1/3"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1/12. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the unit digit of 8⁵⁰?",
+    "options": [
+      "4",
+      "8",
+      "2",
+      "6"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 4. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "How many numbers between 1 and 400 are divisible by 4 or 6?",
+    "options": [
+      "133",
+      "132",
+      "134",
+      "131"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 133. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the sum of the first 200 natural numbers?",
+    "options": [
+      "20100",
+      "20000",
+      "20200",
+      "19900"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 20100. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "Find the value of (√7+√5)(√7-√5).",
+    "options": [
+      "2",
+      "12",
+      "14",
+      "10"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 2. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the remainder when 7²⁵ is divided by 11?",
+    "options": [
+      "7",
+      "4",
+      "8",
+      "3"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 7. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the smallest number divisible by 2,3,4,5,6,7,8,9?",
+    "options": [
+      "2520",
+      "5040",
+      "7560",
+      "10080"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 2520. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the sum of all factors of 120?",
+    "options": [
+      "360",
+      "336",
+      "384",
+      "312"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 360. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "How many prime numbers are there between 200 and 300?",
+    "options": [
+      "16",
+      "15",
+      "17",
+      "14"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 16. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the value of log₂ 64 + log₃ 81?",
+    "options": [
+      "10",
+      "9",
+      "11",
+      "8"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 10. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the unit digit of 3²⁰²⁵?",
+    "options": [
+      "3",
+      "9",
+      "7",
+      "1"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 3. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "How many numbers between 1 and 500 are divisible by 5 or 7?",
+    "options": [
+      "157",
+      "156",
+      "158",
+      "155"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 157. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the sum of the first 30 prime numbers?",
+    "options": [
+      "1593",
+      "1591",
+      "1595",
+      "1589"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1593. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "Find the value of √(11+6√2).",
+    "options": [
+      "3+√2",
+      "3+2√2",
+      "2+√2",
+      "2+2√2"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 3+√2. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the remainder when 5³⁰ is divided by 7?",
+    "options": [
+      "1",
+      "5",
+      "3",
+      "6"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the product of all factors of 48?",
+    "options": [
+      "48⁵",
+      "48¹⁰",
+      "48⁶",
+      "48¹²"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 48⁵. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the sum of all 4-digit numbers divisible by 15?",
+    "options": [
+      "329850",
+      "329850",
+      "329850",
+      "329850"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 329850. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "How many numbers between 1 and 600 are divisible by 6 or 10?",
+    "options": [
+      "140",
+      "139",
+      "141",
+      "138"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 140. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the value of (0.8)³ + (0.2)³?",
+    "options": [
+      "0.52",
+      "0.512",
+      "0.008",
+      "0.52"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 0.52. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the LCM of 2/5, 3/7, 4/9?",
+    "options": [
+      "12",
+      "6",
+      "24",
+      "4"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 12. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the HCF of 2/5, 3/7, 4/9?",
+    "options": [
+      "1/315",
+      "1/105",
+      "1/63",
+      "1/45"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1/315. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the unit digit of 9⁵⁰?",
+    "options": [
+      "1",
+      "9",
+      "3",
+      "7"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "How many numbers between 1 and 700 are divisible by 3 or 11?",
+    "options": [
+      "276",
+      "275",
+      "277",
+      "274"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 276. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the sum of the first 300 natural numbers?",
+    "options": [
+      "45150",
+      "45000",
+      "45300",
+      "44900"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 45150. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "Find the value of (√11+√7)(√11-√7).",
+    "options": [
+      "4",
+      "18",
+      "14",
+      "8"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 4. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the remainder when 2³⁵ is divided by 11?",
+    "options": [
+      "2",
+      "4",
+      "8",
+      "6"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 2. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the smallest number divisible by 1 to 12?",
+    "options": [
+      "27720",
+      "55440",
+      "13860",
+      "83160"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 27720. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the sum of all factors of 180?",
+    "options": [
+      "546",
+      "504",
+      "588",
+      "462"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 546. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "How many prime numbers are there between 300 and 400?",
+    "options": [
+      "16",
+      "15",
+      "17",
+      "14"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 16. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the value of log₁₀ 125 + log₁₀ 8?",
+    "options": [
+      "3",
+      "2",
+      "4",
+      "1"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 3. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the unit digit of 7²⁰²⁵?",
+    "options": [
+      "7",
+      "9",
+      "3",
+      "1"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 7. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "How many numbers between 1 and 800 are divisible by 7 or 13?",
+    "options": [
+      "155",
+      "154",
+      "156",
+      "153"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 155. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the sum of the first 40 prime numbers?",
+    "options": [
+      "3087",
+      "3085",
+      "3089",
+      "3083"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 3087. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "Find the value of √(13+4√10).",
+    "options": [
+      "√8+√5",
+      "√10+√3",
+      "√8+√3",
+      "√10+√5"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is √8+√5. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the remainder when 3⁵⁰ is divided by 13?",
+    "options": [
+      "1",
+      "3",
+      "9",
+      "7"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the product of all factors of 100?",
+    "options": [
+      "100¹⁵",
+      "100⁹",
+      "100¹⁰",
+      "100¹²"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 100¹⁵. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the sum of all 3-digit numbers divisible by 17?",
+    "options": [
+      "28917",
+      "28917",
+      "28917",
+      "28917"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 28917. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "How many numbers between 1 and 900 are divisible by 4 or 9?",
+    "options": [
+      "300",
+      "299",
+      "301",
+      "298"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 300. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the value of (0.5)³ - (0.3)³?",
+    "options": [
+      "0.098",
+      "0.125",
+      "0.027",
+      "0.098"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 0.098. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the LCM of 3/8, 5/12, 7/16?",
+    "options": [
+      "105/8",
+      "105/4",
+      "35/8",
+      "105/16"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 105/8. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the HCF of 3/8, 5/12, 7/16?",
+    "options": [
+      "1/48",
+      "1/24",
+      "1/16",
+      "1/12"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1/48. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the unit digit of 6¹⁰⁰?",
+    "options": [
+      "6",
+      "8",
+      "4",
+      "2"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 6. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "How many numbers between 1 and 1000 are divisible by 3 or 7?",
+    "options": [
+      "428",
+      "427",
+      "429",
+      "426"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 428. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the sum of the first 400 natural numbers?",
+    "options": [
+      "80200",
+      "80000",
+      "80400",
+      "79800"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 80200. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "Find the value of (√13+√11)(√13-√11).",
+    "options": [
+      "2",
+      "24",
+      "26",
+      "14"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 2. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the remainder when 4³⁰ is divided by 7?",
+    "options": [
+      "1",
+      "4",
+      "2",
+      "5"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the smallest number divisible by 1 to 15?",
+    "options": [
+      "360360",
+      "720720",
+      "180180",
+      "540540"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 360360. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the sum of all factors of 200?",
+    "options": [
+      "465",
+      "480",
+      "450",
+      "435"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 465. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "How many prime numbers are there between 400 and 500?",
+    "options": [
+      "17",
+      "16",
+      "18",
+      "15"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 17. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the value of log₅ 125 + log₂ 64?",
+    "options": [
+      "9",
+      "8",
+      "10",
+      "7"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 9. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the unit digit of 2²⁰²⁵?",
+    "options": [
+      "2",
+      "4",
+      "8",
+      "6"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 2. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "How many numbers between 1 and 1000 are divisible by 5 or 11?",
+    "options": [
+      "273",
+      "272",
+      "274",
+      "271"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 273. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the sum of the first 50 prime numbers?",
+    "options": [
+      "5117",
+      "5115",
+      "5119",
+      "5121"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 5117. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "Find the value of √(15+2√54).",
+    "options": [
+      "√9+√6",
+      "√10+√5",
+      "√9+√5",
+      "√10+√6"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is √9+√6. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the remainder when 7⁴⁰ is divided by 17?",
+    "options": [
+      "1",
+      "7",
+      "3",
+      "9"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the product of all factors of 64?",
+    "options": [
+      "64⁷",
+      "64¹⁴",
+      "64⁶",
+      "64¹²"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 64⁷. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the sum of all 4-digit numbers divisible by 7?",
+    "options": [
+      "706086",
+      "706086",
+      "706086",
+      "706086"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 706086. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "How many numbers between 1 and 1200 are divisible by 6 or 8?",
+    "options": [
+      "300",
+      "299",
+      "301",
+      "298"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 300. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the value of (0.6)³ + (0.4)³?",
+    "options": [
+      "0.28",
+      "0.216",
+      "0.064",
+      "0.28"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 0.28. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the LCM of 4/5, 6/7, 8/9?",
+    "options": [
+      "24",
+      "12",
+      "48",
+      "8"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 24. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the HCF of 4/5, 6/7, 8/9?",
+    "options": [
+      "1/315",
+      "1/105",
+      "1/63",
+      "1/45"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1/315. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the unit digit of 8⁷⁵?",
+    "options": [
+      "2",
+      "8",
+      "4",
+      "6"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 2. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "How many numbers between 1 and 1500 are divisible by 3 or 5?",
+    "options": [
+      "700",
+      "699",
+      "701",
+      "698"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 700. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the sum of the first 500 natural numbers?",
+    "options": [
+      "125250",
+      "125000",
+      "125500",
+      "124750"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 125250. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "Find the value of (√17+√15)(√17-√15).",
+    "options": [
+      "2",
+      "32",
+      "34",
+      "16"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 2. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the remainder when 5⁴⁰ is divided by 11?",
+    "options": [
+      "1",
+      "5",
+      "3",
+      "9"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the smallest number divisible by 1 to 18?",
+    "options": [
+      "12252240",
+      "12252240",
+      "12252240",
+      "12252240"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 12252240. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the sum of all factors of 216?",
+    "options": [
+      "600",
+      "576",
+      "624",
+      "552"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 600. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "How many prime numbers are there between 500 and 600?",
+    "options": [
+      "14",
+      "13",
+      "15",
+      "12"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 14. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the value of log₃ 243 + log₂ 128?",
+    "options": [
+      "12",
+      "11",
+      "13",
+      "10"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 12. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the unit digit of 3²⁰²⁶?",
+    "options": [
+      "9",
+      "3",
+      "7",
+      "1"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 9. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "How many numbers between 1 and 2000 are divisible by 7 or 13?",
+    "options": [
+      "392",
+      "391",
+      "393",
+      "390"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 392. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the sum of the first 60 prime numbers?",
+    "options": [
+      "7697",
+      "7695",
+      "7699",
+      "7693"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 7697. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "Find the value of √(17+6√8).",
+    "options": [
+      "3+2√2",
+      "4+√2",
+      "3+√2",
+      "4+2√2"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 3+2√2. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the remainder when 2⁶⁰ is divided by 19?",
+    "options": [
+      "1",
+      "2",
+      "4",
+      "8"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the product of all factors of 144?",
+    "options": [
+      "144¹⁵",
+      "144¹⁰",
+      "144¹⁸",
+      "144¹²"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 144¹⁵. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the sum of all 3-digit numbers divisible by 19?",
+    "options": [
+      "25935",
+      "25935",
+      "25935",
+      "25935"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 25935. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "How many numbers between 1 and 2500 are divisible by 4 or 6?",
+    "options": [
+      "833",
+      "832",
+      "834",
+      "831"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 833. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the value of (0.7)³ - (0.2)³?",
+    "options": [
+      "0.335",
+      "0.343",
+      "0.008",
+      "0.335"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 0.335. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the LCM of 5/6, 7/8, 9/10?",
+    "options": [
+      "315",
+      "105",
+      "630",
+      "45"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 315. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the HCF of 5/6, 7/8, 9/10?",
+    "options": [
+      "1/120",
+      "1/60",
+      "1/40",
+      "1/30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1/120. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the unit digit of 4⁷⁵?",
+    "options": [
+      "4",
+      "6",
+      "2",
+      "8"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 4. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "How many numbers between 1 and 3000 are divisible by 5 or 7?",
+    "options": [
+      "1028",
+      "1027",
+      "1029",
+      "1026"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1028. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the sum of the first 1000 natural numbers?",
+    "options": [
+      "500500",
+      "500000",
+      "501000",
+      "499500"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 500500. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "Find the value of (√19+√17)(√19-√17).",
+    "options": [
+      "2",
+      "36",
+      "38",
+      "18"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 2. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the remainder when 3⁶⁰ is divided by 17?",
+    "options": [
+      "1",
+      "3",
+      "9",
+      "11"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the smallest number divisible by 1 to 20?",
+    "options": [
+      "232792560",
+      "232792560",
+      "232792560",
+      "232792560"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 232792560. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the sum of all factors of 240?",
+    "options": [
+      "744",
+      "720",
+      "768",
+      "696"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 744. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "How many prime numbers are there between 600 and 700?",
+    "options": [
+      "13",
+      "12",
+      "14",
+      "11"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 13. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the unit digit of 9²⁰²⁵?",
+    "options": [
+      "9",
+      "1",
+      "3",
+      "7"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 9. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "How many numbers between 1 and 4000 are divisible by 6 or 9?",
+    "options": [
+      "1111",
+      "1110",
+      "1112",
+      "1109"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1111. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the sum of the first 70 prime numbers?",
+    "options": [
+      "11037",
+      "11035",
+      "11039",
+      "11033"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 11037. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "Find the value of √(19+4√15).",
+    "options": [
+      "√15+2",
+      "√10+3",
+      "√15+3",
+      "√10+2"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is √15+2. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the remainder when 5⁵⁰ is divided by 13?",
+    "options": [
+      "1",
+      "5",
+      "3",
+      "9"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the product of all factors of 225?",
+    "options": [
+      "225¹⁶",
+      "225⁸",
+      "225¹²",
+      "225²⁰"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 225¹⁶. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the sum of all 4-digit numbers divisible by 13?",
+    "options": [
+      "378378",
+      "378378",
+      "378378",
+      "378378"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 378378. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the sum of all 4-digit numbers divisible by 13?",
+    "options": [
+      "378378",
+      "378378",
+      "378378",
+      "378378"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 378378. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "How many numbers between 1 and 5000 are divisible by 7 or 11?",
+    "options": [
+      "1298",
+      "1297",
+      "1299",
+      "1296"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1298. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the value of (0.9)³ + (0.1)³?",
+    "options": [
+      "0.73",
+      "0.729",
+      "0.001",
+      "0.73"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 0.73. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the LCM of 6/7, 8/9, 10/11?",
+    "options": [
+      "120",
+      "60",
+      "240",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 120. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Infosys",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the HCF of 6/7, 8/9, 10/11?",
+    "options": [
+      "1/693",
+      "1/231",
+      "1/99",
+      "1/77"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 1/693. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the unit digit of 8⁵⁰?",
+    "options": [
+      "4",
+      "8",
+      "2",
+      "6"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 4. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "Wipro",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "How many numbers between 1 and 10000 are divisible by 3 or 5?",
+    "options": [
+      "4666",
+      "4667",
+      "4665",
+      "4668"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer is 4666. This follows standard division, modular arithmetic, or formula application rules for number systems.",
+    "subtopic": "Number System Advanced Theorems",
+    "difficulty": "Hard",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply base arithmetic properties.",
+      "Solve standard formulas."
+    ],
+    "timeEstimate": 120,
+    "marks": 2,
+    "negativeMarks": 0.5
+  }
+]

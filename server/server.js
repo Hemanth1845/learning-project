@@ -4,6 +4,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const runSeeder = require('./config/seeder');
 
+// Triggering database re-seed with rich textbook course content
 const authRoutes = require('./routes/auth');
 const courseRoutes = require('./routes/courses');
 const dsaRoutes = require('./routes/dsa');

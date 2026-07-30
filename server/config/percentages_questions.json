@@ -1,0 +1,6002 @@
+[
+  {
+    "q": "A student scores 15% marks in a term examination. If the maximum aggregate marks for the exam are 208, what is the student's actual score?",
+    "options": [
+      "31",
+      "46",
+      "21",
+      "40"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 31",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 216 ml contains 20% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "43",
+      "58",
+      "33",
+      "56"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 43",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 25% over its initial count of 224. What is the new population?",
+    "options": [
+      "280",
+      "295",
+      "270",
+      "364"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 280",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 30% decrease in monthly production compared to its previous output of 232 units. Find the current monthly production.",
+    "options": [
+      "162",
+      "177",
+      "152",
+      "211"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 162",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 35% of the total valid votes cast. If the total number of valid votes is 240, how many votes did Candidate A receive?",
+    "options": [
+      "84",
+      "99",
+      "74",
+      "109"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 84",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A student scores 40% marks in a term examination. If the maximum aggregate marks for the exam are 248, what is the student's actual score?",
+    "options": [
+      "99",
+      "114",
+      "89",
+      "129"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 99",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 256 ml contains 45% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "115",
+      "130",
+      "105",
+      "150"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 115",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 50% over its initial count of 264. What is the new population?",
+    "options": [
+      "396",
+      "411",
+      "386",
+      "515"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 396",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 10% decrease in monthly production compared to its previous output of 272 units. Find the current monthly production.",
+    "options": [
+      "245",
+      "260",
+      "235",
+      "319"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 245",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 15% of the total valid votes cast. If the total number of valid votes is 280, how many votes did Candidate A receive?",
+    "options": [
+      "42",
+      "57",
+      "32",
+      "55"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 42",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A student scores 20% marks in a term examination. If the maximum aggregate marks for the exam are 288, what is the student's actual score?",
+    "options": [
+      "58",
+      "73",
+      "48",
+      "75"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 58",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 296 ml contains 25% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "74",
+      "89",
+      "64",
+      "96"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 74",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 30% over its initial count of 304. What is the new population?",
+    "options": [
+      "395",
+      "410",
+      "385",
+      "514"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 395",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 35% decrease in monthly production compared to its previous output of 312 units. Find the current monthly production.",
+    "options": [
+      "203",
+      "218",
+      "193",
+      "264"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 203",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 40% of the total valid votes cast. If the total number of valid votes is 320, how many votes did Candidate A receive?",
+    "options": [
+      "128",
+      "143",
+      "118",
+      "166"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 128",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A student scores 45% marks in a term examination. If the maximum aggregate marks for the exam are 328, what is the student's actual score?",
+    "options": [
+      "148",
+      "163",
+      "138",
+      "192"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 148",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 336 ml contains 50% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "168",
+      "183",
+      "158",
+      "218"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 168",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 10% over its initial count of 344. What is the new population?",
+    "options": [
+      "378",
+      "393",
+      "368",
+      "491"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 378",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 15% decrease in monthly production compared to its previous output of 352 units. Find the current monthly production.",
+    "options": [
+      "299",
+      "314",
+      "289",
+      "389"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 299",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 20% of the total valid votes cast. If the total number of valid votes is 360, how many votes did Candidate A receive?",
+    "options": [
+      "72",
+      "87",
+      "62",
+      "94"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 72",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A student scores 25% marks in a term examination. If the maximum aggregate marks for the exam are 368, what is the student's actual score?",
+    "options": [
+      "92",
+      "107",
+      "82",
+      "120"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 92",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 376 ml contains 30% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "113",
+      "128",
+      "103",
+      "147"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 113",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 35% over its initial count of 384. What is the new population?",
+    "options": [
+      "518",
+      "533",
+      "508",
+      "673"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 518",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 40% decrease in monthly production compared to its previous output of 392 units. Find the current monthly production.",
+    "options": [
+      "235",
+      "250",
+      "225",
+      "306"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 235",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 45% of the total valid votes cast. If the total number of valid votes is 400, how many votes did Candidate A receive?",
+    "options": [
+      "180",
+      "195",
+      "170",
+      "234"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 180",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A student scores 50% marks in a term examination. If the maximum aggregate marks for the exam are 408, what is the student's actual score?",
+    "options": [
+      "204",
+      "219",
+      "194",
+      "265"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 204",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 416 ml contains 10% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "42",
+      "57",
+      "32",
+      "55"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 42",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 15% over its initial count of 424. What is the new population?",
+    "options": [
+      "488",
+      "503",
+      "478",
+      "634"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 488",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 20% decrease in monthly production compared to its previous output of 432 units. Find the current monthly production.",
+    "options": [
+      "346",
+      "361",
+      "336",
+      "450"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 346",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 25% of the total valid votes cast. If the total number of valid votes is 440, how many votes did Candidate A receive?",
+    "options": [
+      "110",
+      "125",
+      "100",
+      "143"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 110",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A student scores 30% marks in a term examination. If the maximum aggregate marks for the exam are 448, what is the student's actual score?",
+    "options": [
+      "134",
+      "149",
+      "124",
+      "174"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 134",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 456 ml contains 35% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "160",
+      "175",
+      "150",
+      "208"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 160",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 40% over its initial count of 464. What is the new population?",
+    "options": [
+      "650",
+      "665",
+      "640",
+      "845"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 650",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 45% decrease in monthly production compared to its previous output of 472 units. Find the current monthly production.",
+    "options": [
+      "260",
+      "275",
+      "250",
+      "338"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 260",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 50% of the total valid votes cast. If the total number of valid votes is 480, how many votes did Candidate A receive?",
+    "options": [
+      "240",
+      "255",
+      "230",
+      "312"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 240",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A student scores 10% marks in a term examination. If the maximum aggregate marks for the exam are 488, what is the student's actual score?",
+    "options": [
+      "49",
+      "64",
+      "39",
+      "64"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 49",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 496 ml contains 15% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "74",
+      "89",
+      "64",
+      "96"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 74",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 20% over its initial count of 504. What is the new population?",
+    "options": [
+      "605",
+      "620",
+      "595",
+      "787"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 605",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 25% decrease in monthly production compared to its previous output of 512 units. Find the current monthly production.",
+    "options": [
+      "384",
+      "399",
+      "374",
+      "499"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 384",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 30% of the total valid votes cast. If the total number of valid votes is 520, how many votes did Candidate A receive?",
+    "options": [
+      "156",
+      "171",
+      "146",
+      "203"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 156",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A student scores 35% marks in a term examination. If the maximum aggregate marks for the exam are 528, what is the student's actual score?",
+    "options": [
+      "185",
+      "200",
+      "175",
+      "241"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 185",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 536 ml contains 40% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "214",
+      "229",
+      "204",
+      "278"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 214",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 45% over its initial count of 544. What is the new population?",
+    "options": [
+      "789",
+      "804",
+      "779",
+      "1026"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 789",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 50% decrease in monthly production compared to its previous output of 552 units. Find the current monthly production.",
+    "options": [
+      "276",
+      "291",
+      "266",
+      "359"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 276",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 10% of the total valid votes cast. If the total number of valid votes is 560, how many votes did Candidate A receive?",
+    "options": [
+      "56",
+      "71",
+      "46",
+      "73"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 56",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A student scores 15% marks in a term examination. If the maximum aggregate marks for the exam are 568, what is the student's actual score?",
+    "options": [
+      "85",
+      "100",
+      "75",
+      "111"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 85",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 576 ml contains 20% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "115",
+      "130",
+      "105",
+      "150"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 115",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 25% over its initial count of 584. What is the new population?",
+    "options": [
+      "730",
+      "745",
+      "720",
+      "949"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 730",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 30% decrease in monthly production compared to its previous output of 592 units. Find the current monthly production.",
+    "options": [
+      "414",
+      "429",
+      "404",
+      "538"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 414",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 35% of the total valid votes cast. If the total number of valid votes is 600, how many votes did Candidate A receive?",
+    "options": [
+      "210",
+      "225",
+      "200",
+      "273"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 210",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A student scores 40% marks in a term examination. If the maximum aggregate marks for the exam are 608, what is the student's actual score?",
+    "options": [
+      "243",
+      "258",
+      "233",
+      "316"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 243",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 616 ml contains 45% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "277",
+      "292",
+      "267",
+      "360"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 277",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 50% over its initial count of 624. What is the new population?",
+    "options": [
+      "936",
+      "951",
+      "926",
+      "1217"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 936",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 10% decrease in monthly production compared to its previous output of 632 units. Find the current monthly production.",
+    "options": [
+      "569",
+      "584",
+      "559",
+      "740"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 569",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 15% of the total valid votes cast. If the total number of valid votes is 640, how many votes did Candidate A receive?",
+    "options": [
+      "96",
+      "111",
+      "86",
+      "125"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 96",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A student scores 20% marks in a term examination. If the maximum aggregate marks for the exam are 648, what is the student's actual score?",
+    "options": [
+      "130",
+      "145",
+      "120",
+      "169"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 130",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 656 ml contains 25% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "164",
+      "179",
+      "154",
+      "213"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 164",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 30% over its initial count of 664. What is the new population?",
+    "options": [
+      "863",
+      "878",
+      "853",
+      "1122"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 863",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 35% decrease in monthly production compared to its previous output of 672 units. Find the current monthly production.",
+    "options": [
+      "437",
+      "452",
+      "427",
+      "568"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 437",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 40% of the total valid votes cast. If the total number of valid votes is 680, how many votes did Candidate A receive?",
+    "options": [
+      "272",
+      "287",
+      "262",
+      "354"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 272",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A student scores 45% marks in a term examination. If the maximum aggregate marks for the exam are 688, what is the student's actual score?",
+    "options": [
+      "310",
+      "325",
+      "300",
+      "403"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 310",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 696 ml contains 50% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "348",
+      "363",
+      "338",
+      "452"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 348",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 10% over its initial count of 704. What is the new population?",
+    "options": [
+      "774",
+      "789",
+      "764",
+      "1006"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 774",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 15% decrease in monthly production compared to its previous output of 712 units. Find the current monthly production.",
+    "options": [
+      "605",
+      "620",
+      "595",
+      "787"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 605",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 20% of the total valid votes cast. If the total number of valid votes is 720, how many votes did Candidate A receive?",
+    "options": [
+      "144",
+      "159",
+      "134",
+      "187"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 144",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A student scores 25% marks in a term examination. If the maximum aggregate marks for the exam are 728, what is the student's actual score?",
+    "options": [
+      "182",
+      "197",
+      "172",
+      "237"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 182",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 736 ml contains 30% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "221",
+      "236",
+      "211",
+      "287"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 221",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 35% over its initial count of 744. What is the new population?",
+    "options": [
+      "1004",
+      "1019",
+      "994",
+      "1305"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1004",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 40% decrease in monthly production compared to its previous output of 752 units. Find the current monthly production.",
+    "options": [
+      "451",
+      "466",
+      "441",
+      "586"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 451",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 45% of the total valid votes cast. If the total number of valid votes is 760, how many votes did Candidate A receive?",
+    "options": [
+      "342",
+      "357",
+      "332",
+      "445"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 342",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A student scores 50% marks in a term examination. If the maximum aggregate marks for the exam are 768, what is the student's actual score?",
+    "options": [
+      "384",
+      "399",
+      "374",
+      "499"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 384",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 776 ml contains 10% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "78",
+      "93",
+      "68",
+      "101"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 78",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 15% over its initial count of 784. What is the new population?",
+    "options": [
+      "902",
+      "917",
+      "892",
+      "1173"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 902",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 20% decrease in monthly production compared to its previous output of 792 units. Find the current monthly production.",
+    "options": [
+      "634",
+      "649",
+      "624",
+      "824"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 634",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 25% of the total valid votes cast. If the total number of valid votes is 800, how many votes did Candidate A receive?",
+    "options": [
+      "200",
+      "215",
+      "190",
+      "260"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 200",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A student scores 30% marks in a term examination. If the maximum aggregate marks for the exam are 808, what is the student's actual score?",
+    "options": [
+      "242",
+      "257",
+      "232",
+      "315"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 242",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 816 ml contains 35% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "286",
+      "301",
+      "276",
+      "372"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 286",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 40% over its initial count of 824. What is the new population?",
+    "options": [
+      "1154",
+      "1169",
+      "1144",
+      "1500"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1154",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 45% decrease in monthly production compared to its previous output of 832 units. Find the current monthly production.",
+    "options": [
+      "458",
+      "473",
+      "448",
+      "595"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 458",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 50% of the total valid votes cast. If the total number of valid votes is 840, how many votes did Candidate A receive?",
+    "options": [
+      "420",
+      "435",
+      "410",
+      "546"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 420",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A student scores 10% marks in a term examination. If the maximum aggregate marks for the exam are 848, what is the student's actual score?",
+    "options": [
+      "85",
+      "100",
+      "75",
+      "111"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 85",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 856 ml contains 15% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "128",
+      "143",
+      "118",
+      "166"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 128",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 20% over its initial count of 864. What is the new population?",
+    "options": [
+      "1037",
+      "1052",
+      "1027",
+      "1348"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1037",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 25% decrease in monthly production compared to its previous output of 872 units. Find the current monthly production.",
+    "options": [
+      "654",
+      "669",
+      "644",
+      "850"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 654",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 30% of the total valid votes cast. If the total number of valid votes is 880, how many votes did Candidate A receive?",
+    "options": [
+      "264",
+      "279",
+      "254",
+      "343"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 264",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A student scores 35% marks in a term examination. If the maximum aggregate marks for the exam are 888, what is the student's actual score?",
+    "options": [
+      "311",
+      "326",
+      "301",
+      "404"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 311",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 896 ml contains 40% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "358",
+      "373",
+      "348",
+      "465"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 358",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 45% over its initial count of 904. What is the new population?",
+    "options": [
+      "1311",
+      "1326",
+      "1301",
+      "1704"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1311",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 50% decrease in monthly production compared to its previous output of 912 units. Find the current monthly production.",
+    "options": [
+      "456",
+      "471",
+      "446",
+      "593"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 456",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 10% of the total valid votes cast. If the total number of valid votes is 920, how many votes did Candidate A receive?",
+    "options": [
+      "92",
+      "107",
+      "82",
+      "120"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 92",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A student scores 15% marks in a term examination. If the maximum aggregate marks for the exam are 928, what is the student's actual score?",
+    "options": [
+      "139",
+      "154",
+      "129",
+      "181"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 139",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 936 ml contains 20% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "187",
+      "202",
+      "177",
+      "243"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 187",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 25% over its initial count of 944. What is the new population?",
+    "options": [
+      "1180",
+      "1195",
+      "1170",
+      "1534"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1180",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 30% decrease in monthly production compared to its previous output of 952 units. Find the current monthly production.",
+    "options": [
+      "666",
+      "681",
+      "656",
+      "866"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 666",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 35% of the total valid votes cast. If the total number of valid votes is 960, how many votes did Candidate A receive?",
+    "options": [
+      "336",
+      "351",
+      "326",
+      "437"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 336",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A student scores 40% marks in a term examination. If the maximum aggregate marks for the exam are 968, what is the student's actual score?",
+    "options": [
+      "387",
+      "402",
+      "377",
+      "503"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 387",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 976 ml contains 45% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "439",
+      "454",
+      "429",
+      "571"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 439",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 50% over its initial count of 984. What is the new population?",
+    "options": [
+      "1476",
+      "1491",
+      "1466",
+      "1919"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1476",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 10% decrease in monthly production compared to its previous output of 992 units. Find the current monthly production.",
+    "options": [
+      "893",
+      "908",
+      "883",
+      "1161"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 893",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 15% of the total valid votes cast. If the total number of valid votes is 1000, how many votes did Candidate A receive?",
+    "options": [
+      "150",
+      "165",
+      "140",
+      "195"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 150",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A student scores 20% marks in a term examination. If the maximum aggregate marks for the exam are 1008, what is the student's actual score?",
+    "options": [
+      "202",
+      "217",
+      "192",
+      "263"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 202",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 1016 ml contains 25% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "254",
+      "269",
+      "244",
+      "330"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 254",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 30% over its initial count of 1024. What is the new population?",
+    "options": [
+      "1331",
+      "1346",
+      "1321",
+      "1730"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1331",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 35% decrease in monthly production compared to its previous output of 1032 units. Find the current monthly production.",
+    "options": [
+      "671",
+      "686",
+      "661",
+      "872"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 671",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 40% of the total valid votes cast. If the total number of valid votes is 1040, how many votes did Candidate A receive?",
+    "options": [
+      "416",
+      "431",
+      "406",
+      "541"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 416",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A student scores 45% marks in a term examination. If the maximum aggregate marks for the exam are 1048, what is the student's actual score?",
+    "options": [
+      "472",
+      "487",
+      "462",
+      "614"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 472",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 1056 ml contains 50% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "528",
+      "543",
+      "518",
+      "686"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 528",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 10% over its initial count of 1064. What is the new population?",
+    "options": [
+      "1170",
+      "1185",
+      "1160",
+      "1521"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1170",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 15% decrease in monthly production compared to its previous output of 1072 units. Find the current monthly production.",
+    "options": [
+      "911",
+      "926",
+      "901",
+      "1184"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 911",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 20% of the total valid votes cast. If the total number of valid votes is 1080, how many votes did Candidate A receive?",
+    "options": [
+      "216",
+      "231",
+      "206",
+      "281"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 216",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A student scores 25% marks in a term examination. If the maximum aggregate marks for the exam are 1088, what is the student's actual score?",
+    "options": [
+      "272",
+      "287",
+      "262",
+      "354"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 272",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 1096 ml contains 30% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "329",
+      "344",
+      "319",
+      "428"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 329",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 35% over its initial count of 1104. What is the new population?",
+    "options": [
+      "1490",
+      "1505",
+      "1480",
+      "1937"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1490",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 40% decrease in monthly production compared to its previous output of 1112 units. Find the current monthly production.",
+    "options": [
+      "667",
+      "682",
+      "657",
+      "867"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 667",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 45% of the total valid votes cast. If the total number of valid votes is 1120, how many votes did Candidate A receive?",
+    "options": [
+      "504",
+      "519",
+      "494",
+      "655"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 504",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A student scores 50% marks in a term examination. If the maximum aggregate marks for the exam are 1128, what is the student's actual score?",
+    "options": [
+      "564",
+      "579",
+      "554",
+      "733"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 564",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 1136 ml contains 10% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "114",
+      "129",
+      "104",
+      "148"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 114",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 15% over its initial count of 1144. What is the new population?",
+    "options": [
+      "1316",
+      "1331",
+      "1306",
+      "1711"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1316",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 20% decrease in monthly production compared to its previous output of 1152 units. Find the current monthly production.",
+    "options": [
+      "922",
+      "937",
+      "912",
+      "1199"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 922",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 25% of the total valid votes cast. If the total number of valid votes is 1160, how many votes did Candidate A receive?",
+    "options": [
+      "290",
+      "305",
+      "280",
+      "377"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 290",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A student scores 30% marks in a term examination. If the maximum aggregate marks for the exam are 1168, what is the student's actual score?",
+    "options": [
+      "350",
+      "365",
+      "340",
+      "455"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 350",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 1176 ml contains 35% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "412",
+      "427",
+      "402",
+      "536"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 412",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 40% over its initial count of 1184. What is the new population?",
+    "options": [
+      "1658",
+      "1673",
+      "1648",
+      "2155"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1658",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 45% decrease in monthly production compared to its previous output of 1192 units. Find the current monthly production.",
+    "options": [
+      "656",
+      "671",
+      "646",
+      "853"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 656",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 50% of the total valid votes cast. If the total number of valid votes is 1200, how many votes did Candidate A receive?",
+    "options": [
+      "600",
+      "615",
+      "590",
+      "780"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 600",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A student scores 10% marks in a term examination. If the maximum aggregate marks for the exam are 1208, what is the student's actual score?",
+    "options": [
+      "121",
+      "136",
+      "111",
+      "157"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 121",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 1216 ml contains 15% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "182",
+      "197",
+      "172",
+      "237"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 182",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 20% over its initial count of 1224. What is the new population?",
+    "options": [
+      "1469",
+      "1484",
+      "1459",
+      "1910"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1469",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 25% decrease in monthly production compared to its previous output of 1232 units. Find the current monthly production.",
+    "options": [
+      "924",
+      "939",
+      "914",
+      "1201"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 924",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 30% of the total valid votes cast. If the total number of valid votes is 1240, how many votes did Candidate A receive?",
+    "options": [
+      "372",
+      "387",
+      "362",
+      "484"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 372",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A student scores 35% marks in a term examination. If the maximum aggregate marks for the exam are 1248, what is the student's actual score?",
+    "options": [
+      "437",
+      "452",
+      "427",
+      "568"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 437",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 1256 ml contains 40% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "502",
+      "517",
+      "492",
+      "653"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 502",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 45% over its initial count of 1264. What is the new population?",
+    "options": [
+      "1833",
+      "1848",
+      "1823",
+      "2383"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1833",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 50% decrease in monthly production compared to its previous output of 1272 units. Find the current monthly production.",
+    "options": [
+      "636",
+      "651",
+      "626",
+      "827"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 636",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 10% of the total valid votes cast. If the total number of valid votes is 1280, how many votes did Candidate A receive?",
+    "options": [
+      "128",
+      "143",
+      "118",
+      "166"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 128",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A student scores 15% marks in a term examination. If the maximum aggregate marks for the exam are 1288, what is the student's actual score?",
+    "options": [
+      "193",
+      "208",
+      "183",
+      "251"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 193",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 1296 ml contains 20% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "259",
+      "274",
+      "249",
+      "337"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 259",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 25% over its initial count of 1304. What is the new population?",
+    "options": [
+      "1630",
+      "1645",
+      "1620",
+      "2119"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1630",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 30% decrease in monthly production compared to its previous output of 1312 units. Find the current monthly production.",
+    "options": [
+      "918",
+      "933",
+      "908",
+      "1193"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 918",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 35% of the total valid votes cast. If the total number of valid votes is 1320, how many votes did Candidate A receive?",
+    "options": [
+      "462",
+      "477",
+      "452",
+      "601"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 462",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A student scores 40% marks in a term examination. If the maximum aggregate marks for the exam are 1328, what is the student's actual score?",
+    "options": [
+      "531",
+      "546",
+      "521",
+      "690"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 531",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 1336 ml contains 45% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "601",
+      "616",
+      "591",
+      "781"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 601",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 50% over its initial count of 1344. What is the new population?",
+    "options": [
+      "2016",
+      "2031",
+      "2006",
+      "2621"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 2016",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 10% decrease in monthly production compared to its previous output of 1352 units. Find the current monthly production.",
+    "options": [
+      "1217",
+      "1232",
+      "1207",
+      "1582"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1217",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 15% of the total valid votes cast. If the total number of valid votes is 1360, how many votes did Candidate A receive?",
+    "options": [
+      "204",
+      "219",
+      "194",
+      "265"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 204",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A student scores 20% marks in a term examination. If the maximum aggregate marks for the exam are 1368, what is the student's actual score?",
+    "options": [
+      "274",
+      "289",
+      "264",
+      "356"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 274",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A chemical solution of volume 1376 ml contains 25% concentration of active acid. What is the absolute volume of pure acid in the solution?",
+    "options": [
+      "344",
+      "359",
+      "334",
+      "447"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 344",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Due to a seasonal increase in demand, the population of a tourist town increases by 30% over its initial count of 1384. What is the new population?",
+    "options": [
+      "1799",
+      "1814",
+      "1789",
+      "2339"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1799",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A manufacturing unit reports a 35% decrease in monthly production compared to its previous output of 1392 units. Find the current monthly production.",
+    "options": [
+      "905",
+      "920",
+      "895",
+      "1177"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 905",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "In a local mayoral election, Candidate A secures 40% of the total valid votes cast. If the total number of valid votes is 1400, how many votes did Candidate A receive?",
+    "options": [
+      "560",
+      "575",
+      "550",
+      "728"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 560",
+    "subtopic": "Percentages Application",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Apply baseline percentage definitions."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3265. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹3526",
+      "₹3571",
+      "₹3466",
+      "₹3330"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 3526",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3280. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹3690",
+      "₹3735",
+      "₹3630",
+      "₹3346"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 3690",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3295. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹3855",
+      "₹3900",
+      "₹3795",
+      "₹3361"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 3855",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3310. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4022",
+      "₹4067",
+      "₹3962",
+      "₹3376"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4022",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3325. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹3441",
+      "₹3486",
+      "₹3381",
+      "₹3392"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 3441",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3340. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹3607",
+      "₹3652",
+      "₹3547",
+      "₹3407"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 3607",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3355. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹3774",
+      "₹3819",
+      "₹3714",
+      "₹3422"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 3774",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3370. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹3943",
+      "₹3988",
+      "₹3883",
+      "₹3437"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 3943",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3385. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4113",
+      "₹4158",
+      "₹4053",
+      "₹3453"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4113",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3400. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹3519",
+      "₹3564",
+      "₹3459",
+      "₹3468"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 3519",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3415. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹3688",
+      "₹3733",
+      "₹3628",
+      "₹3483"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 3688",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3430. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹3859",
+      "₹3904",
+      "₹3799",
+      "₹3499"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 3859",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3445. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4031",
+      "₹4076",
+      "₹3971",
+      "₹3514"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4031",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3460. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4204",
+      "₹4249",
+      "₹4144",
+      "₹3529"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4204",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3475. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹3597",
+      "₹3642",
+      "₹3537",
+      "₹3545"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 3597",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3490. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹3769",
+      "₹3814",
+      "₹3709",
+      "₹3560"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 3769",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3505. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹3943",
+      "₹3988",
+      "₹3883",
+      "₹3575"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 3943",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3520. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4118",
+      "₹4163",
+      "₹4058",
+      "₹3590"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4118",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3535. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4295",
+      "₹4340",
+      "₹4235",
+      "₹3606"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4295",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3550. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹3674",
+      "₹3719",
+      "₹3614",
+      "₹3621"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 3674",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3565. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹3850",
+      "₹3895",
+      "₹3790",
+      "₹3636"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 3850",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3580. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4028",
+      "₹4073",
+      "₹3968",
+      "₹3652"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4028",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3595. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4206",
+      "₹4251",
+      "₹4146",
+      "₹3667"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4206",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3610. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4386",
+      "₹4431",
+      "₹4326",
+      "₹3682"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4386",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3625. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹3752",
+      "₹3797",
+      "₹3692",
+      "₹3698"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 3752",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3640. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹3931",
+      "₹3976",
+      "₹3871",
+      "₹3713"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 3931",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3655. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4112",
+      "₹4157",
+      "₹4052",
+      "₹3728"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4112",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3670. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4294",
+      "₹4339",
+      "₹4234",
+      "₹3743"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4294",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3685. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4477",
+      "₹4522",
+      "₹4417",
+      "₹3759"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4477",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3700. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹3830",
+      "₹3875",
+      "₹3770",
+      "₹3774"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 3830",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3715. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4012",
+      "₹4057",
+      "₹3952",
+      "₹3789"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4012",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3730. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4196",
+      "₹4241",
+      "₹4136",
+      "₹3805"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4196",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3745. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4382",
+      "₹4427",
+      "₹4322",
+      "₹3820"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4382",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3760. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4568",
+      "₹4613",
+      "₹4508",
+      "₹3835"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4568",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3775. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹3907",
+      "₹3952",
+      "₹3847",
+      "₹3851"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 3907",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3790. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4093",
+      "₹4138",
+      "₹4033",
+      "₹3866"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4093",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3805. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4281",
+      "₹4326",
+      "₹4221",
+      "₹3881"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4281",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3820. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4469",
+      "₹4514",
+      "₹4409",
+      "₹3896"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4469",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3835. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4660",
+      "₹4705",
+      "₹4600",
+      "₹3912"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4660",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3850. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹3985",
+      "₹4030",
+      "₹3925",
+      "₹3927"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 3985",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3865. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4174",
+      "₹4219",
+      "₹4114",
+      "₹3942"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4174",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3880. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4365",
+      "₹4410",
+      "₹4305",
+      "₹3958"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4365",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3895. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4557",
+      "₹4602",
+      "₹4497",
+      "₹3973"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4557",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3910. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4751",
+      "₹4796",
+      "₹4691",
+      "₹3988"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4751",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3925. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4062",
+      "₹4107",
+      "₹4002",
+      "₹4004"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4062",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3940. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4255",
+      "₹4300",
+      "₹4195",
+      "₹4019"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4255",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3955. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4449",
+      "₹4494",
+      "₹4389",
+      "₹4034"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4449",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3970. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4645",
+      "₹4690",
+      "₹4585",
+      "₹4049"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4645",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹3985. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4842",
+      "₹4887",
+      "₹4782",
+      "₹4065"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4842",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4000. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4140",
+      "₹4185",
+      "₹4080",
+      "₹4080"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4140",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4015. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4336",
+      "₹4381",
+      "₹4276",
+      "₹4095"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4336",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4030. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4534",
+      "₹4579",
+      "₹4474",
+      "₹4111"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4534",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4045. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4733",
+      "₹4778",
+      "₹4673",
+      "₹4126"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4733",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4060. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4933",
+      "₹4978",
+      "₹4873",
+      "₹4141"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4933",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4075. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4218",
+      "₹4263",
+      "₹4158",
+      "₹4157"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4218",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4090. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4417",
+      "₹4462",
+      "₹4357",
+      "₹4172"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4417",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4105. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4618",
+      "₹4663",
+      "₹4558",
+      "₹4187"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4618",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4120. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4820",
+      "₹4865",
+      "₹4760",
+      "₹4202"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4820",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4135. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5024",
+      "₹5069",
+      "₹4964",
+      "₹4218"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5024",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4150. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4295",
+      "₹4340",
+      "₹4235",
+      "₹4233"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4295",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4165. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4498",
+      "₹4543",
+      "₹4438",
+      "₹4248"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4498",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4180. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4703",
+      "₹4748",
+      "₹4643",
+      "₹4264"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4703",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4195. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4908",
+      "₹4953",
+      "₹4848",
+      "₹4279"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4908",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4210. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5115",
+      "₹5160",
+      "₹5055",
+      "₹4294"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5115",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4225. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4373",
+      "₹4418",
+      "₹4313",
+      "₹4310"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4373",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4240. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4579",
+      "₹4624",
+      "₹4519",
+      "₹4325"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4579",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4255. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4787",
+      "₹4832",
+      "₹4727",
+      "₹4340"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4787",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4270. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4996",
+      "₹5041",
+      "₹4936",
+      "₹4355"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4996",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4285. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5206",
+      "₹5251",
+      "₹5146",
+      "₹4371"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5206",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4300. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4451",
+      "₹4496",
+      "₹4391",
+      "₹4386"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4451",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4315. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4660",
+      "₹4705",
+      "₹4600",
+      "₹4401"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4660",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4330. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4871",
+      "₹4916",
+      "₹4811",
+      "₹4417"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4871",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4345. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5084",
+      "₹5129",
+      "₹5024",
+      "₹4432"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5084",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4360. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5297",
+      "₹5342",
+      "₹5237",
+      "₹4447"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5297",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4375. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4528",
+      "₹4573",
+      "₹4468",
+      "₹4463"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4528",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4390. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4741",
+      "₹4786",
+      "₹4681",
+      "₹4478"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4741",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4405. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4956",
+      "₹5001",
+      "₹4896",
+      "₹4493"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4956",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4420. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5171",
+      "₹5216",
+      "₹5111",
+      "₹4508"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5171",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4435. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5389",
+      "₹5434",
+      "₹5329",
+      "₹4524"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5389",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4450. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4606",
+      "₹4651",
+      "₹4546",
+      "₹4539"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4606",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4465. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4822",
+      "₹4867",
+      "₹4762",
+      "₹4554"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4822",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4480. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5040",
+      "₹5085",
+      "₹4980",
+      "₹4570"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5040",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4495. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5259",
+      "₹5304",
+      "₹5199",
+      "₹4585"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5259",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4510. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5480",
+      "₹5525",
+      "₹5420",
+      "₹4600"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5480",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4525. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4683",
+      "₹4728",
+      "₹4623",
+      "₹4616"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4683",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4540. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4903",
+      "₹4948",
+      "₹4843",
+      "₹4631"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4903",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4555. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5124",
+      "₹5169",
+      "₹5064",
+      "₹4646"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5124",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4570. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5347",
+      "₹5392",
+      "₹5287",
+      "₹4661"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5347",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4585. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5571",
+      "₹5616",
+      "₹5511",
+      "₹4677"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5571",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4600. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4761",
+      "₹4806",
+      "₹4701",
+      "₹4692"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4761",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4615. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4984",
+      "₹5029",
+      "₹4924",
+      "₹4707"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4984",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4630. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5209",
+      "₹5254",
+      "₹5149",
+      "₹4723"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5209",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4645. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5435",
+      "₹5480",
+      "₹5375",
+      "₹4738"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5435",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4660. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5662",
+      "₹5707",
+      "₹5602",
+      "₹4753"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5662",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4675. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4839",
+      "₹4884",
+      "₹4779",
+      "₹4769"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4839",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4690. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5065",
+      "₹5110",
+      "₹5005",
+      "₹4784"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5065",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4705. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5293",
+      "₹5338",
+      "₹5233",
+      "₹4799"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5293",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4720. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5522",
+      "₹5567",
+      "₹5462",
+      "₹4814"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5522",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4735. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5753",
+      "₹5798",
+      "₹5693",
+      "₹4830"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5753",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4750. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4916",
+      "₹4961",
+      "₹4856",
+      "₹4845"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4916",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4765. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5146",
+      "₹5191",
+      "₹5086",
+      "₹4860"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5146",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4780. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5378",
+      "₹5423",
+      "₹5318",
+      "₹4876"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5378",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4795. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5610",
+      "₹5655",
+      "₹5550",
+      "₹4891"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5610",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4810. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5844",
+      "₹5889",
+      "₹5784",
+      "₹4906"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5844",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4825. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹4994",
+      "₹5039",
+      "₹4934",
+      "₹4922"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 4994",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4840. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5227",
+      "₹5272",
+      "₹5167",
+      "₹4937"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5227",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4855. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5462",
+      "₹5507",
+      "₹5402",
+      "₹4952"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5462",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4870. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5698",
+      "₹5743",
+      "₹5638",
+      "₹4967"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5698",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4885. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5935",
+      "₹5980",
+      "₹5875",
+      "₹4983"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5935",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4900. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5072",
+      "₹5117",
+      "₹5012",
+      "₹4998"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5072",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4915. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5308",
+      "₹5353",
+      "₹5248",
+      "₹5013"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5308",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4930. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5546",
+      "₹5591",
+      "₹5486",
+      "₹5029"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5546",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4945. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5786",
+      "₹5831",
+      "₹5726",
+      "₹5044"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5786",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4960. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹6026",
+      "₹6071",
+      "₹5966",
+      "₹5059"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 6026",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4975. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5149",
+      "₹5194",
+      "₹5089",
+      "₹5075"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5149",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹4990. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5389",
+      "₹5434",
+      "₹5329",
+      "₹5090"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5389",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5005. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5631",
+      "₹5676",
+      "₹5571",
+      "₹5105"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5631",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5020. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5873",
+      "₹5918",
+      "₹5813",
+      "₹5120"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5873",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5035. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹6118",
+      "₹6163",
+      "₹6058",
+      "₹5136"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 6118",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5050. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5227",
+      "₹5272",
+      "₹5167",
+      "₹5151"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5227",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5065. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5470",
+      "₹5515",
+      "₹5410",
+      "₹5166"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5470",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5080. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5715",
+      "₹5760",
+      "₹5655",
+      "₹5182"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5715",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5095. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5961",
+      "₹6006",
+      "₹5901",
+      "₹5197"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5961",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5110. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹6209",
+      "₹6254",
+      "₹6149",
+      "₹5212"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 6209",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5125. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5304",
+      "₹5349",
+      "₹5244",
+      "₹5228"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5304",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5140. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5551",
+      "₹5596",
+      "₹5491",
+      "₹5243"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5551",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5155. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5799",
+      "₹5844",
+      "₹5739",
+      "₹5258"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5799",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5170. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹6049",
+      "₹6094",
+      "₹5989",
+      "₹5273"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 6049",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5185. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹6300",
+      "₹6345",
+      "₹6240",
+      "₹5289"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 6300",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5200. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5382",
+      "₹5427",
+      "₹5322",
+      "₹5304"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5382",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5215. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5632",
+      "₹5677",
+      "₹5572",
+      "₹5319"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5632",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5230. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5884",
+      "₹5929",
+      "₹5824",
+      "₹5335"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5884",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5245. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹6137",
+      "₹6182",
+      "₹6077",
+      "₹5350"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 6137",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5260. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹6391",
+      "₹6436",
+      "₹6331",
+      "₹5365"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 6391",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5275. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5460",
+      "₹5505",
+      "₹5400",
+      "₹5381"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5460",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5290. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5713",
+      "₹5758",
+      "₹5653",
+      "₹5396"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5713",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5305. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5968",
+      "₹6013",
+      "₹5908",
+      "₹5411"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5968",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5320. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹6224",
+      "₹6269",
+      "₹6164",
+      "₹5426"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 6224",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5335. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹6482",
+      "₹6527",
+      "₹6422",
+      "₹5442"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 6482",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5350. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5537",
+      "₹5582",
+      "₹5477",
+      "₹5457"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5537",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5365. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5794",
+      "₹5839",
+      "₹5734",
+      "₹5472"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5794",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5380. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹6053",
+      "₹6098",
+      "₹5993",
+      "₹5488"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 6053",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5395. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹6312",
+      "₹6357",
+      "₹6252",
+      "₹5503"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 6312",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5410. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹6573",
+      "₹6618",
+      "₹6513",
+      "₹5518"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 6573",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5425. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5615",
+      "₹5660",
+      "₹5555",
+      "₹5534"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5615",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5440. It increases by 20% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5875",
+      "₹5920",
+      "₹5815",
+      "₹5549"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5875",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5455. It increases by 25% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹6137",
+      "₹6182",
+      "₹6077",
+      "₹5564"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 6137",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5470. It increases by 30% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹6400",
+      "₹6445",
+      "₹6340",
+      "₹5579"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 6400",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5485. It increases by 35% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹6664",
+      "₹6709",
+      "₹6604",
+      "₹5595"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 6664",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A tech company's stock value starts at ₹5500. It increases by 15% during morning trade, but drops by 10% during afternoon sell-offs. What is the closing stock price?",
+    "options": [
+      "₹5692",
+      "₹5737",
+      "₹5632",
+      "₹5610"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated closing price: 5692",
+    "subtopic": "Successive Percentage Changes",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Multiply successive multipliers sequentially."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  }
+]

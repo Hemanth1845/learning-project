@@ -280,12 +280,14 @@ const AptitudeMastery = () => {
   const [activePageIdx, setActivePageIdx] = useState(0); // Active page index for textbook reader
 
   // Quiz active states
+  const [quizStarted, setQuizStarted] = useState(false);
+  const [quizStartTime, setQuizStartTime] = useState(null);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [quizScore, setQuizScore] = useState(0);
   const [quizFinished, setQuizFinished] = useState(false);
   const [xpEarned, setXpEarned] = useState(0);
-  const [quizTimer, setQuizTimer] = useState(60); // 1 minute per quiz question
+  const [quizTimer, setQuizTimer] = useState(30); // Dynamic per-question timer
   const [timerIntervalId, setTimerIntervalId] = useState(null);
 
   useEffect(() => {
@@ -294,14 +296,16 @@ const AptitudeMastery = () => {
     }
   }, [token]);
 
-  // Handle quiz timer countdown
+  // Handle quiz timer countdown per-question
   useEffect(() => {
-    if (viewMode === 'detail' && detailTab === 'quiz' && !quizFinished && quizTimer > 0) {
+    if (viewMode === 'detail' && detailTab === 'quiz' && quizStarted && !quizFinished && quizTimer > 0) {
       const interval = setInterval(() => {
         setQuizTimer(prev => {
           if (prev <= 1) {
-            // Timer expired, auto-submit or move to next
-            handleAnswerSelect(-1); // wrong answer
+            // Timer expired for this question, auto-advance with no answer/wrong
+            setTimeout(() => {
+              handleAutoAdvance(-1);
+            }, 0);
             return 0;
           }
           return prev - 1;
@@ -309,7 +313,7 @@ const AptitudeMastery = () => {
       }, 1000);
       return () => clearInterval(interval);
     }
-  }, [viewMode, detailTab, quizFinished, quizTimer]);
+  }, [viewMode, detailTab, quizStarted, quizFinished, quizTimer, currentQuestionIndex]);
 
   const fetchAptitudeData = async () => {
     try {
@@ -327,16 +331,31 @@ const AptitudeMastery = () => {
     }
   };
 
-  const handleSelectTopic = (topic) => {
-    setSelectedTopic(topic);
-    setViewMode('detail');
-    setDetailTab('theory');
-    setCurrentQuestionIndex(0);
-    setSelectedAnswer(null);
-    setQuizFinished(false);
-    setQuizScore(0);
-    setQuizTimer(60);
-    setActivePageIdx(0); // Reset page index when switching topics
+  const [userAnswers, setUserAnswers] = useState([]);
+  const [quizAnalytics, setQuizAnalytics] = useState(null);
+
+  const handleSelectTopic = async (topic) => {
+    setLoading(true);
+    try {
+      const res = await fetch(`${API_URL}/aptitude/topics/${topic._id}`, {
+        headers: { 'Authorization': `Bearer ${token}` }
+      });
+      if (res.ok) {
+        const fullTopic = await res.json();
+        setSelectedTopic(fullTopic);
+        setViewMode('detail');
+        setDetailTab('theory');
+        setCurrentQuestionIndex(0);
+        setSelectedAnswer(null);
+        setQuizFinished(false);
+        setQuizScore(0);
+        setActivePageIdx(0);
+      }
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleToggleComplete = async (topic) => {
@@ -372,54 +391,104 @@ const AptitudeMastery = () => {
     }
   };
 
-  const startQuiz = () => {
-    setDetailTab('quiz');
-    setCurrentQuestionIndex(0);
-    setSelectedAnswer(null);
-    setQuizScore(0);
-    setQuizFinished(false);
-    setQuizTimer(60);
+  const startQuiz = async () => {
+    setLoading(true);
+    try {
+      const res = await fetch(`${API_URL}/aptitude/topics/${selectedTopic._id}`, {
+        headers: { 'Authorization': `Bearer ${token}` }
+      });
+      if (res.ok) {
+        const freshTopic = await res.json();
+        setSelectedTopic(freshTopic);
+        
+        const qCount = freshTopic.quizQuestions?.length || 0;
+        setUserAnswers(new Array(qCount).fill(null));
+        setCurrentQuestionIndex(0);
+        setSelectedAnswer(null);
+        setQuizFinished(false);
+        setQuizStarted(false); // Show the animated start screen first
+        setQuizStartTime(null);
+        setDetailTab('quiz');
+        setQuizAnalytics(null);
+      }
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const beginQuizExecution = () => {
+    const questions = selectedTopic.quizQuestions || [];
+    const firstQ = questions[0];
+    const initialTimer = firstQ?.difficulty === 'Hard' ? 60 : 30;
+    setQuizTimer(initialTimer);
+    setQuizStartTime(Date.now());
+    setQuizStarted(true);
   };
 
   const handleAnswerSelect = (optIdx) => {
-    if (selectedAnswer !== null) return; // already answered
-    setSelectedAnswer(optIdx);
-
-    const questions = selectedTopic.quizQuestions || [];
-    const correctIdx = questions[currentQuestionIndex].correctIdx;
-
-    if (optIdx === correctIdx) {
-      setQuizScore(prev => prev + 1);
-    }
+    const updated = [...userAnswers];
+    updated[currentQuestionIndex] = optIdx;
+    setUserAnswers(updated);
   };
 
-  const handleNextQuestion = () => {
+  const handleAutoAdvance = (ansIdx) => {
+    const updated = [...userAnswers];
+    updated[currentQuestionIndex] = ansIdx;
+    setUserAnswers(updated);
+
     const questions = selectedTopic.quizQuestions || [];
     if (currentQuestionIndex < questions.length - 1) {
-      setCurrentQuestionIndex(prev => prev + 1);
-      setSelectedAnswer(null);
-      setQuizTimer(60);
+      const nextIdx = currentQuestionIndex + 1;
+      setCurrentQuestionIndex(nextIdx);
+      const nextQ = questions[nextIdx];
+      setQuizTimer(nextQ?.difficulty === 'Hard' ? 60 : 30);
     } else {
-      finishQuiz();
+      finishQuiz(updated);
     }
   };
 
-  const finishQuiz = async () => {
+  const finishQuiz = async (answersOverride) => {
     const questions = selectedTopic.quizQuestions || [];
-    const finalPercent = Math.round((quizScore / questions.length) * 100);
+    const activeAnswers = answersOverride || userAnswers;
+    
+    let correctCount = 0;
+    const mappedAnswers = [];
+    
+    questions.forEach((q, idx) => {
+      const userAns = activeAnswers[idx];
+      const isCorrect = userAns === q.correctIdx;
+      if (isCorrect) correctCount++;
+      mappedAnswers.push({
+        qId: q._id,
+        subtopic: q.subtopic,
+        correct: isCorrect
+      });
+    });
+
+    const scorePercent = questions.length > 0 ? Math.round((correctCount / questions.length) * 100) : 0;
+    const timeTaken = quizStartTime ? Math.round((Date.now() - quizStartTime) / 1000) : 60;
 
     try {
-      const res = await fetch(`${API_URL}/aptitude/topics/${selectedTopic._id}/submit-quiz`, {
+      const res = await fetch(`${API_URL}/aptitude/topics/${selectedTopic._id}/history`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`
         },
-        body: JSON.stringify({ score: finalPercent })
+        body: JSON.stringify({
+          score: scorePercent,
+          totalQuestions: questions.length,
+          correctAnswers: correctCount,
+          timeTaken,
+          answers: mappedAnswers
+        })
       });
       if (res.ok) {
         const data = await res.json();
         setXpEarned(data.xpEarned);
+        setQuizAnalytics(data.history);
         fetchAptitudeData();
         setSelectedTopic(prev => ({ ...prev, completed: true }));
         reloadProfile();
@@ -795,154 +864,401 @@ const AptitudeMastery = () => {
                   </button>
                 </div>
               </div>
-
             </div>
           )}
 
           {/* TAB 2: INTERACTIVE TIMED QUIZ */}
           {detailTab === 'quiz' && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+              <style>{`
+                @keyframes pulse {
+                  0% { transform: scale(1); }
+                  50% { transform: scale(1.08); }
+                  100% { transform: scale(1); }
+                }
+                @keyframes bounce {
+                  0%, 100% { transform: translateY(0); }
+                  50% { transform: translateY(-6px); }
+                }
+                .glow-button:hover {
+                  box-shadow: 0 0 35px rgba(139, 92, 246, 0.8) !important;
+                  transform: scale(1.05) !important;
+                }
+              `}</style>
+
               {!quizFinished ? (
-                <>
-                  {/* Timer & Question counters bar */}
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '12px' }}>
-                    <span style={{ fontSize: '0.9rem', color: 'var(--text-muted)', fontWeight: 600 }}>
-                      Question {currentQuestionIndex + 1} of {selectedTopic.quizQuestions.length}
-                    </span>
-                    <span style={{
-                      fontSize: '0.9rem',
-                      fontWeight: 700,
-                      color: quizTimer <= 15 ? '#e74c3c' : 'white',
-                      background: quizTimer <= 15 ? 'rgba(231,76,60,0.1)' : 'rgba(255,255,255,0.03)',
-                      padding: '6px 16px',
-                      borderRadius: '4px'
-                    }}>
-                      ⏱️ {quizTimer}s remaining
-                    </span>
-                  </div>
+                !quizStarted ? (
+                  /* Animated Start Screen */
+                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '400px', gap: '32px', textAlign: 'center', padding: '40px 20px' }}>
+                    <div style={{ animation: 'pulse 2s infinite', fontSize: '4.5rem' }}>⏱️</div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                      <h3 style={{ fontSize: '2.2rem', color: 'white', fontWeight: 800 }}>{selectedTopic.title} timed Quiz</h3>
+                      <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', maxWidth: '520px', lineHeight: '1.6', margin: '0 auto' }}>
+                        Ready to test your placement readiness? This timed quiz features strict constraints to mimic real interview platform environments.
+                      </p>
+                    </div>
 
-                  {/* Question box */}
-                  <div style={{ background: 'rgba(0,0,0,0.2)', padding: '24px', borderRadius: '8px', border: '1px solid var(--border-glass)' }}>
-                    <h3 style={{ fontSize: '1.2rem', color: 'white', lineHeight: '1.5', fontWeight: 600 }}>
-                      {selectedTopic.quizQuestions[currentQuestionIndex].q}
-                    </h3>
-                  </div>
-
-                  {/* Options options */}
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                    {selectedTopic.quizQuestions[currentQuestionIndex].options.map((opt, idx) => {
-                      const isAnswered = selectedAnswer !== null;
-                      const isCorrect = idx === selectedTopic.quizQuestions[currentQuestionIndex].correctIdx;
-                      const isSelected = idx === selectedAnswer;
-
-                      let optBg = 'rgba(255,255,255,0.01)';
-                      let optBorder = 'var(--border-glass)';
-                      let optColor = 'white';
-
-                      if (isAnswered) {
-                        if (isCorrect) {
-                          optBg = 'rgba(46, 204, 113, 0.08)';
-                          optBorder = 'var(--color-solved)';
-                          optColor = '#2ecc71';
-                        } else if (isSelected) {
-                          optBg = 'rgba(231, 76, 60, 0.08)';
-                          optBorder = '#e74c3c';
-                          optColor = '#e74c3c';
-                        } else {
-                          optBg = 'rgba(255,255,255,0.01)';
-                          optBorder = 'rgba(255,255,255,0.03)';
-                          optColor = 'var(--text-muted)';
-                        }
-                      }
-
-                      return (
-                        <div
-                          key={idx}
-                          onClick={() => handleAnswerSelect(idx)}
-                          style={{
-                            padding: '16px 20px',
-                            background: optBg,
-                            border: '1px solid',
-                            borderColor: optBorder,
-                            borderRadius: '6px',
-                            color: optColor,
-                            cursor: isAnswered ? 'default' : 'pointer',
-                            fontSize: '0.92rem',
-                            fontWeight: 600,
-                            display: 'flex',
-                            justifyContent: 'space-between',
-                            alignItems: 'center',
-                            transition: 'var(--transition-smooth)'
-                          }}
-                        >
-                          <span>{idx + 1}. {opt}</span>
-                          {isAnswered && isCorrect && <span>✓ Correct</span>}
-                          {isAnswered && isSelected && !isCorrect && <span>✗ Incorrect</span>}
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px', maxWidth: '520px', width: '100%', background: 'rgba(255,255,255,0.02)', padding: '24px', borderRadius: '12px', border: '1px solid var(--border-glass)', textAlign: 'left' }}>
+                      <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+                        <span style={{ fontSize: '1.25rem' }}>📋</span>
+                        <div>
+                          <p style={{ fontSize: '0.85rem', color: 'white', fontWeight: 700, margin: 0 }}>Questions</p>
+                          <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>{selectedTopic.quizQuestions.length} Questions</span>
                         </div>
-                      );
-                    })}
+                      </div>
+                      <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+                        <span style={{ fontSize: '1.25rem' }}>⏳</span>
+                        <div>
+                          <p style={{ fontSize: '0.85rem', color: 'white', fontWeight: 700, margin: 0 }}>Timer Mode</p>
+                          <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Per-Question Limits</span>
+                        </div>
+                      </div>
+                      <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+                        <span style={{ fontSize: '1.25rem' }}>⚡</span>
+                        <div>
+                          <p style={{ fontSize: '0.85rem', color: 'white', fontWeight: 700, margin: 0 }}>Easy-Medium</p>
+                          <span style={{ fontSize: '0.75rem', color: '#2ecc71', fontWeight: 600 }}>30 Seconds Limit</span>
+                        </div>
+                      </div>
+                      <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+                        <span style={{ fontSize: '1.25rem' }}>🔥</span>
+                        <div>
+                          <p style={{ fontSize: '0.85rem', color: 'white', fontWeight: 700, margin: 0 }}>Hard Challenge</p>
+                          <span style={{ fontSize: '0.75rem', color: '#e74c3c', fontWeight: 600 }}>60 Seconds Limit</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <button
+                      onClick={beginQuizExecution}
+                      className="primary-btn glow-button"
+                      style={{
+                        padding: '16px 48px',
+                        fontSize: '1.1rem',
+                        fontWeight: 700,
+                        borderRadius: '30px',
+                        background: 'var(--accent-gradient)',
+                        border: 'none',
+                        color: 'white',
+                        cursor: 'pointer',
+                        boxShadow: '0 0 20px rgba(139, 92, 246, 0.4)',
+                        transition: 'all 0.3s ease',
+                        animation: 'bounce 2s infinite'
+                      }}
+                    >
+                      Start Assessment &rarr;
+                    </button>
+                  </div>
+                ) : (
+                  /* Quiz Questions */
+                  <>
+                    {/* Timer & Question counters bar */}
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '12px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                        <span style={{ fontSize: '0.9rem', color: 'var(--text-muted)', fontWeight: 600 }}>
+                          Question {currentQuestionIndex + 1} of {selectedTopic.quizQuestions.length}
+                        </span>
+                        <span style={{
+                          fontSize: '0.75rem',
+                          fontWeight: 700,
+                          padding: '3px 8px',
+                          borderRadius: '4px',
+                          textTransform: 'uppercase',
+                          background: selectedTopic.quizQuestions[currentQuestionIndex]?.difficulty === 'Hard' ? 'rgba(231,76,60,0.1)' : 'rgba(46,204,113,0.1)',
+                          color: selectedTopic.quizQuestions[currentQuestionIndex]?.difficulty === 'Hard' ? '#e74c3c' : '#2ecc71'
+                        }}>
+                          {selectedTopic.quizQuestions[currentQuestionIndex]?.difficulty || 'Easy-Medium'}
+                        </span>
+                      </div>
+                      <span style={{
+                        fontSize: '0.9rem',
+                        fontWeight: 700,
+                        color: quizTimer <= 15 ? '#e74c3c' : 'white',
+                        background: quizTimer <= 15 ? 'rgba(231,76,60,0.1)' : 'rgba(255,255,255,0.03)',
+                        padding: '6px 16px',
+                        borderRadius: '4px',
+                        transition: 'all 0.2s ease'
+                      }}>
+                        ⏱️ {quizTimer}s remaining
+                      </span>
+                    </div>
+
+                    {/* Progress bar */}
+                    <div style={{ height: '6px', background: 'rgba(255, 255, 255, 0.05)', borderRadius: '3px', overflow: 'hidden' }}>
+                      <div style={{
+                        height: '100%',
+                        width: `${((currentQuestionIndex) / selectedTopic.quizQuestions.length) * 100}%`,
+                        background: 'var(--accent-gradient)',
+                        transition: 'width 0.3s ease'
+                      }} />
+                    </div>
+
+                    {/* Question box */}
+                    <div style={{ background: 'rgba(0,0,0,0.2)', padding: '24px', borderRadius: '8px', border: '1px solid var(--border-glass)' }}>
+                      <h3 style={{ fontSize: '1.25rem', color: 'white', lineHeight: '1.6', fontWeight: 600, whiteSpace: 'pre-wrap' }}>
+                        {selectedTopic.quizQuestions[currentQuestionIndex].q}
+                      </h3>
+                    </div>
+
+                    {/* Options */}
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                      {selectedTopic.quizQuestions[currentQuestionIndex].options.map((opt, idx) => {
+                        const isSelected = userAnswers[currentQuestionIndex] === idx;
+
+                        let optBg = 'rgba(255,255,255,0.01)';
+                        let optBorder = 'var(--border-glass)';
+                        let optColor = 'white';
+
+                        if (isSelected) {
+                          optBg = 'rgba(139, 92, 246, 0.12)';
+                          optBorder = '#a78bfa';
+                          optColor = '#c084fc';
+                        }
+
+                        return (
+                          <div
+                            key={idx}
+                            onClick={() => handleAnswerSelect(idx)}
+                            style={{
+                              padding: '16px 20px',
+                              background: optBg,
+                              border: '1px solid',
+                              borderColor: optBorder,
+                              borderRadius: '8px',
+                              color: optColor,
+                              cursor: 'pointer',
+                              fontSize: '0.92rem',
+                              fontWeight: 600,
+                              display: 'flex',
+                              justifyContent: 'space-between',
+                              alignItems: 'center',
+                              transition: 'var(--transition-smooth)'
+                            }}
+                            className="quiz-option-btn"
+                          >
+                            <span>{String.fromCharCode(65 + idx)}. {opt}</span>
+                            {isSelected && <span style={{ color: '#c084fc' }}>● Selected</span>}
+                          </div>
+                        );
+                      })}
+                    </div>
+
+                    {/* Question Map Progress (Non-clickable to prevent jumping) */}
+                    <div style={{ borderTop: '1px solid var(--border-glass)', paddingTop: '20px', marginTop: '10px' }}>
+                      <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginBottom: '10px', fontWeight: 600 }}>Question Progress Map:</p>
+                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                        {selectedTopic.quizQuestions.map((_, idx) => {
+                          const isCurrent = idx === currentQuestionIndex;
+                          const isAnswered = userAnswers[idx] !== null;
+                          return (
+                            <div
+                              key={idx}
+                              style={{
+                                width: '36px',
+                                height: '36px',
+                                borderRadius: '6px',
+                                background: isCurrent ? 'var(--accent-secondary)' : isAnswered ? 'rgba(46, 204, 113, 0.12)' : 'rgba(255,255,255,0.03)',
+                                border: '1px solid',
+                                borderColor: isCurrent ? 'var(--accent-secondary)' : isAnswered ? '#2ecc71' : 'var(--border-glass)',
+                                color: isCurrent ? 'white' : isAnswered ? '#2ecc71' : 'var(--text-muted)',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                fontWeight: 600,
+                                fontSize: '0.8rem',
+                                transition: 'all 0.2s ease'
+                              }}
+                            >
+                              {idx + 1}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+
+                    {/* Action buttons */}
+                    <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '12px' }}>
+                      {currentQuestionIndex < selectedTopic.quizQuestions.length - 1 ? (
+                        <button
+                          onClick={() => handleAutoAdvance(userAnswers[currentQuestionIndex])}
+                          className="primary-btn"
+                          style={{ padding: '10px 32px' }}
+                        >
+                          Next Question &rarr;
+                        </button>
+                      ) : (
+                        <button
+                          onClick={() => handleAutoAdvance(userAnswers[currentQuestionIndex])}
+                          className="primary-btn"
+                          style={{ padding: '10px 32px', background: 'rgba(46, 204, 113, 0.15)', borderColor: '#2ecc71', color: '#2ecc71' }}
+                        >
+                          Finish Quiz &rarr;
+                        </button>
+                      )}
+                    </div>
+                  </>
+                )
+              ) : (
+                /* Quiz Complete screen */
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+                  <div style={{ textAlign: 'center', padding: '20px 0', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px' }}>
+                    <span style={{ fontSize: '3.5rem' }}>🏆</span>
+                    <h3 style={{ fontSize: '2rem', color: 'white', fontWeight: 800 }}>Assessment Finished!</h3>
+                    
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px', background: 'rgba(0,0,0,0.15)', padding: '24px 32px', borderRadius: '12px', border: '1px solid var(--border-glass)', width: '100%', maxWidth: '640px', marginTop: '12px' }}>
+                      <div>
+                        <div style={{ fontSize: '2.2rem', fontWeight: 800, color: 'var(--accent-secondary)' }}>
+                          {userAnswers.filter((ans, idx) => ans === selectedTopic.quizQuestions[idx].correctIdx).length} / {selectedTopic.quizQuestions.length}
+                        </div>
+                        <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 600 }}>Score</span>
+                      </div>
+                      <div style={{ width: '1px', background: 'var(--border-glass)', height: '100%', justifySelf: 'center' }}></div>
+                      <div>
+                        <div style={{ fontSize: '2.2rem', fontWeight: 800, color: '#2ecc71' }}>
+                          {quizAnalytics ? quizAnalytics.accuracy : 0}%
+                        </div>
+                        <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 600 }}>Accuracy</span>
+                      </div>
+                      <div style={{ width: '1px', background: 'var(--border-glass)', height: '100%', justifySelf: 'center' }}></div>
+                      <div>
+                        <div style={{ fontSize: '2.2rem', fontWeight: 800, color: '#f1c40f' }}>
+                          {quizAnalytics ? Math.floor(quizAnalytics.timeTaken / 60) : 0}m {quizAnalytics ? quizAnalytics.timeTaken % 60 : 0}s
+                        </div>
+                        <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 600 }}>Time Taken</span>
+                      </div>
+                      <div style={{ width: '1px', background: 'var(--border-glass)', height: '100%', justifySelf: 'center' }}></div>
+                      <div>
+                        <div style={{ fontSize: '2.2rem', fontWeight: 800, color: '#e67e22' }}>
+                          +{xpEarned}
+                        </div>
+                        <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 600 }}>XP Earned</span>
+                      </div>
+                    </div>
                   </div>
 
-                  {/* Explanation card (visible only after answering) */}
-                  {selectedAnswer !== null && (
-                    <div style={{ padding: '20px', background: 'rgba(0,0,0,0.15)', border: '1px solid var(--border-glass)', borderRadius: '6px', marginTop: '12px' }}>
-                      <strong style={{ color: 'var(--accent-secondary)', display: 'block', fontSize: '0.88rem', textTransform: 'uppercase' }}>
-                        Solution Explanation:
-                      </strong>
-                      <p style={{ color: 'var(--text-main)', fontSize: '0.88rem', marginTop: '6px', lineHeight: '1.4' }}>
-                        {selectedTopic.quizQuestions[currentQuestionIndex].explanation || 'Explanation details successfully calculated.'}
+                  {/* Topic Analysis cards */}
+                  {quizAnalytics && (
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                      <div className="glass-card" style={{ padding: '20px', borderColor: 'rgba(46, 204, 113, 0.2)', background: 'rgba(46, 204, 113, 0.02)' }}>
+                        <h4 style={{ color: '#2ecc71', fontWeight: 700, fontSize: '0.95rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                          🟢 Strong Areas (&gt;=80% Acc)
+                        </h4>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginTop: '12px' }}>
+                          {quizAnalytics.strongTopics && quizAnalytics.strongTopics.length > 0 ? quizAnalytics.strongTopics.map((sub, idx) => (
+                            <span key={idx} style={{ color: 'white', fontSize: '0.85rem' }}>✓ {sub}</span>
+                          )) : <span style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>No strong areas detected yet.</span>}
+                        </div>
+                      </div>
+
+                      <div className="glass-card" style={{ padding: '20px', borderColor: 'rgba(231, 76, 60, 0.2)', background: 'rgba(231, 76, 60, 0.02)' }}>
+                        <h4 style={{ color: '#e74c3c', fontWeight: 700, fontSize: '0.95rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                          🔴 Weak Areas (&lt;50% Acc)
+                        </h4>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginTop: '12px' }}>
+                          {quizAnalytics.weakTopics && quizAnalytics.weakTopics.length > 0 ? quizAnalytics.weakTopics.map((sub, idx) => (
+                            <span key={idx} style={{ color: 'white', fontSize: '0.85rem' }}>⚠️ {sub}</span>
+                          )) : <span style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>Perfect! No weak areas detected.</span>}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Recommended Practice */}
+                  {quizAnalytics && quizAnalytics.weakTopics && quizAnalytics.weakTopics.length > 0 && (
+                    <div style={{ background: 'rgba(241,196,15,0.06)', borderLeft: '4px solid #f1c40f', padding: '16px 20px', borderRadius: '6px' }}>
+                      <strong style={{ color: '#f1c40f', fontSize: '0.9rem' }}>💡 Recommended Practice Focus:</strong>
+                      <p style={{ color: 'white', fontSize: '0.85rem', marginTop: '6px', lineHeight: '1.4' }}>
+                        To boost your score for product interviews, we recommend re-reading the <strong>{quizAnalytics.weakTopics.join(', ')}</strong> textbook modules and practicing standard formulas.
                       </p>
                     </div>
                   )}
 
-                  {/* Action buttons */}
-                  {selectedAnswer !== null && (
-                    <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '12px' }}>
-                      <button
-                        onClick={handleNextQuestion}
-                        className="primary-btn"
-                        style={{ padding: '10px 32px', fontSize: '0.9rem' }}
-                      >
-                        {currentQuestionIndex < selectedTopic.quizQuestions.length - 1 ? 'Next Question →' : 'Finish Quiz →'}
-                      </button>
-                    </div>
-                  )}
-                </>
-              ) : (
-                /* Quiz Complete screen */
-                <div style={{ textAlign: 'center', padding: '40px 0', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
-                  <span style={{ fontSize: '3rem' }}>🏆</span>
-                  <h3 style={{ fontSize: '1.8rem', color: 'white', fontWeight: 700 }}>Quiz Completed!</h3>
-                  
-                  <div style={{ display: 'flex', gap: '40px', background: 'rgba(0,0,0,0.15)', padding: '24px 48px', borderRadius: '12px', border: '1px solid var(--border-glass)' }}>
-                    <div>
-                      <div style={{ fontSize: '2.5rem', fontWeight: 800, color: 'var(--accent-secondary)' }}>
-                        {quizScore} / {selectedTopic.quizQuestions.length}
-                      </div>
-                      <span style={{ fontSize: '0.78rem', color: 'var(--text-muted)', uppercase: true }}>Final Score</span>
-                    </div>
-                    <div style={{ width: '1px', background: 'var(--border-glass)' }}></div>
-                    <div>
-                      <div style={{ fontSize: '2.5rem', fontWeight: 800, color: '#f1c40f' }}>
-                        +{xpEarned}
-                      </div>
-                      <span style={{ fontSize: '0.78rem', color: 'var(--text-muted)', uppercase: true }}>XP Earned</span>
+                  {/* Review Solutions Section */}
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginTop: '10px' }}>
+                    <h3 style={{ fontSize: '1.4rem', color: 'white', fontWeight: 700, borderBottom: '1px solid var(--border-glass)', paddingBottom: '12px' }}>
+                      📝 Detailed Review & Solutions
+                    </h3>
+                    
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+                      {selectedTopic.quizQuestions.map((q, qIdx) => {
+                        const userAns = userAnswers[qIdx];
+                        const isCorrect = userAns === q.correctIdx;
+                        return (
+                          <div key={qIdx} style={{ padding: '24px', background: 'rgba(255,255,255,0.01)', border: '1px solid var(--border-glass)', borderRadius: '10px' }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+                              <span style={{ fontWeight: 700, color: 'var(--text-bright)', fontSize: '0.9rem' }}>
+                                Question {qIdx + 1}
+                              </span>
+                              <span style={{
+                                fontSize: '0.75rem',
+                                fontWeight: 700,
+                                padding: '3px 8px',
+                                borderRadius: '4px',
+                                background: isCorrect ? 'rgba(46,204,113,0.1)' : 'rgba(231,76,60,0.1)',
+                                color: isCorrect ? '#2ecc71' : '#e74c3c'
+                              }}>
+                                {isCorrect ? '✓ Correct' : '✗ Incorrect'}
+                              </span>
+                            </div>
+                            
+                            <p style={{ color: 'white', fontSize: '1rem', lineHeight: '1.5', marginBottom: '16px', fontWeight: 500, whiteSpace: 'pre-wrap' }}>
+                              {q.q}
+                            </p>
+
+                            {/* Option list */}
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '16px' }}>
+                              {q.options.map((opt, oIdx) => {
+                                const isCorrectOpt = oIdx === q.correctIdx;
+                                const isUserOpt = oIdx === userAns;
+                                
+                                let border = 'var(--border-glass)';
+                                let bg = 'transparent';
+                                let textCol = 'var(--text-main)';
+                                
+                                if (isCorrectOpt) {
+                                  bg = 'rgba(46, 204, 113, 0.08)';
+                                  border = '#2ecc71';
+                                  textCol = '#2ecc71';
+                                } else if (isUserOpt) {
+                                  bg = 'rgba(231, 76, 60, 0.08)';
+                                  border = '#e74c3c';
+                                  textCol = '#e74c3c';
+                                }
+
+                                return (
+                                  <div key={oIdx} style={{ padding: '12px 16px', border: '1px solid', borderColor: border, borderRadius: '6px', background: bg, color: textCol, fontSize: '0.9rem', display: 'flex', justifyContent: 'space-between' }}>
+                                    <span>{String.fromCharCode(65 + oIdx)}. {opt}</span>
+                                    {isCorrectOpt && <span style={{ fontWeight: 700 }}>Correct Answer</span>}
+                                    {!isCorrectOpt && isUserOpt && <span style={{ fontWeight: 700 }}>Your Answer</span>}
+                                  </div>
+                                );
+                              })}
+                            </div>
+
+                            {/* Explanation */}
+                            <div style={{ padding: '16px 20px', background: 'rgba(255,255,255,0.02)', borderLeft: '4px solid var(--accent-secondary)', borderRadius: '4px' }}>
+                              <strong style={{ fontSize: '0.85rem', color: 'var(--accent-secondary)', textTransform: 'uppercase', display: 'block', marginBottom: '4px' }}>
+                                Explanation:
+                              </strong>
+                              <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', lineHeight: '1.4' }}>
+                                {q.explanation}
+                              </p>
+                            </div>
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
 
-                  <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', maxWidth: '400px', lineHeight: '1.5' }}>
-                    Excellent work! You have finished the timed quiz for {selectedTopic.title} and updated your placement profile.
-                  </p>
-
-                  <button
-                    onClick={() => {
-                      setViewMode('list');
-                    }}
-                    className="primary-btn"
-                    style={{ padding: '12px 32px', fontSize: '0.9rem', marginTop: '12px' }}
-                  >
-                    Back to Topics Catalog
-                  </button>
+                  <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+                    <button
+                      onClick={() => setViewMode('list')}
+                      className="primary-btn"
+                      style={{ padding: '12px 48px', fontSize: '0.95rem' }}
+                    >
+                      Back to Catalog
+                    </button>
+                  </div>
                 </div>
               )}
             </div>

@@ -19,6 +19,8 @@ import VideoCallSimulator from './pages/VideoCallSimulator';
 import ResumeATS from './pages/ResumeATS';
 import AdminDashboard from './pages/AdminDashboard';
 import DailyProblems from './pages/DailyProblems';
+import RequestCourse from './pages/RequestCourse';
+import Compiler from './pages/Compiler';
 
 // Protected Route Guard for normal users (Students)
 const ProtectedRoute = ({ children }) => {
@@ -40,8 +42,37 @@ const AdminRoute = ({ children }) => {
 
 // Layout component wrapping pages with Navbar and Sidebar
 const MainLayout = ({ children }) => {
-  const { user, logout } = useContext(AuthContext);
+  const { user, logout, token, API_URL } = useContext(AuthContext);
   const location = useLocation();
+
+  const [globalSearchQuery, setGlobalSearchQuery] = useState('');
+  const [globalSearchResults, setGlobalSearchResults] = useState([]);
+  const [hoveredSearchIdx, setHoveredSearchIdx] = useState(null);
+
+  const handleGlobalSearch = async (val) => {
+    setGlobalSearchQuery(val);
+    if (!val.trim()) {
+      setGlobalSearchResults([]);
+      return;
+    }
+    try {
+      const res = await fetch(`${API_URL}/dashboard/search?q=${val}`, {
+        headers: { 'Authorization': `Bearer ${token}` }
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setGlobalSearchResults(data);
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const handleSelectSearchResult = (res) => {
+    setGlobalSearchQuery('');
+    setGlobalSearchResults([]);
+    window.location.href = res.targetUrl;
+  };
 
   // Load and apply persistent theme from local storage
   const [currentTheme, setCurrentTheme] = useState(() => {
@@ -82,8 +113,14 @@ const MainLayout = ({ children }) => {
               <Link to="/daily-problems" className={`nav-item ${isActive('/daily-problems')}`}>
                 <span>📆</span> Daily Problems
               </Link>
-              <Link to="/courses" className={`nav-item ${isActive('/courses')}`}>
+              <Link to="/courses" className={`nav-item ${isActive('/courses') && !location.search.includes('course=') ? 'active' : ''}`}>
                 <span>📚</span> Courses
+              </Link>
+              <Link to="/courses?course=fullstack-web-dev" className={`nav-item ${location.pathname === '/courses' && location.search.includes('course=fullstack-web-dev') ? 'active' : ''}`}>
+                <span>🌐</span> Full Stack Course
+              </Link>
+              <Link to="/compiler" className={`nav-item ${isActive('/compiler')}`}>
+                <span>💻</span> Compiler
               </Link>
               <Link to="/theory" className={`nav-item ${isActive('/theory')}`}>
                 <span>📖</span> Theory Hub
@@ -109,6 +146,9 @@ const MainLayout = ({ children }) => {
               <Link to="/resume-ats" className={`nav-item ${isActive('/resume-ats')}`}>
                 <span>📄</span> Resume & ATS
               </Link>
+              <Link to="/request-course" className={`nav-item ${isActive('/request-course')}`}>
+                <span>💡</span> Request Course
+              </Link>
             </>
           ) : (
             <>
@@ -127,11 +167,79 @@ const MainLayout = ({ children }) => {
       <main className="main-content">
         <header className="top-header">
           <div className="header-title-section">
-            <h1>{isAdmin ? 'Administrator Console' : 'Placement Preparation Hub'}</h1>
+            <h1>
+              {isAdmin 
+                ? 'Administrator Console' 
+                : location.pathname === '/notes' 
+                  ? 'Placement Prep Sheets' 
+                  : 'Placement Preparation Hub'}
+            </h1>
             <p>{isAdmin ? 'Control system courses, syllabi, assessments and users' : 'Master technical exams and ace interviews'}</p>
           </div>
           
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+            {/* Global Search Input */}
+            {!isAdmin && (
+              <div className="global-search-container" style={{ position: 'relative', width: '280px' }}>
+                <input
+                  type="text"
+                  placeholder="🔍 Global Search (e.g. Normalization)..."
+                  value={globalSearchQuery}
+                  onChange={(e) => handleGlobalSearch(e.target.value)}
+                  style={{
+                    width: '100%',
+                    padding: '8px 16px 8px 36px',
+                    borderRadius: '20px',
+                    background: 'rgba(255,255,255,0.03)',
+                    border: '1px solid var(--border-glass)',
+                    color: 'white',
+                    fontSize: '0.85rem'
+                  }}
+                />
+                <span style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }}>🔍</span>
+                
+                {/* Search Results Dropdown */}
+                {globalSearchResults.length > 0 && (
+                  <div style={{
+                    position: 'absolute',
+                    top: '42px',
+                    right: 0,
+                    width: '320px',
+                    background: '#0d0d15',
+                    border: '1px solid var(--border-glass)',
+                    borderRadius: '8px',
+                    boxShadow: '0 10px 25px rgba(0,0,0,0.5)',
+                    zIndex: 999,
+                    maxHeight: '360px',
+                    overflowY: 'auto',
+                    padding: '8px 0'
+                  }}>
+                    {globalSearchResults.map((res, idx) => (
+                      <div
+                        key={idx}
+                        onClick={() => handleSelectSearchResult(res)}
+                        onMouseEnter={() => setHoveredSearchIdx(idx)}
+                        onMouseLeave={() => setHoveredSearchIdx(null)}
+                        style={{
+                          padding: '10px 16px',
+                          borderBottom: idx === globalSearchResults.length - 1 ? 'none' : '1px solid rgba(255,255,255,0.02)',
+                          cursor: 'pointer',
+                          textAlign: 'left',
+                          background: hoveredSearchIdx === idx ? 'rgba(255,255,255,0.05)' : 'transparent',
+                          transition: 'background 0.2s ease'
+                        }}
+                      >
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                          <span style={{ fontWeight: 600, color: 'white', fontSize: '0.82rem' }}>{res.title}</span>
+                          <span style={{ fontSize: '0.7rem', color: 'var(--accent-secondary)', textTransform: 'uppercase', fontWeight: 700 }}>{res.type}</span>
+                        </div>
+                        <p style={{ color: 'var(--text-muted)', fontSize: '0.72rem', marginTop: '3px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', margin: 0 }}>{res.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
             {/* Show Theme Switcher Dropdown ONLY on Dashboard page */}
             {isDashboard && (
               <div className="theme-dropdown-container">
@@ -197,6 +305,7 @@ function App() {
           <Route path="/dsa" element={<ProtectedRoute><MainLayout><DSAPractice /></MainLayout></ProtectedRoute>} />
           <Route path="/daily-problems" element={<ProtectedRoute><MainLayout><DailyProblems /></MainLayout></ProtectedRoute>} />
           <Route path="/courses" element={<ProtectedRoute><MainLayout><Courses /></MainLayout></ProtectedRoute>} />
+          <Route path="/compiler" element={<ProtectedRoute><MainLayout><Compiler /></MainLayout></ProtectedRoute>} />
           <Route path="/notes" element={<ProtectedRoute><MainLayout><Notes /></MainLayout></ProtectedRoute>} />
           <Route path="/ai-chat" element={<ProtectedRoute><MainLayout><AIChat /></MainLayout></ProtectedRoute>} />
           <Route path="/aptitude" element={<ProtectedRoute><MainLayout><AptitudeMastery /></MainLayout></ProtectedRoute>} />
@@ -209,6 +318,7 @@ function App() {
           <Route path="/mock-interview" element={<ProtectedRoute><MainLayout><MockInterviewSetup /></MainLayout></ProtectedRoute>} />
           <Route path="/mock-interview/call" element={<ProtectedRoute><MainLayout><VideoCallSimulator /></MainLayout></ProtectedRoute>} />
           <Route path="/resume-ats" element={<ProtectedRoute><MainLayout><ResumeATS /></MainLayout></ProtectedRoute>} />
+          <Route path="/request-course" element={<ProtectedRoute><MainLayout><RequestCourse /></MainLayout></ProtectedRoute>} />
 
           {/* Admin Routes */}
           <Route path="/admin-dashboard" element={<AdminRoute><MainLayout><AdminDashboard /></MainLayout></AdminRoute>} />

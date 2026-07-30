@@ -1,0 +1,6002 @@
+[
+  {
+    "q": "An antique collector purchases an item for ₹312 but is forced to sell it at a loss of 15% due to damage. What is the selling price?",
+    "options": [
+      "265",
+      "285",
+      "250",
+      "318"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 265",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹389, a trader makes a clear profit of 20%. What was the original cost price of the item?",
+    "options": [
+      "324",
+      "344",
+      "309",
+      "389"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 324",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 336 books is exactly equal to the selling price of 269 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹348 and sells it to a customer at a profit margin of 30%. Find the final selling price.",
+    "options": [
+      "452",
+      "472",
+      "437",
+      "542"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 452",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹360 but is forced to sell it at a loss of 35% due to damage. What is the selling price?",
+    "options": [
+      "234",
+      "254",
+      "219",
+      "281"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 234",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹521, a trader makes a clear profit of 40%. What was the original cost price of the item?",
+    "options": [
+      "372",
+      "392",
+      "357",
+      "446"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 372",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 384 books is exactly equal to the selling price of 307 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹396 and sells it to a customer at a profit margin of 15%. Find the final selling price.",
+    "options": [
+      "455",
+      "475",
+      "440",
+      "546"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 455",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹408 but is forced to sell it at a loss of 20% due to damage. What is the selling price?",
+    "options": [
+      "326",
+      "346",
+      "311",
+      "391"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 326",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹525, a trader makes a clear profit of 25%. What was the original cost price of the item?",
+    "options": [
+      "420",
+      "440",
+      "405",
+      "504"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 420",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 432 books is exactly equal to the selling price of 346 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹444 and sells it to a customer at a profit margin of 35%. Find the final selling price.",
+    "options": [
+      "599",
+      "619",
+      "584",
+      "719"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 599",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹456 but is forced to sell it at a loss of 40% due to damage. What is the selling price?",
+    "options": [
+      "274",
+      "294",
+      "259",
+      "329"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 274",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹515, a trader makes a clear profit of 10%. What was the original cost price of the item?",
+    "options": [
+      "468",
+      "488",
+      "453",
+      "562"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 468",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 480 books is exactly equal to the selling price of 384 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹492 and sells it to a customer at a profit margin of 20%. Find the final selling price.",
+    "options": [
+      "590",
+      "610",
+      "575",
+      "708"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 590",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹504 but is forced to sell it at a loss of 25% due to damage. What is the selling price?",
+    "options": [
+      "378",
+      "398",
+      "363",
+      "454"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 378",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹671, a trader makes a clear profit of 30%. What was the original cost price of the item?",
+    "options": [
+      "516",
+      "536",
+      "501",
+      "619"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 516",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 528 books is exactly equal to the selling price of 422 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹540 and sells it to a customer at a profit margin of 40%. Find the final selling price.",
+    "options": [
+      "756",
+      "776",
+      "741",
+      "907"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 756",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹552 but is forced to sell it at a loss of 10% due to damage. What is the selling price?",
+    "options": [
+      "497",
+      "517",
+      "482",
+      "596"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 497",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹649, a trader makes a clear profit of 15%. What was the original cost price of the item?",
+    "options": [
+      "564",
+      "584",
+      "549",
+      "677"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 564",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 576 books is exactly equal to the selling price of 461 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹588 and sells it to a customer at a profit margin of 25%. Find the final selling price.",
+    "options": [
+      "735",
+      "755",
+      "720",
+      "882"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 735",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹600 but is forced to sell it at a loss of 30% due to damage. What is the selling price?",
+    "options": [
+      "420",
+      "440",
+      "405",
+      "504"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 420",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹826, a trader makes a clear profit of 35%. What was the original cost price of the item?",
+    "options": [
+      "612",
+      "632",
+      "597",
+      "734"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 612",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 624 books is exactly equal to the selling price of 499 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹636 and sells it to a customer at a profit margin of 10%. Find the final selling price.",
+    "options": [
+      "700",
+      "720",
+      "685",
+      "840"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 700",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹648 but is forced to sell it at a loss of 15% due to damage. What is the selling price?",
+    "options": [
+      "551",
+      "571",
+      "536",
+      "661"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 551",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹792, a trader makes a clear profit of 20%. What was the original cost price of the item?",
+    "options": [
+      "660",
+      "680",
+      "645",
+      "792"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 660",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 672 books is exactly equal to the selling price of 538 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹684 and sells it to a customer at a profit margin of 30%. Find the final selling price.",
+    "options": [
+      "889",
+      "909",
+      "874",
+      "1067"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 889",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹696 but is forced to sell it at a loss of 35% due to damage. What is the selling price?",
+    "options": [
+      "452",
+      "472",
+      "437",
+      "542"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 452",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹991, a trader makes a clear profit of 40%. What was the original cost price of the item?",
+    "options": [
+      "708",
+      "728",
+      "693",
+      "850"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 708",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 720 books is exactly equal to the selling price of 576 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹732 and sells it to a customer at a profit margin of 15%. Find the final selling price.",
+    "options": [
+      "842",
+      "862",
+      "827",
+      "1010"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 842",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹744 but is forced to sell it at a loss of 20% due to damage. What is the selling price?",
+    "options": [
+      "595",
+      "615",
+      "580",
+      "714"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 595",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹945, a trader makes a clear profit of 25%. What was the original cost price of the item?",
+    "options": [
+      "756",
+      "776",
+      "741",
+      "907"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 756",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 768 books is exactly equal to the selling price of 614 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹780 and sells it to a customer at a profit margin of 35%. Find the final selling price.",
+    "options": [
+      "1053",
+      "1073",
+      "1038",
+      "1264"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1053",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹792 but is forced to sell it at a loss of 40% due to damage. What is the selling price?",
+    "options": [
+      "475",
+      "495",
+      "460",
+      "570"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 475",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹884, a trader makes a clear profit of 10%. What was the original cost price of the item?",
+    "options": [
+      "804",
+      "824",
+      "789",
+      "965"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 804",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 816 books is exactly equal to the selling price of 653 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹828 and sells it to a customer at a profit margin of 20%. Find the final selling price.",
+    "options": [
+      "994",
+      "1014",
+      "979",
+      "1193"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 994",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹840 but is forced to sell it at a loss of 25% due to damage. What is the selling price?",
+    "options": [
+      "630",
+      "650",
+      "615",
+      "756"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 630",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹1108, a trader makes a clear profit of 30%. What was the original cost price of the item?",
+    "options": [
+      "852",
+      "872",
+      "837",
+      "1022"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 852",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 864 books is exactly equal to the selling price of 691 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹876 and sells it to a customer at a profit margin of 40%. Find the final selling price.",
+    "options": [
+      "1226",
+      "1246",
+      "1211",
+      "1471"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1226",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹888 but is forced to sell it at a loss of 10% due to damage. What is the selling price?",
+    "options": [
+      "799",
+      "819",
+      "784",
+      "959"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 799",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹1035, a trader makes a clear profit of 15%. What was the original cost price of the item?",
+    "options": [
+      "900",
+      "920",
+      "885",
+      "1080"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 900",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 912 books is exactly equal to the selling price of 730 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹924 and sells it to a customer at a profit margin of 25%. Find the final selling price.",
+    "options": [
+      "1155",
+      "1175",
+      "1140",
+      "1386"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1155",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹936 but is forced to sell it at a loss of 30% due to damage. What is the selling price?",
+    "options": [
+      "655",
+      "675",
+      "640",
+      "786"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 655",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹1280, a trader makes a clear profit of 35%. What was the original cost price of the item?",
+    "options": [
+      "948",
+      "968",
+      "933",
+      "1138"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 948",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 960 books is exactly equal to the selling price of 768 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹972 and sells it to a customer at a profit margin of 10%. Find the final selling price.",
+    "options": [
+      "1069",
+      "1089",
+      "1054",
+      "1283"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1069",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹984 but is forced to sell it at a loss of 15% due to damage. What is the selling price?",
+    "options": [
+      "836",
+      "856",
+      "821",
+      "1003"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 836",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹1195, a trader makes a clear profit of 20%. What was the original cost price of the item?",
+    "options": [
+      "996",
+      "1016",
+      "981",
+      "1195"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 996",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 1008 books is exactly equal to the selling price of 806 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹1020 and sells it to a customer at a profit margin of 30%. Find the final selling price.",
+    "options": [
+      "1326",
+      "1346",
+      "1311",
+      "1591"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1326",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹1032 but is forced to sell it at a loss of 35% due to damage. What is the selling price?",
+    "options": [
+      "671",
+      "691",
+      "656",
+      "805"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 671",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹1462, a trader makes a clear profit of 40%. What was the original cost price of the item?",
+    "options": [
+      "1044",
+      "1064",
+      "1029",
+      "1253"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1044",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 1056 books is exactly equal to the selling price of 845 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹1068 and sells it to a customer at a profit margin of 15%. Find the final selling price.",
+    "options": [
+      "1228",
+      "1248",
+      "1213",
+      "1474"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1228",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹1080 but is forced to sell it at a loss of 20% due to damage. What is the selling price?",
+    "options": [
+      "864",
+      "884",
+      "849",
+      "1037"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 864",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹1365, a trader makes a clear profit of 25%. What was the original cost price of the item?",
+    "options": [
+      "1092",
+      "1112",
+      "1077",
+      "1310"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1092",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 1104 books is exactly equal to the selling price of 883 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹1116 and sells it to a customer at a profit margin of 35%. Find the final selling price.",
+    "options": [
+      "1507",
+      "1527",
+      "1492",
+      "1808"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1507",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹1128 but is forced to sell it at a loss of 40% due to damage. What is the selling price?",
+    "options": [
+      "677",
+      "697",
+      "662",
+      "812"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 677",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹1254, a trader makes a clear profit of 10%. What was the original cost price of the item?",
+    "options": [
+      "1140",
+      "1160",
+      "1125",
+      "1368"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1140",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 1152 books is exactly equal to the selling price of 922 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹1164 and sells it to a customer at a profit margin of 20%. Find the final selling price.",
+    "options": [
+      "1397",
+      "1417",
+      "1382",
+      "1676"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1397",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹1176 but is forced to sell it at a loss of 25% due to damage. What is the selling price?",
+    "options": [
+      "882",
+      "902",
+      "867",
+      "1058"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 882",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹1544, a trader makes a clear profit of 30%. What was the original cost price of the item?",
+    "options": [
+      "1188",
+      "1208",
+      "1173",
+      "1426"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1188",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 1200 books is exactly equal to the selling price of 960 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹1212 and sells it to a customer at a profit margin of 40%. Find the final selling price.",
+    "options": [
+      "1697",
+      "1717",
+      "1682",
+      "2036"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1697",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹1224 but is forced to sell it at a loss of 10% due to damage. What is the selling price?",
+    "options": [
+      "1102",
+      "1122",
+      "1087",
+      "1322"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1102",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹1421, a trader makes a clear profit of 15%. What was the original cost price of the item?",
+    "options": [
+      "1236",
+      "1256",
+      "1221",
+      "1483"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1236",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 1248 books is exactly equal to the selling price of 998 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹1260 and sells it to a customer at a profit margin of 25%. Find the final selling price.",
+    "options": [
+      "1575",
+      "1595",
+      "1560",
+      "1890"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1575",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹1272 but is forced to sell it at a loss of 30% due to damage. What is the selling price?",
+    "options": [
+      "890",
+      "910",
+      "875",
+      "1068"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 890",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹1733, a trader makes a clear profit of 35%. What was the original cost price of the item?",
+    "options": [
+      "1284",
+      "1304",
+      "1269",
+      "1541"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1284",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 1296 books is exactly equal to the selling price of 1037 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹1308 and sells it to a customer at a profit margin of 10%. Find the final selling price.",
+    "options": [
+      "1439",
+      "1459",
+      "1424",
+      "1727"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1439",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹1320 but is forced to sell it at a loss of 15% due to damage. What is the selling price?",
+    "options": [
+      "1122",
+      "1142",
+      "1107",
+      "1346"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1122",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹1598, a trader makes a clear profit of 20%. What was the original cost price of the item?",
+    "options": [
+      "1332",
+      "1352",
+      "1317",
+      "1598"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1332",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 1344 books is exactly equal to the selling price of 1075 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹1356 and sells it to a customer at a profit margin of 30%. Find the final selling price.",
+    "options": [
+      "1763",
+      "1783",
+      "1748",
+      "2116"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1763",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹1368 but is forced to sell it at a loss of 35% due to damage. What is the selling price?",
+    "options": [
+      "889",
+      "909",
+      "874",
+      "1067"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 889",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹1932, a trader makes a clear profit of 40%. What was the original cost price of the item?",
+    "options": [
+      "1380",
+      "1400",
+      "1365",
+      "1656"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1380",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 1392 books is exactly equal to the selling price of 1114 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹1404 and sells it to a customer at a profit margin of 15%. Find the final selling price.",
+    "options": [
+      "1615",
+      "1635",
+      "1600",
+      "1938"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1615",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹1416 but is forced to sell it at a loss of 20% due to damage. What is the selling price?",
+    "options": [
+      "1133",
+      "1153",
+      "1118",
+      "1360"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1133",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹1785, a trader makes a clear profit of 25%. What was the original cost price of the item?",
+    "options": [
+      "1428",
+      "1448",
+      "1413",
+      "1714"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1428",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 1440 books is exactly equal to the selling price of 1152 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹1452 and sells it to a customer at a profit margin of 35%. Find the final selling price.",
+    "options": [
+      "1960",
+      "1980",
+      "1945",
+      "2352"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1960",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹1464 but is forced to sell it at a loss of 40% due to damage. What is the selling price?",
+    "options": [
+      "878",
+      "898",
+      "863",
+      "1054"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 878",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹1624, a trader makes a clear profit of 10%. What was the original cost price of the item?",
+    "options": [
+      "1476",
+      "1496",
+      "1461",
+      "1771"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1476",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 1488 books is exactly equal to the selling price of 1190 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹1500 and sells it to a customer at a profit margin of 20%. Find the final selling price.",
+    "options": [
+      "1800",
+      "1820",
+      "1785",
+      "2160"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1800",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹1512 but is forced to sell it at a loss of 25% due to damage. What is the selling price?",
+    "options": [
+      "1134",
+      "1154",
+      "1119",
+      "1361"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1134",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹1981, a trader makes a clear profit of 30%. What was the original cost price of the item?",
+    "options": [
+      "1524",
+      "1544",
+      "1509",
+      "1829"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1524",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 1536 books is exactly equal to the selling price of 1229 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹1548 and sells it to a customer at a profit margin of 40%. Find the final selling price.",
+    "options": [
+      "2167",
+      "2187",
+      "2152",
+      "2600"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 2167",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹1560 but is forced to sell it at a loss of 10% due to damage. What is the selling price?",
+    "options": [
+      "1404",
+      "1424",
+      "1389",
+      "1685"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1404",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹1808, a trader makes a clear profit of 15%. What was the original cost price of the item?",
+    "options": [
+      "1572",
+      "1592",
+      "1557",
+      "1886"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1572",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 1584 books is exactly equal to the selling price of 1267 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹1596 and sells it to a customer at a profit margin of 25%. Find the final selling price.",
+    "options": [
+      "1995",
+      "2015",
+      "1980",
+      "2394"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1995",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹1608 but is forced to sell it at a loss of 30% due to damage. What is the selling price?",
+    "options": [
+      "1126",
+      "1146",
+      "1111",
+      "1351"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1126",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹2187, a trader makes a clear profit of 35%. What was the original cost price of the item?",
+    "options": [
+      "1620",
+      "1640",
+      "1605",
+      "1944"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1620",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 1632 books is exactly equal to the selling price of 1306 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹1644 and sells it to a customer at a profit margin of 10%. Find the final selling price.",
+    "options": [
+      "1808",
+      "1828",
+      "1793",
+      "2170"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1808",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹1656 but is forced to sell it at a loss of 15% due to damage. What is the selling price?",
+    "options": [
+      "1408",
+      "1428",
+      "1393",
+      "1690"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1408",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹2002, a trader makes a clear profit of 20%. What was the original cost price of the item?",
+    "options": [
+      "1668",
+      "1688",
+      "1653",
+      "2002"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1668",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 1680 books is exactly equal to the selling price of 1344 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹1692 and sells it to a customer at a profit margin of 30%. Find the final selling price.",
+    "options": [
+      "2200",
+      "2220",
+      "2185",
+      "2640"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 2200",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹1704 but is forced to sell it at a loss of 35% due to damage. What is the selling price?",
+    "options": [
+      "1108",
+      "1128",
+      "1093",
+      "1330"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1108",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹2402, a trader makes a clear profit of 40%. What was the original cost price of the item?",
+    "options": [
+      "1716",
+      "1736",
+      "1701",
+      "2059"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1716",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 1728 books is exactly equal to the selling price of 1382 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹1740 and sells it to a customer at a profit margin of 15%. Find the final selling price.",
+    "options": [
+      "2001",
+      "2021",
+      "1986",
+      "2401"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 2001",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹1752 but is forced to sell it at a loss of 20% due to damage. What is the selling price?",
+    "options": [
+      "1402",
+      "1422",
+      "1387",
+      "1682"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1402",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹2205, a trader makes a clear profit of 25%. What was the original cost price of the item?",
+    "options": [
+      "1764",
+      "1784",
+      "1749",
+      "2117"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1764",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 1776 books is exactly equal to the selling price of 1421 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹1788 and sells it to a customer at a profit margin of 35%. Find the final selling price.",
+    "options": [
+      "2414",
+      "2434",
+      "2399",
+      "2897"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 2414",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹1800 but is forced to sell it at a loss of 40% due to damage. What is the selling price?",
+    "options": [
+      "1080",
+      "1100",
+      "1065",
+      "1296"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1080",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹1993, a trader makes a clear profit of 10%. What was the original cost price of the item?",
+    "options": [
+      "1812",
+      "1832",
+      "1797",
+      "2174"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1812",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 1824 books is exactly equal to the selling price of 1459 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹1836 and sells it to a customer at a profit margin of 20%. Find the final selling price.",
+    "options": [
+      "2203",
+      "2223",
+      "2188",
+      "2644"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 2203",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹1848 but is forced to sell it at a loss of 25% due to damage. What is the selling price?",
+    "options": [
+      "1386",
+      "1406",
+      "1371",
+      "1663"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1386",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹2418, a trader makes a clear profit of 30%. What was the original cost price of the item?",
+    "options": [
+      "1860",
+      "1880",
+      "1845",
+      "2232"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1860",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 1872 books is exactly equal to the selling price of 1498 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹1884 and sells it to a customer at a profit margin of 40%. Find the final selling price.",
+    "options": [
+      "2638",
+      "2658",
+      "2623",
+      "3166"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 2638",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹1896 but is forced to sell it at a loss of 10% due to damage. What is the selling price?",
+    "options": [
+      "1706",
+      "1726",
+      "1691",
+      "2047"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1706",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹2194, a trader makes a clear profit of 15%. What was the original cost price of the item?",
+    "options": [
+      "1908",
+      "1928",
+      "1893",
+      "2290"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1908",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 1920 books is exactly equal to the selling price of 1536 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹1932 and sells it to a customer at a profit margin of 25%. Find the final selling price.",
+    "options": [
+      "2415",
+      "2435",
+      "2400",
+      "2898"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 2415",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹1944 but is forced to sell it at a loss of 30% due to damage. What is the selling price?",
+    "options": [
+      "1361",
+      "1381",
+      "1346",
+      "1633"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1361",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹2641, a trader makes a clear profit of 35%. What was the original cost price of the item?",
+    "options": [
+      "1956",
+      "1976",
+      "1941",
+      "2347"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1956",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 1968 books is exactly equal to the selling price of 1574 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹1980 and sells it to a customer at a profit margin of 10%. Find the final selling price.",
+    "options": [
+      "2178",
+      "2198",
+      "2163",
+      "2614"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 2178",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹1992 but is forced to sell it at a loss of 15% due to damage. What is the selling price?",
+    "options": [
+      "1693",
+      "1713",
+      "1678",
+      "2032"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1693",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹2405, a trader makes a clear profit of 20%. What was the original cost price of the item?",
+    "options": [
+      "2004",
+      "2024",
+      "1989",
+      "2405"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 2004",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 2016 books is exactly equal to the selling price of 1613 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹2028 and sells it to a customer at a profit margin of 30%. Find the final selling price.",
+    "options": [
+      "2636",
+      "2656",
+      "2621",
+      "3163"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 2636",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹2040 but is forced to sell it at a loss of 35% due to damage. What is the selling price?",
+    "options": [
+      "1326",
+      "1346",
+      "1311",
+      "1591"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1326",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹2873, a trader makes a clear profit of 40%. What was the original cost price of the item?",
+    "options": [
+      "2052",
+      "2072",
+      "2037",
+      "2462"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 2052",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "If the cost price of 2064 books is exactly equal to the selling price of 1651 books, calculate the overall profit percentage.",
+    "options": [
+      "25%",
+      "45",
+      "10",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 25",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A local retailer buys a consumer electronics device for ₹2076 and sells it to a customer at a profit margin of 15%. Find the final selling price.",
+    "options": [
+      "2387",
+      "2407",
+      "2372",
+      "2864"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 2387",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An antique collector purchases an item for ₹2088 but is forced to sell it at a loss of 20% due to damage. What is the selling price?",
+    "options": [
+      "1670",
+      "1690",
+      "1655",
+      "2004"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 1670",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "By selling an item for ₹2625, a trader makes a clear profit of 25%. What was the original cost price of the item?",
+    "options": [
+      "2100",
+      "2120",
+      "2085",
+      "2520"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated answer: 2100",
+    "subtopic": "Profit & Loss Calculations",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Use standard CP and SP ratios."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "An item costing ₹4220 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "27.51%",
+      "35%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 27.51%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4240 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "-4.01%",
+      "0%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is -4.01%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4260 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "17.00%",
+      "20%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 17.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4280 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "19.00%",
+      "25%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 19.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4300 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "20.00%",
+      "30%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 20.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4320 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "8.01%",
+      "10%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 8.01%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4340 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "10.51%",
+      "15%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 10.51%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4360 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "12.00%",
+      "20%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 12.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4380 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "35.00%",
+      "40%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 35.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4400 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "2.00%",
+      "5%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 2.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4420 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "4.00%",
+      "10%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 4.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4440 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "25.99%",
+      "30%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 25.99%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4460 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "27.51%",
+      "35%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 27.51%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4480 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "-4.00%",
+      "0%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is -4.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4500 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "17.00%",
+      "20%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 17.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4520 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "19.00%",
+      "25%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 19.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4540 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "20.00%",
+      "30%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 20.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4560 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "8.00%",
+      "10%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 8.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4580 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "10.50%",
+      "15%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 10.50%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4600 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "12.00%",
+      "20%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 12.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4620 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "35.00%",
+      "40%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 35.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4640 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "2.00%",
+      "5%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 2.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4660 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "3.99%",
+      "10%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 3.99%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4680 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "26.00%",
+      "30%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 26.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4700 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "27.51%",
+      "35%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 27.51%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4720 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "-4.00%",
+      "0%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is -4.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4740 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "17.00%",
+      "20%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 17.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4760 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "18.99%",
+      "25%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 18.99%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4780 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "20.00%",
+      "30%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 20.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4800 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "8.00%",
+      "10%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 8.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4820 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "10.50%",
+      "15%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 10.50%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4840 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "12.00%",
+      "20%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 12.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4860 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "35.00%",
+      "40%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 35.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4880 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "2.01%",
+      "5%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 2.01%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4900 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "4.00%",
+      "10%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 4.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4920 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "26.00%",
+      "30%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 26.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4940 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "27.51%",
+      "35%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 27.51%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4960 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "-3.99%",
+      "0%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is -3.99%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹4980 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "17.01%",
+      "20%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 17.01%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5000 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "19.00%",
+      "25%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 19.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5020 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "20.00%",
+      "30%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 20.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5040 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "8.00%",
+      "10%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 8.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5060 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "10.49%",
+      "15%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 10.49%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5080 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "12.01%",
+      "20%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 12.01%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5100 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "35.00%",
+      "40%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 35.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5120 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "1.99%",
+      "5%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 1.99%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5140 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "4.01%",
+      "10%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 4.01%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5160 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "26.01%",
+      "30%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 26.01%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5180 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "27.51%",
+      "35%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 27.51%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5200 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "-4.00%",
+      "0%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is -4.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5220 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "16.99%",
+      "20%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 16.99%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5240 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "19.01%",
+      "25%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 19.01%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5260 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "20.00%",
+      "30%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 20.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5280 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "7.99%",
+      "10%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 7.99%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5300 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "10.51%",
+      "15%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 10.51%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5320 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "11.99%",
+      "20%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 11.99%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5340 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "35.00%",
+      "40%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 35.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5360 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "2.00%",
+      "5%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 2.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5380 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "4.00%",
+      "10%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 4.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5400 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "26.00%",
+      "30%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 26.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5420 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "27.51%",
+      "35%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 27.51%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5440 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "-4.01%",
+      "0%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is -4.01%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5460 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "17.00%",
+      "20%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 17.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5480 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "19.00%",
+      "25%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 19.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5500 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "20.00%",
+      "30%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 20.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5520 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "8.01%",
+      "10%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 8.01%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5540 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "10.51%",
+      "15%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 10.51%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5560 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "12.00%",
+      "20%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 12.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5580 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "35.00%",
+      "40%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 35.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5600 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "2.00%",
+      "5%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 2.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5620 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "4.00%",
+      "10%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 4.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5640 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "25.99%",
+      "30%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 25.99%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5660 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "27.51%",
+      "35%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 27.51%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5680 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "-4.00%",
+      "0%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is -4.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5700 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "17.00%",
+      "20%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 17.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5720 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "19.00%",
+      "25%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 19.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5740 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "20.00%",
+      "30%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 20.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5760 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "8.00%",
+      "10%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 8.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5780 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "10.50%",
+      "15%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 10.50%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5800 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "12.00%",
+      "20%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 12.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5820 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "35.00%",
+      "40%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 35.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5840 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "2.00%",
+      "5%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 2.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5860 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "3.99%",
+      "10%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 3.99%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5880 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "26.00%",
+      "30%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 26.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5900 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "27.51%",
+      "35%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 27.51%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5920 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "-4.00%",
+      "0%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is -4.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5940 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "17.00%",
+      "20%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 17.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5960 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "18.99%",
+      "25%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 18.99%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹5980 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "20.00%",
+      "30%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 20.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6000 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "8.00%",
+      "10%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 8.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6020 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "10.50%",
+      "15%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 10.50%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6040 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "12.00%",
+      "20%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 12.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6060 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "35.00%",
+      "40%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 35.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6080 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "2.01%",
+      "5%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 2.01%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6100 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "4.00%",
+      "10%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 4.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6120 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "26.00%",
+      "30%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 26.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6140 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "27.51%",
+      "35%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 27.51%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6160 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "-3.99%",
+      "0%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is -3.99%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6180 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "17.01%",
+      "20%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 17.01%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6200 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "19.00%",
+      "25%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 19.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6220 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "20.00%",
+      "30%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 20.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6240 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "8.00%",
+      "10%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 8.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6260 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "10.50%",
+      "15%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 10.50%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6280 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "12.01%",
+      "20%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 12.01%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6300 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "35.00%",
+      "40%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 35.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6320 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "1.99%",
+      "5%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 1.99%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6340 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "4.01%",
+      "10%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 4.01%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6360 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "26.01%",
+      "30%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 26.01%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6380 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "27.51%",
+      "35%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 27.51%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6400 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "-4.00%",
+      "0%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is -4.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6420 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "16.99%",
+      "20%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 16.99%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6440 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "19.01%",
+      "25%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 19.01%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6460 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "20.00%",
+      "30%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 20.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6480 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "7.99%",
+      "10%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 7.99%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6500 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "10.51%",
+      "15%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 10.51%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6520 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "11.99%",
+      "20%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 11.99%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6540 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "35.00%",
+      "40%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 35.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6560 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "2.00%",
+      "5%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 2.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6580 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "4.00%",
+      "10%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 4.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6600 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "26.00%",
+      "30%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 26.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6620 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "27.51%",
+      "35%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 27.51%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6640 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "-4.01%",
+      "0%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is -4.01%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6660 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "17.00%",
+      "20%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 17.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6680 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "19.00%",
+      "25%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 19.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6700 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "20.00%",
+      "30%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 20.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6720 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "8.01%",
+      "10%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 8.01%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6740 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "10.50%",
+      "15%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 10.50%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6760 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "12.00%",
+      "20%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 12.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6780 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "35.00%",
+      "40%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 35.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6800 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "2.00%",
+      "5%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 2.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6820 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "4.00%",
+      "10%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 4.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6840 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "25.99%",
+      "30%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 25.99%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6860 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "27.51%",
+      "35%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 27.51%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6880 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "-4.00%",
+      "0%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is -4.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6900 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "17.00%",
+      "20%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 17.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6920 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "19.00%",
+      "25%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 19.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6940 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "20.00%",
+      "30%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 20.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6960 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "8.00%",
+      "10%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 8.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹6980 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "10.50%",
+      "15%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 10.50%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹7000 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "12.00%",
+      "20%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 12.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹7020 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "35.00%",
+      "40%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 35.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹7040 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "2.00%",
+      "5%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 2.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹7060 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "3.99%",
+      "10%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 3.99%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹7080 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "26.00%",
+      "30%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 26.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹7100 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "27.51%",
+      "35%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 27.51%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹7120 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "-4.00%",
+      "0%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is -4.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹7140 is marked up by 30% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "17.00%",
+      "20%",
+      "25.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 17.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹7160 is marked up by 40% by a wholesale dealer. If the dealer subsequently offers a trade discount of 15%, what is the final profit percentage realized?",
+    "options": [
+      "18.99%",
+      "25%",
+      "34.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 18.99%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹7180 is marked up by 50% by a wholesale dealer. If the dealer subsequently offers a trade discount of 20%, what is the final profit percentage realized?",
+    "options": [
+      "20.00%",
+      "30%",
+      "42.50%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 20.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "An item costing ₹7200 is marked up by 20% by a wholesale dealer. If the dealer subsequently offers a trade discount of 10%, what is the final profit percentage realized?",
+    "options": [
+      "8.00%",
+      "10%",
+      "17.00%",
+      "None of these"
+    ],
+    "correctIdx": 0,
+    "explanation": "Calculated profit percentage is 8.00%",
+    "subtopic": "Marked Price and Discounts",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Find SP by applying successive markup and discount multipliers."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  }
+]

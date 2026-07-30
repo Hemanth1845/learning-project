@@ -1,13 +1,13 @@
 const TheorySubject = require('../models/TheorySubject');
 const TheoryChapter = require('../models/TheoryChapter');
 const AptitudeTopic = require('../models/AptitudeTopic');
+const { osTheoryChapters } = require('./osTheoryData');
+const { synonymsData, oneWordSubData, idiomsData, spellCheckData, prepositionsData, articlesData, readingCompData, errorSpottingData, voiceData, speechData, bloodRelationsData, seatingArrangementData, mirrorImagesData, analogyData, classificationData } = require('./aptitudeQuestionsData');
 
 const seedTheoryData = async () => {
-  const subjectCount = await TheorySubject.countDocuments();
-  if (subjectCount > 0) {
-    console.log('Theory subjects already seeded. Skipping seeder...');
-    return;
-  }
+  // Always clear existing theory subjects and chapters to apply our rich new seeder content!
+  await TheorySubject.deleteMany({});
+  await TheoryChapter.deleteMany({});
 
   // Define subjects
   const subjects = [
@@ -42,10 +42,35 @@ const seedTheoryData = async () => {
       'Interview Questions'
     ],
     os: [
-      'Introduction', 'Process', 'Thread', 'Scheduling', 'Synchronization', 
-      'Deadlock', 'Memory Management', 'Paging', 'Segmentation', 'Virtual Memory', 
-      'File System', 'Disk Scheduling', 'Protection', 'Security', 'Linux Commands', 
-      'Interview Questions'
+      'Operating System Introduction',
+      'Process, Program, and Thread',
+      'Types of Operating System',
+      'Batch OS, Multiprogramming OS and Multitasking OS',
+      'Multiprocessing OS and Real-time OS',
+      'Distributed, Clustured, Embedded OS',
+      'Process and Its State',
+      'Process Control Block',
+      'Context Switching',
+      'User Mode and Kernel Mode',
+      'Scheduling Queues and Schedulers in OS',
+      'Process Scheduling Algorithms, Preemptive vs. Non-Preemptive',
+      'Scheduling Algorithms (FCFS, SJF, SRTF)',
+      'Scheduling Algorithms (HRRN, RR, PBS, MLQ)',
+      'Threads in Operating System',
+      'Multithreading Models: User-Level vs. Kernel-Level',
+      'Process Synchronization & Race Conditions',
+      'Semaphores and Mutexes',
+      'Classic Synchronization Problems (Bounded Buffer, Readers-Writers)',
+      'Deadlock Introduction & Necessary Conditions',
+      'Deadlock Prevention, Avoidance (Banker\'s Algorithm)',
+      'Memory Management: Contiguous vs. Non-Contiguous',
+      'Paging and Translation Lookaside Buffer (TLB)',
+      'Virtual Memory & Page Replacement Algorithms (FIFO, LRU, Optimal)',
+      'File System Structures & Allocation Methods',
+      'Disk Scheduling Algorithms (FCFS, SSTF, SCAN, LOOK)',
+      'OS Protection & Security',
+      'Linux Core Commands & Shell Scripting',
+      'Frequently Asked Technical Interview Questions'
     ],
     dbms: [
       'ER Model', 'Keys', 'Normalization', 'SQL', 'Transactions', 'ACID', 
@@ -169,29 +194,57 @@ def solve_${title.toLowerCase().replace(/[^a-zA-Z0-9]/g, '_')}():
     const chaptersList = subjectsChapters[subjectId];
     for (let i = 0; i < chaptersList.length; i++) {
       const title = chaptersList[i];
-      chaptersData.push({
-        subjectId,
-        title,
-        order: i + 1,
-        content: makeChapterContent(subjectId, title),
-        codeExamples: [
-          { language: 'cpp', code: `#include <iostream>\nusing namespace std;\n\nvoid solve() {\n  cout << "C++ implementation of ${title}" << endl;\n}` },
-          { language: 'java', code: `import java.util.*;\n\npublic class Solution {\n  public static void main(String[] args) {\n    System.out.println("Java implementation of ${title}");\n  }\n}` },
-          { language: 'python', code: `def solve():\n    print("Python implementation of ${title}")` }
-        ],
-        diagramUrl: 'https://images.unsplash.com/photo-1516116211223-5c359a36298a?auto=format&fit=crop&q=80&w=600',
-        interviewTips: `Always discuss edge cases before writing code for ${title}. Mention potential memory constraints.`,
-        commonMistakes: `Forgetting base cases, ignoring null pointer checks, and off-by-one array bounds error.`,
-        realInterviewQuestions: [
-          { question: `What is the significance of ${title}?`, answer: `It provides optimization solutions for core logic requirements.`, difficulty: 'Medium' }
-        ],
-        companyFAQs: [
-          { companyName: 'TCS', questionText: `Explain how ${title} is used in backend system stacks.` },
-          { companyName: 'Infosys', questionText: `What are the memory trade-offs when implementing ${title}?` }
-        ],
-        notesUrl: 'https://drive.google.com/file/d/1FQGGORBNB3yJrbhvwaPpAa7BHufdp-x3/view?usp=sharing',
-        xpReward: 20
-      });
+      const customOSChapter = (subjectId === 'os') ? osTheoryChapters[title] : null;
+
+      if (customOSChapter) {
+        chaptersData.push({
+          subjectId,
+          title,
+          order: i + 1,
+          content: customOSChapter.content,
+          codeExamples: customOSChapter.codeExamples || [
+            { language: 'cpp', code: `#include <iostream>\nusing namespace std;\n\nvoid solve() {\n  cout << "C++ implementation of ${title}" << endl;\n}` },
+            { language: 'java', code: `import java.util.*;\n\npublic class Solution {\n  public static void main(String[] args) {\n    System.out.println("Java implementation of ${title}");\n  }\n}` },
+            { language: 'python', code: `def solve():\n    print("Python implementation of ${title}")` }
+          ],
+          diagramUrl: 'https://images.unsplash.com/photo-1516116211223-5c359a36298a?auto=format&fit=crop&q=80&w=600',
+          interviewTips: customOSChapter.interviewTips || `Always discuss edge cases before writing code for ${title}. Mention potential memory constraints.`,
+          commonMistakes: customOSChapter.commonMistakes || `Forgetting base cases, ignoring null pointer checks, and off-by-one array bounds error.`,
+          realInterviewQuestions: customOSChapter.realInterviewQuestions || [
+            { question: `What is the significance of ${title}?`, answer: `It provides optimization solutions for core logic requirements.`, difficulty: 'Medium' }
+          ],
+          companyFAQs: customOSChapter.companyFAQs || [
+            { companyName: 'TCS', questionText: `Explain how ${title} is used in backend system stacks.` },
+            { companyName: 'Infosys', questionText: `What are the memory trade-offs when implementing ${title}?` }
+          ],
+          notesUrl: 'https://drive.google.com/file/d/1FQGGORBNB3yJrbhvwaPpAa7BHufdp-x3/view?usp=sharing',
+          xpReward: 20
+        });
+      } else {
+        chaptersData.push({
+          subjectId,
+          title,
+          order: i + 1,
+          content: makeChapterContent(subjectId, title),
+          codeExamples: [
+            { language: 'cpp', code: `#include <iostream>\nusing namespace std;\n\nvoid solve() {\n  cout << "C++ implementation of ${title}" << endl;\n}` },
+            { language: 'java', code: `import java.util.*;\n\npublic class Solution {\n  public static void main(String[] args) {\n    System.out.println("Java implementation of ${title}");\n  }\n}` },
+            { language: 'python', code: `def solve():\n    print("Python implementation of ${title}")` }
+          ],
+          diagramUrl: 'https://images.unsplash.com/photo-1516116211223-5c359a36298a?auto=format&fit=crop&q=80&w=600',
+          interviewTips: `Always discuss edge cases before writing code for ${title}. Mention potential memory constraints.`,
+          commonMistakes: `Forgetting base cases, ignoring null pointer checks, and off-by-one array bounds error.`,
+          realInterviewQuestions: [
+            { question: `What is the significance of ${title}?`, answer: `It provides optimization solutions for core logic requirements.`, difficulty: 'Medium' }
+          ],
+          companyFAQs: [
+            { companyName: 'TCS', questionText: `Explain how ${title} is used in backend system stacks.` },
+            { companyName: 'Infosys', questionText: `What are the memory trade-offs when implementing ${title}?` }
+          ],
+          notesUrl: 'https://drive.google.com/file/d/1FQGGORBNB3yJrbhvwaPpAa7BHufdp-x3/view?usp=sharing',
+          xpReward: 20
+        });
+      }
     }
   }
 
@@ -584,719 +637,31 @@ const seedAptitudeData = async () => {
     console.log('Cleared old aptitude topics.');
   }
 
+  const { generateQuestions } = require('./aptitudeQuestionsGenerator');
+
   const listCategories = {
     quant: [
-      'Number System', 'Percentage', 'Profit & Loss', 'Simple Interest', 'Compound Interest', 
-      'Ratio & Proportion', 'Partnership', 'Average', 'Ages', 'Time & Work', 
-      'Pipes & Cisterns', 'Time Speed Distance', 'Boats & Streams', 'Train Problems', 
-      'Permutation & Combination', 'Probability', 'Geometry', 'Mensuration', 
-      'Trigonometry', 'Logarithms', 'HCF & LCM', 'Calendar', 'Clock', 
-      'Data Interpretation', 'Data Sufficiency', 'Mixtures & Allegations', 
-      'Sequence & Series', 'Simplification', 'Surds & Indices', 'Quadratic Equations', 
-      'Shortcuts & Formulas', 'Previous Questions', 'Company Wise Questions'
+      'Number System', 'Percentage', 'Profit & Loss', 'Ratio', 'Time & Work', 
+      'Time Speed Distance', 'Pipes & Cisterns', 'Probability', 'Permutation', 
+      'Combination', 'LCM', 'HCF', 'Ages', 'Partnership', 'Average', 'Calendar', 
+      'Clock', 'Simplification'
     ],
     logical: [
-      'Blood Relations', 'Coding & Decoding', 'Seating Arrangement', 'Puzzles', 
+      'Blood Relations', 'Coding Decoding', 'Seating Arrangement', 'Puzzle', 
       'Direction Sense', 'Statement & Conclusion', 'Statement & Assumption', 
-      'Cause & Effect', 'Syllogism', 'Venn Diagrams', 'Input & Output', 
-      'Ranking & Order', 'Analogy', 'Classification', 'Number Series', 
-      'Alphabet Series', 'Clocks & Calendars', 'Cubes & Dice', 'Mirror & Water Images', 
-      'Pattern Completion', 'Decision Making', 'Critical Reasoning', 'Logical Puzzles', 
-      'Company Questions'
+      'Course of Action', 'Syllogism', 'Calendar', 'Clock', 'Ranking', 
+      'Missing Number', 'Series', 'Mirror Images', 'Paper Folding', 'Cube Problems', 
+      'Data Sufficiency'
     ],
     verbal: [
-      'Reading Comprehension', 'Synonyms & Antonyms', 'Idioms & Phrases', 
-      'Sentence Correction', 'Error Spotting', 'Para Jumbles', 'Cloze Test', 
-      'Fill in the Blanks', 'Vocabulary', 'Active & Passive Voice', 'Direct & Indirect Speech', 
-      'One Word Substitution', 'Word Formation', 'Spell Check', 'Grammar Tenses', 
-      'Articles', 'Prepositions', 'Subject Verb Agreement', 'Company Questions'
+      'Synonyms', 'Antonyms', 'One Word Substitution', 'Idioms & Phrases', 
+      'Sentence Correction', 'Fill in the Blanks', 'Reading Comprehension', 
+      'Error Detection', 'Para Jumbles', 'Active Passive', 'Direct Indirect Speech', 
+      'Vocabulary', 'Sentence Improvement'
     ]
   };
 
   const companiesList = ['TCS', 'Infosys', 'Wipro', 'Accenture', 'Capgemini', 'Cognizant', 'Deloitte', 'HCL', 'Tech Mahindra'];
-
-  const generateQuizQuestions = (category, title, count = 50) => {
-    const questions = [];
-    
-    for (let i = 1; i <= count; i++) {
-      let q = '';
-      let options = [];
-      let explanation = '';
-      
-      const num1 = 10 + i * 2;
-      const num2 = 5 + (i % 5) * 2;
-      const num3 = 100 + i * 15;
-      
-      const names = ['Ram', 'Rahul', 'Amit', 'John', 'David', 'Sam', 'Sita', 'Priya', 'Anjali', 'Sara', 'Karan', 'Vijay', 'Vikram', 'Raj', 'Rohan', 'Nehal', 'Tanvi', 'Simran', 'Pooja', 'Neha'];
-      const nameA = names[i % names.length];
-      const nameB = names[(i + 3) % names.length];
-      const nameC = names[(i + 7) % names.length];
-
-      if (category === 'quant') {
-        if (title === 'Number System') {
-          const type = i % 5;
-          if (type === 0) {
-            const primes = [101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257];
-            const p = primes[i % primes.length];
-            q = `Which of the following is a prime number?`;
-            options = [`${p}`, `${p + 1}`, `${p - 1 === 1 ? 4 : p - 1}`, `${p + 3}`];
-            explanation = `${p} is a prime number because it has no positive divisors other than 1 and itself.`;
-          } else if (type === 1) {
-            const n = 10 + i * 2;
-            const sum = (n * (n + 1)) / 2;
-            q = `Find the sum of the first ${n} natural numbers.`;
-            options = [`${sum}`, `${sum + 10}`, `${sum - 5}`, `${sum * 2}`];
-            explanation = `The sum of first n natural numbers is given by the formula n(n + 1)/2. Here, n = ${n}. Sum = (${n} * ${n + 1}) / 2 = ${sum}.`;
-          } else if (type === 2) {
-            const mult = 100 + i * 5;
-            const test = mult * 9;
-            const testStr = test.toString();
-            const replacedIdx = i % testStr.length;
-            const replacedChar = testStr[replacedIdx];
-            const partStr = testStr.substring(0, replacedIdx) + '*' + testStr.substring(replacedIdx + 1);
-            q = `In the number ${partStr}, what digit should replace '*' so that the number is divisible by 9?`;
-            options = [`${replacedChar}`, `${(parseInt(replacedChar) + 2) % 10}`, `${(parseInt(replacedChar) + 5) % 10}`, `${(parseInt(replacedChar) + 8) % 10}`];
-            explanation = `A number is divisible by 9 if the sum of its digits is divisible by 9. Sum of digits in ${partStr} excluding '*' is ${testStr.split('').reduce((acc, c) => acc + parseInt(c), 0) - parseInt(replacedChar)}. Adding ${replacedChar} makes the sum divisible by 9.`;
-          } else if (type === 3) {
-            const base = 2 + (i % 7);
-            const pow = 10 + i * 3;
-            const unitDigits = {
-              2: [6, 2, 4, 8],
-              3: [1, 3, 9, 7],
-              4: [6, 4, 6, 4],
-              5: [5, 5, 5, 5],
-              6: [6, 6, 6, 6],
-              7: [1, 7, 9, 3],
-              8: [6, 8, 4, 2]
-            };
-            const cycle = unitDigits[base] || [1, 1, 1, 1];
-            const ansVal = cycle[pow % 4];
-            q = `What is the unit digit in the product of (${base}^${pow})?`;
-            options = [`${ansVal}`, `${(ansVal + 2) % 10}`, `${(ansVal + 4) % 10}`, `${(ansVal + 7) % 10}`];
-            explanation = `The cyclicity of unit digit of ${base} is 4. The power ${pow} leaves a remainder of ${pow % 4} when divided by 4. Thus the unit digit is ${ansVal}.`;
-          } else {
-            const d = 10 + i * 2;
-            const d2 = 5 + (i % 4);
-            const rem = 2 + (i % 3);
-            const number = d * 15 + rem;
-            const finalRem = number % d2;
-            q = `A number when divided by ${d} leaves a remainder of ${rem}. What will be the remainder when the same number is divided by ${d2}?`;
-            options = [`${finalRem}`, `${(finalRem + 1) % d2}`, `${(finalRem + 2) % d2}`, `${(finalRem + 3) % d2}`];
-            explanation = `Let the number be ${d}x + ${rem}. When divided by ${d2}, the remainder is (${d}x + ${rem}) % ${d2} = ${finalRem}.`;
-          }
-        } else if (title === 'Percentage') {
-          const pct = 10 + (i % 9) * 5;
-          const type = i % 5;
-          if (type === 0) {
-            const ansVal = ((pct / (100 + pct)) * 100).toFixed(2);
-            q = `If ${nameA}'s salary is ${pct}% more than ${nameB}'s salary, by what percentage is ${nameB}'s salary less than ${nameA}'s?`;
-            options = [`${ansVal}%`, `${pct}%`, `${(pct - 5)}%`, `${(pct + 5)}%`];
-            explanation = `Let B's salary be 100. A's salary = ${100 + pct}. Difference = ${pct}. Percentage less = (${pct} / ${100 + pct}) * 100 = ${ansVal}%.`;
-          } else if (type === 1) {
-            const ansVal = ((pct / (100 - pct)) * 100).toFixed(2);
-            q = `If the price of petrol is decreased by ${pct}%, by how much percentage can a driver increase his consumption so as not to decrease his expenditure?`;
-            options = [`${ansVal}%`, `${pct}%`, `${(pct - 2)}%`, `${(pct + 2)}%`];
-            explanation = `Percentage increase in consumption = [R / (100 - R)] * 100 = [${pct} / ${100 - pct}] * 100 = ${ansVal}%.`;
-          } else if (type === 2) {
-            const totalMarks = 200 + i * 10;
-            const passPct = 30 + (i % 3) * 5;
-            const passMarks = (totalMarks * passPct) / 100;
-            const gotMarks = passMarks - num2;
-            q = `A student has to secure ${passPct}% marks to pass. He gets ${gotMarks} marks and fails by ${num2} marks. Find the maximum marks for the exam.`;
-            options = [`${totalMarks}`, `${totalMarks + 50}`, `${totalMarks - 50}`, `None of these`];
-            explanation = `Passing marks = ${gotMarks} + ${num2} = ${passMarks}. Since ${passPct}% of total marks = ${passMarks}, Total Marks = (${passMarks} * 100) / ${passPct} = ${totalMarks}.`;
-          } else if (type === 3) {
-            const initPrice = 1000 + i * 100;
-            const finalPrice = Math.round(initPrice * (1 + pct / 100) * 0.9);
-            const netChangePct = (((finalPrice - initPrice) / initPrice) * 100).toFixed(2);
-            q = `The price of a laptop is first increased by ${pct}% and then decreased by 10%. If the initial price was Rs. ${initPrice}, what is the net percentage change in the price?`;
-            options = [`${netChangePct}%`, `${pct - 10}%`, `${pct}%`, '0%'];
-            explanation = `Final price = ${initPrice} * (1 + ${pct}/100) * 0.9 = Rs. ${finalPrice}. Net change = ((${finalPrice} - ${initPrice}) / ${initPrice}) * 100 = ${netChangePct}%.`;
-          } else {
-            const population = 10000 + i * 2000;
-            const rate = 5 + (i % 3) * 5;
-            const popAfter2Yrs = Math.round(population * Math.pow(1 + rate/100, 2));
-            q = `The population of a town is ${population} and it increases at the rate of ${rate}% per annum. What will be the population after 2 years?`;
-            options = [`${popAfter2Yrs}`, `${Math.round(population * 1.1)}`, `${population + rate * 2}`, 'None of these'];
-            explanation = `Population after 2 years = P * (1 + R/100)^2 = ${population} * (1 + ${rate}/100)^2 = ${popAfter2Yrs}.`;
-          }
-        } else if (title === 'Profit & Loss') {
-          const cp = 100 + i * 10;
-          const type = i % 4;
-          if (type === 0) {
-            const profitPct = 10 + (i % 5) * 5;
-            const sp = Math.round(cp * (1 + profitPct/100));
-            q = `A merchant buys an item for Rs. ${cp} and sells it for Rs. ${sp}. What is the profit percentage?`;
-            options = [`${profitPct}%`, `${(profitPct - 2)}%`, `${(profitPct + 2)}%`, 'None of these'];
-            explanation = `Profit = SP - CP = Rs. ${sp - cp}. Profit % = (Profit / CP) * 100 = (${sp - cp} / ${cp}) * 100 = ${profitPct}%.`;
-          } else if (type === 1) {
-            const lossPct = 5 + (i % 4) * 5;
-            const sp = Math.round(cp * (1 - lossPct/100));
-            q = `An item bought for Rs. ${cp} is sold at a loss of ${lossPct}%. What is the selling price?`;
-            options = [`Rs. ${sp}`, `Rs. ${sp - 10}`, `Rs. ${sp + 10}`, `Rs. ${cp}`];
-            explanation = `SP = CP * (1 - Loss/100) = ${cp} * (1 - ${lossPct}/100) = Rs. ${sp}.`;
-          } else if (type === 2) {
-            const sp = 240 + i * 20;
-            const gainPct = 20;
-            const cpVal = Math.round((sp * 100) / (100 + gainPct));
-            q = `By selling an article for Rs. ${sp}, a shopkeeper gains ${gainPct}%. Find the cost price of the article.`;
-            options = [`Rs. ${cpVal}`, `Rs. ${cpVal - 20}`, `Rs. ${cpVal + 20}`, 'None of these'];
-            explanation = `CP = (SP * 100) / (100 + Gain%) = (${sp} * 100) / 120 = Rs. ${cpVal}.`;
-          } else {
-            const cp1 = 1000 + i * 100;
-            q = `A dealer sells two machines for Rs. ${cp1} each. On one he gains 10% and on the other he loses 10%. What is his overall gain or loss percentage?`;
-            options = ['1% Loss', '1% Gain', 'No Profit No Loss', '2% Loss'];
-            explanation = `When two items are sold at the same price, one at a gain of x% and other at a loss of x%, there is always a loss of (x/10)^2 %. Here, loss = (10/10)^2 = 1% loss.`;
-          }
-        } else if (title === 'Simple Interest') {
-          const p = 1000 + i * 500;
-          const r = 5 + (i % 6);
-          const t = 2 + (i % 4);
-          const si = (p * r * t) / 100;
-          q = `Find the simple interest on Rs. ${p} at ${r}% per annum for ${t} years.`;
-          options = [`Rs. ${si}`, `Rs. ${si + 50}`, `Rs. ${si - 30}`, `Rs. ${si * 1.1}`];
-          explanation = `Formula: Simple Interest (SI) = (P * R * T) / 100. SI = (${p} * ${r} * ${t}) / 100 = Rs. ${si}.`;
-        } else if (title === 'Compound Interest') {
-          const p = 5000 + i * 1000;
-          const r = 10;
-          const t = 2;
-          const ci = Math.round(p * (Math.pow(1 + r/100, t) - 1));
-          q = `Find the compound interest on Rs. ${p} at ${r}% per annum for ${t} years compounded annually.`;
-          options = [`Rs. ${ci}`, `Rs. ${ci + 150}`, `Rs. ${ci - 100}`, `Rs. ${ci + 50}`];
-          explanation = `Amount = P * (1 + R/100)^T = ${p} * (1.1)^2 = Rs. ${Math.round(p * 1.21)}. CI = Amount - Principal = Rs. ${ci}.`;
-        } else if (title === 'Ratio & Proportion') {
-          const type = i % 3;
-          if (type === 0) {
-            const sum = 1000 + i * 500;
-            const a = 2 + (i % 3);
-            const b = 3 + (i % 3);
-            const c = 5 + (i % 3);
-            const totRatio = a + b + c;
-            const shareB = Math.round((sum * b) / totRatio);
-            q = `Divide Rs. ${sum} among A, B, and C in the ratio ${a}:${b}:${c}. What is B's share?`;
-            options = [`Rs. ${shareB}`, `Rs. ${shareB + 100}`, `Rs. ${shareB - 100}`, `Rs. ${Math.round(sum / 3)}`];
-            explanation = `B's share = Total Sum * (b / (a + b + c)) = ${sum} * (${b} / ${totRatio}) = Rs. ${shareB}.`;
-          } else if (type === 1) {
-            const a = 1 + (i % 3);
-            const b = 2 + (i % 3);
-            const c = 3 + (i % 3);
-            const mult = 10 + i * 2;
-            const totVal = a * 1.00 * mult + b * 0.50 * mult + c * 0.25 * mult;
-            const num50p = b * mult;
-            q = `A bag contains 1-rupee, 50-paise, and 25-paise coins in the ratio ${a}:${b}:${c}. If the total value of these coins is Rs. ${totVal.toFixed(2)}, find the number of 50-paise coins.`;
-            options = [`${num50p}`, `${num50p + 20}`, `${num50p - 10}`, `${num50p * 2}`];
-            explanation = `Let the coins be ${a}x, ${b}x, and ${c}x. Total value = ${a}x * 1 + ${b}x * 0.50 + ${c}x * 0.25 = ${totVal} => x = ${mult}. Thus, 50p coins = ${b}x = ${num50p}.`;
-          } else {
-            const a = 2 + (i % 3);
-            const b = 3 + (i % 3);
-            const c = 4 + (i % 3);
-            const d = 5 + (i % 3);
-            const acNum = a * c;
-            const bdDen = b * d;
-            q = `If A:B = ${a}:${b} and B:C = ${c}:${d}, find the ratio of A:C.`;
-            options = [`${acNum}:${bdDen}`, `${a}:${d}`, `${c}:${b}`, `${acNum + 1}:${bdDen + 1}`];
-            explanation = `A/C = (A/B) * (B/C) = (${a}/${b}) * (${c}/${d}) = ${acNum}/${bdDen}. Thus A:C = ${acNum}:${bdDen}.`;
-          }
-        } else if (title === 'Partnership') {
-          const type = i % 2;
-          const invA = 10000 + i * 2000;
-          const invB = 15000 + i * 3000;
-          if (type === 0) {
-            const totalProfit = 5000 + i * 1000;
-            const shareA = Math.round((invA * totalProfit) / (invA + invB));
-            q = `${nameA} and ${nameB} start a business with investments of Rs. ${invA} and Rs. ${invB} respectively. If the total annual profit is Rs. ${totalProfit}, find ${nameA}'s share.`;
-            options = [`Rs. ${shareA}`, `Rs. ${totalProfit - shareA}`, `Rs. ${shareA + 200}`, `Rs. ${shareA - 200}`];
-            explanation = `The profit is shared in the ratio of their investments. Ratio A:B = ${invA}:${invB}. A's share = ${totalProfit} * (${invA} / (invA + invB)) = Rs. ${shareA}.`;
-          } else {
-            const timeA = 12;
-            const timeB = 12 - 2 - (i % 4);
-            const totalProfit = 10000 + i * 1500;
-            const valA = invA * timeA;
-            const valB = invB * timeB;
-            const shareB = Math.round((valB * totalProfit) / (valA + valB));
-            q = `${nameA} starts a business with Rs. ${invA}. After ${12 - timeB} months, ${nameB} joins him with Rs. ${invB}. If the annual profit is Rs. ${totalProfit}, what is ${nameB}'s profit share?`;
-            options = [`Rs. ${shareB}`, `Rs. ${totalProfit - shareB}`, `Rs. ${shareB + 500}`, `Rs. ${shareB - 500}`];
-            explanation = `Profit ratio = (InvA * TimeA) : (InvB * TimeB) = (${invA} * ${timeA}) : (${invB} * ${timeB}) = ${valA}:${valB}. B's share = ${totalProfit} * (${valB} / (valA + valB)) = Rs. ${shareB}.`;
-          }
-        } else if (title === 'Average') {
-          const count = 3 + (i % 4);
-          const avg = 20 + i;
-          const sum = count * avg;
-          const newWeight = avg + 2;
-          const actualTeacherWeight = (count + 1) * newWeight - sum;
-          q = `The average weight of a class of ${count} students is ${avg} kg. If the weight of the teacher is included, the average weight increases by 2 kg. What is the weight of the teacher?`;
-          options = [`${actualTeacherWeight} kg`, `${actualTeacherWeight - 5} kg`, `${actualTeacherWeight + 5} kg`, 'None of these'];
-          explanation = `Total weight of ${count} students = ${count} * ${avg} = ${sum} kg. New average including teacher = ${avg} + 2 = ${avg + 2} kg. Total weight of ${count + 1} people = ${count + 1} * ${avg + 2} = ${(count + 1) * (avg + 2)} kg. Weight of teacher = ${(count + 1) * (avg + 2)} - ${sum} = ${actualTeacherWeight} kg.`;
-        } else if (title === 'Ages') {
-          const ratioA = 3 + (i % 3);
-          const ratioB = ratioA + 1;
-          const multiplier = 3 + (i % 5);
-          const ageA = ratioA * multiplier;
-          const ageB = ratioB * multiplier;
-          const diff = ageB - ageA;
-          q = `The ratio of the ages of ${nameA} and ${nameB} is ${ratioA}:${ratioB}. If the difference between their ages is ${diff} years, what is the age of ${nameA}?`;
-          options = [`${ageA} years`, `${ageB} years`, `${ageA + 5} years`, `${ageB - 2} years`];
-          explanation = `Let their ages be ${ratioA}x and ${ratioB}x. Difference = ${ratioB}x - ${ratioA}x = x = ${diff}. Age of A = ${ratioA}x = ${ratioA} * ${diff} = ${ageA} years.`;
-        } else if (title === 'Time & Work') {
-          const daysA = 10 + (i % 5) * 5;
-          const daysB = daysA * 2;
-          const together = (daysA * daysB) / (daysA + daysB);
-          q = `${nameA} can complete a work in ${daysA} days, and ${nameB} can complete it in ${daysB} days. In how many days can they complete the work working together?`;
-          options = [`${together.toFixed(1)} days`, `${(together + 1).toFixed(1)} days`, `${(together - 1).toFixed(1)} days`, 'None of these'];
-          explanation = `Together, they do (1/${daysA} + 1/${daysB}) of the work in one day. One day's work = (${daysB} + ${daysA}) / (${daysA} * ${daysB}) = 1 / ${together.toFixed(1)}. Hence, time = ${together.toFixed(1)} days.`;
-        } else if (title === 'Pipes & Cisterns') {
-          const type = i % 2;
-          const h1 = 6 + (i % 5) * 2;
-          const h2 = h1 + 4 + (i % 3) * 2;
-          if (type === 0) {
-            const together = (h1 * h2) / (h1 + h2);
-            q = `Pipe A can fill a tank in ${h1} hours and Pipe B can fill it in ${h2} hours. How long will it take to fill the tank if both pipes are opened together?`;
-            options = [`${together.toFixed(2)} hours`, `${(together + 1).toFixed(2)} hours`, `${(together - 0.5).toFixed(2)} hours`, `None of these`];
-            explanation = `One hour work together = (1/${h1}) + (1/${h2}) = (${h1}+${h2}) / (${h1}*${h2}). Time taken = (${h1}*${h2}) / (${h1}+${h2}) = ${together.toFixed(2)} hours.`;
-          } else {
-            const net = (h1 * h2) / (h2 - h1);
-            q = `Pipe A can fill a tank in ${h1} hours, but due to a leak at the bottom, it takes ${h2} hours to fill. In how many hours can the leak empty the full tank?`;
-            options = [`${net.toFixed(1)} hours`, `${(net + 2).toFixed(1)} hours`, `${(net - 2).toFixed(1)} hours`, `None of these`];
-            explanation = `Work of leak in 1 hour = (1/${h1}) - (1/${h2}) = (${h2}-${h1}) / (${h1}*${h2}). Time taken to empty = (${h1}*${h2}) / (${h2}-${h1}) = ${net.toFixed(1)} hours.`;
-          }
-        } else if (title === 'Time Speed Distance' || title === 'Train Problems') {
-          const type = i % 2;
-          if (type === 0) {
-            const speedKmph = 36 + (i % 10) * 18;
-            const speedMps = (speedKmph * 5) / 18;
-            const length = 100 + (i % 5) * 50;
-            const time = length / speedMps;
-            q = `A train ${length} meters long passes a pole in how many seconds if its speed is ${speedKmph} km/hr?`;
-            options = [`${time.toFixed(1)} seconds`, `${(time + 2).toFixed(1)} seconds`, `${(time - 1).toFixed(1)} seconds`, 'None of these'];
-            explanation = `Convert speed to m/s: ${speedKmph} * (5/18) = ${speedMps} m/s. Time to cross pole = Train length / Speed = ${length} / ${speedMps} = ${time.toFixed(1)} seconds.`;
-          } else {
-            const len1 = 120 + i * 10;
-            const len2 = 80 + i * 5;
-            const s1 = 40 + (i % 5) * 5;
-            const s2 = 20 + (i % 4) * 5;
-            const relSpeedMps = ((s1 + s2) * 5) / 18;
-            const time = (len1 + len2) / relSpeedMps;
-            q = `Two trains of lengths ${len1}m and ${len2}m are running in opposite directions at speeds of ${s1} km/hr and ${s2} km/hr respectively. In what time will they cross each other?`;
-            options = [`${time.toFixed(2)} seconds`, `${(time + 3).toFixed(2)} seconds`, `${(time - 2).toFixed(2)} seconds`, `None of these`];
-            explanation = `Relative speed (opposite direction) = ${s1} + ${s2} = ${s1+s2} km/hr = ${(s1+s2)*5/18} m/s. Total distance = ${len1} + ${len2} = ${len1+len2}m. Time taken = Distance / Relative Speed = ${time.toFixed(2)} seconds.`;
-          }
-        } else if (title === 'Boats & Streams') {
-          const type = i % 2;
-          const sb = 10 + (i % 5) * 2;
-          const ss = 2 + (i % 3);
-          if (type === 0) {
-            const ds = sb + ss;
-            const us = sb - ss;
-            q = `A boat's speed in still water is ${sb} km/hr and the speed of the stream is ${ss} km/hr. Find the speed of the boat downstream and upstream.`;
-            options = [`Downstream: ${ds} km/hr, Upstream: ${us} km/hr`, `Downstream: ${us} km/hr, Upstream: ${ds} km/hr`, `Downstream: ${ds + 2} km/hr, Upstream: ${us - 1} km/hr`, `None of these`];
-            explanation = `Downstream speed = Speed in still water + Stream speed = ${sb} + ${ss} = ${ds} km/hr. Upstream speed = Speed in still water - Stream speed = ${sb} - ${ss} = ${us} km/hr.`;
-          } else {
-            const ds = 12 + (i % 4) * 2;
-            const us = 6 + (i % 3) * 2;
-            const still = (ds + us) / 2;
-            const stream = (ds - us) / 2;
-            q = `A man can row downstream at ${ds} km/hr and upstream at ${us} km/hr. Find his speed in still water and the speed of the stream.`;
-            options = [`Still water: ${still} km/hr, Stream: ${stream} km/hr`, `Still water: ${stream} km/hr, Stream: ${still} km/hr`, `Still water: ${still + 1} km/hr, Stream: ${stream - 0.5} km/hr`, `None of these`];
-            explanation = `Speed in still water = (Downstream + Upstream) / 2 = (${ds} + ${us}) / 2 = ${still} km/hr. Stream speed = (Downstream - Upstream) / 2 = (${ds} - ${us}) / 2 = ${stream} km/hr.`;
-          }
-        } else if (title === 'Permutation & Combination') {
-          const type = i % 3;
-          if (type === 0) {
-            const words = ['TIGER', 'LEADER', 'MATRIX', 'PORTAL', 'STUDENT', 'APTITUDE'];
-            const w = words[i % words.length];
-            const fact = (n) => n <= 1 ? 1 : n * fact(n - 1);
-            const counts = {};
-            for (const char of w) { counts[char] = (counts[char] || 0) + 1; }
-            let denom = 1;
-            for (const char of Object.keys(counts)) { denom *= fact(counts[char]); }
-            const ansVal = fact(w.length) / denom;
-            q = `In how many ways can the letters of the word "${w}" be arranged?`;
-            options = [`${ansVal}`, `${ansVal + 120}`, `${ansVal - 60}`, `${ansVal * 2}`];
-            explanation = `The word "${w}" has ${w.length} letters. Permutations = ${w.length}! / (product of factorials of repeating letter counts) = ${ansVal}.`;
-          } else if (type === 1) {
-            const n = 5 + (i % 3);
-            const r = 2 + (i % 2);
-            const fact = (x) => x <= 1 ? 1 : x * fact(x - 1);
-            const combs = fact(n) / (fact(r) * fact(n - r));
-            q = `In how many ways can a committee of ${r} members be selected from a group of ${n} candidates?`;
-            options = [`${combs}`, `${combs + 5}`, `${combs - 2}`, `${combs * 2}`];
-            explanation = `Combinations formula: nCr = n! / (r! * (n-r)!). Here n = ${n}, r = ${r}. Result = ${n}! / (${r}! * ${n-r}!) = ${combs}.`;
-          } else {
-            const people = 6 + (i % 10);
-            const handshakes = (people * (people - 1)) / 2;
-            q = `In a business meeting of ${people} people, everyone shakes hands with everyone else exactly once. How many handshakes take place?`;
-            options = [`${handshakes}`, `${handshakes + people}`, `${handshakes - people}`, `${handshakes * 2}`];
-            explanation = `Number of handshakes = nC2 = n * (n - 1) / 2. Here n = ${people}. Total handshakes = (${people} * ${people - 1}) / 2 = ${handshakes}.`;
-          }
-        } else if (title === 'Probability') {
-          const type = i % 2;
-          if (type === 0) {
-            const red = 4 + (i % 3);
-            const black = 5 + (i % 4);
-            const total = red + black;
-            const nCrTotal = (total * (total - 1)) / 2;
-            const nCrRed = (red * (red - 1)) / 2;
-            const gcdVal = (a, b) => b === 0 ? a : gcdVal(b, a % b);
-            const common = gcdVal(nCrRed, nCrTotal);
-            const num = nCrRed / common;
-            const den = nCrTotal / common;
-            q = `A bag contains ${red} red and ${black} black balls. What is the probability of drawing 2 red balls at random?`;
-            options = [`${num}/${den}`, `${num + 1}/${den}`, `${num}/${den + 1}`, `${num + 2}/${den + 3}`];
-            explanation = `Probability = (Red C 2) / (Total C 2) = (${red} * ${red - 1} / 2) / (${total} * ${total - 1} / 2) = ${nCrRed} / ${nCrTotal} = ${num}/${den}.`;
-          } else {
-            q = `What is the probability of drawing a Queen or a King from a well-shuffled deck of 52 cards?`;
-            options = [`2/13`, `1/13`, `4/13`, `1/52`];
-            explanation = `There are 4 Queens and 4 Kings in a deck of 52 cards. Total favorable cards = 8. Probability = 8 / 52 = 2 / 13.`;
-          }
-        } else if (title === 'Geometry') {
-          const type = i % 2;
-          if (type === 0) {
-            const a = 2 + (i % 3);
-            const b = 3 + (i % 3);
-            const c = 4 + (i % 3);
-            const sum = a + b + c;
-            const smallestAngle = Math.round((180 * a) / sum);
-            q = `The angles of a triangle are in the ratio ${a}:${b}:${c}. Find the measure of the smallest angle.`;
-            options = [`${smallestAngle}°`, `${smallestAngle + 10}°`, `${smallestAngle - 5}°`, `${smallestAngle * 1.5}°`];
-            explanation = `The sum of angles in a triangle is 180°. Smallest angle = 180° * (${a} / ${sum}) = ${smallestAngle}°.`;
-          } else {
-            const r = 5 + (i % 5);
-            const dist = 3 + (i % 3);
-            const halfChord = Math.sqrt(r*r - dist*dist);
-            const chordLen = 2 * halfChord;
-            q = `Find the length of a chord which is at a distance of ${dist} cm from the center of a circle of radius ${r} cm.`;
-            options = [`${chordLen.toFixed(2)} cm`, `${(chordLen + 2).toFixed(2)} cm`, `${(chordLen - 1).toFixed(2)} cm`, `None of these`];
-            explanation = `By Pythagoras theorem, half chord length = sqrt(radius^2 - distance^2) = sqrt(${r}^2 - ${dist}^2) = ${halfChord.toFixed(2)} cm. Full chord length = 2 * ${halfChord.toFixed(2)} = ${chordLen.toFixed(2)} cm.`;
-          }
-        } else if (title === 'Mensuration') {
-          const type = i % 2;
-          const rad = 7 + (i % 5) * 7;
-          if (type === 0) {
-            const vol = (4 * Math.PI * Math.pow(rad, 3)) / 3;
-            q = `Find the volume of a sphere of radius ${rad} cm. (Use pi = 22/7)`;
-            options = [`${vol.toFixed(2)} cm³`, `${(vol + 100).toFixed(2)} cm³`, `${(vol - 100).toFixed(2)} cm³`, `None of these`];
-            explanation = `Volume of sphere = 4/3 * pi * r^3 = 4/3 * (22/7) * ${rad}^3 = ${vol.toFixed(2)} cm³.`;
-          } else {
-            const side = 4 + (i % 6);
-            const diag = Math.sqrt(3) * side;
-            q = `Find the length of the longest diagonal of a cube of side ${side} cm.`;
-            options = [`${diag.toFixed(2)} cm`, `${(diag + 1).toFixed(2)} cm`, `${(diag - 1).toFixed(2)} cm`, `None of these`];
-            explanation = `The longest diagonal of a cube of side 's' is s * sqrt(3) = ${side} * 1.732 = ${diag.toFixed(2)} cm.`;
-          }
-        } else if (title === 'Trigonometry') {
-          const dist = 30 + i * 5;
-          const height = Math.round(dist * Math.sqrt(3));
-          q = `The angle of elevation of the top of a tower from a distance of ${dist} meters from its foot is 60°. What is the height of the tower?`;
-          options = [`${height} m`, `${height + 10} m`, `${height - 15} m`, `${dist} m`];
-          explanation = `tan(60°) = Height / Distance => sqrt(3) = Height / ${dist} => Height = ${dist} * sqrt(3) = ${height} meters.`;
-        } else if (title === 'Logarithms') {
-          const base = 2 + (i % 3);
-          const power = 3 + (i % 4);
-          const num = Math.pow(base, power);
-          q = `Evaluate the value of log_${base}(${num}).`;
-          options = [`${power}`, `${power + 1}`, `${power - 1}`, `${power * 2}`];
-          explanation = `Let log_${base}(${num}) = x. Then ${base}^x = ${num} = ${base}^${power}. Thus x = ${power}.`;
-        } else if (title === 'HCF & LCM') {
-          const type = i % 3;
-          if (type === 0) {
-            const hcf = 3 + (i % 5);
-            const lcm = hcf * (4 + (i % 3)) * (5 + (i % 4));
-            const n1 = hcf * (4 + (i % 3));
-            const n2 = (hcf * lcm) / n1;
-            q = `The HCF and LCM of two numbers are ${hcf} and ${lcm} respectively. If one of the numbers is ${n1}, find the other number.`;
-            options = [`${n2}`, `${n2 + 5}`, `${n2 - 5}`, `${n2 * 2}`];
-            explanation = `Formula: Product of two numbers = HCF * LCM. Other number = (HCF * LCM) / Given Number = (${hcf} * ${lcm}) / ${n1} = ${n2}.`;
-          } else if (type === 1) {
-            const a = 4, b = 6, c = 8;
-            const lcm = 24;
-            const rem = 2 + (i % 3);
-            const ansVal = lcm * (1 + (i % 3)) + rem;
-            q = `Find the least number which when divided by ${a}, ${b}, and ${c} leaves a remainder of ${rem} in each case.`;
-            options = [`${ansVal}`, `${ansVal - 1}`, `${ansVal + 1}`, `${ansVal * 2}`];
-            explanation = `The least number is LCM(a, b, c) * k + remainder. LCM(${a}, ${b}, ${c}) = ${lcm}. Required number = ${lcm} * k + ${rem} = ${ansVal}.`;
-          } else {
-            const a = 10, b = 15, c = 20;
-            const lcm = 60;
-            const minutes = 30 + i * 5;
-            const tolls = Math.floor((minutes * 60) / lcm) + 1;
-            q = `Three bells toll together at intervals of ${a}, ${b}, and ${c} seconds respectively. In ${minutes} minutes, how many times do they toll together including the first one?`;
-            options = [`${tolls}`, `${tolls - 1}`, `${tolls + 1}`, `None of these`];
-            explanation = `They toll together at intervals of LCM(${a}, ${b}, ${c}) = ${lcm} seconds. In ${minutes} minutes (${minutes * 60} seconds), they toll together (${minutes * 60} / ${lcm}) + 1 = ${tolls} times.`;
-          }
-        } else if (title === 'Calendar') {
-          const type = i % 2;
-          if (type === 0) {
-            const years = 1 + (i % 15);
-            const extraDays = Math.floor(years + years/4);
-            const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-            const startDayIdx = i % 7;
-            const endDay = days[(startDayIdx + extraDays) % 7];
-            q = `If 1st January of year X was a ${days[startDayIdx]}, what day of the week was 1st January after ${years} years?`;
-            options = [`${endDay}`, `${days[(startDayIdx + extraDays + 1) % 7]}`, `${days[(startDayIdx + extraDays - 1 + 7) % 7]}`, `None of these`];
-            explanation = `Every ordinary year contributes 1 odd day and every leap year contributes 2 odd days. Sum of odd days over ${years} years yields ${extraDays} odd days, moving from ${days[startDayIdx]} to ${endDay}.`;
-          } else {
-            const year = 2000 + i * 4;
-            q = `Is the year ${year} a leap year?`;
-            options = [`Yes`, `No`, `Cannot be determined`, `Only in certain calendars`];
-            explanation = `A year is a leap year if it is divisible by 4, except for centurial years which must be divisible by 400. Since ${year} is divisible by 4, it is a leap year.`;
-          }
-        } else if (title === 'Clock') {
-          const hr = 1 + (i % 11);
-          const min = 5 * (i % 12);
-          const angle = Math.abs(30 * hr - 5.5 * min);
-          const finalAngle = angle > 180 ? 360 - angle : angle;
-          q = `Find the angle between the hour hand and the minute hand of a clock at ${hr}:${min.toString().padStart(2, '0')}.`;
-          options = [`${finalAngle}°`, `${finalAngle + 10}°`, `${finalAngle - 5}°`, `${360 - finalAngle}°`];
-          explanation = `Formula: Angle = |30 * Hour - 11/2 * Minute|. Here Hour = ${hr}, Minute = ${min}. Angle = |30*${hr} - 5.5*${min}| = ${finalAngle}°.`;
-        } else if (title === 'Data Interpretation') {
-          const total = 500 + i * 100;
-          const share = 10 + (i % 5) * 10;
-          const count = (total * share) / 100;
-          q = `In a survey of ${total} students, a pie chart shows that ${share}% prefer computer science. How many students prefer computer science?`;
-          options = [`${count}`, `${count + 50}`, `${count - 50}`, `${count * 2}`];
-          explanation = `Students preferring CS = ${share}% of ${total} = (${share}/100) * ${total} = ${count}.`;
-        } else if (title === 'Data Sufficiency') {
-          q = `Is A older than B?
-Statement I: A is 5 years older than C.
-Statement II: C is younger than B by 2 years.`;
-          options = [`Both Statements I and II together are sufficient to answer`, `Statement I alone is sufficient`, `Statement II alone is sufficient`, `Statements I and II together are not sufficient`];
-          explanation = `From I: A = C + 5. From II: C = B - 2 => B = C + 2. Comparing A and B: A > B since C + 5 > C + 2. Hence, both statements together are sufficient.`;
-        } else if (title === 'Mixtures & Allegations') {
-          const p1 = 40 + (i % 5) * 5;
-          const p2 = 60 + (i % 5) * 5;
-          const target = p1 + 5;
-          const r1 = p2 - target;
-          const r2 = target - p1;
-          const gcd = (x, y) => y === 0 ? x : gcd(y, x % y);
-          const comm = gcd(r1, r2);
-          q = `In what ratio must tea at Rs. ${p1}/kg be mixed with tea at Rs. ${p2}/kg so that the mixture is worth Rs. ${target}/kg?`;
-          options = [`${r1/comm}:${r2/comm}`, `${r2/comm}:${r1/comm}`, `${r1/comm + 1}:${r2/comm}`, `None of these`];
-          explanation = `Using the allegation rule: Ratio of quantity = (Price of dearer - Mean price) : (Mean price - Price of cheaper) = (${p2} - ${target}) : (${target} - ${p1}) = ${r1}:${r2} = ${r1/comm}:${r2/comm}.`;
-        } else if (title === 'Sequence & Series') {
-          const a = 2 + (i % 5);
-          const d = 3 + (i % 3);
-          const termNum = 10 + (i % 5);
-          const ansVal = a + (termNum - 1) * d;
-          q = `Find the ${termNum}th term of the arithmetic progression (AP) series: ${a}, ${a+d}, ${a+2*d}, ...`;
-          options = [`${ansVal}`, `${ansVal + d}`, `${ansVal - d}`, `${ansVal * 2}`];
-          explanation = `The nth term of an AP is a + (n - 1) * d. Here a = ${a}, d = ${d}, n = ${termNum}. Term = ${a} + (${termNum} - 1) * ${d} = ${ansVal}.`;
-        } else if (title === 'Simplification' || title === 'Surds & Indices') {
-          const val = 2 + (i % 4);
-          const ansVal = Math.pow(val, 3);
-          q = `If x^(1/3) = ${val}, what is the value of x?`;
-          options = [`${ansVal}`, `${ansVal - 1}`, `${ansVal + 1}`, `${val * 3}`];
-          explanation = `Cubing both sides: (x^(1/3))^3 = ${val}^3 => x = ${ansVal}.`;
-        } else if (title === 'Quadratic Equations') {
-          const root1 = 2 + (i % 3);
-          const root2 = 5 + (i % 3);
-          const b = root1 + root2;
-          const c = root1 * root2;
-          q = `Find the roots of the quadratic equation x² - ${b}x + ${c} = 0.`;
-          options = [`${root1} and ${root2}`, `${root1 - 1} and ${root2 + 1}`, `${-root1} and ${-root2}`, `None of these`];
-          explanation = `The equation factors as (x - ${root1})(x - ${root2}) = 0. Therefore, the roots are x = ${root1} and x = ${root2}.`;
-        } else {
-          const base = i * 2;
-          q = `Solve the following company-specific aptitude problem for ${title}: A product is sold for Rs. ${base * 10}. If it was bought for Rs. ${base * 8}, what is the percentage markup?`;
-          options = ['25%', '20%', '30%', 'None of these'];
-          explanation = `Markup = (Selling Price - Cost Price) / Cost Price = (${base * 10} - ${base * 8}) / (${base * 8}) = 2/8 = 25%.`;
-        }
-      } else if (category === 'logical') {
-        if (title === 'Blood Relations') {
-          const rels = [
-            { q: `Pointing to a photo, ${nameA} said, "He is the son of the only son of my grandfather." How is the person related to ${nameA}?`, ans: 'Brother', opts: ['Brother', 'Uncle', 'Cousin', 'Father'] },
-            { q: `If A is the brother of B, B is the sister of C, and C is the father of D, how is A related to D?`, ans: 'Uncle', opts: ['Uncle', 'Brother', 'Grandfather', 'Father'] },
-            { q: `Introducing a man, a woman says, "His wife is the only daughter of my father." How is the man related to the woman?`, ans: 'Husband', opts: ['Husband', 'Brother', 'Father-in-law', 'Uncle'] }
-          ];
-          const rObj = rels[i % rels.length];
-          q = rObj.q;
-          options = rObj.opts;
-          explanation = `Based on blood relationship deduction tree, the relation is ${rObj.ans}.`;
-        } else if (title === 'Coding & Decoding') {
-          const codes = [
-            { w: 'CAT', c: 'ECV', t: 'DOG', ca: 'FQI', opts: ['FQI', 'FPG', 'EQH', 'GRI'] },
-            { w: 'TAP', c: 'SZO', t: 'PIN', ca: 'OHM', opts: ['OHM', 'QJO', 'OIN', 'NIM'] },
-            { w: 'GOLD', c: 'HPME', t: 'SILVER', ca: 'TJMWFS', opts: ['TJMWFS', 'TJKWFS', 'THKVER', 'RHKUDQ'] }
-          ];
-          const cObj = codes[i % codes.length];
-          q = `If in a code language, '${cObj.w}' is written as '${cObj.c}', how will '${cObj.t}' be written?`;
-          options = cObj.opts;
-          explanation = `Each letter is shifted by a standard constant offset (e.g. +1 or -1 or +2) in the alphabet. Evaluating '${cObj.t}' gives '${cObj.ca}'.`;
-        } else if (title === 'Direction Sense') {
-          const dist1 = 5 + (i % 5);
-          const dist2 = 12 + (i % 3);
-          const hyp = Math.round(Math.sqrt(dist1*dist1 + dist2*dist2));
-          q = `${nameA} goes ${dist1} km North, turns left and goes ${dist2} km. How far is he from the starting point?`;
-          options = [`${hyp} km`, `${hyp + 2} km`, `${hyp - 1} km`, 'None of these'];
-          explanation = `Using Pythagoras theorem: distance = sqrt(${dist1}^2 + ${dist2}^2) = sqrt(${dist1*dist1} + ${dist2*dist2}) = ${hyp} km.`;
-        } else if (title === 'Number Series') {
-          const diff = 2 + (i % 4);
-          const term1 = 5;
-          const term2 = term1 + diff;
-          const term3 = term2 + diff;
-          const term4 = term3 + diff;
-          const term5 = term4 + diff;
-          q = `Find the next term in the series: ${term1}, ${term2}, ${term3}, ${term4}, ...`;
-          options = [`${term5}`, `${term5 + 1}`, `${term5 - 1}`, `${term5 + diff}`];
-          explanation = `This is an arithmetic progression with common difference of ${diff}. The next term is ${term4} + ${diff} = ${term5}.`;
-        } else if (title === 'Alphabet Series') {
-          q = `Find the next letters in the alphabet series: Z, X, V, T, R, ...`;
-          options = [`P`, `Q`, `O`, `S`];
-          explanation = `The letters are moving backwards skipping one letter: Z(-2)->X(-2)->V(-2)->T(-2)->R(-2)->P.`;
-        } else if (title === 'Syllogism') {
-          q = `Statements:
-All dogs are birds.
-All birds are cats.
-Conclusions:
-I. All dogs are cats.
-II. Some cats are dogs.`;
-          options = [`Both I and II follow`, `Only I follows`, `Only II follows`, `Neither I nor II follows`];
-          explanation = `Since all dogs are birds and all birds are cats, it follows that all dogs are cats (Conclusion I). Also, since all dogs are cats, some cats must be dogs (Conclusion II). Thus, both follow.`;
-        } else if (title === 'Venn Diagrams') {
-          q = `In a group of students, 15 study Python, 10 study Java, and 5 study both. How many students study at least one of these languages?`;
-          options = [`20`, `25`, `30`, `15`];
-          explanation = `Using Venn diagram: Total = Python + Java - Both = 15 + 10 - 5 = 20.`;
-        } else if (title === 'Seating Arrangement') {
-          q = `Five friends A, B, C, D, E are sitting in a row facing North. A is to the left of B but right of C. D is to the right of B but left of E. Who is sitting in the middle?`;
-          options = [`B`, `A`, `C`, `D`];
-          explanation = `The order from left to right is: C, A, B, D, E. The person in the middle is B.`;
-        } else if (title === 'Clocks & Calendars') {
-          q = `If today is Thursday, what was the day 3 days before yesterday?`;
-          options = [`Sunday`, `Saturday`, `Monday`, `Friday`];
-          explanation = `Today is Thursday. Yesterday was Wednesday. 3 days before Wednesday was Sunday.`;
-        } else if (title === 'Cubes & Dice') {
-          q = `A standard dice is rolled. What is the probability of rolling a number greater than 4?`;
-          options = [`1/3`, `1/2`, `2/3`, `1/6`];
-          explanation = `Favorable outcomes are 5 and 6 (2 outcomes). Total outcomes = 6. Probability = 2/6 = 1/3.`;
-        } else if (title === 'Mirror & Water Images') {
-          q = `Find the correct mirror image of the word "MERN" when the mirror is placed to its right.`;
-          options = [`ИЯƎM`, `MERN`, `NREM`, `WERN`];
-          explanation = `The letters are reversed horizontally and individual letters are also mirrored: M->M, E->Ǝ, R->Я, N->И. From right to left, this gives: ИЯƎM.`;
-        } else if (title === 'Analogy') {
-          q = `Complete the analogy: Clock : Time :: Thermometer : ?`;
-          options = [`Temperature`, `Heat`, `Mercury`, `Fever`];
-          explanation = `A clock measures time, while a thermometer measures temperature.`;
-        } else if (title === 'Classification') {
-          q = `Choose the word which is different from the rest.`;
-          options = [`Carrot`, `Apple`, `Mango`, `Banana`];
-          explanation = `Apple, Mango, and Banana are fruits that grow on trees/plants, while Carrot is a root vegetable.`;
-        } else if (title === 'Ranking & Order') {
-          const pos = 5 + (i % 15);
-          q = `${nameA} is ${pos}th from the start and ${pos + 5}th from the end in a row of students. How many students are there in the row?`;
-          options = [`${2 * pos + 4}`, `${2 * pos + 5}`, `${2 * pos + 3}`, `${pos + 5}`];
-          explanation = `Total students = Position from start + Position from end - 1 = ${pos} + ${pos + 5} - 1 = ${2 * pos + 4}.`;
-        } else {
-          q = `Identify the logical pattern for ${title}: Which of the following numbers fits the classification logic? Pattern sequence: ${i}, ${i*3}, ${i*9}, ...`;
-          options = [`${i*27}`, `${i*18}`, `${i*36}`, `${i*12}`];
-          explanation = `Each term is multiplied by 3 to get the next term. ${i*9} * 3 = ${i*27}.`;
-        }
-      } else { // Category: verbal
-        if (title === 'Synonyms & Antonyms') {
-          const db = [
-            { w: 'CANDID', q: 'Choose the word nearest in meaning to: "CANDID"', ans: 'Frank', opts: ['Frank', 'Devious', 'Silent', 'Arrogant'], exp: 'Candid means truthful and straightforward; frank.' },
-            { w: 'OBSTINATE', q: 'Choose the word opposite in meaning to: "OBSTINATE"', ans: 'Flexible', opts: ['Flexible', 'Stubborn', 'Rigid', 'Firm'], exp: 'Obstinate means stubborn; the opposite is flexible.' },
-            { w: 'ABSTAIN', q: 'Choose the word nearest in meaning to: "ABSTAIN"', ans: 'Refrain', opts: ['Refrain', 'Indulge', 'Pursue', 'Begin'], exp: 'Abstain means to choose not to do something; refrain.' },
-            { w: 'AMICABLE', q: 'Choose the word opposite in meaning to: "AMICABLE"', ans: 'Hostile', opts: ['Hostile', 'Friendly', 'Harmful', 'Kind'], exp: 'Amicable means friendly; the opposite is hostile.' },
-            { w: 'BENEVOLENT', q: 'Choose the word nearest in meaning to: "BENEVOLENT"', ans: 'Kind', opts: ['Kind', 'Malevolent', 'Cruel', 'Greedy'], exp: 'Benevolent means kind and well-meaning.' }
-          ];
-          const item = db[(i - 1) % db.length];
-          q = item.q;
-          options = item.opts;
-          explanation = item.exp;
-        } else if (title === 'One Word Substitution') {
-          const db = [
-            { q: 'Give a one-word substitution for: "A person who does not believe in God"', ans: 'Atheist', opts: ['Atheist', 'Theist', 'Agnostic', 'Monotheist'], exp: 'An atheist is a person who disbelieves or lacks belief in the existence of God.' },
-            { q: 'Give a one-word substitution for: "A person who is unable to pay his debts"', ans: 'Insolvent', opts: ['Insolvent', 'Lender', 'Broker', 'Debtor'], exp: 'An insolvent person is unable to pay debts owed.' },
-            { q: 'Give a one-word substitution for: "One who knows many languages"', ans: 'Polyglot', opts: ['Polyglot', 'Linguist', 'Bilingual', 'Translator'], exp: 'A polyglot is someone who knows or uses several languages.' },
-            { q: 'Give a one-word substitution for: "A study of ancient things"', ans: 'Archaeology', opts: ['Archaeology', 'Anthropology', 'History', 'Ethnology'], exp: 'Archaeology is the study of human history and prehistory through excavation of sites.' }
-          ];
-          const item = db[(i - 1) % db.length];
-          q = item.q;
-          options = item.opts;
-          explanation = item.exp;
-        } else if (title === 'Idioms & Phrases') {
-          const db = [
-            { q: 'What is the meaning of the idiom: "Spill the beans"?', ans: 'Reveal a secret', opts: ['Reveal a secret', 'Spill food', 'Cook beans', 'Apostatize'], exp: 'To "spill the beans" is a colloquial idiom meaning to reveal secret information.' },
-            { q: 'What is the meaning of the idiom: "Beat around the bush"?', ans: 'Avoid the main topic', opts: ['Avoid the main topic', 'Cut down bushes', 'Play music', 'Run fast'], exp: 'To "beat around the bush" means to discuss a matter without coming to the point.' },
-            { q: 'What is the meaning of the idiom: "Burn the midnight oil"?', ans: 'Work or study late into the night', opts: ['Work or study late into the night', 'Waste fuel', 'Light a lamp', 'Sleep early'], exp: 'To "burn the midnight oil" means to read or work late into the night.' }
-          ];
-          const item = db[(i - 1) % db.length];
-          q = item.q;
-          options = item.opts;
-          explanation = item.exp;
-        } else if (title === 'Spell Check') {
-          const db = [
-            { q: 'Choose the correctly spelled word.', ans: 'Accommodation', opts: ['Accommodation', 'Accomodation', 'Acomodation', 'Acommocation'], exp: 'The correct spelling is ACCOMMODATION (with double c and double m).' },
-            { q: 'Choose the correctly spelled word.', ans: 'Necessary', opts: ['Necessary', 'Neccessary', 'Necassary', 'Nessesary'], exp: 'The correct spelling is NECESSARY (with single c and double s).' },
-            { q: 'Choose the correctly spelled word.', ans: 'Committee', opts: ['Committee', 'Comitee', 'Commitee', 'Committe'], exp: 'The correct spelling is COMMITTEE (double m, double t, double e).' }
-          ];
-          const item = db[(i - 1) % db.length];
-          q = item.q;
-          options = item.opts;
-          explanation = item.exp;
-        } else if (title === 'Prepositions') {
-          const db = [
-            { q: 'She is fond ___ classical music.', ans: 'of', opts: ['of', 'to', 'for', 'with'], exp: 'The adjective "fond" is followed by the preposition "of".' },
-            { q: 'He has been suffering ___ fever since yesterday.', ans: 'from', opts: ['from', 'with', 'by', 'of'], exp: 'We say "suffering from" a disease or pain.' },
-            { q: 'Please listen ___ me.', ans: 'to', opts: ['to', 'for', 'with', 'at'], exp: 'The verb "listen" takes the preposition "to".' },
-            { q: 'She congratulated him ___ his success.', ans: 'on', opts: ['on', 'for', 'at', 'with'], exp: 'Congratulate is followed by "on".' }
-          ];
-          const item = db[(i - 1) % db.length];
-          q = item.q;
-          options = item.opts;
-          explanation = item.exp;
-        } else if (title === 'Articles') {
-          const db = [
-            { q: 'He is ___ honorable man.', ans: 'an', opts: ['an', 'a', 'the', 'no article'], exp: '"Honorable" starts with a silent "h" and a vowel sound, so it takes "an".' },
-            { q: 'Copper is ___ useful metal.', ans: 'a', opts: ['a', 'an', 'the', 'no article'], exp: '"Useful" starts with a consonant sound "yoo", so it takes "a".' },
-            { q: '___ sun rises in the east.', ans: 'The', opts: ['The', 'A', 'An', 'no article'], exp: 'Unique celestial bodies like the sun take the definite article "the".' }
-          ];
-          const item = db[(i - 1) % db.length];
-          q = item.q;
-          options = item.opts;
-          explanation = item.exp;
-        } else if (title === 'Reading Comprehension') {
-          q = `Based on the passage below, answer the question:
-"Artificial Intelligence is rapidly transforming modern industries. While it automates repetitive tasks, it also creates high-yield jobs in software engineering and data analysis."
-What is a key effect of Artificial Intelligence according to the passage?`;
-          options = [`Automating repetitive tasks and creating software jobs`, `Replacing all human labor`, `Decreasing software productivity`, `None of these`];
-          explanation = `The passage directly states that AI automates repetitive tasks and creates software engineering jobs.`;
-        } else if (title === 'Error Spotting') {
-          q = `Find the grammatically incorrect part in the sentence:
-"Each of the students (A) / are required (B) / to submit (C) / their assignment (D)"`;
-          options = [`are required (B)`, `Each of the students (A)`, `to submit (C)`, `their assignment (D)`];
-          explanation = `"Each" is a singular pronoun and takes a singular verb. "are required" should be "is required".`;
-        } else if (title === 'Active & Passive Voice') {
-          q = `Convert the sentence to Passive Voice: "The chef cooked the delicious meal."`;
-          options = [`The delicious meal was cooked by the chef.`, `The chef was cooking the delicious meal.`, `The delicious meal is cooked by the chef.`, `The chef had cooked the delicious meal.`];
-          explanation = `In passive voice, the object "The delicious meal" becomes the subject, followed by "was cooked" and the agent "by the chef".`;
-        } else if (title === 'Direct & Indirect Speech') {
-          q = `Convert the sentence to Indirect Speech: She said, "I am writing a letter."`;
-          options = [`She said that she was writing a letter.`, `She said that she is writing a letter.`, `She said that I was writing a letter.`, `She says she writes a letter.`];
-          explanation = `In indirect speech, the present continuous "am writing" shifts back to past continuous "was writing", and the pronoun "I" shifts to "she".`;
-        } else {
-          q = `Fill in the blank with appropriate word for ${title}: The teacher was so ____ with the class's behaviour that she cancelled the field trip.`;
-          options = ['displeased', 'delighted', 'indifferent', 'excited'];
-          explanation = `The context implies a negative reaction resulting in a punishment, making "displeased" the only logical choice.`;
-        }
-      }
-      
-      const shift = (i % 4);
-      const shuffledOptions = [];
-      for (let s = 0; s < 4; s++) {
-        shuffledOptions[(s + shift) % 4] = options[s];
-      }
-      const correctIdx = shift;
-
-      questions.push({
-        q,
-        options: shuffledOptions,
-        correctIdx,
-        explanation
-      });
-    }
-
-    return questions;
-  };
 
   const topicsData = [];
 
@@ -1309,26 +674,26 @@ What is a key effect of Artificial Intelligence according to the passage?`;
 
       const concepts = generateDetailedTextbook(catId, title);
       const shortcuts = [
-        `Shortcut Trick A: Always read standard formulations carefully.`,
-        `Shortcut Trick B: Solve using successive ratios or direct value assumptions.`,
-        `Shortcut Trick C: Draw family trees, Venn diagrams, or timelines for logical topics.`
+        `Shortcut Trick A: Practice the formula sheets and formulas carefully.`,
+        `Shortcut Trick B: Draw simple diagrams (like family trees or Venn diagrams) before solving.`,
+        `Shortcut Trick C: Eliminate choices that are obviously incorrect to save time.`
       ];
 
       topicsData.push({
         category: catId,
         title,
         difficulty: i % 3 === 0 ? 'Easy' : i % 3 === 1 ? 'Medium' : 'Hard',
-        desc: `Learn the concepts, shortcuts, and solve high-yield practice questions for ${title}.`,
-        questionsCount: 50,
+        desc: `Master core placement-level concepts, learn shortcut tricks, and practice ${['Number System', 'Percentage', 'Profit & Loss'].includes(title) ? 300 : ['Missing Number', 'Series', 'Mirror Images', 'Paper Folding', 'Cube Problems', 'Data Sufficiency'].includes(title) ? 100 : 50} high-yield questions for ${title}.`,
+        questionsCount: ['Number System', 'Percentage', 'Profit & Loss'].includes(title) ? 300 : ['Missing Number', 'Series', 'Mirror Images', 'Paper Folding', 'Cube Problems', 'Data Sufficiency'].includes(title) ? 100 : 50,
         shortcutsCount: shortcuts.length,
         duration: `${30 + (i % 3) * 10} min`,
         tags,
         concepts,
         shortcuts,
-        quizQuestions: generateQuizQuestions(catId, title, 50),
+        quizQuestions: generateQuestions(catId, title),
         xpReward: 50,
         order: i + 1,
-        slug: title.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+        slug: `${catId}-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
         year_level: ['1st', '2nd', '3rd', '4th'],
         target_role: 'Software Engineer',
         is_placement_prep: true
@@ -1336,7 +701,6 @@ What is a key effect of Artificial Intelligence according to the passage?`;
     }
   }
 
-  await AptitudeTopic.deleteMany({});
   await AptitudeTopic.insertMany(topicsData);
   console.log(`Seeded ${topicsData.length} aptitude topics successfully.`);
 };

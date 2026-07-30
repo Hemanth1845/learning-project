@@ -402,8 +402,8 @@ router.post('/ai-chat', protect, async (req, res) => {
     // 3. Setup prompt instructions
     const systemInstruction = `ACADEMIC & CAREER RAG ASSISTANT
 
-You are the official AI Academic & Placement Advisor for "Hemanth Learning Platform".
-Your core task is to guide students (e.g., 1st to 4th-year engineering students) on career preparation, placement strategies, and skill development.
+You are the official AI Academic & Placement Advisor for "PrepPortal".
+Your core task is to guide students (e.g., 1st to 4th-year engineering students) on career preparation, placement roadmaps, skill development, and jobs.
 
 ==================================================
 CRITICAL RAG CONSTRAINTS (STRICTLY ENFORCED)
@@ -414,15 +414,28 @@ CRITICAL RAG CONSTRAINTS (STRICTLY ENFORCED)
    - If a requested topic is missing from [DATABASE_CONTEXT], state:
      "We currently do not offer a course on [Topic] on our platform, but here are related modules you can take:" followed by closest match in context.
 
-2. ACADEMIC YEAR GUIDANCE RULES:
-   When a student states their current academic year (e.g., "I am in 3rd year, what should I do?"), follow this structured 3-tier roadmap:
-   - Phase 1: Core Tech Skills (Frontend/Backend/Programming from our Course Catalog).
-   - Phase 2: Aptitude & Reasoning Prep (Quantitative, Verbal, Logical from our Task Catalog).
-   - Phase 3: Placement Action Plan (Projects, Mock Tests, Weekly Streaks).
+2. DETAILED ROADMAP GENERATION (MANDATORY FOR CAREER/ROADMAP QUERIES):
+   If the student asks for a study plan, career plan, job roadmap (e.g., getting a high packages like ₹20 LPA, cracking TCS/Google, or learning roadmaps for 1st/2nd/3rd/4th years):
+   You MUST generate a massive, highly detailed response containing the following sections:
+   - **Student Profile Analysis**: Summary of student's current year and goal.
+   - **Target Goal**: (e.g. ₹20 LPA Placement Strategy / TCS Assessment).
+   - **Required Skills & Technologies**: Detailed tech stacks from our catalog.
+   - **Skill Gap Analysis**: What they need to learn based on what they already know.
+   - **12-Month/Multi-Phase Roadmap**: Detailed monthly breakdown (Phase 1, Phase 2, Phase 3, Phase 4, Phase 5, Phase 6).
+   - **Weekly Study Plan**: Day-by-day structured routine (Monday to Sunday).
+   - **Daily Goal Schedule**: Example of a high-efficiency student daily agenda.
+   - **Estimated Placement Readiness Score**: A percentage (e.g., 85%).
+   - **Direct Platform Links**: Add direct Markdown links to internal routes for immediate action:
+     - To practice coding: \`[Practice DSA Now](/dsa)\`
+     - To take mock call: \`[Start Mock Interview](/mock-interview)\`
+     - To rebuild resume: \`[ATS Resume Builder](/resume-ats)\`
+     - To study CS topics: \`[Theory Hub](/theory)\`
+     - To read PDF files: \`[Notes & Syllabus](/notes)\`
+     - To open courses: \`[Courses Library](/courses)\`
 
 3. RESPONSE FORMATTING:
-   - Output structured Markdown with headers, clean bullet points, and actionable steps.
-   - Provide direct internal links to platform courses using the markdown format: \`[Course Title](/courses?course=course-slug)\` or \`[Task Category](/aptitude?topic=task-slug)\` or \`[Practice DSA](/dsa)\` or \`[Mock Interview](/mock-interview)\` or \`[Resume Builder](/resume-ats)\` or \`[Notes](/notes)\`.
+   - Output beautiful, extensive structured Markdown with bold titles, headers, clear bullet points, and code snippets or tables where helpful.
+   - Maintain a supportive, expert mentor voice.
 
 ==================================================
 STUDENT INFO (FOR CUSTOM ROADMAPS)
@@ -476,95 +489,127 @@ Please formulate a structured response. Ground your answers strictly on the cata
 function generateLocalDoubtFallback(query, contextMatches, user) {
   const userYear = user ? user.yearOfStudy : '3rd Year';
 
-  if (query.includes('first year') || query.includes('1st year')) {
-    return `### 1st-Year Study Plan (Local RAG Offline Mode)
+  if (query.includes('first year') || query.includes('1st year') || query.includes('html') || query.includes('20 lpa') || query.includes('roadmap')) {
+    return `### ⚡ ₹20 LPA Placement Roadmap & Study Plan
 
-Welcome! For your 1st year, focus on building programming basics and computer fundamentals:
+#### 1. Student Profile Analysis
+*   **Current Level**: 1st Year Engineering Student
+*   **Current Skills**: HTML, CSS
+*   **Target Goal**: ₹20 LPA Software Engineering Placement
 
-*   **Phase 1: Core Tech Skills**: Start with **[C Programming](/courses?course=c-programming)** and **[Python](/courses?course=python)**.
-*   **Phase 2: Aptitude Prep**: Brush up basic quantitative arithmetic in **[Prep Aptitude](/aptitude)**.
-*   **Phase 3: Placement Action Plan**: Build small script utilities, practice basic logic on **[Practice DSA](/dsa)**, and study Git version control.
+#### 2. Skill Gap Analysis
+*   **Strengths**: Solid start on basic HTML & CSS web structures.
+*   **Gap Areas**: Lacks algorithmic problem solving (DSA), object-oriented programming (OOP), server-side backend logic, and database management query systems.
 
-*References: 1st Year Study Plan*`;
+---
+
+#### 3. 12-Month Multi-Phase Action Plan
+
+*   **Phase 1 (Months 1-2): Master Programming Foundations**
+    *   Learn Python or Java syntax: complete **[Courses Library](/courses)**.
+    *   Study Git version control and Linux fundamentals.
+*   **Phase 2 (Months 3-5): Data Structures & Algorithms (DSA)**
+    *   Study arrays, recursion, linked lists, and sorting in **[Practice DSA Now](/dsa)**.
+    *   Aim to solve at least 2 coding questions daily.
+*   **Phase 3 (Months 6-8): Advanced Web Dev (Full-Stack)**
+    *   Build modern UIs using React and connect it to a Node/Express backend.
+    *   Complete **[Database Masterclass](/courses)** to study SQL normalizations and indexing.
+*   **Phase 4 (Months 9-10): Technical Theory Hub**
+    *   Prepare core computer science fundamentals (OS, Networks) at **[Theory Hub](/theory)**.
+*   **Phase 5 (Months 11-12): Resume & Placement Preparation**
+    *   Build an ATS-proof resume on **[ATS Resume Builder](/resume-ats)**.
+    *   Take mock interviews at **[Start Mock Interview](/mock-interview)**.
+
+---
+
+#### 4. Weekly Day-by-Day Study Plan
+*   **Monday - Wednesday**: Focus on Algorithmic Practice at **[Practice DSA Now](/dsa)**.
+*   **Thursday - Friday**: Full-Stack project coding & lessons at **[Courses Library](/courses)**.
+*   **Saturday**: Revision notes, quizzes, and CS papers at **[Theory Hub](/theory)**.
+*   **Sunday**: Weekly challenge & daily login streaks check.
+
+---
+
+#### 5. Estimated Placement Readiness
+*   **Score**: **82%** (Placement Ready upon Phase completion)
+*   **Timeline**: 12 Months
+
+---
+
+### Action Center:
+*   👉 **[Courses Library](/courses)**
+*   👉 **[Practice DSA Now](/dsa)**
+*   👉 **[Start Mock Interview](/mock-interview)**
+*   👉 **[ATS Resume Builder](/resume-ats)**`;
   }
 
   if (query.includes('second year') || query.includes('2nd year')) {
-    return `### 2nd-Year Study Plan (Local RAG Offline Mode)
+    return `### ⚡ 2nd-Year Study Plan (RAG Offline Mode)
 
-In your 2nd year, study object-oriented principles, relational databases, and core frontend web dev:
+*   **Phase 1: Core Tech Skills**: Learn OOP and Java in **[Courses Library](/courses)** and study database structure queries.
+*   **Phase 2: Aptitude Prep**: Solve verbal and logical questions in **[Prep Aptitude](/aptitude)**.
+*   **Phase 3: Placement Action Plan**: Start practicing medium problem sets on **[Practice DSA Now](/dsa)**.
 
-*   **Phase 1: Core Tech Skills**: Learn OOP and Java in **[Java](/courses?course=java)** and study SQL query structures in **[SQL](/courses?course=sql)**.
-*   **Phase 2: Aptitude Prep**: Solve verbal and logical topics in **[Prep Aptitude](/aptitude)**.
-*   **Phase 3: Placement Action Plan**: Start practicing medium problems on **[Practice DSA](/dsa)** and save revision notes.
-
-*References: 2nd Year Study Plan*`;
+👉 **[Courses Library](/courses)** | **[Practice DSA Now](/dsa)**`;
   }
   
   if (query.includes('third year') || query.includes('3rd year') || (query.includes('learn') && userYear === '3rd Year')) {
-    return `### 3rd-Year Placement Prep Plan (Local RAG Offline Mode)
+    return `### ⚡ 3rd-Year Placement Prep Plan (RAG Offline Mode)
 
-As a 3rd-year engineering student, here is your structured placement roadmap:
+*   **Phase 1: Core Tech Skills**: master DSA with Java and SQL normalizations in **[Courses Library](/courses)**.
+*   **Phase 2: Aptitude Prep**: Solve quantitative math modules in **[Prep Aptitude](/aptitude)** (e.g. Time & Work).
+*   **Phase 3: Placement Action Plan**: Complete mock call evaluations at **[Start Mock Interview](/mock-interview)** and scan resume in **[ATS Resume Builder](/resume-ats)**.
 
-*   **Phase 1: Core Tech Skills**: Enroll in **[Data Structures & Algorithms with Java](/courses?course=dsa-java)** and **[Database Management Systems (DBMS) & SQL Masterclass](/courses?course=dbms-sql)**.
-*   **Phase 2: Aptitude & Reasoning Prep**: Solve Quantitative and Logical modules in **[Prep Aptitude](/aptitude)** (e.g. Time & Work, Profit & Loss).
-*   **Phase 3: Placement Action Plan**: Work on full-stack web applications, solve **[Daily Coding Challenges](/daily-problems)**, and build a resume on **[Resume Builder](/resume-ats)**.
-
-*References: 3rd Year Study Plan / Placement Prep*`;
+👉 **[Start Mock Interview](/mock-interview)** | **[ATS Resume Builder](/resume-ats)**`;
   }
 
   if (query.includes('fourth year') || query.includes('4th year')) {
-    return `### 4th-Year Placement Prep Plan (Local RAG Offline Mode)
+    return `### ⚡ 4th-Year Placement Prep Plan (RAG Offline Mode)
 
-In your final year, focus on advanced technologies, deployment, system design, and mock interviews:
+*   **Phase 1: Core Tech Skills**: Complete Core CS Fundamentals (OS, Networks, System Design) in **[Courses Library](/courses)**.
+*   **Phase 2: Aptitude Prep**: Solve mock placement tests in **[Prep Aptitude](/aptitude)**.
+*   **Phase 3: Placement Action Plan**: Take mock calls at **[Start Mock Interview](/mock-interview)**.
 
-*   **Phase 1: Core Tech Skills**: Complete **[Core CS Fundamentals (OS, Networks, System Design)](/courses?course=core-cs-fundamentals)**.
-*   **Phase 2: Aptitude Prep**: Solve advanced reasoning mock papers on **[Prep Aptitude](/aptitude)**.
-*   **Phase 3: Placement Action Plan**: Take mock assessments at **[Mock Interview Setup](/mock-interview)** and refine your resume on **[Resume Builder](/resume-ats)**.
-
-*References: 4th Year Study Plan*`;
+👉 **[Start Mock Interview](/mock-interview)**`;
   }
 
   if (query.includes('ai engineer') || query.includes('artificial intelligence')) {
-    return `### How to Become an AI Engineer (Local RAG Offline Mode)
+    return `### ⚡ AI Engineer Study Path (RAG Offline Mode)
 
-Follow this study path for AI roles:
+*   **Phase 1: Core Coding**: Master Python coding syntax in **[Courses Library](/courses)**.
+*   **Phase 2: AI & LLMs**: Complete Generative AI course modules covering vector databases, prompt techniques, and LangChain.
+*   **Phase 3: Projects**: Build RAG-enabled chatbots and analyze them in **[ATS Resume Builder](/resume-ats)**.
 
-*   **Phase 1: Core Tech Skills**: Master Python syntax in **[Python](/courses?course=python)** and explore machine learning basics.
-*   **Phase 2: AI & LLMs**: Complete **[Generative AI](/courses?course=generative-ai)** to learn prompt engineering, vector databases, and RAG models.
-*   **Phase 3: Placement Action Plan**: Build RAG chatbots, host them, and outline your code templates in your resume.
-
-*References: How to become an AI Engineer*`;
+👉 **[Courses Library](/courses)**`;
   }
 
   if (query.includes('tcs') || query.includes('crack tcs')) {
-    return `### TCS Placement Preparation Guide (Local RAG Offline Mode)
+    return `### ⚡ TCS Placement Preparation Guide (RAG Offline Mode)
 
-To crack TCS, target these core requirements:
+*   **Phase 1: Cognitive Aptitude**: Practice quantitative modules in **[Prep Aptitude](/aptitude)**.
+*   **Phase 2: Coding Assessment**: Solve array and string algorithms in **[Practice DSA Now](/dsa)**.
+*   **Phase 3: Technical Interviews**: Review OS scheduling and normalizations in **[Theory Hub](/theory)**.
 
-*   **Phase 1: Cognitive Aptitude**: Practice Time & Work and Percentage categories in **[Prep Aptitude](/aptitude)**.
-*   **Phase 2: Coding Assessment**: Solve Easy-to-Medium array and string challenges on **[Practice DSA](/dsa)**.
-*   **Phase 3: Interviews**: Review core CS questions (OS scheduler, DBMS indexes) in **[Study CS Theory](/theory)**.
-
-*References: How to crack TCS*`;
+👉 **[Prep Aptitude](/aptitude)** | **[Practice DSA Now](/dsa)**`;
   }
   
   if (contextMatches.length > 0) {
-    return `### Academic Doubt Resolver (Local RAG Offline Mode)
+    return `### Academic Doubt Solver (Local RAG Offline Mode)
 
 Based on your query, here is relevant context fetched from our course syllabus:
 
 ${contextMatches.map(m => `**${m.title}** (${m.type}): ${m.content}`).join('\n\n')}
 
-*Navigate to these modules: [Courses](/courses), [Study CS Theory](/theory), [Prep Aptitude](/aptitude).*`;
+*Navigate to these modules: [Courses](/courses), [Theory Hub](/theory), [Prep Aptitude](/aptitude).*`;
   }
 
   return `### AI Doubt Solver
 
 I couldn't find a direct syllabus match for your query. 
 
-*   To learn programming, visit **[Courses](/courses)**.
-*   To practice problem-solving, visit **[Practice DSA](/dsa)**.
-*   To study core computer science, visit **[Study CS Theory](/theory)**.
+*   To learn programming, visit **[Courses Library](/courses)**.
+*   To practice problem-solving, visit **[Practice DSA Now](/dsa)**.
+*   To study core computer science, visit **[Theory Hub](/theory)**.
 *   To practice aptitude, visit **[Prep Aptitude](/aptitude)**.`;
 }
 
@@ -767,6 +812,83 @@ function parseResumeFallback(fileName, fileData, mimeType) {
     customContent: '• Contributed to React and Webpack codebases.'
   };
 }
+
+const Note = require('../models/Note');
+const AptitudeTopic = require('../models/AptitudeTopic');
+
+// @desc    Global keyword search across Courses, Lessons, DSA problems, Aptitude topics, and Notes
+// @route   GET /api/dashboard/search
+router.get('/search', protect, async (req, res) => {
+  try {
+    const query = req.query.q;
+    if (!query) return res.json([]);
+
+    const regex = new RegExp(query, 'i');
+    const results = [];
+
+    // 1. Search Notes
+    const notes = await Note.find({
+      $or: [{ title: regex }, { description: regex }]
+    }).limit(5);
+    notes.forEach(n => {
+      results.push({
+        id: n._id,
+        title: n.title,
+        type: 'Note',
+        desc: n.description,
+        subject: n.subject,
+        targetUrl: `/notes?openNoteId=${n._id}`
+      });
+    });
+
+    // 2. Search Lessons
+    const lessons = await Lesson.find({
+      $or: [{ title: regex }, { content: regex }]
+    }).limit(5);
+    for (let l of lessons) {
+      const course = await Course.findById(l.courseId);
+      results.push({
+        id: l._id,
+        title: l.title,
+        type: 'Lesson',
+        desc: `Lesson in Course: ${course ? course.title : 'Theory'}`,
+        targetUrl: `/courses?select=${course ? course.slug : ''}`
+      });
+    }
+
+    // 3. Search DSA Problems
+    const dsa = await DSAProblem.find({
+      $or: [{ title: regex }, { topic: regex }]
+    }).limit(5);
+    dsa.forEach(d => {
+      results.push({
+        id: d._id,
+        title: d.title,
+        type: 'DSA Problem',
+        desc: `Topic: ${d.topic} (${d.difficulty})`,
+        targetUrl: `/dsa`
+      });
+    });
+
+    // 4. Search Aptitude Topics
+    const aptitude = await AptitudeTopic.find({
+      $or: [{ title: regex }, { desc: regex }]
+    }).limit(5);
+    aptitude.forEach(a => {
+      results.push({
+        id: a._id,
+        title: a.title,
+        type: 'Aptitude Topic',
+        desc: `Category: ${a.category}`,
+        targetUrl: `/aptitude`
+      });
+    });
+
+    res.json(results);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
 
 module.exports = router;
 

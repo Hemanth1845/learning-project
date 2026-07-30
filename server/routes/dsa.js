@@ -49,7 +49,10 @@ router.get('/', protect, async (req, res) => {
 // @route   GET /api/dsa/daily
 router.get('/daily', protect, async (req, res) => {
   try {
-    const dailyProblems = await DSAProblem.find({ topic: 'Strings' }).limit(2);
+    let dailyProblems = await DSAProblem.find({ isDaily: true });
+    if (dailyProblems.length === 0) {
+      dailyProblems = await DSAProblem.find({ topic: 'Strings' }).limit(2);
+    }
     const userSubmissions = await Submission.find({
       userId: req.user._id,
       itemType: 'dsa'
@@ -62,6 +65,118 @@ router.get('/daily', protect, async (req, res) => {
       };
     });
     res.json(problemsWithStatus);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// @desc    Run arbitrary code with custom stdin input
+// @route   POST /api/dsa/compiler/run
+router.post('/compiler/run', protect, async (req, res) => {
+  try {
+    const { language, code, customInput } = req.body;
+    const fs = require('fs');
+    const path = require('path');
+    const { execSync } = require('child_process');
+
+    if (!code) {
+      return res.json({ success: false, error: 'Code is empty.' });
+    }
+
+    const tempDir = path.join(__dirname, '../temp');
+    if (!fs.existsSync(tempDir)) {
+      fs.mkdirSync(tempDir);
+    }
+
+    const cleanInput = customInput || '';
+
+    if (language === 'javascript') {
+      try {
+        let consoleOutput = [];
+        const customConsole = `
+          const console = {
+            log: (...args) => global.consoleOutput.push(args.map(x => typeof x === 'object' ? JSON.stringify(x) : x).join(' ')),
+            error: (...args) => global.consoleOutput.push('[ERROR] ' + args.join(' ')),
+            warn: (...args) => global.consoleOutput.push('[WARN] ' + args.join(' '))
+          };
+        `;
+        
+        global.consoleOutput = [];
+        const runnerCode = `
+          ${customConsole}
+          ${code}
+        `;
+        
+        new Function(runnerCode)();
+        const output = global.consoleOutput.join('\n');
+        delete global.consoleOutput;
+        
+        res.json({ success: true, output, error: '' });
+      } catch (err) {
+        res.json({ success: false, output: '', error: err.message });
+      }
+    } else if (language === 'python') {
+      const tempFile = path.join(tempDir, `run_${Date.now()}.py`);
+      try {
+        fs.writeFileSync(tempFile, code);
+        const output = execSync(`python "${tempFile}"`, {
+          input: cleanInput,
+          encoding: 'utf-8',
+          timeout: 4000
+        });
+        res.json({ success: true, output, error: '' });
+      } catch (err) {
+        res.json({ success: false, output: err.stdout || '', error: err.stderr || err.message });
+      } finally {
+        if (fs.existsSync(tempFile)) fs.unlinkSync(tempFile);
+      }
+    } else if (language === 'java') {
+      const javaFile = path.join(tempDir, 'Solution.java');
+      const classFile = path.join(tempDir, 'Solution.class');
+      try {
+        fs.writeFileSync(javaFile, code);
+        // Compile
+        execSync(`javac "${javaFile}"`, { encoding: 'utf-8', timeout: 4000 });
+        // Run
+        const output = execSync(`java -cp "${tempDir}" Solution`, {
+          input: cleanInput,
+          encoding: 'utf-8',
+          timeout: 4000
+        });
+        res.json({ success: true, output, error: '' });
+      } catch (err) {
+        res.json({ success: false, output: err.stdout || '', error: err.stderr || err.message });
+      } finally {
+        if (fs.existsSync(javaFile)) fs.unlinkSync(javaFile);
+        if (fs.existsSync(classFile)) fs.unlinkSync(classFile);
+      }
+    } else if (language === 'cpp') {
+      const cppFile = path.join(tempDir, 'solution.cpp');
+      const exeFile = path.join(tempDir, `sol_${Date.now()}` + (process.platform === 'win32' ? '.exe' : ''));
+      try {
+        fs.writeFileSync(cppFile, code);
+        // Compile
+        execSync(`g++ -O3 "${cppFile}" -o "${exeFile}"`, { encoding: 'utf-8', timeout: 6000 });
+        // Run
+        const output = execSync(`"${exeFile}"`, {
+          input: cleanInput,
+          encoding: 'utf-8',
+          timeout: 4000
+        });
+        res.json({ success: true, output, error: '' });
+      } catch (err) {
+        res.json({
+          success: false,
+          output: err.stdout || '',
+          error: err.stderr || err.message || 'C++ compilation failed (please verify g++ is installed).'
+        });
+      } finally {
+        if (fs.existsSync(cppFile)) fs.unlinkSync(cppFile);
+        if (fs.existsSync(exeFile)) fs.unlinkSync(exeFile);
+      }
+    } else {
+      res.json({ success: false, output: '', error: 'Unsupported language requested.' });
+    }
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -156,6 +271,7 @@ router.post('/', protect, adminOnly, async (req, res) => {
       description: description || '',
       examples: examples || [],
       testCases: testCases || [],
+      isDaily: req.body.isDaily || false,
       codeTemplates: {
         javascript: `function ${camelTitle}(nums) {\n  // Write your code here\n  // Return the result\n}`,
         python: `def ${camelTitle}(nums):\n    # Write your code here\n    pass`,
@@ -174,7 +290,7 @@ router.post('/', protect, adminOnly, async (req, res) => {
 // @route   PUT /api/dsa/:id
 router.put('/:id', protect, adminOnly, async (req, res) => {
   try {
-    const { title, topic, difficulty, xp, solveUrl, videoUrl, description, examples, testCases } = req.body;
+    const { title, topic, difficulty, xp, solveUrl, videoUrl, description, examples, testCases, isDaily } = req.body;
     const problem = await DSAProblem.findById(req.params.id);
     if (!problem) {
       return res.status(404).json({ message: 'Problem not found' });
@@ -189,6 +305,7 @@ router.put('/:id', protect, adminOnly, async (req, res) => {
     if (description !== undefined) problem.description = description;
     if (examples !== undefined) problem.examples = examples;
     if (testCases !== undefined) problem.testCases = testCases;
+    if (isDaily !== undefined) problem.isDaily = isDaily;
 
     await problem.save();
     res.json(problem);

@@ -260,14 +260,16 @@ router.post('/:courseId/lessons/:lessonId/interview-prep/complete', protect, asy
 // @route   POST /api/courses
 router.post('/', protect, adminOnly, async (req, res) => {
   try {
-    const { title, description, category, difficulty, thumbnail, pdfUrl } = req.body;
+    const { title, description, category, difficulty, thumbnail, pdfUrl, externalLink, practicePageUrl } = req.body;
     const newCourse = await Course.create({
       title,
       description,
       category,
       difficulty,
       thumbnail,
-      pdfUrl: pdfUrl || ''
+      pdfUrl: pdfUrl || '',
+      externalLink: externalLink || '',
+      practicePageUrl: practicePageUrl || ''
     });
     res.status(201).json(newCourse);
   } catch (error) {
@@ -279,7 +281,7 @@ router.post('/', protect, adminOnly, async (req, res) => {
 // @route   PUT /api/courses/:id
 router.put('/:id', protect, adminOnly, async (req, res) => {
   try {
-    const { title, description, category, difficulty, thumbnail, pdfUrl } = req.body;
+    const { title, description, category, difficulty, thumbnail, pdfUrl, externalLink, practicePageUrl } = req.body;
     const course = await Course.findById(req.params.id);
     if (!course) return res.status(404).json({ message: 'Course not found' });
 
@@ -289,6 +291,8 @@ router.put('/:id', protect, adminOnly, async (req, res) => {
     course.difficulty = difficulty || course.difficulty;
     course.thumbnail = thumbnail || course.thumbnail;
     course.pdfUrl = pdfUrl !== undefined ? pdfUrl : course.pdfUrl;
+    course.externalLink = externalLink !== undefined ? externalLink : course.externalLink;
+    course.practicePageUrl = practicePageUrl !== undefined ? practicePageUrl : course.practicePageUrl;
 
     await course.save();
     res.json(course);
@@ -365,6 +369,113 @@ router.delete('/:courseId/lessons/:lessonId', protect, adminOnly, async (req, re
 
     await lesson.deleteOne();
     res.json({ message: 'Lesson deleted successfully' });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// @desc    Get all course requests
+// @route   GET /api/courses/requests/all
+router.get('/requests/all', protect, async (req, res) => {
+  try {
+    const CourseRequest = require('../models/CourseRequest');
+    const requests = await CourseRequest.find({}).sort({ createdAt: -1 });
+    res.json(requests);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// @desc    Submit a new course request
+// @route   POST /api/courses/requests/submit
+router.post('/requests/submit', protect, async (req, res) => {
+  try {
+    const { courseName, category, priority, reason, description, referenceLinks } = req.body;
+    if (!courseName || !category) {
+      return res.status(400).json({ message: 'Course name and category are required.' });
+    }
+
+    const CourseRequest = require('../models/CourseRequest');
+    const request = await CourseRequest.create({
+      userId: req.user._id,
+      username: req.user.username,
+      courseName,
+      category,
+      priority,
+      reason: reason || '',
+      description: description || '',
+      referenceLinks: referenceLinks || '',
+      votes: [req.user._id],
+      status: 'Pending'
+    });
+
+    res.status(201).json(request);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// @desc    Vote / Upvote for a course request
+// @route   POST /api/courses/requests/:id/vote
+router.post('/requests/:id/vote', protect, async (req, res) => {
+  try {
+    const CourseRequest = require('../models/CourseRequest');
+    const request = await CourseRequest.findById(req.params.id);
+    if (!request) {
+      return res.status(404).json({ message: 'Course request not found.' });
+    }
+
+    const voterId = req.user._id;
+    const voteIndex = request.votes.indexOf(voterId);
+
+    if (voteIndex > -1) {
+      request.votes.splice(voteIndex, 1);
+    } else {
+      request.votes.push(voterId);
+    }
+
+    await request.save();
+    res.json(request);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// @desc    Update course request status (Admin only)
+// @route   PUT /api/courses/requests/:id/status
+router.put('/requests/:id/status', protect, adminOnly, async (req, res) => {
+  try {
+    const { status } = req.body;
+    if (!['Pending', 'In Progress', 'Completed', 'Rejected'].includes(status)) {
+      return res.status(400).json({ message: 'Invalid status value.' });
+    }
+
+    const CourseRequest = require('../models/CourseRequest');
+    const request = await CourseRequest.findById(req.params.id);
+    if (!request) {
+      return res.status(404).json({ message: 'Course request not found.' });
+    }
+
+    request.status = status;
+    await request.save();
+    res.json(request);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// @desc    Delete course request (Admin only)
+// @route   DELETE /api/courses/requests/:id
+router.delete('/requests/:id', protect, adminOnly, async (req, res) => {
+  try {
+    const CourseRequest = require('../models/CourseRequest');
+    const request = await CourseRequest.findById(req.params.id);
+    if (!request) {
+      return res.status(404).json({ message: 'Course request not found.' });
+    }
+
+    await request.deleteOne();
+    res.json({ message: 'Course request deleted successfully.' });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

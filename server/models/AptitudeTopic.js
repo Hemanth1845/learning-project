@@ -4,7 +4,14 @@ const QuizQuestionSchema = new mongoose.Schema({
   q: { type: String, required: true },
   options: [{ type: String, required: true }],
   correctIdx: { type: Number, required: true },
-  explanation: { type: String, default: '' }
+  explanation: { type: String, default: '' },
+  subtopic: { type: String, default: '' },
+  difficulty: { type: String, enum: ['Easy-Medium', 'Hard'], default: 'Easy-Medium' },
+  companyTags: [{ type: String }],
+  hints: [{ type: String }],
+  timeEstimate: { type: Number, default: 60 },
+  marks: { type: Number, default: 1 },
+  negativeMarks: { type: Number, default: 0 }
 });
 
 const AptitudeTopicSchema = new mongoose.Schema({

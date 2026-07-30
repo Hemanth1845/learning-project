@@ -1,0 +1,3002 @@
+[
+  {
+    "q": "A square sheet of paper is folded in half sequentially 3 times. What is the total number of layers of paper formed?",
+    "options": [
+      "8",
+      "4",
+      "16",
+      "6"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 8.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 4 times. What is the total number of layers of paper formed?",
+    "options": [
+      "16",
+      "8",
+      "32",
+      "14"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 16.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 5 times. What is the total number of layers of paper formed?",
+    "options": [
+      "32",
+      "16",
+      "64",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 32.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 2 times. What is the total number of layers of paper formed?",
+    "options": [
+      "4",
+      "2",
+      "8",
+      "2"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 4.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 3 times. What is the total number of layers of paper formed?",
+    "options": [
+      "8",
+      "4",
+      "16",
+      "6"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 8.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 4 times. What is the total number of layers of paper formed?",
+    "options": [
+      "16",
+      "8",
+      "32",
+      "14"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 16.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 5 times. What is the total number of layers of paper formed?",
+    "options": [
+      "32",
+      "16",
+      "64",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 32.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 2 times. What is the total number of layers of paper formed?",
+    "options": [
+      "4",
+      "2",
+      "8",
+      "2"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 4.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 3 times. What is the total number of layers of paper formed?",
+    "options": [
+      "8",
+      "4",
+      "16",
+      "6"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 8.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 4 times. What is the total number of layers of paper formed?",
+    "options": [
+      "16",
+      "8",
+      "32",
+      "14"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 16.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 5 times. What is the total number of layers of paper formed?",
+    "options": [
+      "32",
+      "16",
+      "64",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 32.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 2 times. What is the total number of layers of paper formed?",
+    "options": [
+      "4",
+      "2",
+      "8",
+      "2"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 4.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 3 times. What is the total number of layers of paper formed?",
+    "options": [
+      "8",
+      "4",
+      "16",
+      "6"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 8.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 4 times. What is the total number of layers of paper formed?",
+    "options": [
+      "16",
+      "8",
+      "32",
+      "14"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 16.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 5 times. What is the total number of layers of paper formed?",
+    "options": [
+      "32",
+      "16",
+      "64",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 32.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 2 times. What is the total number of layers of paper formed?",
+    "options": [
+      "4",
+      "2",
+      "8",
+      "2"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 4.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 3 times. What is the total number of layers of paper formed?",
+    "options": [
+      "8",
+      "4",
+      "16",
+      "6"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 8.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 4 times. What is the total number of layers of paper formed?",
+    "options": [
+      "16",
+      "8",
+      "32",
+      "14"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 16.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 5 times. What is the total number of layers of paper formed?",
+    "options": [
+      "32",
+      "16",
+      "64",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 32.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 2 times. What is the total number of layers of paper formed?",
+    "options": [
+      "4",
+      "2",
+      "8",
+      "2"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 4.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 3 times. What is the total number of layers of paper formed?",
+    "options": [
+      "8",
+      "4",
+      "16",
+      "6"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 8.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 4 times. What is the total number of layers of paper formed?",
+    "options": [
+      "16",
+      "8",
+      "32",
+      "14"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 16.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 5 times. What is the total number of layers of paper formed?",
+    "options": [
+      "32",
+      "16",
+      "64",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 32.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 2 times. What is the total number of layers of paper formed?",
+    "options": [
+      "4",
+      "2",
+      "8",
+      "2"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 4.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 3 times. What is the total number of layers of paper formed?",
+    "options": [
+      "8",
+      "4",
+      "16",
+      "6"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 8.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 4 times. What is the total number of layers of paper formed?",
+    "options": [
+      "16",
+      "8",
+      "32",
+      "14"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 16.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 5 times. What is the total number of layers of paper formed?",
+    "options": [
+      "32",
+      "16",
+      "64",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 32.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 2 times. What is the total number of layers of paper formed?",
+    "options": [
+      "4",
+      "2",
+      "8",
+      "2"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 4.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 3 times. What is the total number of layers of paper formed?",
+    "options": [
+      "8",
+      "4",
+      "16",
+      "6"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 8.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 4 times. What is the total number of layers of paper formed?",
+    "options": [
+      "16",
+      "8",
+      "32",
+      "14"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 16.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 5 times. What is the total number of layers of paper formed?",
+    "options": [
+      "32",
+      "16",
+      "64",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 32.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 2 times. What is the total number of layers of paper formed?",
+    "options": [
+      "4",
+      "2",
+      "8",
+      "2"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 4.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 3 times. What is the total number of layers of paper formed?",
+    "options": [
+      "8",
+      "4",
+      "16",
+      "6"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 8.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 4 times. What is the total number of layers of paper formed?",
+    "options": [
+      "16",
+      "8",
+      "32",
+      "14"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 16.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 5 times. What is the total number of layers of paper formed?",
+    "options": [
+      "32",
+      "16",
+      "64",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 32.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 2 times. What is the total number of layers of paper formed?",
+    "options": [
+      "4",
+      "2",
+      "8",
+      "2"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 4.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 3 times. What is the total number of layers of paper formed?",
+    "options": [
+      "8",
+      "4",
+      "16",
+      "6"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 8.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 4 times. What is the total number of layers of paper formed?",
+    "options": [
+      "16",
+      "8",
+      "32",
+      "14"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 16.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 5 times. What is the total number of layers of paper formed?",
+    "options": [
+      "32",
+      "16",
+      "64",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 32.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 2 times. What is the total number of layers of paper formed?",
+    "options": [
+      "4",
+      "2",
+      "8",
+      "2"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 4.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 3 times. What is the total number of layers of paper formed?",
+    "options": [
+      "8",
+      "4",
+      "16",
+      "6"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 8.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 4 times. What is the total number of layers of paper formed?",
+    "options": [
+      "16",
+      "8",
+      "32",
+      "14"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 16.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 5 times. What is the total number of layers of paper formed?",
+    "options": [
+      "32",
+      "16",
+      "64",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 32.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 2 times. What is the total number of layers of paper formed?",
+    "options": [
+      "4",
+      "2",
+      "8",
+      "2"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 4.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 3 times. What is the total number of layers of paper formed?",
+    "options": [
+      "8",
+      "4",
+      "16",
+      "6"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 8.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 4 times. What is the total number of layers of paper formed?",
+    "options": [
+      "16",
+      "8",
+      "32",
+      "14"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 16.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 5 times. What is the total number of layers of paper formed?",
+    "options": [
+      "32",
+      "16",
+      "64",
+      "30"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 32.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 2 times. What is the total number of layers of paper formed?",
+    "options": [
+      "4",
+      "2",
+      "8",
+      "2"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 4.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 3 times. What is the total number of layers of paper formed?",
+    "options": [
+      "8",
+      "4",
+      "16",
+      "6"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 8.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square sheet of paper is folded in half sequentially 4 times. What is the total number of layers of paper formed?",
+    "options": [
+      "16",
+      "8",
+      "32",
+      "14"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 16.",
+    "subtopic": "Paper Folding Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "A square paper is folded in half 6 times, and then 2 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "128",
+      "64",
+      "192",
+      "122"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 128.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 3 times, and then 3 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "24",
+      "12",
+      "36",
+      "21"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 24.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 4 times, and then 4 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "64",
+      "32",
+      "96",
+      "60"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 64.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 5 times, and then 5 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "160",
+      "80",
+      "240",
+      "155"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 160.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 6 times, and then 1 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "64",
+      "32",
+      "96",
+      "58"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 64.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 3 times, and then 2 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "16",
+      "8",
+      "24",
+      "13"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 16.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 4 times, and then 3 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "48",
+      "24",
+      "72",
+      "44"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 48.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 5 times, and then 4 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "128",
+      "64",
+      "192",
+      "123"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 128.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 6 times, and then 5 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "320",
+      "160",
+      "480",
+      "314"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 320.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 3 times, and then 1 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "8",
+      "4",
+      "12",
+      "5"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 8.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 4 times, and then 2 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "32",
+      "16",
+      "48",
+      "28"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 32.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 5 times, and then 3 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "96",
+      "48",
+      "144",
+      "91"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 96.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 6 times, and then 4 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "256",
+      "128",
+      "384",
+      "250"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 256.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 3 times, and then 5 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "40",
+      "20",
+      "60",
+      "37"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 40.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 4 times, and then 1 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "16",
+      "8",
+      "24",
+      "12"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 16.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 5 times, and then 2 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "64",
+      "32",
+      "96",
+      "59"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 64.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 6 times, and then 3 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "192",
+      "96",
+      "288",
+      "186"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 192.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 3 times, and then 4 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "32",
+      "16",
+      "48",
+      "29"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 32.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 4 times, and then 5 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "80",
+      "40",
+      "120",
+      "76"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 80.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 5 times, and then 1 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "32",
+      "16",
+      "48",
+      "27"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 32.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 6 times, and then 2 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "128",
+      "64",
+      "192",
+      "122"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 128.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 3 times, and then 3 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "24",
+      "12",
+      "36",
+      "21"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 24.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 4 times, and then 4 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "64",
+      "32",
+      "96",
+      "60"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 64.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 5 times, and then 5 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "160",
+      "80",
+      "240",
+      "155"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 160.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 6 times, and then 1 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "64",
+      "32",
+      "96",
+      "58"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 64.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 3 times, and then 2 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "16",
+      "8",
+      "24",
+      "13"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 16.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 4 times, and then 3 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "48",
+      "24",
+      "72",
+      "44"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 48.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 5 times, and then 4 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "128",
+      "64",
+      "192",
+      "123"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 128.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 6 times, and then 5 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "320",
+      "160",
+      "480",
+      "314"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 320.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 3 times, and then 1 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "8",
+      "4",
+      "12",
+      "5"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 8.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 4 times, and then 2 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "32",
+      "16",
+      "48",
+      "28"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 32.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 5 times, and then 3 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "96",
+      "48",
+      "144",
+      "91"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 96.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 6 times, and then 4 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "256",
+      "128",
+      "384",
+      "250"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 256.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 3 times, and then 5 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "40",
+      "20",
+      "60",
+      "37"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 40.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 4 times, and then 1 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "16",
+      "8",
+      "24",
+      "12"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 16.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 5 times, and then 2 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "64",
+      "32",
+      "96",
+      "59"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 64.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 6 times, and then 3 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "192",
+      "96",
+      "288",
+      "186"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 192.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 3 times, and then 4 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "32",
+      "16",
+      "48",
+      "29"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 32.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 4 times, and then 5 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "80",
+      "40",
+      "120",
+      "76"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 80.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 5 times, and then 1 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "32",
+      "16",
+      "48",
+      "27"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 32.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 6 times, and then 2 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "128",
+      "64",
+      "192",
+      "122"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 128.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 3 times, and then 3 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "24",
+      "12",
+      "36",
+      "21"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 24.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 4 times, and then 4 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "64",
+      "32",
+      "96",
+      "60"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 64.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 5 times, and then 5 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "160",
+      "80",
+      "240",
+      "155"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 160.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 6 times, and then 1 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "64",
+      "32",
+      "96",
+      "58"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 64.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 3 times, and then 2 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "16",
+      "8",
+      "24",
+      "13"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 16.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 4 times, and then 3 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "48",
+      "24",
+      "72",
+      "44"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 48.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 5 times, and then 4 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "128",
+      "64",
+      "192",
+      "123"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 128.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 6 times, and then 5 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "320",
+      "160",
+      "480",
+      "314"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 320.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 3 times, and then 1 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "8",
+      "4",
+      "12",
+      "5"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 8.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 4 times, and then 2 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "32",
+      "16",
+      "48",
+      "28"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 32.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 5 times, and then 3 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "96",
+      "48",
+      "144",
+      "91"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 96.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 6 times, and then 4 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "256",
+      "128",
+      "384",
+      "250"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 256.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 3 times, and then 5 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "40",
+      "20",
+      "60",
+      "37"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 40.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 4 times, and then 1 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "16",
+      "8",
+      "24",
+      "12"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 16.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 5 times, and then 2 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "64",
+      "32",
+      "96",
+      "59"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 64.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 6 times, and then 3 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "192",
+      "96",
+      "288",
+      "186"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 192.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 3 times, and then 4 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "32",
+      "16",
+      "48",
+      "29"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 32.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 4 times, and then 5 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "80",
+      "40",
+      "120",
+      "76"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 80.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 5 times, and then 1 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "32",
+      "16",
+      "48",
+      "27"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 32.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 6 times, and then 2 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "128",
+      "64",
+      "192",
+      "122"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 128.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 3 times, and then 3 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "24",
+      "12",
+      "36",
+      "21"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 24.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 4 times, and then 4 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "64",
+      "32",
+      "96",
+      "60"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 64.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 5 times, and then 5 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "160",
+      "80",
+      "240",
+      "155"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 160.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 6 times, and then 1 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "64",
+      "32",
+      "96",
+      "58"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 64.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 3 times, and then 2 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "16",
+      "8",
+      "24",
+      "13"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 16.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 4 times, and then 3 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "48",
+      "24",
+      "72",
+      "44"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 48.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 5 times, and then 4 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "128",
+      "64",
+      "192",
+      "123"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 128.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 6 times, and then 5 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "320",
+      "160",
+      "480",
+      "314"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 320.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 3 times, and then 1 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "8",
+      "4",
+      "12",
+      "5"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 8.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 4 times, and then 2 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "32",
+      "16",
+      "48",
+      "28"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 32.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 5 times, and then 3 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "96",
+      "48",
+      "144",
+      "91"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 96.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 6 times, and then 4 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "256",
+      "128",
+      "384",
+      "250"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 256.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 3 times, and then 5 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "40",
+      "20",
+      "60",
+      "37"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 40.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 4 times, and then 1 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "16",
+      "8",
+      "24",
+      "12"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 16.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 5 times, and then 2 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "64",
+      "32",
+      "96",
+      "59"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 64.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 6 times, and then 3 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "192",
+      "96",
+      "288",
+      "186"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 192.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 3 times, and then 4 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "32",
+      "16",
+      "48",
+      "29"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 32.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 4 times, and then 5 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "80",
+      "40",
+      "120",
+      "76"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 80.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 5 times, and then 1 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "32",
+      "16",
+      "48",
+      "27"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 32.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 6 times, and then 2 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "128",
+      "64",
+      "192",
+      "122"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 128.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 3 times, and then 3 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "24",
+      "12",
+      "36",
+      "21"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 24.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 4 times, and then 4 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "64",
+      "32",
+      "96",
+      "60"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 64.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 5 times, and then 5 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "160",
+      "80",
+      "240",
+      "155"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 160.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 6 times, and then 1 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "64",
+      "32",
+      "96",
+      "58"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 64.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 3 times, and then 2 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "16",
+      "8",
+      "24",
+      "13"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 16.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 4 times, and then 3 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "48",
+      "24",
+      "72",
+      "44"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 48.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 5 times, and then 4 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "128",
+      "64",
+      "192",
+      "123"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 128.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 6 times, and then 5 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "320",
+      "160",
+      "480",
+      "314"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 320.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 3 times, and then 1 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "8",
+      "4",
+      "12",
+      "5"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 8.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 4 times, and then 2 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "32",
+      "16",
+      "48",
+      "28"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 32.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 5 times, and then 3 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "96",
+      "48",
+      "144",
+      "91"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 96.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 6 times, and then 4 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "256",
+      "128",
+      "384",
+      "250"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 256.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 3 times, and then 5 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "40",
+      "20",
+      "60",
+      "37"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 40.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 4 times, and then 1 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "16",
+      "8",
+      "24",
+      "12"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 16.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 5 times, and then 2 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "64",
+      "32",
+      "96",
+      "59"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 64.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 6 times, and then 3 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "192",
+      "96",
+      "288",
+      "186"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 192.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 3 times, and then 4 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "32",
+      "16",
+      "48",
+      "29"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 32.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 4 times, and then 5 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "80",
+      "40",
+      "120",
+      "76"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 80.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "A square paper is folded in half 5 times, and then 1 small circular holes are punched through all layers. How many holes will be visible when the paper is fully unfolded?",
+    "options": [
+      "32",
+      "16",
+      "48",
+      "27"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 32.",
+    "subtopic": "Paper Folding Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  }
+]

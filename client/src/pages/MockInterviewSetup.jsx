@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../context/AuthContext';
 
 const MockInterviewSetup = () => {
   const navigate = useNavigate();
+  const { token, API_URL } = useContext(AuthContext);
 
   // Mode state
   const [selectedMode, setSelectedMode] = useState('DSA'); // 'DSA', 'Behavioral', 'Resume', 'ML', 'SystemDesign'
@@ -10,6 +12,44 @@ const MockInterviewSetup = () => {
   const [selectedCompany, setSelectedCompany] = useState('General'); // 'Google', 'Microsoft', 'Amazon', 'Meta', 'TCS', 'Infosys', 'Wipro', 'General'
   // Interviewer state
   const [selectedInterviewer, setSelectedInterviewer] = useState('Priya'); // 'Priya', 'Arjun'
+
+  // Resume state
+  const [resumeText, setResumeText] = useState('');
+  const [resumeLoading, setResumeLoading] = useState(false);
+
+  useEffect(() => {
+    if (token) {
+      fetchResume();
+    }
+  }, [token]);
+
+  const fetchResume = async () => {
+    setResumeLoading(true);
+    try {
+      const res = await fetch(`${API_URL}/dashboard/resume`, {
+        headers: { 'Authorization': `Bearer ${token}` }
+      });
+      if (res.ok) {
+        const data = await res.json();
+        if (data.resume) {
+          const r = data.resume;
+          const formatted = `Name: ${r.name || ''}
+Email: ${r.email || ''}
+Skills: ${r.skillsLanguages || ''}, ${r.skillsFrameworks || ''}, ${r.skillsDatabases || ''}
+Education: ${r.education || ''}
+Experience: ${r.experienceRole || ''} at ${r.experienceCompany || ''} (${r.experienceDuration || ''})
+${r.experienceBullets || ''}
+Project: ${r.projectTitle || ''} using ${r.projectStack || ''}
+${r.projectBullets || ''}`;
+          setResumeText(formatted);
+        }
+      }
+    } catch (err) {
+      console.error('Error fetching resume in setup:', err);
+    } finally {
+      setResumeLoading(false);
+    }
+  };
 
   const modes = [
     { id: 'DSA', title: 'DSA Technical Round', desc: 'Data Structures & Algorithms coding interview with live problem-solving.', icon: '💻' },
@@ -50,7 +90,9 @@ const MockInterviewSetup = () => {
   ];
 
   const handleStartSession = () => {
-    navigate(`/mock-interview/call?mode=${selectedMode}&company=${selectedCompany}&interviewer=${selectedInterviewer}`);
+    navigate(`/mock-interview/call?mode=${selectedMode}&company=${selectedCompany}&interviewer=${selectedInterviewer}`, {
+      state: { resumeText }
+    });
   };
 
   return (
@@ -135,6 +177,27 @@ const MockInterviewSetup = () => {
               })}
             </div>
           </div>
+
+          {selectedMode === 'Resume' && (
+            <div className="glass-card" style={{ marginTop: '12px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <h4 style={{ color: 'white', fontWeight: 600, fontSize: '0.98rem' }}>📋 Resume Text for AI Interview</h4>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>
+                We pre-loaded your platform resume profile details. Edit or paste custom resume info below:
+              </p>
+              {resumeLoading ? (
+                <div style={{ color: 'var(--accent-secondary)', fontSize: '0.85rem' }}>Loading resume profile...</div>
+              ) : (
+                <textarea 
+                  className="form-input" 
+                  rows="6" 
+                  placeholder="Skills: React, Java... Project: E-Commerce..." 
+                  value={resumeText}
+                  onChange={(e) => setResumeText(e.target.value)}
+                  style={{ resize: 'none', background: 'rgba(0,0,0,0.25)', fontSize: '0.88rem', color: 'white' }}
+                />
+              )}
+            </div>
+          )}
 
           {/* 2. Target Company */}
           <div>

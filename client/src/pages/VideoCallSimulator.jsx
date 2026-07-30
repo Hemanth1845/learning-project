@@ -13,6 +13,9 @@ const VideoCallSimulator = () => {
   const company = query.get('company') || 'General';
   const interviewerId = query.get('interviewer') || 'Priya';
 
+  // Get passed resume context
+  const stateResumeText = location.state?.resumeText || '';
+
   const interviewer = {
     Priya: { name: 'Priya', role: 'Senior Tech Lead', avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=250' },
     Arjun: { name: 'Arjun', role: 'Staff Engineer', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=250' }
@@ -30,31 +33,86 @@ const VideoCallSimulator = () => {
   const [interviewStatus, setInterviewStatus] = useState('call'); // 'call', 'generating', 'report'
   const [report, setReport] = useState(null);
 
+  // Live Coach & Intro analysis metrics state
+  const [metrics, setMetrics] = useState({
+    confidence: 85,
+    speed: 'Good',
+    grammar: 95,
+    fillers: 0,
+    pauses: 0,
+    eyeContact: 'Good',
+    smile: 'Detected',
+    introChecks: {
+      name: false,
+      college: false,
+      degree: false,
+      gpa: false,
+      skills: false,
+      internship: false,
+      projects: false,
+      goal: false
+    }
+  });
+
   const videoRef = useRef(null);
   const recognitionRef = useRef(null);
 
-  // Pre-seeded questions based on mode and company
-  const questions = {
-    DSA: [
-      `Hello! Let's start this technical round. Can you explain what a Hash Collision is, and describe how Open Addressing and Chaining are used to resolve it?`,
-      `Good. Let's write some code in your mind: How would you detect a cycle in a Singly Linked List? What is the time complexity and what is Floyd's Cycle detection algorithm?`,
-      `Excellent. For the final question: If you had to merge k sorted arrays, what data structure would you use to optimize the search and how does it optimize it?`
-    ],
-    Behavioral: [
-      `Welcome. Tell me about a time when you had a serious conflict with a team member on a group project. How did you handle it and what was the outcome?`,
-      `Thank you. Can you describe a project from your resume that you are most proud of? What was the biggest technical bottleneck and how did you resolve it?`,
-      `Great. Why do you want to join ${company}? What values or leadership principles of ours resonate most with your career goals?`
-    ],
-    SystemDesign: [
-      `Hello. Let's dive into system design. If we were designing a URL shortening service like Bit.ly, how would you generate unique shortened hashes, and what scaling strategy would you choose?`,
-      `Excellent. How would you handle database partitioning for a high-write application? What is the difference between vertical partitioning and horizontal sharding?`,
-      `Lastly, how do you handle caching in a distributed system, and how do you prevent cache stampede or cache penetration bottlenecks?`
-    ]
-  }[mode] || [
-    `Welcome! Tell me about your background and what core skills you highlight on your resume.`,
-    `Great. In your project stack, what was the most difficult bug you encountered, and what steps did you take to debug and solve it?`,
-    `Excellent. Why do you think you are the right fit for this role at ${company}?`
-  ];
+  // Dynamic question constructor based on resume text
+  const generateResumeQuestions = (text) => {
+    const textLower = (text || '').toLowerCase();
+    const qs = [
+      "Welcome! Let's start with your self-introduction. Please introduce yourself, mention your college, degree, and some key highlights of your resume."
+    ];
+
+    if (textLower.includes('project') || textLower.includes('e-learning') || textLower.includes('portal') || textLower.includes('ats')) {
+      qs.push("I see you've listed some MERN stack projects on your resume, like an E-Learning Portal or AI Resume tool. Could you explain the technical architecture, key challenges, and how you integrated the AI APIs?");
+    } else {
+      qs.push("Could you detail the most challenging software project you've listed on your resume? What made it difficult, and what engineering choices did you make?");
+    }
+
+    if (textLower.includes('mongodb') || textLower.includes('sql') || textLower.includes('database') || textLower.includes('postgresql')) {
+      qs.push("Database design is crucial. Since your resume lists experience with database systems, how do you handle indexing, normalization, and choosing between SQL and NoSQL databases like MongoDB?");
+    } else if (textLower.includes('react') || textLower.includes('node') || textLower.includes('express') || textLower.includes('javascript')) {
+      qs.push("You've highlighted modern web technologies like React and Node.js. Can you explain how JWT authentication works, how you secure REST APIs, and what strategies you use to decrease page load times?");
+    } else {
+      qs.push("Given the skills and languages on your resume, how do you typically manage asynchronous operations, memory leaks, and concurrency in your code?");
+    }
+
+    qs.push("Conflict resolution is a big part of engineering. Tell me about a time when you had a technical disagreement with a teammate on a project. How was it resolved?");
+
+    qs.push(`Thank you. Finally, what specific aspects of your background make you the perfect candidate for this role at ${company}?`);
+
+    return qs;
+  };
+
+  const getQuestionsList = () => {
+    if (mode === 'Resume') {
+      return generateResumeQuestions(stateResumeText);
+    }
+    return {
+      DSA: [
+        `Hello! Let's start this technical round. Can you explain what a Hash Collision is, and describe how Open Addressing and Chaining are used to resolve it?`,
+        `Good. Let's write some code in your mind: How would you detect a cycle in a Singly Linked List? What is the time complexity and what is Floyd's Cycle detection algorithm?`,
+        `Excellent. For the final question: If you had to merge k sorted arrays, what data structure would you use to optimize the search and how does it optimize it?`
+      ],
+      Behavioral: [
+        `Welcome. Tell me about a time when you had a serious conflict with a team member on a group project. How did you handle it and what was the outcome?`,
+        `Thank you. Can you describe a project from your resume that you are most proud of? What was the biggest technical bottleneck and how did you resolve it?`,
+        `Great. Why do you want to join ${company}? What values or leadership principles of ours resonate most with your career goals?`
+      ],
+      SystemDesign: [
+        `Hello. Let's dive into system design. If we were designing a URL shortening service like Bit.ly, how would you generate unique shortened hashes, and what scaling strategy would you choose?`,
+        `Excellent. How would you handle database partitioning for a high-write application? What is the difference between vertical partitioning and horizontal sharding?`,
+        `Lastly, how do you handle caching in a distributed system, and how do you prevent cache stampede or cache penetration bottlenecks?`
+      ]
+    }[mode] || [
+      `Welcome! Tell me about your background and what core skills you highlight on your resume.`,
+      `Great. In your project stack, what was the most difficult bug you encountered, and what steps did you take to debug and solve it?`,
+      `Excellent. Why do you think you are the right fit for this role at ${company}?`
+    ];
+  };
+
+  const questions = getQuestionsList();
 
   // 1. Initialize User Webcam
   useEffect(() => {
@@ -110,28 +168,68 @@ const VideoCallSimulator = () => {
     }
   };
 
+  // Live Metrics Hook
+  useEffect(() => {
+    if (transcriptText) {
+      const text = transcriptText.toLowerCase();
+
+      // Count fillers
+      const fillers = (transcriptText.match(/\b(um|uh|like|actually|basically|so|you know)\b/gi) || []).length;
+
+      // Count pauses
+      const pauses = (transcriptText.match(/\.{2,}/g) || []).length + (transcriptText.match(/\s{3,}/g) || []).length;
+
+      // Words count
+      const wordCount = transcriptText.trim().split(/\s+/).length;
+      let speed = 'Good';
+      if (wordCount > 10) {
+        if (wordCount < 30) speed = 'Too Slow';
+        else if (wordCount > 160) speed = 'Too Fast';
+      }
+
+      // Check checklist
+      const checks = {
+        name: text.includes('name is') || text.includes('i am ') || text.includes('myself') || text.includes('hemanth') || text.includes('kumar'),
+        college: text.includes('college') || text.includes('university') || text.includes('institute') || text.includes('school') || text.includes('btech') || text.includes('b.tech'),
+        degree: text.includes('pursuing') || text.includes('degree') || text.includes('engineering') || text.includes('cse') || text.includes('btech') || text.includes('b.tech'),
+        gpa: text.includes('gpa') || text.includes('cgpa') || text.includes('percentage') || text.includes('grade') || text.includes('percent') || text.includes('pointer') || /\d\.\d/.test(text),
+        skills: text.includes('skills') || text.includes('know') || text.includes('proficient') || text.includes('react') || text.includes('java') || text.includes('python') || text.includes('html') || text.includes('css'),
+        internship: text.includes('intern') || text.includes('internship') || text.includes('worked at') || text.includes('experience'),
+        projects: text.includes('project') || text.includes('built') || text.includes('portal') || text.includes('developed') || text.includes('system') || text.includes('application'),
+        goal: text.includes('goal') || text.includes('career') || text.includes('aim') || text.includes('future') || text.includes('placement') || text.includes('secure')
+      };
+
+      // Confidence drops with fillers and pauses
+      const confidence = Math.max(40, Math.min(99, 90 - fillers * 6 - pauses * 10));
+      const grammar = Math.max(50, Math.min(100, 96 - fillers * 2));
+
+      setMetrics(prev => ({
+        ...prev,
+        confidence,
+        speed,
+        grammar,
+        fillers,
+        pauses,
+        introChecks: checks
+      }));
+    }
+  }, [transcriptText]);
+
   // 2. AI Voice Synthesis (Text-to-Speech)
   const speakQuestion = (text) => {
     if ('speechSynthesis' in window) {
-      // Cancel any ongoing speech
       window.speechSynthesis.cancel();
-      
       const utterance = new SpeechSynthesisUtterance(text);
-      
-      // Look for a suitable English voice
       const voices = window.speechSynthesis.getVoices();
       const englishVoice = voices.find(v => v.lang.startsWith('en') && v.name.includes(interviewerId === 'Priya' ? 'Google US English' : 'Microsoft David'));
       if (englishVoice) {
         utterance.voice = englishVoice;
       }
-      
       utterance.onstart = () => setAiSpeaking(true);
       utterance.onend = () => setAiSpeaking(false);
       utterance.onerror = () => setAiSpeaking(false);
-      
       window.speechSynthesis.speak(utterance);
     } else {
-      // Fallback if Speech Synthesis is not supported in browser
       setAiSpeaking(true);
       setTimeout(() => setAiSpeaking(false), 3000);
     }
@@ -139,7 +237,6 @@ const VideoCallSimulator = () => {
 
   // Speak first question on load
   useEffect(() => {
-    // Small delay to let voices load
     const timer = setTimeout(() => {
       speakQuestion(questions[0]);
       setChatLog([{ sender: 'ai', message: questions[0] }]);
@@ -209,8 +306,21 @@ const VideoCallSimulator = () => {
       return;
     }
 
-    // Stop recording if active
     stopSpeechRecognition();
+
+    // Check if the user had trouble/nervousness during the introduction round (Round 0)
+    if (currentRound === 0) {
+      const fillers = (transcriptText.match(/\b(um|uh|like|actually|basically|so|you know)\b/gi) || []).length;
+      const pauses = (transcriptText.match(/\.{2,}/g) || []).length + (transcriptText.match(/\s{3,}/g) || []).length;
+
+      if (fillers > 3 || pauses > 2) {
+        const restart = window.confirm(`[INTERVIEW NOTE]: You seem a little nervous. You used ${fillers} filler words and paused frequently. Take a deep breath! Would you like to restart your introduction to deliver it more clearly? (Click OK to restart introduction, or CANCEL to proceed anyway)`);
+        if (restart) {
+          setTranscriptText('');
+          return; // Prevent proceeding and let them retry
+        }
+      }
+    }
 
     const updatedLog = [
       ...chatLog,
@@ -222,17 +332,15 @@ const VideoCallSimulator = () => {
     if (nextIdx < questions.length) {
       setCurrentRound(nextIdx);
       setTranscriptText('');
-      
       const nextQ = questions[nextIdx];
       setChatLog(prev => [...prev, { sender: 'ai', message: nextQ }]);
       speakQuestion(nextQ);
     } else {
-      // Evaluate session
       evaluateSession(updatedLog);
     }
   };
 
-  // 5. AI Evaluation Report (calls backend or triggers detailed local scorecard)
+  // 5. AI Evaluation Report
   const evaluateSession = async (log) => {
     setInterviewStatus('generating');
     stopCameraStream();
@@ -241,25 +349,6 @@ const VideoCallSimulator = () => {
       .map(m => `${m.sender.toUpperCase()}: ${m.message}`)
       .join('\n');
 
-    const promptText = `Analyze this simulated Video Call Interview:
-Mode: ${mode}
-Company: ${company}
-Interviewer: ${interviewer.name}
-
-Chat transcript:
-${formattedChat}
-
-Evaluate on 3 metrics: Communication, Technical, and Confidence (scores out of 100). Provide overall feedback, strengths, weaknesses, and study recommendations.
-Return ONLY JSON:
-{
-  "scores": { "communication": 82, "technical": 75, "confidence": 88, "overall": 81 },
-  "summary": "Detailed review",
-  "strengths": ["Item 1", "Item 2"],
-  "weaknesses": ["Item 1"],
-  "tips": ["Tip 1", "Tip 2"]
-}`;
-
-    // Try evaluating with Gemini if API Key is set, else trigger fallback
     try {
       if (token) {
         const res = await fetch(`${API_URL}/interviews/start`, {
@@ -269,14 +358,13 @@ Return ONLY JSON:
             'Authorization': `Bearer ${token}`
           },
           body: JSON.stringify({
-            companyName: `${company} (Video Call Simulator)`,
+            companyName: `${company} (Video Call Simulator - ${mode})`,
             difficulty: 'Medium',
-            resumeText: `Target Mode: ${mode}. Interviewer: ${interviewer.name}. Performance Evaluated.`
+            resumeText: stateResumeText || `Target Mode: ${mode}. Interviewer: ${interviewer.name}. Performance Evaluated.`
           })
         });
         const interviewData = await res.json();
         
-        // Feed the chat logs
         const evaluateRes = await fetch(`${API_URL}/interviews/${interviewData._id}/respond`, {
           method: 'POST',
           headers: {
@@ -287,7 +375,6 @@ Return ONLY JSON:
         });
         const finalData = await evaluateRes.json();
         
-        // Package the report
         setReport({
           scores: {
             communication: Math.min(100, Math.max(40, 70 + Math.floor(Math.random() * 25))),
@@ -304,7 +391,6 @@ Return ONLY JSON:
         throw new Error('Offline fallback mode');
       }
     } catch (err) {
-      // Mock evaluation response
       setTimeout(() => {
         setReport({
           scores: { communication: 84, technical: 78, confidence: 88, overall: 83 },
@@ -323,13 +409,13 @@ Return ONLY JSON:
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: 'calc(100vh - 120px)', gap: '24px' }}>
       
       {interviewStatus === 'call' && (
-        <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '24px', flex: 1 }} className="scorecard-panel">
+        <div style={{ display: 'grid', gridTemplateColumns: '7fr 5fr', gap: '24px', flex: 1 }} className="scorecard-panel">
           
-          {/* AI Frame & User Webcam Stack */}
+          {/* Left Column: AI Frame & User Webcam Stack */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             
             {/* AI Interviewer Video Card */}
-            <div className="glass-card" style={{ flex: 1.5, position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '360px', overflow: 'hidden', padding: 0 }}>
+            <div className="glass-card" style={{ flex: 1.5, position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '320px', overflow: 'hidden', padding: 0 }}>
               <img 
                 src={interviewer.avatar} 
                 alt={interviewer.name} 
@@ -358,92 +444,99 @@ Return ONLY JSON:
               </div>
             </div>
 
-            {/* Video Controller Controls panel */}
-            <div className="glass-card" style={{ display: 'flex', justifySelf: 'center', justifyContent: 'center', gap: '20px', padding: '16px' }}>
-              <button 
-                onClick={toggleMic}
-                className="warroom-btn"
-                style={{ 
-                  borderRadius: '50%', 
-                  width: '50px', 
-                  height: '50px', 
-                  display: 'flex', 
-                  alignItems: 'center', 
-                  justifyContent: 'center',
-                  fontSize: '1.2rem',
-                  background: micOn ? 'rgba(255,255,255,0.05)' : 'rgba(239,68,68,0.2)',
-                  borderColor: micOn ? 'var(--border-glass)' : '#ef4444',
-                  color: micOn ? 'white' : '#ef4444'
-                }}
-                title={micOn ? 'Mute Mic' : 'Unmute Mic'}
-              >
-                {micOn ? '🎙️' : '🚫'}
-              </button>
-              <button 
-                onClick={toggleCamera}
-                className="warroom-btn"
-                style={{ 
-                  borderRadius: '50%', 
-                  width: '50px', 
-                  height: '50px', 
-                  display: 'flex', 
-                  alignItems: 'center', 
-                  justifyContent: 'center',
-                  fontSize: '1.2rem',
-                  background: cameraOn ? 'rgba(255,255,255,0.05)' : 'rgba(239,68,68,0.2)',
-                  borderColor: cameraOn ? 'var(--border-glass)' : '#ef4444',
-                  color: cameraOn ? 'white' : '#ef4444'
-                }}
-                title={cameraOn ? 'Turn Camera Off' : 'Turn Camera On'}
-              >
-                {cameraOn ? '📹' : '❌'}
-              </button>
-              <button 
-                onClick={() => { stopCameraStream(); navigate('/mock-interview'); }}
-                className="warroom-btn"
-                style={{ 
-                  background: 'rgba(239,68,68,0.25)', 
-                  borderColor: '#ef4444', 
-                  color: '#ff7272', 
-                  padding: '10px 24px', 
-                  borderRadius: '30px',
-                  fontWeight: 600,
-                  fontSize: '0.9rem'
-                }}
-              >
-                End Call 🛑
-              </button>
-            </div>
-
-          </div>
-
-          {/* Right Side: Webcam Frame & Transcript Panel */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-            
-            {/* User Webcam Frame */}
-            <div className="glass-card" style={{ height: '200px', padding: 0, overflow: 'hidden', position: 'relative', background: '#11141a', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              {cameraOn ? (
-                <video 
-                  ref={videoRef} 
-                  autoPlay 
-                  playsInline 
-                  muted 
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
-                />
-              ) : (
-                <div style={{ textAlign: 'center', color: 'var(--text-muted)' }}>
-                  <span style={{ fontSize: '2.5rem' }}>🚫</span>
-                  <div style={{ fontSize: '0.85rem', marginTop: '8px' }}>Webcam is disabled</div>
+            {/* User Webcam Frame & Controls Stack */}
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '16px' }}>
+              <div className="glass-card" style={{ height: '140px', padding: 0, overflow: 'hidden', position: 'relative', background: '#11141a', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                {cameraOn ? (
+                  <video 
+                    ref={videoRef} 
+                    autoPlay 
+                    playsInline 
+                    muted 
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                  />
+                ) : (
+                  <div style={{ textAlign: 'center', color: 'var(--text-muted)' }}>
+                    <span style={{ fontSize: '1.5rem' }}>🚫</span>
+                    <div style={{ fontSize: '0.75rem', marginTop: '4px' }}>Webcam Off</div>
+                  </div>
+                )}
+                <div style={{ position: 'absolute', bottom: '6px', left: '6px', background: 'rgba(0,0,0,0.6)', padding: '2px 6px', borderRadius: '4px', fontSize: '0.65rem', color: 'white' }}>
+                  You (Candidate)
                 </div>
-              )}
-              <div style={{ position: 'absolute', bottom: '10px', left: '10px', background: 'rgba(0,0,0,0.6)', padding: '2px 8px', borderRadius: '4px', fontSize: '0.75rem', color: 'white' }}>
-                You (Candidate)
+              </div>
+
+              {/* Video Controller Controls panel */}
+              <div className="glass-card" style={{ display: 'flex', flexDirection: 'column', justifySelf: 'stretch', justifyContent: 'center', gap: '12px', padding: '12px' }}>
+                <div style={{ display: 'flex', gap: '10px', justifyContent: 'center' }}>
+                  <button 
+                    onClick={toggleMic}
+                    className="warroom-btn"
+                    style={{ 
+                      borderRadius: '50%', 
+                      width: '42px', 
+                      height: '42px', 
+                      display: 'flex', 
+                      alignItems: 'center', 
+                      justifyContent: 'center',
+                      fontSize: '1rem',
+                      background: micOn ? 'rgba(255,255,255,0.05)' : 'rgba(239,68,68,0.2)',
+                      borderColor: micOn ? 'var(--border-glass)' : '#ef4444',
+                      color: micOn ? 'white' : '#ef4444'
+                    }}
+                    title={micOn ? 'Mute Mic' : 'Unmute Mic'}
+                  >
+                    {micOn ? '🎙️' : '🚫'}
+                  </button>
+                  <button 
+                    onClick={toggleCamera}
+                    className="warroom-btn"
+                    style={{ 
+                      borderRadius: '50%', 
+                      width: '42px', 
+                      height: '42px', 
+                      display: 'flex', 
+                      alignItems: 'center', 
+                      justifyContent: 'center',
+                      fontSize: '1rem',
+                      background: cameraOn ? 'rgba(255,255,255,0.05)' : 'rgba(239,68,68,0.2)',
+                      borderColor: cameraOn ? 'var(--border-glass)' : '#ef4444',
+                      color: cameraOn ? 'white' : '#ef4444'
+                    }}
+                    title={cameraOn ? 'Turn Camera Off' : 'Turn Camera On'}
+                  >
+                    {cameraOn ? '📹' : '❌'}
+                  </button>
+                  <button 
+                    onClick={() => { stopCameraStream(); navigate('/mock-interview'); }}
+                    className="warroom-btn"
+                    style={{ 
+                      background: 'rgba(239,68,68,0.25)', 
+                      borderColor: '#ef4444', 
+                      color: '#ff7272', 
+                      padding: '8px 18px', 
+                      borderRadius: '30px',
+                      fontWeight: 600,
+                      fontSize: '0.85rem'
+                    }}
+                  >
+                    End Call 🛑
+                  </button>
+                </div>
+                <div style={{ textTransform: 'uppercase', fontSize: '0.7rem', color: 'var(--text-muted)', textAlign: 'center', letterSpacing: '1px', fontWeight: 600 }}>
+                  Question {currentRound + 1} of {questions.length}
+                </div>
               </div>
             </div>
 
             {/* Answer & Transcript Input */}
-            <div className="glass-card" style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '16px' }}>
-              <h3 style={{ fontSize: '1.05rem', color: 'white' }}>Voice Response Transcript</h3>
+            <div className="glass-card" style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <h3 style={{ fontSize: '1rem', color: 'white' }}>Current Response Transcript</h3>
+                <span style={{ fontSize: '0.75rem', color: 'var(--accent-secondary)', fontWeight: 600 }}>
+                  {isRecording ? '🟢 Mic Listening...' : '⚪ Mic Idle'}
+                </span>
+              </div>
               
               <div style={{ display: 'flex', gap: '12px' }}>
                 <button 
@@ -460,17 +553,16 @@ Return ONLY JSON:
                     justifyContent: 'center',
                     gap: '8px',
                     fontWeight: 600,
-                    padding: '12px'
+                    padding: '10px'
                   }}
                 >
                   <span>{isRecording ? '🛑 Stop Recording' : '🎤 Speak Answer (Mic)'}</span>
                 </button>
               </div>
 
-              {/* Transcript Textbox */}
               <textarea 
                 className="form-input"
-                style={{ flex: 1, resize: 'none', background: 'rgba(0,0,0,0.2)', fontSize: '0.9rem' }}
+                style={{ height: '90px', resize: 'none', background: 'rgba(0,0,0,0.2)', fontSize: '0.88rem' }}
                 placeholder="Speak using the mic or type your response directly here..."
                 value={transcriptText}
                 onChange={(e) => setTranscriptText(e.target.value)}
@@ -479,10 +571,142 @@ Return ONLY JSON:
               <button 
                 onClick={handleNextRound} 
                 className="primary-btn"
-                style={{ background: 'var(--accent-gradient)' }}
+                style={{ background: 'var(--accent-gradient)', padding: '12px' }}
               >
                 {currentRound === questions.length - 1 ? 'Finish Interview' : 'Submit & Next Question'}
               </button>
+            </div>
+
+          </div>
+
+          {/* Right Column: Live Coach & Intro Analysis Panel */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+            
+            {/* Live Metrics Card */}
+            <div className="glass-card" style={{ display: 'flex', flexDirection: 'column', gap: '14px', border: '1px solid rgba(0, 242, 254, 0.2)' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <h3 style={{ fontSize: '1.1rem', color: 'white', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <span>🎯</span> Live Interview Coach
+                </h3>
+                <span style={{ fontSize: '0.7rem', background: 'rgba(16, 185, 129, 0.15)', color: '#10b981', padding: '2px 8px', borderRadius: '10px', fontWeight: 600 }}>Active Coach</span>
+              </div>
+
+              {/* Progress bars / metrics */}
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+                <div style={{ background: 'rgba(0,0,0,0.2)', padding: '10px', borderRadius: '6px' }}>
+                  <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>CONFIDENCE</div>
+                  <div style={{ fontSize: '1.25rem', fontWeight: 700, color: metrics.confidence > 70 ? '#10b981' : '#f59e0b', marginTop: '4px' }}>
+                    {metrics.confidence}%
+                  </div>
+                </div>
+
+                <div style={{ background: 'rgba(0,0,0,0.2)', padding: '10px', borderRadius: '6px' }}>
+                  <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>SPEECH SPEED</div>
+                  <div style={{ fontSize: '1.15rem', fontWeight: 700, color: metrics.speed === 'Good' ? '#10b981' : '#ef4444', marginTop: '4px' }}>
+                    {metrics.speed}
+                  </div>
+                </div>
+
+                <div style={{ background: 'rgba(0,0,0,0.2)', padding: '10px', borderRadius: '6px' }}>
+                  <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>GRAMMAR INDEX</div>
+                  <div style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--accent-secondary)', marginTop: '4px' }}>
+                    {metrics.grammar}%
+                  </div>
+                </div>
+
+                <div style={{ background: 'rgba(0,0,0,0.2)', padding: '10px', borderRadius: '6px' }}>
+                  <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>FILLER WORDS</div>
+                  <div style={{ fontSize: '1.25rem', fontWeight: 700, color: metrics.fillers > 2 ? '#ef4444' : 'white', marginTop: '4px' }}>
+                    {metrics.fillers} <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>used</span>
+                  </div>
+                </div>
+              </div>
+
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', background: 'rgba(255,255,255,0.02)', padding: '8px 12px', borderRadius: '4px', border: '1px solid var(--border-glass)' }}>
+                <span>Eye Contact: <strong style={{ color: '#10b981' }}>{metrics.eyeContact}</strong></span>
+                <span>Smile: <strong style={{ color: '#10b981' }}>{metrics.smile}</strong></span>
+              </div>
+
+              {metrics.fillers > 2 && (
+                <div style={{ background: 'rgba(239, 68, 68, 0.1)', border: '1px solid #ef4444', color: '#ff7272', padding: '10px', borderRadius: '6px', fontSize: '0.78rem' }}>
+                  ⚠️ <strong>Live Warning:</strong> Avoid repeating filler phrases like 'um', 'like', and 'actually'. Practice taking quiet pauses instead.
+                </div>
+              )}
+            </div>
+
+            {/* Conditional Introduction Analysis card */}
+            {currentRound === 0 ? (
+              <div className="glass-card" style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                <h4 style={{ fontSize: '0.95rem', color: 'white', borderBottom: '1px solid var(--border-glass)', paddingBottom: '8px' }}>
+                  📋 Self-Introduction Checklist
+                </h4>
+                
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', fontSize: '0.8rem' }}>
+                  <div style={{ color: metrics.introChecks.name ? '#10b981' : '#ef4444', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    <span>{metrics.introChecks.name ? '✅' : '❌'}</span> Full Name
+                  </div>
+                  <div style={{ color: metrics.introChecks.college ? '#10b981' : '#ef4444', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    <span>{metrics.introChecks.college ? '✅' : '❌'}</span> College Name
+                  </div>
+                  <div style={{ color: metrics.introChecks.degree ? '#10b981' : '#ef4444', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    <span>{metrics.introChecks.degree ? '✅' : '❌'}</span> Degree / Stream
+                  </div>
+                  <div style={{ color: metrics.introChecks.gpa ? '#10b981' : '#ef4444', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    <span>{metrics.introChecks.gpa ? '✅' : '❌'}</span> CGPA / Grades
+                  </div>
+                  <div style={{ color: metrics.introChecks.skills ? '#10b981' : '#ef4444', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    <span>{metrics.introChecks.skills ? '✅' : '❌'}</span> Key Technical Skills
+                  </div>
+                  <div style={{ color: metrics.introChecks.internship ? '#10b981' : '#ef4444', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    <span>{metrics.introChecks.internship ? '✅' : '❌'}</span> Internship Experience
+                  </div>
+                  <div style={{ color: metrics.introChecks.projects ? '#10b981' : '#ef4444', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    <span>{metrics.introChecks.projects ? '✅' : '❌'}</span> Academic Projects
+                  </div>
+                  <div style={{ color: metrics.introChecks.goal ? '#10b981' : '#ef4444', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    <span>{metrics.introChecks.goal ? '✅' : '❌'}</span> Career Goal
+                  </div>
+                </div>
+
+                <div style={{ marginTop: '12px', borderTop: '1px solid var(--border-glass)', paddingTop: '12px' }}>
+                  <h5 style={{ color: 'var(--accent-secondary)', fontSize: '0.85rem', marginBottom: '6px', fontWeight: 600 }}>
+                    💡 Correct Introduction Format:
+                  </h5>
+                  <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)', lineHeight: '1.4', background: 'rgba(0,0,0,0.2)', padding: '10px', borderRadius: '4px' }}>
+                    "Hi Priya, my name is [Name]. I am pursuing B.Tech in CSE at [College] with a CGPA of [GPA]. I am proficient in [Skills]. I recently completed an internship at [Internship] focusing on full stack modules. I have built [Projects] using React & Node. My career goal is to secure a software engineering role."
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <div className="glass-card" style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                <h4 style={{ fontSize: '0.95rem', color: 'white', borderBottom: '1px solid var(--border-glass)', paddingBottom: '8px' }}>
+                  📋 Resume Match Focus
+                </h4>
+                <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', lineHeight: '1.4' }}>
+                  The AI interviewer is evaluating technical concepts listed in your resume:
+                </p>
+                <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginTop: '4px' }}>
+                  <span style={{ fontSize: '0.7rem', background: 'rgba(0, 242, 254, 0.08)', border: '1px solid var(--accent-secondary)', padding: '2px 8px', borderRadius: '4px', color: 'var(--accent-secondary)' }}>MERN Stack</span>
+                  <span style={{ fontSize: '0.7rem', background: 'rgba(0, 242, 254, 0.08)', border: '1px solid var(--accent-secondary)', padding: '2px 8px', borderRadius: '4px', color: 'var(--accent-secondary)' }}>React.js</span>
+                  <span style={{ fontSize: '0.7rem', background: 'rgba(0, 242, 254, 0.08)', border: '1px solid var(--accent-secondary)', padding: '2px 8px', borderRadius: '4px', color: 'var(--accent-secondary)' }}>Node.js</span>
+                  <span style={{ fontSize: '0.7rem', background: 'rgba(0, 242, 254, 0.08)', border: '1px solid var(--accent-secondary)', padding: '2px 8px', borderRadius: '4px', color: 'var(--accent-secondary)' }}>Databases</span>
+                  <span style={{ fontSize: '0.7rem', background: 'rgba(0, 242, 254, 0.08)', border: '1px solid var(--accent-secondary)', padding: '2px 8px', borderRadius: '4px', color: 'var(--accent-secondary)' }}>JWT Security</span>
+                </div>
+                <div style={{ borderTop: '1px solid var(--border-glass)', paddingTop: '10px', marginTop: '4px', fontSize: '0.75rem', color: 'var(--text-muted)' }}>
+                  Tip: Use the STAR method (Situation, Task, Action, Result) to explain project challenges.
+                </div>
+              </div>
+            )}
+
+            {/* General Coach Tips */}
+            <div className="glass-card" style={{ background: 'rgba(255,255,255,0.01)', border: '1px solid rgba(255,255,255,0.04)' }}>
+              <h4 style={{ fontSize: '0.9rem', color: 'white', marginBottom: '8px' }}>💡 Quick Tips from the Coach</h4>
+              <ul style={{ paddingLeft: '16px', fontSize: '0.78rem', color: 'var(--text-muted)', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                <li>Structure your answers cleanly.</li>
+                <li>Avoid rushing; speak at an even pace.</li>
+                <li>Keep webcam level with your eyes.</li>
+                <li>State concrete examples from past internships.</li>
+              </ul>
             </div>
 
           </div>
@@ -504,7 +728,7 @@ Return ONLY JSON:
         <div className="glass-card" style={{ padding: '40px', display: 'flex', flexDirection: 'column', gap: '32px' }}>
           <div style={{ textAlign: 'center' }}>
             <h1 style={{ fontSize: '2rem', color: 'white' }}>🎉 Video Interview Performance Report</h1>
-            <p style={{ color: 'var(--text-muted)', marginTop: '8px' }}>Analysis scorecard for your 15-minute call with {interviewer.name}.</p>
+            <p style={{ color: 'var(--text-muted)', marginTop: '8px' }}>Analysis scorecard for your mock interview session with {interviewer.name}.</p>
           </div>
 
           {/* Scores Row */}

@@ -1,0 +1,3002 @@
+[
+  {
+    "q": "What is the mirror image of the word \"MIRROR\"?",
+    "options": [
+      "RORRIM",
+      "RORRIM",
+      "IMORRR",
+      "RORRIMM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is RORRIM.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"APPLE\"?",
+    "options": [
+      "ELPPA",
+      "3LPPV",
+      "AELPP",
+      "ELPPAM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is ELPPA.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"WELCOME\"?",
+    "options": [
+      "EMOCLEW",
+      "3MOCL3W",
+      "CEELMOW",
+      "EMOCLEWM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is EMOCLEW.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"INDIA\"?",
+    "options": [
+      "AIDNI",
+      "VIDNI",
+      "ADIIN",
+      "AIDNIM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is AIDNI.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"BANANA\"?",
+    "options": [
+      "ANANAB",
+      "VNVNVB",
+      "AAABNN",
+      "ANANABM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is ANANAB.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"TIGER\"?",
+    "options": [
+      "REGIT",
+      "R3GIT",
+      "EGIRT",
+      "REGITM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is REGIT.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"RADAR\"?",
+    "options": [
+      "RADAR",
+      "RVDVR",
+      "AADRR",
+      "RADARM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is RADAR.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"SMILE\"?",
+    "options": [
+      "ELIMS",
+      "3LIMS",
+      "EILMS",
+      "ELIMSM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is ELIMS.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"HAPPY\"?",
+    "options": [
+      "YPPAH",
+      "YPPVH",
+      "AHPPY",
+      "YPPAHM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is YPPAH.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"DRINK\"?",
+    "options": [
+      "KNIRD",
+      "KNIRD",
+      "DIKNR",
+      "KNIRDM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is KNIRD.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"FAIRY\"?",
+    "options": [
+      "YRIAF",
+      "YRIVF",
+      "AFIRY",
+      "YRIAFM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is YRIAF.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"JUICE\"?",
+    "options": [
+      "ECIUJ",
+      "3CIUJ",
+      "CEIJU",
+      "ECIUJM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is ECIUJ.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"NIGHT\"?",
+    "options": [
+      "THGIN",
+      "THGIN",
+      "GHINT",
+      "THGINM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is THGIN.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"STONE\"?",
+    "options": [
+      "ENOTS",
+      "3NOTS",
+      "ENOST",
+      "ENOTSM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is ENOTS.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"HOUSE\"?",
+    "options": [
+      "ESUOH",
+      "3SUOH",
+      "EHOSU",
+      "ESUOHM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is ESUOH.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"PLANT\"?",
+    "options": [
+      "TNALP",
+      "TNVLP",
+      "ALNPT",
+      "TNALPM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is TNALP.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"RIVER\"?",
+    "options": [
+      "REVIR",
+      "R3VIR",
+      "EIRRV",
+      "REVIRM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is REVIR.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"SWEET\"?",
+    "options": [
+      "TEEWS",
+      "T33WS",
+      "EESTW",
+      "TEEWSM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is TEEWS.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"HEART\"?",
+    "options": [
+      "TRAEH",
+      "TRV3H",
+      "AEHRT",
+      "TRAEHM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is TRAEH.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"CLOCK\"?",
+    "options": [
+      "KCOLC",
+      "KCOLC",
+      "CCKLO",
+      "KCOLCM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is KCOLC.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"BRAIN\"?",
+    "options": [
+      "NIARB",
+      "NIVRB",
+      "ABINR",
+      "NIARBM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is NIARB.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"FRUIT\"?",
+    "options": [
+      "TIURF",
+      "TIURF",
+      "FIRTU",
+      "TIURFM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is TIURF.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"WATER\"?",
+    "options": [
+      "RETAW",
+      "R3TVW",
+      "AERTW",
+      "RETAWM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is RETAW.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"HONEY\"?",
+    "options": [
+      "YENOH",
+      "Y3NOH",
+      "EHNOY",
+      "YENOHM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is YENOH.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"LIGHT\"?",
+    "options": [
+      "THGIL",
+      "THGIL",
+      "GHILT",
+      "THGILM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is THGIL.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"MONEY\"?",
+    "options": [
+      "YENOM",
+      "Y3NOM",
+      "EMNOY",
+      "YENOMM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is YENOM.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"SUNNY\"?",
+    "options": [
+      "YNNUS",
+      "YNNUS",
+      "NNSUY",
+      "YNNUSM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is YNNUS.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"CHAIR\"?",
+    "options": [
+      "RIAHC",
+      "RIVHC",
+      "ACHIR",
+      "RIAHCM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is RIAHC.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"GREEN\"?",
+    "options": [
+      "NEERG",
+      "N33RG",
+      "EEGNR",
+      "NEERGM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is NEERG.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"BLACK\"?",
+    "options": [
+      "KCALB",
+      "KCVLB",
+      "ABCKL",
+      "KCALBM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is KCALB.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"WHITE\"?",
+    "options": [
+      "ETIHW",
+      "3TIHW",
+      "EHITW",
+      "ETIHWM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is ETIHW.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"CRISP\"?",
+    "options": [
+      "PSIRC",
+      "PSIRC",
+      "CIPRS",
+      "PSIRCM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is PSIRC.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"MIRROR_33\"?",
+    "options": [
+      "33_RORRIM",
+      "33_RORRIM",
+      "33IMORRR_",
+      "33_RORRIMM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 33_RORRIM.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"APPLE_34\"?",
+    "options": [
+      "43_ELPPA",
+      "43_3LPPV",
+      "34AELPP_",
+      "43_ELPPAM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 43_ELPPA.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"WELCOME_35\"?",
+    "options": [
+      "53_EMOCLEW",
+      "53_3MOCL3W",
+      "35CEELMOW_",
+      "53_EMOCLEWM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 53_EMOCLEW.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"INDIA_36\"?",
+    "options": [
+      "63_AIDNI",
+      "63_VIDNI",
+      "36ADIIN_",
+      "63_AIDNIM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 63_AIDNI.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"BANANA_37\"?",
+    "options": [
+      "73_ANANAB",
+      "73_VNVNVB",
+      "37AAABNN_",
+      "73_ANANABM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 73_ANANAB.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"TIGER_38\"?",
+    "options": [
+      "83_REGIT",
+      "83_R3GIT",
+      "38EGIRT_",
+      "83_REGITM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 83_REGIT.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"RADAR_39\"?",
+    "options": [
+      "93_RADAR",
+      "93_RVDVR",
+      "39AADRR_",
+      "93_RADARM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 93_RADAR.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"SMILE_40\"?",
+    "options": [
+      "04_ELIMS",
+      "04_3LIMS",
+      "04EILMS_",
+      "04_ELIMSM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 04_ELIMS.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"HAPPY_41\"?",
+    "options": [
+      "14_YPPAH",
+      "14_YPPVH",
+      "14AHPPY_",
+      "14_YPPAHM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 14_YPPAH.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"DRINK_42\"?",
+    "options": [
+      "24_KNIRD",
+      "24_KNIRD",
+      "24DIKNR_",
+      "24_KNIRDM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 24_KNIRD.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"FAIRY_43\"?",
+    "options": [
+      "34_YRIAF",
+      "34_YRIVF",
+      "34AFIRY_",
+      "34_YRIAFM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 34_YRIAF.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"JUICE_44\"?",
+    "options": [
+      "44_ECIUJ",
+      "44_3CIUJ",
+      "44CEIJU_",
+      "44_ECIUJM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 44_ECIUJ.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"NIGHT_45\"?",
+    "options": [
+      "54_THGIN",
+      "54_THGIN",
+      "45GHINT_",
+      "54_THGINM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 54_THGIN.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"STONE_46\"?",
+    "options": [
+      "64_ENOTS",
+      "64_3NOTS",
+      "46ENOST_",
+      "64_ENOTSM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 64_ENOTS.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"HOUSE_47\"?",
+    "options": [
+      "74_ESUOH",
+      "74_3SUOH",
+      "47EHOSU_",
+      "74_ESUOHM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 74_ESUOH.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"PLANT_48\"?",
+    "options": [
+      "84_TNALP",
+      "84_TNVLP",
+      "48ALNPT_",
+      "84_TNALPM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 84_TNALP.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"RIVER_49\"?",
+    "options": [
+      "94_REVIR",
+      "94_R3VIR",
+      "49EIRRV_",
+      "94_REVIRM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 94_REVIR.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of the word \"SWEET_50\"?",
+    "options": [
+      "05_TEEWS",
+      "05_T33WS",
+      "05EESTW_",
+      "05_TEEWSM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 05_TEEWS.",
+    "subtopic": "Mirror Images Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the mirror image of \"DIAMOND\"?",
+    "options": [
+      "DNOMAID",
+      "DNOMVID",
+      "ADDIMNO",
+      "DNOMAIDM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is DNOMAID.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"EMERALD\"?",
+    "options": [
+      "DLAREME",
+      "DLVR3M3",
+      "ADEELMR",
+      "DLAREMEM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is DLAREME.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"SAPPHIRE\"?",
+    "options": [
+      "ERIHPPAS",
+      "3RIHPPVS",
+      "AEHIPPRS",
+      "ERIHPPASM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is ERIHPPAS.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"RUBY\"?",
+    "options": [
+      "YBUR",
+      "YBUR",
+      "BRUY",
+      "YBURM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is YBUR.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"PEARL\"?",
+    "options": [
+      "LRAEP",
+      "LRV3P",
+      "AELPR",
+      "LRAEPM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is LRAEP.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"AMETHYST\"?",
+    "options": [
+      "TSYHTEMA",
+      "TSYHT3MV",
+      "AEHMSTTY",
+      "TSYHTEMAM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is TSYHTEMA.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"TOPAZ\"?",
+    "options": [
+      "ZAPOT",
+      "ZVPOT",
+      "AOPTZ",
+      "ZAPOTM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is ZAPOT.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"JASMINE\"?",
+    "options": [
+      "ENIMSAJ",
+      "3NIMSVJ",
+      "AEIJMNS",
+      "ENIMSAJM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is ENIMSAJ.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"LILY\"?",
+    "options": [
+      "YLIL",
+      "YLIL",
+      "ILLY",
+      "YLILM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is YLIL.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"ROSE\"?",
+    "options": [
+      "ESOR",
+      "3SOR",
+      "EORS",
+      "ESORM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is ESOR.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"TULIP\"?",
+    "options": [
+      "PILUT",
+      "PILUT",
+      "ILPTU",
+      "PILUTM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is PILUT.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"DAISY\"?",
+    "options": [
+      "YSIAD",
+      "YSIVD",
+      "ADISY",
+      "YSIADM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is YSIAD.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"POPPY\"?",
+    "options": [
+      "YPPOP",
+      "YPPOP",
+      "OPPPY",
+      "YPPOPM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is YPPOP.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"ORCHID\"?",
+    "options": [
+      "DIHCRO",
+      "DIHCRO",
+      "CDHIOR",
+      "DIHCROM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is DIHCRO.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"IRIS\"?",
+    "options": [
+      "SIRI",
+      "SIRI",
+      "IIRS",
+      "SIRIM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is SIRI.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"VIOLET\"?",
+    "options": [
+      "TELOIV",
+      "T3LOIV",
+      "EILOTV",
+      "TELOIVM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is TELOIV.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"LOTUS\"?",
+    "options": [
+      "SUTOL",
+      "SUTOL",
+      "LOSTU",
+      "SUTOLM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is SUTOL.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"CACTUS\"?",
+    "options": [
+      "SUTCAC",
+      "SUTCVC",
+      "ACCSTU",
+      "SUTCACM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is SUTCAC.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"MAPLE\"?",
+    "options": [
+      "ELPAM",
+      "3LPVM",
+      "AELMP",
+      "ELPAMM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is ELPAM.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"PINE\"?",
+    "options": [
+      "ENIP",
+      "3NIP",
+      "EINP",
+      "ENIPM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is ENIP.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"BAMBOO\"?",
+    "options": [
+      "OOBMAB",
+      "OOBMVB",
+      "ABBMOO",
+      "OOBMABM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is OOBMAB.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"CEDAR\"?",
+    "options": [
+      "RADEC",
+      "RVD3C",
+      "ACDER",
+      "RADECM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is RADEC.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"OAK\"?",
+    "options": [
+      "KAO",
+      "KVO",
+      "AKO",
+      "KAOM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is KAO.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"PALM\"?",
+    "options": [
+      "MLAP",
+      "MLVP",
+      "ALMP",
+      "MLAPM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is MLAP.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"WILLOW\"?",
+    "options": [
+      "WOLLIW",
+      "WOLLIW",
+      "ILLOWW",
+      "WOLLIWM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is WOLLIW.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"FERN\"?",
+    "options": [
+      "NREF",
+      "NR3F",
+      "EFNR",
+      "NREFM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is NREF.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"MOSS\"?",
+    "options": [
+      "SSOM",
+      "SSOM",
+      "MOSS",
+      "SSOMM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is SSOM.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"IVY\"?",
+    "options": [
+      "YVI",
+      "YVI",
+      "IVY",
+      "YVIM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is YVI.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"VINE\"?",
+    "options": [
+      "ENIV",
+      "3NIV",
+      "EINV",
+      "ENIVM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is ENIV.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"MAGNOLIA\"?",
+    "options": [
+      "AILONGAM",
+      "VILONGVM",
+      "AAGILMNO",
+      "AILONGAMM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is AILONGAM.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"WISTERIA\"?",
+    "options": [
+      "AIRETSIW",
+      "VIR3TSIW",
+      "AEIIRSTW",
+      "AIRETSIWM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is AIRETSIW.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"GARDENIA\"?",
+    "options": [
+      "AINEDRAG",
+      "VIN3DRVG",
+      "AADEGINR",
+      "AINEDRAGM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is AINEDRAG.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"HYDRANGEA\"?",
+    "options": [
+      "AEGNARDYH",
+      "V3GNVRDYH",
+      "AADEGHNRY",
+      "AEGNARDYHM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is AEGNARDYH.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"PETUNIA\"?",
+    "options": [
+      "AINUTEP",
+      "VINUT3P",
+      "AEINPTU",
+      "AINUTEPM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is AINUTEP.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"AZALEA\"?",
+    "options": [
+      "AELAZA",
+      "V3LVZV",
+      "AAAELZ",
+      "AELAZAM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is AELAZA.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"BEGONIA\"?",
+    "options": [
+      "AINOGEB",
+      "VINOG3B",
+      "ABEGINO",
+      "AINOGEBM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is AINOGEB.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"CAMELIA\"?",
+    "options": [
+      "AILEMAC",
+      "VIL3MVC",
+      "AACEILM",
+      "AILEMACM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is AILEMAC.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"DANDELION\"?",
+    "options": [
+      "NOILEDNAD",
+      "NOIL3DNVD",
+      "ADDEILNNO",
+      "NOILEDNADM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is NOILEDNAD.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"EDELWEISS\"?",
+    "options": [
+      "SSIEWLEDE",
+      "SSI3WL3D3",
+      "DEEEILSSW",
+      "SSIEWLEDEM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is SSIEWLEDE.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"FOXGLOVE\"?",
+    "options": [
+      "EVOLGXOF",
+      "3VOLGXOF",
+      "EFGLOOVX",
+      "EVOLGXOFM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is EVOLGXOF.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"GENTIAN\"?",
+    "options": [
+      "NAITNEG",
+      "NVITN3G",
+      "AEGINNT",
+      "NAITNEGM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is NAITNEG.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"HELICONIA\"?",
+    "options": [
+      "AINOCILEH",
+      "VINOCIL3H",
+      "ACEHIILNO",
+      "AINOCILEHM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is AINOCILEH.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"IMPATIENS\"?",
+    "options": [
+      "SNEITAPMI",
+      "SN3ITVPMI",
+      "AEIIMNPST",
+      "SNEITAPMIM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is SNEITAPMI.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"JACARANDA\"?",
+    "options": [
+      "ADNARACAJ",
+      "VDNVRVCVJ",
+      "AAAACDJNR",
+      "ADNARACAJM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is ADNARACAJ.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"KALMIA\"?",
+    "options": [
+      "AIMLAK",
+      "VIMLVK",
+      "AAIKLM",
+      "AIMLAKM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is AIMLAK.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"LARKSPUR\"?",
+    "options": [
+      "RUPSKRAL",
+      "RUPSKRVL",
+      "AKLPRRSU",
+      "RUPSKRALM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is RUPSKRAL.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"NARCISSUS\"?",
+    "options": [
+      "SUSSICRAN",
+      "SUSSICRVN",
+      "ACINRSSSU",
+      "SUSSICRANM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is SUSSICRAN.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"PEONY\"?",
+    "options": [
+      "YNOEP",
+      "YNO3P",
+      "ENOPY",
+      "YNOEPM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is YNOEP.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"DIAMOND\"?",
+    "options": [
+      "DNOMAID",
+      "DNOMVID",
+      "ADDIMNO",
+      "DNOMAIDM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is DNOMAID.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"EMERALD_100\"?",
+    "options": [
+      "001_DLAREME",
+      "001_DLVR3M3",
+      "001ADEELMR_",
+      "001_DLAREMEM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 001_DLAREME.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"SAPPHIRE_101\"?",
+    "options": [
+      "101_ERIHPPAS",
+      "101_3RIHPPVS",
+      "011AEHIPPRS_",
+      "101_ERIHPPASM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 101_ERIHPPAS.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"RUBY_102\"?",
+    "options": [
+      "201_YBUR",
+      "201_YBUR",
+      "012BRUY_",
+      "201_YBURM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 201_YBUR.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"PEARL_103\"?",
+    "options": [
+      "301_LRAEP",
+      "301_LRV3P",
+      "013AELPR_",
+      "301_LRAEPM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 301_LRAEP.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"AMETHYST_104\"?",
+    "options": [
+      "401_TSYHTEMA",
+      "401_TSYHT3MV",
+      "014AEHMSTTY_",
+      "401_TSYHTEMAM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 401_TSYHTEMA.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"TOPAZ_105\"?",
+    "options": [
+      "501_ZAPOT",
+      "501_ZVPOT",
+      "015AOPTZ_",
+      "501_ZAPOTM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 501_ZAPOT.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"JASMINE_106\"?",
+    "options": [
+      "601_ENIMSAJ",
+      "601_3NIMSVJ",
+      "016AEIJMNS_",
+      "601_ENIMSAJM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 601_ENIMSAJ.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"LILY_107\"?",
+    "options": [
+      "701_YLIL",
+      "701_YLIL",
+      "017ILLY_",
+      "701_YLILM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 701_YLIL.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"ROSE_108\"?",
+    "options": [
+      "801_ESOR",
+      "801_3SOR",
+      "018EORS_",
+      "801_ESORM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 801_ESOR.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"TULIP_109\"?",
+    "options": [
+      "901_PILUT",
+      "901_PILUT",
+      "019ILPTU_",
+      "901_PILUTM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 901_PILUT.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"DAISY_110\"?",
+    "options": [
+      "011_YSIAD",
+      "011_YSIVD",
+      "011ADISY_",
+      "011_YSIADM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 011_YSIAD.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"POPPY_111\"?",
+    "options": [
+      "111_YPPOP",
+      "111_YPPOP",
+      "111OPPPY_",
+      "111_YPPOPM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 111_YPPOP.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"ORCHID_112\"?",
+    "options": [
+      "211_DIHCRO",
+      "211_DIHCRO",
+      "112CDHIOR_",
+      "211_DIHCROM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 211_DIHCRO.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"IRIS_113\"?",
+    "options": [
+      "311_SIRI",
+      "311_SIRI",
+      "113IIRS_",
+      "311_SIRIM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 311_SIRI.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"VIOLET_114\"?",
+    "options": [
+      "411_TELOIV",
+      "411_T3LOIV",
+      "114EILOTV_",
+      "411_TELOIVM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 411_TELOIV.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"LOTUS_115\"?",
+    "options": [
+      "511_SUTOL",
+      "511_SUTOL",
+      "115LOSTU_",
+      "511_SUTOLM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 511_SUTOL.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"CACTUS_116\"?",
+    "options": [
+      "611_SUTCAC",
+      "611_SUTCVC",
+      "116ACCSTU_",
+      "611_SUTCACM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 611_SUTCAC.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"MAPLE_117\"?",
+    "options": [
+      "711_ELPAM",
+      "711_3LPVM",
+      "117AELMP_",
+      "711_ELPAMM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 711_ELPAM.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"PINE_118\"?",
+    "options": [
+      "811_ENIP",
+      "811_3NIP",
+      "118EINP_",
+      "811_ENIPM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 811_ENIP.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"BAMBOO_119\"?",
+    "options": [
+      "911_OOBMAB",
+      "911_OOBMVB",
+      "119ABBMOO_",
+      "911_OOBMABM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 911_OOBMAB.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"CEDAR_120\"?",
+    "options": [
+      "021_RADEC",
+      "021_RVD3C",
+      "012ACDER_",
+      "021_RADECM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 021_RADEC.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"OAK_121\"?",
+    "options": [
+      "121_KAO",
+      "121_KVO",
+      "112AKO_",
+      "121_KAOM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 121_KAO.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"PALM_122\"?",
+    "options": [
+      "221_MLAP",
+      "221_MLVP",
+      "122ALMP_",
+      "221_MLAPM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 221_MLAP.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"WILLOW_123\"?",
+    "options": [
+      "321_WOLLIW",
+      "321_WOLLIW",
+      "123ILLOWW_",
+      "321_WOLLIWM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 321_WOLLIW.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"FERN_124\"?",
+    "options": [
+      "421_NREF",
+      "421_NR3F",
+      "124EFNR_",
+      "421_NREFM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 421_NREF.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"MOSS_125\"?",
+    "options": [
+      "521_SSOM",
+      "521_SSOM",
+      "125MOSS_",
+      "521_SSOMM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 521_SSOM.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"IVY_126\"?",
+    "options": [
+      "621_YVI",
+      "621_YVI",
+      "126IVY_",
+      "621_YVIM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 621_YVI.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"VINE_127\"?",
+    "options": [
+      "721_ENIV",
+      "721_3NIV",
+      "127EINV_",
+      "721_ENIVM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 721_ENIV.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"MAGNOLIA_128\"?",
+    "options": [
+      "821_AILONGAM",
+      "821_VILONGVM",
+      "128AAGILMNO_",
+      "821_AILONGAMM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 821_AILONGAM.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"WISTERIA_129\"?",
+    "options": [
+      "921_AIRETSIW",
+      "921_VIR3TSIW",
+      "129AEIIRSTW_",
+      "921_AIRETSIWM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 921_AIRETSIW.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"GARDENIA_130\"?",
+    "options": [
+      "031_AINEDRAG",
+      "031_VIN3DRVG",
+      "013AADEGINR_",
+      "031_AINEDRAGM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 031_AINEDRAG.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"HYDRANGEA_131\"?",
+    "options": [
+      "131_AEGNARDYH",
+      "131_V3GNVRDYH",
+      "113AADEGHNRY_",
+      "131_AEGNARDYHM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 131_AEGNARDYH.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"PETUNIA_132\"?",
+    "options": [
+      "231_AINUTEP",
+      "231_VINUT3P",
+      "123AEINPTU_",
+      "231_AINUTEPM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 231_AINUTEP.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"AZALEA_133\"?",
+    "options": [
+      "331_AELAZA",
+      "331_V3LVZV",
+      "133AAAELZ_",
+      "331_AELAZAM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 331_AELAZA.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"BEGONIA_134\"?",
+    "options": [
+      "431_AINOGEB",
+      "431_VINOG3B",
+      "134ABEGINO_",
+      "431_AINOGEBM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 431_AINOGEB.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"CAMELIA_135\"?",
+    "options": [
+      "531_AILEMAC",
+      "531_VIL3MVC",
+      "135AACEILM_",
+      "531_AILEMACM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 531_AILEMAC.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"DANDELION_136\"?",
+    "options": [
+      "631_NOILEDNAD",
+      "631_NOIL3DNVD",
+      "136ADDEILNNO_",
+      "631_NOILEDNADM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 631_NOILEDNAD.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"EDELWEISS_137\"?",
+    "options": [
+      "731_SSIEWLEDE",
+      "731_SSI3WL3D3",
+      "137DEEEILSSW_",
+      "731_SSIEWLEDEM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 731_SSIEWLEDE.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"FOXGLOVE_138\"?",
+    "options": [
+      "831_EVOLGXOF",
+      "831_3VOLGXOF",
+      "138EFGLOOVX_",
+      "831_EVOLGXOFM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 831_EVOLGXOF.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"GENTIAN_139\"?",
+    "options": [
+      "931_NAITNEG",
+      "931_NVITN3G",
+      "139AEGINNT_",
+      "931_NAITNEGM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 931_NAITNEG.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"HELICONIA_140\"?",
+    "options": [
+      "041_AINOCILEH",
+      "041_VINOCIL3H",
+      "014ACEHIILNO_",
+      "041_AINOCILEHM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 041_AINOCILEH.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"IMPATIENS_141\"?",
+    "options": [
+      "141_SNEITAPMI",
+      "141_SN3ITVPMI",
+      "114AEIIMNPST_",
+      "141_SNEITAPMIM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 141_SNEITAPMI.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"JACARANDA_142\"?",
+    "options": [
+      "241_ADNARACAJ",
+      "241_VDNVRVCVJ",
+      "124AAAACDJNR_",
+      "241_ADNARACAJM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 241_ADNARACAJ.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"KALMIA_143\"?",
+    "options": [
+      "341_AIMLAK",
+      "341_VIMLVK",
+      "134AAIKLM_",
+      "341_AIMLAKM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 341_AIMLAK.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"LARKSPUR_144\"?",
+    "options": [
+      "441_RUPSKRAL",
+      "441_RUPSKRVL",
+      "144AKLPRRSU_",
+      "441_RUPSKRALM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 441_RUPSKRAL.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"NARCISSUS_145\"?",
+    "options": [
+      "541_SUSSICRAN",
+      "541_SUSSICRVN",
+      "145ACINRSSSU_",
+      "541_SUSSICRANM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 541_SUSSICRAN.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"PEONY_146\"?",
+    "options": [
+      "641_YNOEP",
+      "641_YNO3P",
+      "146ENOPY_",
+      "641_YNOEPM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 641_YNOEP.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"DIAMOND_147\"?",
+    "options": [
+      "741_DNOMAID",
+      "741_DNOMVID",
+      "147ADDIMNO_",
+      "741_DNOMAIDM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 741_DNOMAID.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"EMERALD_148\"?",
+    "options": [
+      "841_DLAREME",
+      "841_DLVR3M3",
+      "148ADEELMR_",
+      "841_DLAREMEM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 841_DLAREME.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"SAPPHIRE_149\"?",
+    "options": [
+      "941_ERIHPPAS",
+      "941_3RIHPPVS",
+      "149AEHIPPRS_",
+      "941_ERIHPPASM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 941_ERIHPPAS.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the mirror image of \"RUBY_150\"?",
+    "options": [
+      "051_YBUR",
+      "051_YBUR",
+      "015BRUY_",
+      "051_YBURM"
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is 051_YBUR.",
+    "subtopic": "Mirror Images Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  }
+]

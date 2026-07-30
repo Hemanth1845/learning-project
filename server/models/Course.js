@@ -27,6 +27,14 @@ const CourseSchema = new mongoose.Schema({
     type: String,
     default: ''
   },
+  externalLink: {
+    type: String,
+    default: ''
+  },
+  practicePageUrl: {
+    type: String,
+    default: ''
+  },
   slug: {
     type: String,
     required: true,

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
+import { useLocation } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 
 // Simple Markdown to HTML converter function
@@ -23,8 +24,228 @@ const parseMarkdown = (text) => {
   return html;
 };
 
+// High-Fidelity Placement Studio Style Textbook Content Parser
+const TextbookContentParser = ({ text }) => {
+  if (!text) return null;
+
+  const lines = text.split('\n');
+  const elements = [];
+  let currentBlockType = null; // 'list', 'code', 'table', 'text'
+  let currentBlockLines = [];
+  let inCodeBlock = false;
+
+  const flushBlock = (key) => {
+    if (currentBlockLines.length === 0) return;
+
+    const blockText = currentBlockLines.join('\n');
+    const trimmedBlockText = blockText.trim();
+    if (!trimmedBlockText) {
+      currentBlockLines = [];
+      return;
+    }
+
+    if (currentBlockType === 'list') {
+      elements.push(
+        <ul key={key} style={{ paddingLeft: '24px', listStyleType: 'none', margin: '12px 0', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+          {currentBlockLines.map((line, lIdx) => {
+            const content = line.replace(/^[\s-*•\d.]+\.?\s*/, '').trim();
+            const parts = content.split('**');
+            const formattedContent = parts.map((part, pIdx) => {
+              if (pIdx % 2 === 1) {
+                return <strong key={pIdx} style={{ color: '#111111', fontWeight: 700 }}>{part}</strong>;
+              }
+              return part;
+            });
+            return (
+              <li key={lIdx} style={{ position: 'relative', color: '#333333', fontSize: '0.94rem', lineHeight: '1.65', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+                <span style={{ position: 'absolute', left: '-16px', color: '#e67e22', fontWeight: 'bold', fontSize: '1.1rem', lineHeight: '1.2' }}>•</span>
+                {formattedContent}
+              </li>
+            );
+          })}
+        </ul>
+      );
+    } else if (currentBlockType === 'code') {
+      // Remove code fences
+      const cleanedLines = currentBlockLines.filter(l => !l.trim().startsWith('```'));
+      elements.push(
+        <div key={key} style={{
+          background: '#f8fafc',
+          border: '1px solid #e2e8f0',
+          borderRadius: '8px',
+          padding: '20px',
+          margin: '20px 0',
+          fontFamily: 'Consolas, Monaco, monospace',
+          fontSize: '0.85rem',
+          lineHeight: '1.5',
+          color: '#334155',
+          overflowX: 'auto',
+          whiteSpace: 'pre'
+        }}>
+          {cleanedLines.join('\n')}
+        </div>
+      );
+    } else if (currentBlockType === 'table') {
+      // Parse table rows
+      const dataLines = currentBlockLines.filter(line => line.includes('|') && !line.includes('+--') && !line.includes('===') && !line.includes('---'));
+      if (dataLines.length > 0) {
+        const rows = dataLines.map(line => {
+          return line.split('|').map(cell => cell.trim()).filter((_, idx, arr) => idx > 0 && idx < arr.length - 1);
+        });
+        const headerRow = rows[0];
+        const bodyRows = rows.slice(1);
+        elements.push(
+          <div key={key} style={{ overflowX: 'auto', margin: '24px 0', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', background: '#ffffff', textAlign: 'left' }}>
+              <thead>
+                <tr style={{ background: '#fdf2f0', borderBottom: '2px solid #f8d7da' }}>
+                  {headerRow.map((cell, idx) => (
+                    <th key={idx} style={{ padding: '12px 16px', color: '#b02a37', fontSize: '0.88rem', fontWeight: 700, fontFamily: 'system-ui, sans-serif', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{cell}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {bodyRows.map((row, rIdx) => (
+                  <tr key={rIdx} style={{ borderBottom: rIdx === bodyRows.length - 1 ? 'none' : '1px solid #f1f5f9', background: rIdx % 2 === 1 ? '#f8fafc' : '#ffffff' }}>
+                    {row.map((cell, cIdx) => (
+                      <td key={cIdx} style={{ padding: '12px 16px', color: '#334155', fontSize: '0.88rem', fontFamily: 'system-ui, sans-serif', lineHeight: '1.5' }}>{cell}</td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        );
+      }
+    } else {
+      // Plain text block
+      const parts = trimmedBlockText.split('**');
+      const formatted = parts.map((part, idx) => {
+        if (idx % 2 === 1) {
+          return <strong key={idx} style={{ color: '#111111', fontWeight: 700 }}>{part}</strong>;
+        }
+        return part;
+      });
+
+      // Check if it's a solved example style card
+      const isExample = trimmedBlockText.includes('Q:') || trimmedBlockText.includes('Question:') || trimmedBlockText.includes('Solution:');
+      if (isExample) {
+        const titleLine = currentBlockLines[0].replace(/^###?\s+/, '').replace(/\*\*/g, '').replace(/^✨\s*/, '').trim();
+        const restLines = currentBlockLines.slice(1).join('\n');
+        elements.push(
+          <div key={key} style={{
+            background: '#edf2ff',
+            border: '1px solid rgba(59, 130, 246, 0.15)',
+            borderLeft: '4px solid #3b82f6',
+            borderRadius: '8px',
+            padding: '20px',
+            margin: '20px 0',
+            boxShadow: '0 2px 4px rgba(0,0,0,0.01)'
+          }}>
+            <h5 style={{ color: '#2563eb', fontWeight: 700, fontSize: '0.96rem', marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '6px', fontFamily: 'system-ui, sans-serif' }}>
+              <span>✨</span> {titleLine || 'Key Insight'}
+            </h5>
+            <div style={{ color: '#334155', fontSize: '0.92rem', lineHeight: '1.65', fontFamily: 'system-ui, sans-serif', whiteSpace: 'pre-wrap' }}>
+              {restLines}
+            </div>
+          </div>
+        );
+      } else {
+        elements.push(
+          <p key={key} style={{ color: '#2d3748', fontSize: '0.96rem', lineHeight: '1.7', margin: '14px 0', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+            {formatted}
+          </p>
+        );
+      }
+    }
+
+    currentBlockLines = [];
+    currentBlockType = null;
+  };
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const trimmed = line.trim();
+
+    // If inside a code fence, consume everything until closing fence
+    if (inCodeBlock) {
+      currentBlockLines.push(line);
+      if (trimmed.startsWith('```')) {
+        flushBlock(i);
+        inCodeBlock = false;
+      }
+      continue;
+    }
+
+    // Check for code fence start
+    if (trimmed.startsWith('```')) {
+      flushBlock(i);
+      currentBlockType = 'code';
+      inCodeBlock = true;
+      currentBlockLines.push(line);
+      continue;
+    }
+
+    // 1. Check for headings (Starts with #)
+    if (trimmed.startsWith('#')) {
+      flushBlock(i);
+      const headingText = trimmed.replace(/^#+\s*/, '').replace(/\*\*/g, '').trim();
+      const level = (trimmed.match(/^#+/) || ['#'])[0].length;
+      const fontSize = level === 1 ? '2.1rem' : level === 2 ? '1.8rem' : level === 3 ? '1.5rem' : '1.25rem';
+      elements.push(
+        <div key={i} style={{ margin: '24px 0 10px 0', borderBottom: level <= 3 ? '1px solid #e2e8f0' : 'none', paddingBottom: '8px' }}>
+          <h4 style={{ fontFamily: 'Georgia, serif', color: '#111111', fontSize: fontSize, fontWeight: 700 }}>
+            {headingText}
+          </h4>
+        </div>
+      );
+      continue;
+    }
+
+    // 2. Check for empty line
+    if (!trimmed) {
+      flushBlock(i);
+      continue;
+    }
+
+    // 3. Check for bullet lists
+    if (trimmed.startsWith('-') || trimmed.startsWith('*') || trimmed.startsWith('•')) {
+      if (currentBlockType !== 'list') {
+        flushBlock(i);
+        currentBlockType = 'list';
+      }
+      currentBlockLines.push(line);
+      continue;
+    }
+
+    // 4. Check for tables (starts with | or contains | but not code/diagram)
+    if (trimmed.startsWith('|')) {
+      if (currentBlockType !== 'table') {
+        flushBlock(i);
+        currentBlockType = 'table';
+      }
+      currentBlockLines.push(line);
+      continue;
+    }
+
+    // 5. Otherwise, text
+    if (currentBlockType === null) {
+      currentBlockType = 'text';
+    } else if (currentBlockType !== 'text') {
+      flushBlock(i);
+      currentBlockType = 'text';
+    }
+    currentBlockLines.push(line);
+  }
+
+  flushBlock(lines.length);
+
+  return <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>{elements}</div>;
+};
+
 const Courses = () => {
   const { token, reloadProfile, API_URL } = useContext(AuthContext);
+  const location = useLocation();
   const [courses, setCourses] = useState([]);
   const [activeCourse, setActiveCourse] = useState(null);
   const [lessons, setLessons] = useState([]);
@@ -77,6 +298,24 @@ const Courses = () => {
       console.error(err);
     }
   };
+
+  useEffect(() => {
+    if (courses.length > 0) {
+      const searchParams = new URLSearchParams(location.search);
+      const autoCourseTitle = searchParams.get('course');
+      if (autoCourseTitle) {
+        const found = courses.find(c => 
+          c.title.toLowerCase().includes('full-stack') || 
+          c.title.toLowerCase().includes('fullstack') ||
+          c.slug === autoCourseTitle ||
+          c.title.toLowerCase().includes(autoCourseTitle.toLowerCase())
+        );
+        if (found) {
+          handleSelectCourse(found);
+        }
+      }
+    }
+  }, [courses, location.search]);
 
   const handleSelectCourse = async (course) => {
     setActiveCourse(course);
@@ -230,7 +469,7 @@ const Courses = () => {
               </button>
             </h2>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
             {activeCourse.pdfUrl && (
               <button 
                 onClick={() => window.open(activeCourse.pdfUrl, '_blank')}
@@ -248,6 +487,50 @@ const Courses = () => {
                 }}
               >
                 📖 View Full PDF Notes
+              </button>
+            )}
+            {activeCourse.externalLink && (
+              <button 
+                onClick={() => window.open(activeCourse.externalLink, '_blank')}
+                className="primary-btn"
+                style={{
+                  padding: '8px 16px',
+                  fontSize: '0.82rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  background: 'var(--accent-secondary)',
+                  borderColor: 'var(--accent-secondary)',
+                  color: 'white',
+                  fontWeight: 'bold'
+                }}
+              >
+                🔗 External Reference
+              </button>
+            )}
+            {activeCourse.practicePageUrl && (
+              <button 
+                onClick={() => {
+                  if (activeCourse.practicePageUrl.startsWith('/')) {
+                    window.location.href = activeCourse.practicePageUrl;
+                  } else {
+                    window.open(activeCourse.practicePageUrl, '_blank');
+                  }
+                }}
+                className="primary-btn"
+                style={{
+                  padding: '8px 16px',
+                  fontSize: '0.82rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  background: 'var(--color-solved)',
+                  borderColor: 'var(--color-solved)',
+                  color: 'white',
+                  fontWeight: 'bold'
+                }}
+              >
+                💻 Practice Sandbox
               </button>
             )}
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '4px' }}>
@@ -297,21 +580,35 @@ const Courses = () => {
           {activeLesson ? (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
               
-              {/* Markdown notes panel */}
-              <div className="glass-card" style={{ padding: '32px' }}>
-                <h1 style={{ fontSize: '1.8rem', marginBottom: '20px' }}>{activeLesson.lesson.title}</h1>
+              {/* Textbook style white sheet */}
+              <div className="glass-card" style={{ 
+                padding: '40px 48px', 
+                background: '#ffffff', 
+                border: '1px solid #e2e8f0', 
+                boxShadow: '0 4px 20px rgba(0,0,0,0.1)', 
+                borderRadius: '12px',
+                color: '#2d3748'
+              }}>
+                <h1 style={{ 
+                  fontSize: '2rem', 
+                  marginBottom: '24px', 
+                  fontFamily: 'Georgia, serif', 
+                  color: '#111111', 
+                  fontWeight: 700,
+                  borderBottom: '2px solid #e67e22',
+                  paddingBottom: '12px'
+                }}>
+                  {activeLesson.lesson.title}
+                </h1>
                 
-                {/* Notes Container */}
-                <div 
-                  style={{ color: 'var(--text-main)', fontSize: '0.98rem', lineHeight: '1.6' }}
-                  dangerouslySetInnerHTML={{ __html: parseMarkdown(activeLesson.lesson.content) }}
-                />
+                {/* Notes Container parsed inside Placement Studio Textbook view */}
+                <TextbookContentParser text={activeLesson.lesson.content} />
 
                 {/* Video Lesson (if provided) */}
                 {activeLesson.lesson.videoUrl && (
-                  <div style={{ marginTop: '24px', borderTop: '1px solid var(--border-glass)', paddingTop: '24px' }}>
-                    <h3 style={{ fontSize: '1.1rem', color: 'white', marginBottom: '12px' }}>📽️ Video Explanation</h3>
-                    <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '8px', border: '1px solid var(--border-glass)' }}>
+                  <div style={{ marginTop: '32px', borderTop: '1px solid #e2e8f0', paddingTop: '24px' }}>
+                    <h3 style={{ fontSize: '1.2rem', color: '#111111', marginBottom: '16px', fontFamily: 'Georgia, serif', fontWeight: 700 }}>📽️ Video Explanation</h3>
+                    <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
                       <iframe 
                         src={activeLesson.lesson.videoUrl} 
                         style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}

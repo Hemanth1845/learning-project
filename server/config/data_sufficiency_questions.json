@@ -1,0 +1,3002 @@
+[
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Wipro",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "TCS",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "Is the integer x a prime number?\nStatement I: x is a factor of 87.\nStatement II: x is greater than 10 but less than 40.",
+    "options": [
+      "Both statements I and II together are sufficient, but neither statement alone is sufficient.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Statements I and II together are not sufficient."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Both statements I and II together are sufficient, but neither statement alone is sufficient..",
+    "subtopic": "Data Sufficiency Fundamentals",
+    "difficulty": "Easy-Medium",
+    "companyTags": "Infosys",
+    "hints": [
+      "Observe the given pattern carefully."
+    ],
+    "timeEstimate": 30,
+    "marks": 1,
+    "negativeMarks": 0.25
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Cognizant",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Deloitte",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  },
+  {
+    "q": "What is the ratio of the speed of a train to the speed of a car?\nStatement I: The train covers a distance of 480 km in 6 hours.\nStatement II: The car covers the same distance of 480 km in 8 hours with a 30-minute stop.",
+    "options": [
+      "Each statement alone is sufficient to answer the question.",
+      "Statement I alone is sufficient, but Statement II alone is not sufficient.",
+      "Statement II alone is sufficient, but Statement I alone is not sufficient.",
+      "Both statements I and II together are necessary."
+    ],
+    "correctIdx": 0,
+    "explanation": "The correct answer is Each statement alone is sufficient to answer the question..",
+    "subtopic": "Data Sufficiency Advanced",
+    "difficulty": "Hard",
+    "companyTags": "Accenture",
+    "hints": [
+      "Apply advanced multi-step logic."
+    ],
+    "timeEstimate": 60,
+    "marks": 2,
+    "negativeMarks": 0.5
+  }
+]
