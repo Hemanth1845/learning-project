@@ -491,17 +491,23 @@ router.delete('/requests/:id', protect, adminOnly, async (req, res) => {
 // @route   POST /api/courses/:courseId/submit-project
 router.post('/:courseId/submit-project', protect, async (req, res) => {
   try {
-    const { fileUrl, fileName } = req.body;
-    if (!fileUrl) {
-      return res.status(400).json({ message: 'Project submission file/URL is required.' });
-    }
+    const { fileUrl, fileName, projectIndex, projectTitle, githubLink, liveDemoLink, reportText } = req.body;
 
     const ProjectSubmission = require('../models/ProjectSubmission');
-    // Check if submission already exists
-    let submission = await ProjectSubmission.findOne({ userId: req.user._id, courseId: req.params.courseId });
+    
+    // Check if submission already exists for this specific project index
+    let submission = await ProjectSubmission.findOne({ 
+      userId: req.user._id, 
+      courseId: req.params.courseId,
+      projectIndex: projectIndex || 1
+    });
+
     if (submission) {
-      submission.fileUrl = fileUrl;
+      submission.fileUrl = fileUrl || submission.fileUrl;
       submission.fileName = fileName || submission.fileName;
+      submission.githubLink = githubLink || submission.githubLink;
+      submission.liveDemoLink = liveDemoLink || submission.liveDemoLink;
+      submission.reportText = reportText || submission.reportText;
       submission.status = 'Pending';
       await submission.save();
     } else {
@@ -509,8 +515,13 @@ router.post('/:courseId/submit-project', protect, async (req, res) => {
         userId: req.user._id,
         username: req.user.username,
         courseId: req.params.courseId,
-        fileUrl,
+        projectIndex: projectIndex || 1,
+        projectTitle: projectTitle || 'Project',
+        githubLink: githubLink || '',
+        liveDemoLink: liveDemoLink || '',
+        fileUrl: fileUrl || '',
         fileName: fileName || 'project-submission.zip',
+        reportText: reportText || '',
         status: 'Pending'
       });
     }
@@ -521,7 +532,7 @@ router.post('/:courseId/submit-project', protect, async (req, res) => {
       userId: req.user._id,
       username: req.user.username,
       action: 'Submitted Project',
-      details: `Uploaded project archive "${fileName || 'project-submission.zip'}"`
+      details: `Submitted Project ${projectIndex || 1}: "${projectTitle || 'Project'}"`
     });
 
     res.status(201).json(submission);
@@ -530,12 +541,17 @@ router.post('/:courseId/submit-project', protect, async (req, res) => {
   }
 });
 
-// @desc    Get user's project submission for a course
+// @desc    Get user's project submission for a course by index
 // @route   GET /api/courses/:courseId/submission
 router.get('/:courseId/submission', protect, async (req, res) => {
   try {
+    const projectIndex = parseInt(req.query.projectIndex) || 1;
     const ProjectSubmission = require('../models/ProjectSubmission');
-    const submission = await ProjectSubmission.findOne({ userId: req.user._id, courseId: req.params.courseId });
+    const submission = await ProjectSubmission.findOne({ 
+      userId: req.user._id, 
+      courseId: req.params.courseId,
+      projectIndex
+    });
     res.json(submission || null);
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -558,7 +574,7 @@ router.get('/submissions/all', protect, adminOnly, async (req, res) => {
 // @route   PUT /api/courses/submissions/:submissionId/evaluate
 router.put('/submissions/:submissionId/evaluate', protect, adminOnly, async (req, res) => {
   try {
-    const { status, remarks } = req.body;
+    const { status, remarks, scores, aiSuggestions } = req.body;
     if (!['Approved', 'Rejected', 'Needs Improvement'].includes(status)) {
       return res.status(400).json({ message: 'Invalid status evaluation value.' });
     }
@@ -571,7 +587,33 @@ router.put('/submissions/:submissionId/evaluate', protect, adminOnly, async (req
 
     submission.status = status;
     submission.remarks = remarks || '';
+    if (scores) {
+      submission.scores = {
+        ui: Number(scores.ui) || 0,
+        codeQuality: Number(scores.codeQuality) || 0,
+        logic: Number(scores.logic) || 0,
+        overall: Number(scores.overall) || 0
+      };
+    }
+    if (aiSuggestions) {
+      submission.aiSuggestions = {
+        strengths: aiSuggestions.strengths || '',
+        weaknesses: aiSuggestions.weaknesses || '',
+        suggestions: aiSuggestions.suggestions || ''
+      };
+    }
+    
     await submission.save();
+
+    // Reward XP to user on Approval
+    if (status === 'Approved') {
+      const User = require('../models/User');
+      const student = await User.findById(submission.userId);
+      if (student) {
+        student.xp += 100;
+        await student.save();
+      }
+    }
 
     res.json(submission);
   } catch (error) {

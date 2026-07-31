@@ -24,7 +24,16 @@ const CommunicationCoach = () => {
   const [liveCoachMessage, setLiveCoachMessage] = useState('Position your camera and speak clearly when ready.');
   
   // Challenge & Report states
-  const [currentTopic, setCurrentTopic] = useState('Describe your favorite software project and why it inspires you.');
+  const [currentTopic, setCurrentTopic] = useState(() => {
+    const pool = [
+      'Describe your favorite software project and why it inspires you.',
+      'Tell me about a time you had to explain a complex technical concept to a non-technical person.',
+      'What motivates you to work in software engineering, and where do you see yourself in five years?',
+      'Describe your college or university and the major achievements of your academic life.',
+      'If you could solve one global problem using technology, what would it be and why?'
+    ];
+    return pool[Math.floor(Math.random() * pool.length)];
+  });
   const [report, setReport] = useState(null);
 
   // References for timers and speech recognition

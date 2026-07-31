@@ -6,7 +6,7 @@ const Dashboard = () => {
   const { token, user, reloadProfile, updateProfile, API_URL } = useContext(AuthContext);
   const [stats, setStats] = useState(null);
   const [leaderboard, setLeaderboard] = useState([]);
-  const [bookmarks, setBookmarks] = useState({ courses: [], dsa: [] });
+  const [bookmarks, setBookmarks] = useState({ courses: [], dsa: [], theory: [], aptitude: [] });
   const [loading, setLoading] = useState(true);
 
   const [yearOfStudy, setYearOfStudy] = useState(user?.yearOfStudy || '3rd Year');
@@ -192,21 +192,33 @@ const Dashboard = () => {
             <span>🔖</span> Bookmarked Topics
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '16px' }}>
-            {bookmarks.courses.map((course) => (
+            {bookmarks.courses && bookmarks.courses.map((course) => (
               <Link to="/courses" key={course._id} style={{ display: 'flex', justifyContent: 'space-between', padding: '16px', background: 'rgba(111, 66, 193, 0.05)', border: '1px solid rgba(111, 66, 193, 0.2)', borderRadius: '8px' }}>
                 <span style={{ fontWeight: 600, color: 'white' }}>📚 {course.title}</span>
                 <span style={{ fontSize: '0.8rem', color: 'var(--accent-secondary)', fontWeight: 600 }}>Course →</span>
               </Link>
             ))}
-            {bookmarks.dsa.map((prob) => (
+            {bookmarks.dsa && bookmarks.dsa.map((prob) => (
               <Link to="/dsa" key={prob._id} style={{ display: 'flex', justifyContent: 'space-between', padding: '16px', background: 'rgba(0, 242, 254, 0.05)', border: '1px solid rgba(0, 242, 254, 0.2)', borderRadius: '8px' }}>
                 <span style={{ fontWeight: 600, color: 'white' }}>🧠 {prob.title}</span>
                 <span style={{ fontSize: '0.8rem', color: 'var(--accent-secondary)', fontWeight: 600 }}>DSA ({prob.difficulty}) →</span>
               </Link>
             ))}
-            {bookmarks.courses.length === 0 && bookmarks.dsa.length === 0 && (
+            {bookmarks.theory && bookmarks.theory.map((ch) => (
+              <Link to="/theory" key={ch._id} style={{ display: 'flex', justifyContent: 'space-between', padding: '16px', background: 'rgba(245, 158, 11, 0.05)', border: '1px solid rgba(245, 158, 11, 0.2)', borderRadius: '8px' }}>
+                <span style={{ fontWeight: 600, color: 'white' }}>📖 {ch.title}</span>
+                <span style={{ fontSize: '0.8rem', color: 'var(--accent-secondary)', fontWeight: 600 }}>Theory →</span>
+              </Link>
+            ))}
+            {bookmarks.aptitude && bookmarks.aptitude.map((topic) => (
+              <Link to="/aptitude" key={topic._id} style={{ display: 'flex', justifyContent: 'space-between', padding: '16px', background: 'rgba(16, 185, 129, 0.05)', border: '1px solid rgba(16, 185, 129, 0.2)', borderRadius: '8px' }}>
+                <span style={{ fontWeight: 600, color: 'white' }}>🧮 {topic.title}</span>
+                <span style={{ fontSize: '0.8rem', color: 'var(--accent-secondary)', fontWeight: 600 }}>Aptitude →</span>
+              </Link>
+            ))}
+            {(!bookmarks.courses?.length && !bookmarks.dsa?.length && !bookmarks.theory?.length && !bookmarks.aptitude?.length) && (
               <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', textAlign: 'center', padding: '24px 0', gridColumn: '1 / -1' }}>
-                Bookmark courses or DSA problems to see them here.
+                Bookmark courses, DSA problems, theory chapters, or aptitude topics to see them here.
               </p>
             )}
           </div>

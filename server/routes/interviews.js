@@ -125,6 +125,12 @@ Candidate Resume Text: "${interview.resumeText.substring(0, 2000)}"
 Chat History:
 ${chatHistoryFormatted}
 
+CRITICAL SCORING CONSTRAINTS:
+1. You must check each user answer for relevance to the actual question asked. 
+2. If any response is completely off-topic, nonsense, a song (e.g. singing 'Twinkle Twinkle', movie dialogues), or talks about completely unrelated topics (e.g., cricket, food like biryani, when asked about technical coding/projects), you MUST set "overallScore" to less than 10 (between 0 and 9).
+3. Do not award high communication scores for fluent but irrelevant answers.
+4. Calculate the score breakdown: Relevance (35%), Technical Accuracy (25%), Communication (15%), Grammar (10%), Confidence (10%), Vocabulary (5%).
+
 Provide a detailed evaluation scorecard. Return ONLY a JSON object. Do not wrap in markdown tags or backticks. Format must match:
 {
   "overallScore": 85,
@@ -213,15 +219,18 @@ router.post('/parse-resume', protect, async (req, res) => {
       return res.status(400).json({ message: 'File content is required.' });
     }
 
+    const nameRegexMatch = fileContent.match(/(?:Name|Full Name):\s*([^\n]+)/i) || fileContent.match(/^([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)/m);
+    const candidateName = nameRegexMatch ? nameRegexMatch[1].trim() : (req.user.username.charAt(0).toUpperCase() + req.user.username.slice(1));
+
     let parsedInfo = {
-      fullName: 'Ravada Hemanth',
+      fullName: candidateName,
       collegeName: 'KL University',
       degree: 'B.Tech in Computer Science',
-      cgpa: '9.2',
+      cgpa: '9.0',
       skills: 'React, Node.js, Express, MongoDB, Java, C++',
       internship: 'Software Engineering Intern',
-      projects: 'PrepPortal Placement App, Compiler Sandbox',
-      careerGoal: 'Full Stack Engineer'
+      projects: 'Placement Prep Portal, Code Compiler Sandbox',
+      careerGoal: 'Software Engineer'
     };
 
     if (process.env.GEMINI_API_KEY) {

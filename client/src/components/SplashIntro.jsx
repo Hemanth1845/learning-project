@@ -19,8 +19,14 @@ const SplashIntro = ({ onComplete }) => {
     setTimeout(onComplete, 800);
   };
 
+  const cssSaved = localStorage.getItem('app-css-settings');
+  const css = cssSaved ? JSON.parse(cssSaved) : { splashBg: 'light', splashTextColor: 'dark' };
+
+  const bgClass = css.splashBg === 'dark' ? 'bg-dark' : 'bg-light';
+  const textClass = css.splashTextColor === 'light' ? 'text-light' : 'text-dark';
+
   return (
-    <div className={`splash-overlay ${fadeOut ? 'fade-out' : ''}`}>
+    <div className={`splash-overlay ${bgClass} ${textClass} ${fadeOut ? 'fade-out' : ''}`}>
       {/* Dynamic Animated Particles: Flowers, Fireflies, Sparkles */}
       <div className="particles-container">
         {[...Array(20)].map((_, i) => (

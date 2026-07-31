@@ -81,7 +81,10 @@ const AdminDashboard = () => {
       hoverFx: '3d-tilt',
       borderRadius: '16px',
       glassBlur: '8px',
-      globalScale: '1.0'
+      globalScale: '1.0',
+      bgEffect: 'birds',
+      splashBg: 'light',
+      splashTextColor: 'dark'
     };
   });
 
@@ -95,6 +98,13 @@ const AdminDashboard = () => {
   
   // Course form states
   const [courseForm, setCourseForm] = useState({ id: null, title: '', description: '', category: 'Core CS', parentCategory: '', difficulty: 'Easy', thumbnail: '', pdfUrl: '', externalLink: '', practicePageUrl: '' });
+  
+  const [evaluatingSub, setEvaluatingSub] = useState(null);
+  const [evalScores, setEvalScores] = useState({ ui: 80, codeQuality: 80, logic: 80 });
+  const [evalRemarks, setEvalRemarks] = useState('');
+  const [evalStrengths, setEvalStrengths] = useState('');
+  const [evalWeaknesses, setEvalWeaknesses] = useState('');
+  const [evalSuggestions, setEvalSuggestions] = useState('');
   
   // Lesson form states
   const [lessonForm, setLessonForm] = useState({
@@ -530,7 +540,7 @@ const AdminDashboard = () => {
     }
   };
 
-  const handleEvaluateSubmission = async (subId, status, remarks) => {
+  const handleEvaluateSubmission = async (subId, status, remarks, scores, aiSuggestions) => {
     try {
       const res = await fetch(`${API_URL}/courses/submissions/${subId}/evaluate`, {
         method: 'PUT',
@@ -538,11 +548,12 @@ const AdminDashboard = () => {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`
         },
-        body: JSON.stringify({ status, remarks })
+        body: JSON.stringify({ status, remarks, scores, aiSuggestions })
       });
       if (res.ok) {
         alert('Evaluation saved successfully!');
         fetchSubmissions();
+        setEvaluatingSub(null);
       } else {
         const err = await res.json();
         alert(err.message || 'Failed to evaluate project');
@@ -996,7 +1007,7 @@ const AdminDashboard = () => {
 
   const handleSaveDsa = async (e) => {
     e.preventDefault();
-    const url = dsaForm.id ? `${API_URL}/dsa/${dsaForm.id}` : `${API_URL}/dsa`;
+    const url = dsaForm.id ? `${API_URL}/dsa/${dsaForm.id}` : `${API_URL}/dsa/admin/add`;
     const method = dsaForm.id ? 'PUT' : 'POST';
 
     const examples = [
@@ -1570,7 +1581,7 @@ const AdminDashboard = () => {
           <div style={{ padding: '24px', borderBottom: '1px solid var(--border-glass)' }} className="glass-card">
             <h3 style={{ fontSize: '1.25rem', color: 'white' }}>Full-Stack Project Evaluations</h3>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginTop: '4px' }}>
-              Inspect files uploaded by students, test code structure/run status, and assign remarks.
+              Inspect files uploaded by students, assign scores (UI, Logic, Code Quality), and write comments.
             </p>
           </div>
 
@@ -1583,11 +1594,11 @@ const AdminDashboard = () => {
                   <thead>
                     <tr>
                       <th>Student</th>
-                      <th>Course</th>
-                      <th>Filename</th>
+                      <th>Project Title</th>
+                      <th>Submission Assets</th>
                       <th>Submitted Date</th>
                       <th>Status</th>
-                      <th>Remarks</th>
+                      <th>Scores</th>
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -1597,16 +1608,31 @@ const AdminDashboard = () => {
                         <tr key={sub._id}>
                           <td style={{ fontWeight: 600, color: 'white' }}>{sub.username}</td>
                           <td>
-                            {courses.find(c => c._id === sub.courseId)?.title || 'Full Stack Sub-Course'}
+                            <div style={{ color: 'white', fontWeight: 600 }}>{sub.projectTitle || 'Project'}</div>
+                            <div style={{ fontSize: '0.75rem', color: 'var(--accent-secondary)' }}>Index: {sub.projectIndex || 1}</div>
                           </td>
                           <td>
-                            <a
-                              href={sub.fileUrl}
-                              download={sub.fileName}
-                              style={{ color: 'var(--accent-secondary)', textDecoration: 'underline' }}
-                            >
-                              📁 {sub.fileName}
-                            </a>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                              {sub.fileUrl && (
+                                <a
+                                  href={sub.fileUrl}
+                                  download={sub.fileName}
+                                  style={{ color: 'var(--accent-secondary)', textDecoration: 'underline', fontSize: '0.85rem' }}
+                                >
+                                  📁 ZIP File
+                                </a>
+                              )}
+                              {sub.githubLink && (
+                                <a href={sub.githubLink} target="_blank" rel="noopener noreferrer" style={{ color: '#818cf8', fontSize: '0.82rem' }}>
+                                  🔗 GitHub Link ↗
+                                </a>
+                              )}
+                              {sub.liveDemoLink && (
+                                <a href={sub.liveDemoLink} target="_blank" rel="noopener noreferrer" style={{ color: '#10b981', fontSize: '0.82rem' }}>
+                                  🌐 Live Demo ↗
+                                </a>
+                              )}
+                            </div>
                           </td>
                           <td>{new Date(sub.createdAt).toLocaleDateString()}</td>
                           <td>
@@ -1622,40 +1648,33 @@ const AdminDashboard = () => {
                             </span>
                           </td>
                           <td>
-                            <input
-                              type="text"
-                              placeholder="Add feedback remarks..."
-                              defaultValue={sub.remarks}
-                              onBlur={(e) => handleEvaluateSubmission(sub._id, sub.status, e.target.value)}
-                              style={{
-                                width: '100%',
-                                background: 'rgba(255,255,255,0.03)',
-                                border: '1px solid var(--border-glass)',
-                                borderRadius: '4px',
-                                padding: '6px 10px',
-                                color: 'white',
-                                fontSize: '0.82rem'
-                              }}
-                            />
+                            {sub.scores && sub.scores.overall ? (
+                              <span style={{ fontWeight: 600, color: 'var(--color-points)' }}>
+                                {sub.scores.overall}% (UI: {sub.scores.ui}%, CQ: {sub.scores.codeQuality}%)
+                              </span>
+                            ) : (
+                              <span style={{ color: 'var(--text-muted)', fontSize: '0.82rem' }}>Not Graded</span>
+                            )}
                           </td>
                           <td>
-                            <select
-                              value={sub.status}
-                              onChange={(e) => handleEvaluateSubmission(sub._id, e.target.value, sub.remarks)}
-                              style={{
-                                background: 'rgba(0,0,0,0.3)',
-                                border: '1px solid var(--border-glass)',
-                                borderRadius: '4px',
-                                padding: '6px 10px',
-                                color: 'white',
-                                fontSize: '0.8rem'
+                            <button
+                              onClick={() => {
+                                setEvaluatingSub(sub);
+                                setEvalScores({
+                                  ui: sub.scores?.ui || 80,
+                                  codeQuality: sub.scores?.codeQuality || 80,
+                                  logic: sub.scores?.logic || 80
+                                });
+                                setEvalRemarks(sub.remarks || '');
+                                setEvalStrengths(sub.aiSuggestions?.strengths || '');
+                                setEvalWeaknesses(sub.aiSuggestions?.weaknesses || '');
+                                setEvalSuggestions(sub.aiSuggestions?.suggestions || '');
                               }}
+                              className="warroom-btn"
+                              style={{ background: 'var(--accent-gradient)', border: 'none', color: 'white', padding: '6px 12px', fontSize: '0.8rem' }}
                             >
-                              <option value="Pending">Pending</option>
-                              <option value="Approved">Approved</option>
-                              <option value="Rejected">Rejected</option>
-                              <option value="Needs Improvement">Needs Improvement</option>
-                            </select>
+                              Grade / Evaluate
+                            </button>
                           </td>
                         </tr>
                       ))
@@ -1850,6 +1869,30 @@ const AdminDashboard = () => {
               >
                 <option value="none">⏹ None (Solid Clean Background)</option>
                 <option value="birds">🦅 Animated Wing-Flapping Birds Flight</option>
+              </select>
+            </div>
+
+            <div className="form-group">
+              <label>Splash Page Background Color</label>
+              <select 
+                className="form-input"
+                value={cssSettings.splashBg || 'light'}
+                onChange={(e) => setCssSettings({ ...cssSettings, splashBg: e.target.value })}
+              >
+                <option value="light">☀️ Clean Pure White</option>
+                <option value="dark">🌙 Dark Cosmic Space</option>
+              </select>
+            </div>
+
+            <div className="form-group">
+              <label>Splash Page Sentence Text Color</label>
+              <select 
+                className="form-input"
+                value={cssSettings.splashTextColor || 'dark'}
+                onChange={(e) => setCssSettings({ ...cssSettings, splashTextColor: e.target.value })}
+              >
+                <option value="dark">⚫ High-Contrast Deep Black & Reds</option>
+                <option value="light">⚪ Vibrant White & Blue Glow</option>
               </select>
             </div>
 
@@ -3358,6 +3401,139 @@ const AdminDashboard = () => {
                 </button>
               </div>
             </form>
+          </div>
+        </div>
+      )}
+
+      {/* PROJECT EVALUATION MODAL */}
+      {evaluatingSub && (
+        <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', background: 'rgba(0,0,0,0.8)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 10000 }}>
+          <div className="glass-card" style={{ maxWidth: '600px', width: '90%', display: 'flex', flexDirection: 'column', gap: '20px', maxHeight: '90vh', overflowY: 'auto', padding: '30px' }}>
+            <h2>Evaluate Project Submission</h2>
+            <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+              Student: <strong style={{ color: 'white' }}>{evaluatingSub.username}</strong> | 
+              Project: <strong style={{ color: 'white' }}>{evaluatingSub.projectTitle} (Index: {evaluatingSub.projectIndex})</strong>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '12px' }}>
+              <div className="form-group">
+                <label>UI Design Score (0-100)</label>
+                <input 
+                  type="number" 
+                  className="form-input" 
+                  value={evalScores.ui} 
+                  onChange={(e) => setEvalScores({ ...evalScores, ui: Number(e.target.value) })}
+                />
+              </div>
+              <div className="form-group">
+                <label>Code Quality (0-100)</label>
+                <input 
+                  type="number" 
+                  className="form-input" 
+                  value={evalScores.codeQuality} 
+                  onChange={(e) => setEvalScores({ ...evalScores, codeQuality: Number(e.target.value) })}
+                />
+              </div>
+              <div className="form-group">
+                <label>Logic/Functionality (0-100)</label>
+                <input 
+                  type="number" 
+                  className="form-input" 
+                  value={evalScores.logic} 
+                  onChange={(e) => setEvalScores({ ...evalScores, logic: Number(e.target.value) })}
+                />
+              </div>
+            </div>
+
+            <div className="form-group">
+              <label>Reviewer Feedback Remarks</label>
+              <textarea 
+                className="form-input" 
+                rows="3" 
+                value={evalRemarks} 
+                onChange={(e) => setEvalRemarks(e.target.value)}
+                placeholder="Good styling. Clean component break down..."
+              />
+            </div>
+
+            <div style={{ borderTop: '1px solid var(--border-glass)', paddingTop: '12px' }}>
+              <h4 style={{ color: 'white', marginBottom: '10px' }}>AI-Style Feedback Suggestions</h4>
+              <div className="form-group">
+                <label>Strengths</label>
+                <input 
+                  type="text" 
+                  className="form-input" 
+                  value={evalStrengths} 
+                  onChange={(e) => setEvalStrengths(e.target.value)} 
+                  placeholder="e.g. Good folder structure, clear naming conventions"
+                />
+              </div>
+              <div className="form-group" style={{ marginTop: '10px' }}>
+                <label>Weaknesses</label>
+                <input 
+                  type="text" 
+                  className="form-input" 
+                  value={evalWeaknesses} 
+                  onChange={(e) => setEvalWeaknesses(e.target.value)} 
+                  placeholder="e.g. Missing responsive breakpoints for mobile"
+                />
+              </div>
+              <div className="form-group" style={{ marginTop: '10px' }}>
+                <label>Actionable Suggestions</label>
+                <input 
+                  type="text" 
+                  className="form-input" 
+                  value={evalSuggestions} 
+                  onChange={(e) => setEvalSuggestions(e.target.value)} 
+                  placeholder="e.g. Use CSS media queries to fix navbar overlap"
+                />
+              </div>
+            </div>
+
+            <div style={{ display: 'flex', gap: '16px', justifyContent: 'flex-end', marginTop: '12px' }}>
+              <button 
+                type="button" 
+                onClick={() => setEvaluatingSub(null)} 
+                className="warroom-btn" 
+                style={{ background: 'transparent', borderColor: 'var(--border-glass)', color: 'white' }}
+              >
+                Cancel
+              </button>
+              <button 
+                type="button" 
+                onClick={() => {
+                  const overall = Math.round((evalScores.ui + evalScores.codeQuality + evalScores.logic) / 3);
+                  handleEvaluateSubmission(
+                    evaluatingSub._id, 
+                    'Approved', 
+                    evalRemarks, 
+                    { ...evalScores, overall }, 
+                    { strengths: evalStrengths, weaknesses: evalWeaknesses, suggestions: evalSuggestions }
+                  );
+                }} 
+                className="primary-btn" 
+                style={{ padding: '8px 20px', background: 'var(--color-solved)', borderColor: 'var(--color-solved)', color: 'white' }}
+              >
+                Approve & Save
+              </button>
+              <button 
+                type="button" 
+                onClick={() => {
+                  const overall = Math.round((evalScores.ui + evalScores.codeQuality + evalScores.logic) / 3);
+                  handleEvaluateSubmission(
+                    evaluatingSub._id, 
+                    'Needs Improvement', 
+                    evalRemarks, 
+                    { ...evalScores, overall }, 
+                    { strengths: evalStrengths, weaknesses: evalWeaknesses, suggestions: evalSuggestions }
+                  );
+                }} 
+                className="primary-btn" 
+                style={{ padding: '8px 20px', background: '#f59e0b', borderColor: '#f59e0b', color: 'white' }}
+              >
+                Request Changes
+              </button>
+            </div>
           </div>
         </div>
       )}

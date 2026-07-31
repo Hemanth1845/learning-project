@@ -15,13 +15,33 @@ const ProjectSubmissionSchema = new mongoose.Schema({
     ref: 'Course',
     required: true
   },
+  projectIndex: {
+    type: Number,
+    default: 1
+  },
+  projectTitle: {
+    type: String,
+    default: 'Project'
+  },
+  githubLink: {
+    type: String,
+    default: ''
+  },
+  liveDemoLink: {
+    type: String,
+    default: ''
+  },
   fileUrl: {
     type: String,
-    required: true // base64 or link to uploaded project file
+    default: ''
   },
   fileName: {
     type: String,
     default: 'project-submission.zip'
+  },
+  reportText: {
+    type: String,
+    default: ''
   },
   remarks: {
     type: String,
@@ -31,6 +51,17 @@ const ProjectSubmissionSchema = new mongoose.Schema({
     type: String,
     enum: ['Pending', 'Approved', 'Rejected', 'Needs Improvement'],
     default: 'Pending'
+  },
+  scores: {
+    ui: { type: Number, default: 0 },
+    codeQuality: { type: Number, default: 0 },
+    logic: { type: Number, default: 0 },
+    overall: { type: Number, default: 0 }
+  },
+  aiSuggestions: {
+    strengths: { type: String, default: '' },
+    weaknesses: { type: String, default: '' },
+    suggestions: { type: String, default: '' }
   },
   createdAt: {
     type: Date,

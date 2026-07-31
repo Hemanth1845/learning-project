@@ -124,6 +124,8 @@ router.get('/bookmarks', protect, async (req, res) => {
     
     const bookmarkedCourses = [];
     const bookmarkedDSA = [];
+    const bookmarkedTheory = [];
+    const bookmarkedAptitude = [];
 
     for (let bookmark of bookmarks) {
       if (bookmark.itemType === 'course') {
@@ -132,12 +134,22 @@ router.get('/bookmarks', protect, async (req, res) => {
       } else if (bookmark.itemType === 'dsa') {
         const problem = await DSAProblem.findById(bookmark.itemId);
         if (problem) bookmarkedDSA.push(problem);
+      } else if (bookmark.itemType === 'theory') {
+        const TheoryChapter = require('../models/TheoryChapter');
+        const chapter = await TheoryChapter.findById(bookmark.itemId);
+        if (chapter) bookmarkedTheory.push(chapter);
+      } else if (bookmark.itemType === 'aptitude') {
+        const AptitudeTopic = require('../models/AptitudeTopic');
+        const topic = await AptitudeTopic.findById(bookmark.itemId);
+        if (topic) bookmarkedAptitude.push(topic);
       }
     }
 
     res.json({
       courses: bookmarkedCourses,
-      dsa: bookmarkedDSA
+      dsa: bookmarkedDSA,
+      theory: bookmarkedTheory,
+      aptitude: bookmarkedAptitude
     });
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -741,10 +753,10 @@ Do not include any explanation or markdown formatting, return ONLY the raw JSON 
         parsedResume = JSON.parse(cleanedJson);
       } catch (err) {
         console.error('Gemini resume parsing failed, using fallback parser:', err);
-        parsedResume = parseResumeFallback(fileName, fileData, mimeType);
+        parsedResume = parseResumeFallback(fileName, fileData, mimeType, req.user);
       }
     } else {
-      parsedResume = parseResumeFallback(fileName, fileData, mimeType);
+      parsedResume = parseResumeFallback(fileName, fileData, mimeType, req.user);
     }
 
     res.json({ success: true, parsed: parsedResume });
@@ -755,15 +767,16 @@ Do not include any explanation or markdown formatting, return ONLY the raw JSON 
   }
 });
 
-function parseResumeFallback(fileName, fileData, mimeType) {
+function parseResumeFallback(fileName, fileData, mimeType, user) {
+  const defaultName = user ? (user.username.charAt(0).toUpperCase() + user.username.slice(1)) : 'Placement Candidate';
   // If the file is JSON, we can try to parse it directly
   if (fileName.endsWith('.json') || mimeType === 'application/json') {
     try {
       const decodedText = Buffer.from(fileData, 'base64').toString('utf-8');
       const parsed = JSON.parse(decodedText);
       return {
-        name: parsed.name || 'Hemanth Kumar',
-        email: parsed.email || 'hemanth@placementprep.com',
+        name: parsed.name || defaultName,
+        email: parsed.email || (user ? user.email : 'candidate@placementprep.com'),
         phone: parsed.phone || '+91 98765 43210',
         github: parsed.github || 'github.com/hemanth',
         linkedin: parsed.linkedin || 'linkedin.com/in/hemanth',
@@ -820,11 +833,11 @@ function parseResumeFallback(fileName, fileData, mimeType) {
   });
 
   return {
-    name: nameMatch ? nameMatch[1].trim() : 'Hemanth Kumar (Demo Mode)',
-    email: emailMatch ? emailMatch[1].trim() : 'hemanth@placementprep.com',
+    name: nameMatch ? nameMatch[1].trim() : defaultName,
+    email: emailMatch ? emailMatch[1].trim() : (user ? user.email : 'candidate@placementprep.com'),
     phone: phoneMatch ? phoneMatch[1].trim() : '+91 98765 43210',
-    github: githubMatch ? githubMatch[1].trim() : 'github.com/hemanth',
-    linkedin: linkedinMatch ? linkedinMatch[1].trim() : 'linkedin.com/in/hemanth',
+    github: githubMatch ? githubMatch[1].trim() : 'github.com/candidate',
+    linkedin: linkedinMatch ? linkedinMatch[1].trim() : 'linkedin.com/in/candidate',
     education: 'B.Tech in Computer Science, 2027 (GPA: 8.9/10) (Parsed from ' + fileName + ')',
     experienceCompany: 'Tech Solutions Ltd.',
     experienceRole: 'Software Developer Intern',

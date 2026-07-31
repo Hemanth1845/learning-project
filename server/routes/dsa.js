@@ -756,4 +756,37 @@ router.post('/:id/run', protect, async (req, res) => {
   }
 });
 
+// @desc    Add new DSA problem / Daily Challenge (Admin only)
+// @route   POST /api/dsa/admin/add
+router.post('/admin/add', protect, adminOnly, async (req, res) => {
+  try {
+    const { title, topic, difficulty, xp, description, isDaily, solveUrl, videoUrl, examples, codeTemplates, testCases } = req.body;
+    
+    // Generate a unique problemId and slug
+    const count = await DSAProblem.countDocuments();
+    const problemId = count + 100;
+    const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+
+    const problem = await DSAProblem.create({
+      problemId,
+      title,
+      topic,
+      difficulty,
+      xp: xp || 20,
+      description: description || '',
+      isDaily: isDaily || false,
+      solveUrl: solveUrl || '',
+      videoUrl: videoUrl || '',
+      examples: examples || [],
+      codeTemplates: codeTemplates || { javascript: '', python: '', java: '', cpp: '' },
+      testCases: testCases || [],
+      slug
+    });
+
+    res.status(201).json(problem);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
 module.exports = router;
