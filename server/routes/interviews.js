@@ -45,23 +45,27 @@ router.post('/start', protect, async (req, res) => {
       return res.status(400).json({ message: 'Company name and resume text are required.' });
     }
 
+    const nameRegexMatch = resumeText.match(/(?:Name|Full Name):\s*([^\n\r]+)/i);
+    const candidateName = nameRegexMatch ? nameRegexMatch[1].trim() : (req.user.username.charAt(0).toUpperCase() + req.user.username.slice(1));
+
     let firstQuestion = '';
 
     if (process.env.GEMINI_API_KEY) {
       try {
         const prompt = `You are a technical interviewer at ${companyName} conducting a ${difficulty} interview.
+Candidate's Name: ${candidateName}
 Candidate's Resume Text: "${resumeText.substring(0, 3000)}"
 
-This is the start of the interview. Please welcome the candidate and ask the first question. 
-Keep the response professional, crisp, and direct. Ask only ONE technical question to start.`;
+This is the start of the interview. Please welcome the candidate by their name (e.g. "Hi ${candidateName}, welcome...") and ask them to start with their self-introduction and briefly describe their background.
+Keep the response professional, crisp, and direct. Ask only ONE question to start.`;
 
         firstQuestion = await callGemini(prompt);
       } catch (err) {
         console.warn('Gemini start error, falling back to local question engine:', err);
-        firstQuestion = getFallbackQuestion(companyName, difficulty, [], resumeText);
+        firstQuestion = `Hi ${candidateName}, welcome to your technical interview for ${companyName}. Start with your self-introduction and explain your experience with the technology stack on your resume.`;
       }
     } else {
-      firstQuestion = getFallbackQuestion(companyName, difficulty, [], resumeText);
+      firstQuestion = `Hi ${candidateName}, welcome to your technical interview for ${companyName}. Start with your self-introduction and explain your experience with the technology stack on your resume.`;
     }
 
     const interview = await Interview.create({
@@ -219,25 +223,108 @@ router.post('/parse-resume', protect, async (req, res) => {
       return res.status(400).json({ message: 'File content is required.' });
     }
 
-    const nameRegexMatch = fileContent.match(/(?:Name|Full Name):\s*([^\n]+)/i) || fileContent.match(/^([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)/m);
-    const candidateName = nameRegexMatch ? nameRegexMatch[1].trim() : (req.user.username.charAt(0).toUpperCase() + req.user.username.slice(1));
+    let fileBase64 = fileContent;
+    let mimeType = 'text/plain';
+    let rawText = '';
+
+    if (fileContent.startsWith('data:')) {
+      const match = fileContent.match(/^data:([^;]+);base64,(.+)$/);
+      if (match) {
+        mimeType = match[1];
+        fileBase64 = match[2];
+      }
+    }
+
+    if (mimeType.includes('pdf') || (fileName && fileName.toLowerCase().endsWith('.pdf'))) {
+      try {
+        const pdf = require('pdf-parse');
+        const buffer = Buffer.from(fileBase64, 'base64');
+        const pdfData = await pdf(buffer);
+        rawText = pdfData.text;
+      } catch (err) {
+        console.error('PDF parsing in interviews failed:', err);
+      }
+    }
+
+    if (!rawText) {
+      try {
+        rawText = Buffer.from(fileBase64, 'base64').toString('utf-8');
+      } catch (e) {
+        rawText = '';
+      }
+    }
+
+    // Try to extract name from decoded text or filename or user model fallback
+    let candidateName = '';
+    const lines = rawText.split('\n').map(l => l.trim()).filter(Boolean);
+    for (let i = 0; i < Math.min(lines.length, 5); i++) {
+      const line = lines[i];
+      if (line.length > 3 && !line.includes('@') && !line.includes('http') && !line.includes(':') && !/\d{5,}/.test(line)) {
+        if (/^[A-Za-z\s.]+$/.test(line)) {
+          candidateName = line.trim();
+          break;
+        }
+      }
+    }
+
+    if (!candidateName && fileName) {
+      const cleanFileName = fileName.replace(/\.[^/.]+$/, "").replace(/[-_]resume/i, "").trim();
+      if (cleanFileName && cleanFileName.length > 2 && !/resume/i.test(cleanFileName)) {
+        candidateName = cleanFileName.charAt(0).toUpperCase() + cleanFileName.slice(1);
+      }
+    }
+    if (!candidateName) {
+      candidateName = req.user.username.charAt(0).toUpperCase() + req.user.username.slice(1);
+    }
+
+    const emailMatch = rawText.match(/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/);
+    const phoneMatch = rawText.match(/((?:\+?\d{1,3}[\s-])?\(?\d{3}\)?[\s-]?\d{3}[\s-]?\d{4}|\+?\d{10,12})/);
+    const githubMatch = rawText.match(/(github\.com\/[a-zA-Z0-9-_/]+)/i);
+    const linkedinMatch = rawText.match(/(linkedin\.com\/in\/[a-zA-Z0-9-_/]+)/i);
+
+    // Extract skills dynamically
+    const skillsList = ['javascript', 'react', 'node', 'python', 'java', 'c++', 'sql', 'mongodb', 'express', 'html', 'css', 'docker', 'aws', 'spring boot', 'mysql', 'postgresql', 'redis', 'firebase', 'git', 'github'];
+    const matchedSkills = [];
+    skillsList.forEach(s => {
+      const reg = new RegExp('\\b' + s.replace('.', '\\.').replace('+', '\\+') + '\\b', 'i');
+      if (reg.test(rawText)) {
+        matchedSkills.push(s.charAt(0).toUpperCase() + s.slice(1));
+      }
+    });
+
+    const collegeMatch = rawText.match(/([A-Za-z0-9.\s,]+(?:University|Institute|College|Foundation|Academy|School|K\.L\.\s*University))/i);
+    const degreeMatch = rawText.match(/(B\.Tech|M\.Tech|B\.E|B\.Sc|M\.Sc|MCA|BCA|MBA|Bachelor|Master)\s*(?:in|of)?\s*([A-Za-z\s&]+)/i);
+    const cgpaMatch = rawText.match(/(?:CGPA|GPA|Grade|Pointer):\s*([0-9./]+)/i) || rawText.match(/\b([0-9]\.[0-9]{1,2})\b/);
+
+    let educationStr = '';
+    if (collegeMatch) {
+      educationStr = `${degreeMatch ? degreeMatch[0].trim() : 'B.Tech'} at ${collegeMatch[0].trim()} ${cgpaMatch ? `(CGPA: ${cgpaMatch[1]})` : ''}`;
+    }
+
+    let projectTitle = '';
+    let projectIdx = rawText.toLowerCase().indexOf('projects');
+    if (projectIdx !== -1) {
+      const projectSectionText = rawText.substring(projectIdx + 8, projectIdx + 800);
+      const pLines = projectSectionText.split('\n').map(l => l.trim()).filter(Boolean);
+      if (pLines.length > 0) {
+        projectTitle = pLines[0].replace(/[^a-zA-Z0-9\s-]/g, '').trim();
+      }
+    }
 
     let parsedInfo = {
       fullName: candidateName,
-      collegeName: 'KL University',
-      degree: 'B.Tech in Computer Science',
-      cgpa: '9.0',
-      skills: 'React, Node.js, Express, MongoDB, Java, C++',
-      internship: 'Software Engineering Intern',
-      projects: 'Placement Prep Portal, Code Compiler Sandbox',
+      collegeName: collegeMatch ? collegeMatch[0].trim() : 'KL University',
+      degree: degreeMatch ? degreeMatch[0].trim() : 'B.Tech in Computer Science',
+      cgpa: cgpaMatch ? cgpaMatch[1].trim() : '9.0',
+      skills: matchedSkills.join(', ') || 'React, Node.js, Express, MongoDB, Java, C++',
+      internship: '',
+      projects: projectTitle || 'Placement Prep Portal, Code Compiler Sandbox',
       careerGoal: 'Software Engineer'
     };
 
     if (process.env.GEMINI_API_KEY) {
       try {
-        const textSample = fileContent.substring(0, 8000);
         const prompt = `Analyze this resume and extract candidate's details.
-        Resume Content: "${textSample}"
         
         Return ONLY valid JSON matching this schema:
         {
@@ -252,12 +339,27 @@ router.post('/parse-resume', protect, async (req, res) => {
         }
         Do not add markdown formatting or explanation outside the JSON.`;
 
-        const response = await callGemini(prompt);
+        let response = '';
+        if (mimeType.includes('pdf') || mimeType.includes('word') || mimeType.includes('officedocument')) {
+          const { callGeminiWithMedia } = require('../utils/gemini');
+          response = await callGeminiWithMedia(fileBase64, mimeType, prompt);
+        } else {
+          response = await callGemini(`Resume Content:\n"${rawText.substring(0, 8000)}"\n\n${prompt}`);
+        }
+
         let cleanJson = response.trim();
         if (cleanJson.startsWith('```')) {
           cleanJson = cleanJson.replace(/^```(json)?/, '').replace(/```$/, '').trim();
         }
-        parsedInfo = JSON.parse(cleanJson);
+        const parsed = JSON.parse(cleanJson);
+        if (parsed.fullName) parsedInfo.fullName = parsed.fullName;
+        if (parsed.collegeName) parsedInfo.collegeName = parsed.collegeName;
+        if (parsed.degree) parsedInfo.degree = parsed.degree;
+        if (parsed.cgpa) parsedInfo.cgpa = parsed.cgpa;
+        if (parsed.skills) parsedInfo.skills = parsed.skills;
+        if (parsed.internship) parsedInfo.internship = parsed.internship;
+        if (parsed.projects) parsedInfo.projects = parsed.projects;
+        if (parsed.careerGoal) parsedInfo.careerGoal = parsed.careerGoal;
       } catch (err) {
         console.warn('Gemini resume parsing error, using default extraction:', err);
       }

@@ -45,10 +45,17 @@ router.get('/', protect, async (req, res) => {
   }
 });
 
-// @desc    Get 2 daily problems from Strings category
+// @desc    Get 2 daily problems
 // @route   GET /api/dsa/daily
 router.get('/daily', protect, async (req, res) => {
   try {
+    // Automatically erase/deactivate daily challenges older than 24 hours
+    const cutoffTime = new Date(Date.now() - 24 * 60 * 60 * 1000);
+    await DSAProblem.updateMany(
+      { isDaily: true, createdAt: { $lt: cutoffTime } },
+      { $set: { isDaily: false } }
+    );
+
     let dailyProblems = await DSAProblem.find({ isDaily: true });
     if (dailyProblems.length === 0) {
       dailyProblems = await DSAProblem.find({ topic: 'Strings' }).limit(2);
@@ -272,17 +279,39 @@ router.post('/:id/toggle', protect, async (req, res) => {
   }
 });
 
+const enforceDailyLimit = async (problemIdToIgnore = null) => {
+  const cutoffTime = new Date(Date.now() - 24 * 60 * 60 * 1000);
+  await DSAProblem.updateMany(
+    { isDaily: true, createdAt: { $lt: cutoffTime } },
+    { $set: { isDaily: false } }
+  );
+
+  const query = { isDaily: true };
+  if (problemIdToIgnore) {
+    query._id = { $ne: problemIdToIgnore };
+  }
+  return await DSAProblem.countDocuments(query);
+};
+
 // @desc    Create a new DSA Problem (Admin only)
 // @route   POST /api/dsa
 router.post('/', protect, adminOnly, async (req, res) => {
   try {
-    const { title, topic, difficulty, xp, solveUrl, videoUrl, description, examples, testCases } = req.body;
+    const { title, topic, difficulty, xp, solveUrl, videoUrl, description, examples, testCases, isDaily } = req.body;
+
+    if (isDaily) {
+      const activeCount = await enforceDailyLimit();
+      if (activeCount >= 2) {
+        return res.status(400).json({ message: 'Only 2 daily problems can be active per day. Please wait 24 hours or deactivate/edit an existing daily problem.' });
+      }
+    }
 
     const lastProblem = await DSAProblem.findOne().sort({ problemId: -1 });
     const problemId = lastProblem ? lastProblem.problemId + 1 : 1;
 
     const cleanTitle = title.replace(/\s+/g, '');
     const camelTitle = cleanTitle.charAt(0).toLowerCase() + cleanTitle.slice(1);
+    const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
     const newProblem = await DSAProblem.create({
       problemId,
@@ -295,12 +324,13 @@ router.post('/', protect, adminOnly, async (req, res) => {
       description: description || '',
       examples: examples || [],
       testCases: testCases || [],
-      isDaily: req.body.isDaily || false,
+      isDaily: isDaily || false,
+      slug,
       codeTemplates: {
-        javascript: `function ${camelTitle}(nums) {\n  // Write your code here\n  // Return the result\n}`,
-        python: `def ${camelTitle}(nums):\n    # Write your code here\n    pass`,
-        java: `class Solution {\n    public void ${camelTitle}(int[] nums) {\n        // Write your code here\n    }\n}`,
-        cpp: `class Solution {\npublic:\n    void ${camelTitle}(vector<int>& nums) {\n        // Write your code here\n    }\n};`
+        javascript: `class Solution {\n    ${camelTitle}(nums) {\n        // Write your code here\n        \n    }\n}`,
+        python: `class Solution:\n    def ${camelTitle}(self, nums: List[int]) -> List[int]:\n        # Write your code here\n        pass\n`,
+        java: `class Solution {\n    public int[] ${camelTitle}(int[] nums) {\n        // Write your code here\n        return nums;\n    }\n}`,
+        cpp: `class Solution {\npublic:\n    vector<int> ${camelTitle}(vector<int>& nums) {\n        // Write your code here\n        \n    }\n};`
       }
     });
 
@@ -315,12 +345,23 @@ router.post('/', protect, adminOnly, async (req, res) => {
 router.put('/:id', protect, adminOnly, async (req, res) => {
   try {
     const { title, topic, difficulty, xp, solveUrl, videoUrl, description, examples, testCases, isDaily } = req.body;
+
+    if (isDaily) {
+      const activeCount = await enforceDailyLimit(req.params.id);
+      if (activeCount >= 2) {
+        return res.status(400).json({ message: 'Only 2 daily problems can be active per day. Please wait 24 hours or deactivate/edit an existing daily problem.' });
+      }
+    }
+
     const problem = await DSAProblem.findById(req.params.id);
     if (!problem) {
       return res.status(404).json({ message: 'Problem not found' });
     }
 
-    problem.title = title || problem.title;
+    if (title) {
+      problem.title = title;
+      problem.slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+    }
     problem.topic = topic || problem.topic;
     problem.difficulty = difficulty || problem.difficulty;
     problem.xp = xp !== undefined ? xp : problem.xp;
@@ -751,39 +792,6 @@ router.post('/:id/run', protect, async (req, res) => {
         error: `Compile Error: C++ compiler (g++) not found on this system. Please use JavaScript, Python, or Java.`
       });
     }
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
-});
-
-// @desc    Add new DSA problem / Daily Challenge (Admin only)
-// @route   POST /api/dsa/admin/add
-router.post('/admin/add', protect, adminOnly, async (req, res) => {
-  try {
-    const { title, topic, difficulty, xp, description, isDaily, solveUrl, videoUrl, examples, codeTemplates, testCases } = req.body;
-    
-    // Generate a unique problemId and slug
-    const count = await DSAProblem.countDocuments();
-    const problemId = count + 100;
-    const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-
-    const problem = await DSAProblem.create({
-      problemId,
-      title,
-      topic,
-      difficulty,
-      xp: xp || 20,
-      description: description || '',
-      isDaily: isDaily || false,
-      solveUrl: solveUrl || '',
-      videoUrl: videoUrl || '',
-      examples: examples || [],
-      codeTemplates: codeTemplates || { javascript: '', python: '', java: '', cpp: '' },
-      testCases: testCases || [],
-      slug
-    });
-
-    res.status(201).json(problem);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

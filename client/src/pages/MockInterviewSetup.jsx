@@ -19,17 +19,19 @@ const MockInterviewSetup = () => {
   const [parsedProfile, setParsedProfile] = useState(null);
   const [uploadError, setUploadError] = useState('');
   const [voiceOnly, setVoiceOnly] = useState(false);
+  const [uploadedFileName, setUploadedFileName] = useState('');
 
   const handleResumeFileUpload = async (e) => {
     const file = e.target.files[0];
     if (!file) return;
     setResumeLoading(true);
     setUploadError('');
+    setUploadedFileName(file.name);
 
     try {
       const reader = new FileReader();
       reader.onload = async () => {
-        const fileContent = reader.result;
+        const fileContent = reader.result; // Base64 Data URL
         try {
           const res = await fetch(`${API_URL}/interviews/parse-resume`, {
             method: 'POST',
@@ -64,7 +66,7 @@ Career Goal: ${data.parsedInfo.careerGoal}`;
           setResumeLoading(false);
         }
       };
-      reader.readAsText(file);
+      reader.readAsDataURL(file);
     } catch (err) {
       console.error(err);
       setResumeLoading(false);
@@ -233,32 +235,101 @@ ${r.projectBullets || ''}`;
           </div>
 
           {selectedMode === 'Resume' && (
-            <div className="glass-card" style={{ marginTop: '12px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-              <h4 style={{ color: 'white', fontWeight: 600, fontSize: '0.98rem' }}>📄 Upload Resume for AI Analysis</h4>
-              <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>
-                Upload your resume (.txt, .pdf, .docx). Our AI will parse the details and build a custom interview checklist!
+            <div className="glass-card" style={{ marginTop: '12px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <span style={{ background: '#2ecc71', color: '#1a1f2c', padding: '2px 8px', borderRadius: '4px', fontSize: '0.75rem', fontWeight: 'bold' }}>!</span>
+                <h4 style={{ color: 'white', fontWeight: 600, fontSize: '1.05rem', margin: 0 }}>Upload Your Resume</h4>
+              </div>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', margin: 0 }}>
+                Upload your resume PDF or paste text. The interviewer will ask questions about YOUR projects, skills, and experience.
               </p>
               
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 <input 
                   type="file" 
+                  id="mock-resume-file-input"
                   accept=".txt,.pdf,.docx"
                   onChange={handleResumeFileUpload} 
-                  style={{
-                    padding: '10px',
-                    background: 'rgba(255,255,255,0.03)',
-                    border: '1px solid var(--border-glass)',
-                    borderRadius: '6px',
-                    color: 'white',
-                    cursor: 'pointer'
-                  }}
+                  style={{ display: 'none' }}
                 />
+
+                {uploadedFileName ? (
+                  <div 
+                    onClick={() => document.getElementById('mock-resume-file-input').click()} 
+                    style={{ 
+                      border: '1px dashed #2ecc71', 
+                      padding: '16px', 
+                      borderRadius: '8px', 
+                      textAlign: 'center', 
+                      cursor: 'pointer', 
+                      background: 'rgba(46, 204, 113, 0.05)', 
+                      color: '#2ecc71',
+                      fontSize: '0.9rem',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: '8px'
+                    }}
+                  >
+                    <span>🟢 <strong>{uploadedFileName}</strong> (Click to change)</span>
+                  </div>
+                ) : (
+                  <div 
+                    onClick={() => document.getElementById('mock-resume-file-input').click()} 
+                    style={{ 
+                      border: '1px dashed var(--border-glass)', 
+                      padding: '24px', 
+                      borderRadius: '8px', 
+                      textAlign: 'center', 
+                      cursor: 'pointer', 
+                      background: 'rgba(255,255,255,0.01)', 
+                      color: 'var(--text-muted)',
+                      fontSize: '0.9rem',
+                      transition: 'border-color 0.2s'
+                    }}
+                    onMouseOver={(e) => e.currentTarget.style.borderColor = 'var(--accent-secondary)'}
+                    onMouseOut={(e) => e.currentTarget.style.borderColor = 'var(--border-glass)'}
+                  >
+                    <span>📤 Drag & Drop or <strong>Browse</strong> to upload resume PDF/Word</span>
+                  </div>
+                )}
+
                 {resumeLoading && <span style={{ fontSize: '0.8rem', color: 'var(--accent-secondary)' }}>⏳ Parsing resume contents with Gemini AI...</span>}
                 {uploadError && <span style={{ fontSize: '0.8rem', color: 'var(--color-hard)' }}>❌ {uploadError}</span>}
+
+                <div style={{ textAlign: 'center', fontSize: '0.8rem', color: 'var(--text-muted)', margin: '4px 0' }}>
+                  — OR paste text below —
+                </div>
+
+                <textarea 
+                  className="form-input" 
+                  rows="6"
+                  placeholder="Paste your plain text resume contents here..."
+                  value={resumeText} 
+                  onChange={(e) => setResumeText(e.target.value)} 
+                  style={{
+                    fontFamily: 'monospace',
+                    fontSize: '0.8rem',
+                    background: 'rgba(0, 0, 0, 0.2)',
+                    borderColor: 'var(--border-glass)',
+                    borderRadius: '8px',
+                    color: '#e2e8f0',
+                    padding: '12px',
+                    width: '100%',
+                    resize: 'vertical'
+                  }}
+                />
+
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.8rem' }}>
+                  <span style={{ color: 'var(--text-muted)' }}>{resumeText.length} characters</span>
+                  {resumeText.length > 50 && (
+                    <span style={{ color: '#2ecc71', fontWeight: 600 }}>✓ Ready for interview</span>
+                  )}
+                </div>
               </div>
 
               {parsedProfile && (
-                <div style={{ marginTop: '12px', background: 'rgba(255,255,255,0.01)', padding: '16px', borderRadius: '8px', border: '1px solid var(--border-glass)' }}>
+                <div style={{ marginTop: '4px', background: 'rgba(255,255,255,0.01)', padding: '16px', borderRadius: '8px', border: '1px solid var(--border-glass)' }}>
                   <h5 style={{ color: 'white', fontSize: '0.9rem', marginBottom: '12px', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '6px' }}>
                     ✓ Extracted Candidate Information
                   </h5>

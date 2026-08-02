@@ -277,6 +277,7 @@ router.get('/admin/users', protect, adminOnly, async (req, res) => {
         xp: u.xp,
         streak: u.streak,
         rank: u.rank,
+        profilePic: u.profilePic || '',
         status: u.status || 'active',
         createdAt: u.createdAt,
         phoneNumber: u.phoneNumber || '',
@@ -707,9 +708,33 @@ router.post('/parse-resume', protect, async (req, res) => {
       return res.status(400).json({ message: 'File data is required' });
     }
 
-    const { callGeminiWithMedia } = require('../utils/gemini');
+    const { callGemini } = require('../utils/gemini');
 
-    const prompt = `Analyze the uploaded resume and extract the details into the following JSON format. Ensure all fields are filled based on the document contents. If a field is not found in the resume, leave it as an empty string.
+    // 1. Extract text from base64 PDF or Text content
+    let text = '';
+    if (fileName.toLowerCase().endsWith('.pdf') || mimeType === 'application/pdf') {
+      try {
+        const pdf = require('pdf-parse');
+        const buffer = Buffer.from(fileData, 'base64');
+        const pdfData = await pdf(buffer);
+        text = pdfData.text;
+      } catch (err) {
+        console.error('PDF parsing error, falling back to string conversion:', err);
+      }
+    }
+
+    if (!text) {
+      try {
+        text = Buffer.from(fileData, 'base64').toString('utf-8');
+      } catch (e) {
+        text = '';
+      }
+    }
+
+    let parsedResume = null;
+    if (process.env.GEMINI_API_KEY) {
+      try {
+        const prompt = `Analyze this resume and extract the details into the following JSON format. Ensure all fields are filled based on the document contents. If a field is not found in the resume, leave it as an empty string.
 
 Required JSON Structure:
 {
@@ -721,42 +746,41 @@ Required JSON Structure:
   "education": "Education details (e.g. 'B.Tech in Computer Science, 2027 (GPA: 8.9/10)')",
   "experienceCompany": "Most recent company name",
   "experienceRole": "Most recent role title",
-  "experienceDuration": "Most recent experience duration (e.g., 'May 2026 - July 2026')",
-  "experienceBullets": "Key achievements or bullet points for the most recent experience (separated by newlines, each starting with '• ')",
+  "experienceDuration": "Most recent experience duration",
+  "experienceBullets": "Key achievements or bullet points for the experience (separated by newlines, each starting with '• ')",
   "projectTitle": "Most prominent project title",
-  "projectStack": "Tech stack used in the project (e.g. 'MERN Stack, JWT')",
+  "projectStack": "Tech stack used in the project",
   "projectBullets": "Project details/bullets (separated by newlines, each starting with '• ')",
-  "skillsLanguages": "Programming languages (comma-separated, e.g., 'Javascript, Python')",
-  "skillsFrameworks": "Frameworks and libraries (comma-separated, e.g., 'React, Node.js')",
-  "skillsDatabases": "Databases and caching (comma-separated, e.g., 'MongoDB, Redis')",
-  "languages": "Languages spoken (e.g., 'English (Fluent), Telugu (Native)')",
+  "skillsLanguages": "Programming languages (comma-separated)",
+  "skillsFrameworks": "Frameworks and libraries (comma-separated)",
+  "skillsDatabases": "Databases and caching (comma-separated)",
+  "languages": "Languages spoken",
   "certificates": "Certificates list (newline separated bullet points starting with '• ')",
   "interests": "Interests list (newline separated bullet points starting with '• ')",
   "courses": "Courses completed (newline separated bullet points starting with '• ')",
   "awards": "Awards and achievements (newline separated bullet points starting with '• ')",
   "organisations": "Organisations or volunteer history (newline separated bullet points starting with '• ')",
   "publications": "Publications list (newline separated bullet points starting with '• ')",
-  "references": "References (e.g., names and contact details)",
+  "references": "References",
   "declaration": "Declaration statement",
-  "customTitle": "A custom section title if any other section exists",
-  "customContent": "Custom section content (newline separated bullet points starting with '• ')"
+  "customTitle": "Custom section title",
+  "customContent": "Custom section content"
 }
 
-Do not include any explanation or markdown formatting, return ONLY the raw JSON object.`;
+Resume Content:
+"${text.substring(0, 10000)}"
 
-    let parsedResume = null;
-    if (process.env.GEMINI_API_KEY) {
-      try {
-        const aiResponseText = await callGeminiWithMedia(fileData, mimeType, prompt);
-        // clean up possible markdown JSON blocks
-        const cleanedJson = aiResponseText.replace(/```json/g, '').replace(/```/g, '').trim();
+Return ONLY the raw JSON object. Do not include markdown formatting or backticks.`;
+
+        const responseText = await callGemini(prompt);
+        const cleanedJson = responseText.replace(/```json/g, '').replace(/```/g, '').trim();
         parsedResume = JSON.parse(cleanedJson);
       } catch (err) {
         console.error('Gemini resume parsing failed, using fallback parser:', err);
-        parsedResume = parseResumeFallback(fileName, fileData, mimeType, req.user);
+        parsedResume = parseResumeFallbackText(text, fileName, req.user);
       }
     } else {
-      parsedResume = parseResumeFallback(fileName, fileData, mimeType, req.user);
+      parsedResume = parseResumeFallbackText(text, fileName, req.user);
     }
 
     res.json({ success: true, parsed: parsedResume });
@@ -767,99 +791,102 @@ Do not include any explanation or markdown formatting, return ONLY the raw JSON 
   }
 });
 
-function parseResumeFallback(fileName, fileData, mimeType, user) {
+function parseResumeFallbackText(text, fileName, user) {
+  const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
   const defaultName = user ? (user.username.charAt(0).toUpperCase() + user.username.slice(1)) : 'Placement Candidate';
-  // If the file is JSON, we can try to parse it directly
-  if (fileName.endsWith('.json') || mimeType === 'application/json') {
-    try {
-      const decodedText = Buffer.from(fileData, 'base64').toString('utf-8');
-      const parsed = JSON.parse(decodedText);
-      return {
-        name: parsed.name || defaultName,
-        email: parsed.email || (user ? user.email : 'candidate@placementprep.com'),
-        phone: parsed.phone || '+91 98765 43210',
-        github: parsed.github || 'github.com/hemanth',
-        linkedin: parsed.linkedin || 'linkedin.com/in/hemanth',
-        education: parsed.education || 'B.Tech in Computer Science, 2027 (GPA: 8.9/10)',
-        experienceCompany: parsed.experienceCompany || 'Tech Solutions Ltd.',
-        experienceRole: parsed.experienceRole || 'Software Developer Intern',
-        experienceDuration: parsed.experienceDuration || 'May 2026 - July 2026',
-        experienceBullets: parsed.experienceBullets || '• Developed robust web portals using React and Express.\n• Designed relational databases and optimized indexes.',
-        projectTitle: parsed.projectTitle || 'E-Learning Portal',
-        projectStack: parsed.projectStack || 'MERN Stack, JWT',
-        projectBullets: parsed.projectBullets || '• Integrated Google Gemini AI to analyze resumes.',
-        skillsLanguages: parsed.skillsLanguages || 'Javascript, Python',
-        skillsFrameworks: parsed.skillsFrameworks || 'React, Node.js',
-        skillsDatabases: parsed.skillsDatabases || 'MongoDB, Redis',
-        languages: parsed.languages || 'English (Fluent), Telugu (Native)',
-        certificates: parsed.certificates || '• AWS Certified Cloud Practitioner (2025)',
-        interests: parsed.interests || '• Open Source contributing\n• Competitive Programming',
-        courses: parsed.courses || '• Advanced Data Structures & Algorithms',
-        awards: parsed.awards || '• 1st Place Winner - Smart India Hackathon (2025)',
-        organisations: parsed.organisations || '• Lead Organizer at College Open Source Developers Guild',
-        publications: parsed.publications || '• "Review of Speech Synthesis APIs in Modern Web Apps"',
-        references: parsed.references || 'Dr. R. Prasad (prasad@college.edu)',
-        declaration: parsed.declaration || 'I hereby declare that the details provided are authentic.',
-        customTitle: parsed.customTitle || 'Volunteering & Open Source',
-        customContent: parsed.customContent || '• Contributed to React and Webpack codebases.'
-      };
-    } catch (e) {
-      // Fallback to text parsing
+  
+  // Heuristic search for Candidate Name on the first 5 lines
+  let candidateName = '';
+  for (let i = 0; i < Math.min(lines.length, 5); i++) {
+    const line = lines[i];
+    if (line.length > 3 && !line.includes('@') && !line.includes('http') && !line.includes(':') && !/\d{5,}/.test(line)) {
+      if (/^[A-Za-z\s.]+$/.test(line)) {
+        candidateName = line.trim();
+        break;
+      }
     }
   }
 
-  // Decode the text if it is text/plain
-  let text = '';
-  try {
-    text = Buffer.from(fileData, 'base64').toString('utf-8');
-  } catch (e) {
-    text = '';
+  if (!candidateName && fileName) {
+    const cleanFileName = fileName.replace(/\.[^/.]+$/, "").replace(/[-_]resume/i, "").trim();
+    if (cleanFileName && cleanFileName.length > 2 && !/resume/i.test(cleanFileName)) {
+      candidateName = cleanFileName.charAt(0).toUpperCase() + cleanFileName.slice(1);
+    }
+  }
+  if (!candidateName) {
+    candidateName = defaultName;
   }
 
-  // Parse text using regex heuristics
-  const nameMatch = text.match(/name:\s*([^\n]+)/i) || text.match(/^([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)/m);
   const emailMatch = text.match(/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/);
-  const phoneMatch = text.match(/((?:\+?\d{1,3}[\s-])?\(?\d{3}\)?[\s-]?\d{3}[\s-]?\d{4})/);
-  const githubMatch = text.match(/(github\.com\/[a-zA-Z0-9-_]+)/i);
-  const linkedinMatch = text.match(/(linkedin\.com\/in\/[a-zA-Z0-9-_]+)/i);
+  const phoneMatch = text.match(/((?:\+?\d{1,3}[\s-])?\(?\d{3}\)?[\s-]?\d{3}[\s-]?\d{4}|\+?\d{10,12})/);
+  const githubMatch = text.match(/(github\.com\/[a-zA-Z0-9-_/]+)/i);
+  const linkedinMatch = text.match(/(linkedin\.com\/in\/[a-zA-Z0-9-_/]+)/i);
 
-  // Extract skills if any matching words
-  const skills = [];
-  const allSkills = ['javascript', 'python', 'java', 'c++', 'react', 'node', 'express', 'mongodb', 'sql', 'aws', 'docker'];
-  allSkills.forEach(s => {
-    if (text.toLowerCase().includes(s)) {
-      skills.push(s.charAt(0).toUpperCase() + s.slice(1));
+  // Extract skills dynamically
+  const skillsList = ['javascript', 'react', 'node', 'python', 'java', 'c++', 'sql', 'mongodb', 'express', 'html', 'css', 'docker', 'aws', 'spring boot', 'mysql', 'postgresql', 'redis', 'firebase', 'git', 'github'];
+  const matchedSkills = [];
+  skillsList.forEach(s => {
+    const reg = new RegExp('\\b' + s.replace('.', '\\.').replace('+', '\\+') + '\\b', 'i');
+    if (reg.test(text)) {
+      matchedSkills.push(s.charAt(0).toUpperCase() + s.slice(1));
     }
   });
 
+  // Extract education details
+  const collegeMatch = text.match(/([A-Za-z0-9.\s,]+(?:University|Institute|College|Foundation|Academy|School|K\.L\.\s*University))/i);
+  const degreeMatch = text.match(/(B\.Tech|M\.Tech|B\.E|B\.Sc|M\.Sc|MCA|BCA|MBA|Bachelor|Master)\s*(?:in|of)?\s*([A-Za-z\s&]+)/i);
+  const cgpaMatch = text.match(/(?:CGPA|GPA|Grade|Pointer):\s*([0-9./]+)/i) || text.match(/\b([0-9]\.[0-9]{1,2})\b/);
+
+  let educationStr = '';
+  if (collegeMatch) {
+    educationStr = `${degreeMatch ? degreeMatch[0].trim() : 'B.Tech'} at ${collegeMatch[0].trim()} ${cgpaMatch ? `(CGPA: ${cgpaMatch[1]})` : ''}`;
+  }
+
+  // Extract projects list
+  let projectTitle = '';
+  let projectStack = '';
+  let projectBullets = '';
+  const projectIdx = text.toLowerCase().indexOf('projects');
+  if (projectIdx !== -1) {
+    const projectSectionText = text.substring(projectIdx + 8, projectIdx + 800);
+    const pLines = projectSectionText.split('\n').map(l => l.trim()).filter(Boolean);
+    if (pLines.length > 0) {
+      projectTitle = pLines[0].replace(/[^a-zA-Z0-9\s-]/g, '').trim();
+      const bulletLines = pLines.filter(l => l.startsWith('•') || l.startsWith('-') || l.startsWith('*'));
+      if (bulletLines.length > 0) {
+        projectBullets = bulletLines.slice(0, 3).join('\n');
+      }
+    }
+  }
+
   return {
-    name: nameMatch ? nameMatch[1].trim() : defaultName,
-    email: emailMatch ? emailMatch[1].trim() : (user ? user.email : 'candidate@placementprep.com'),
-    phone: phoneMatch ? phoneMatch[1].trim() : '+91 98765 43210',
-    github: githubMatch ? githubMatch[1].trim() : 'github.com/candidate',
-    linkedin: linkedinMatch ? linkedinMatch[1].trim() : 'linkedin.com/in/candidate',
-    education: 'B.Tech in Computer Science, 2027 (GPA: 8.9/10) (Parsed from ' + fileName + ')',
-    experienceCompany: 'Tech Solutions Ltd.',
-    experienceRole: 'Software Developer Intern',
-    experienceDuration: 'May 2026 - July 2026',
-    experienceBullets: '• Developed robust web portals using React and Express.\n• Designed relational databases and optimized indexes.',
-    projectTitle: 'E-Learning Portal',
-    projectStack: 'MERN Stack, JWT',
-    projectBullets: '• Integrated Google Gemini AI to analyze resumes.',
-    skillsLanguages: skills.length > 0 ? skills.slice(0, 4).join(', ') : 'Javascript, Python, C++',
-    skillsFrameworks: 'React, Node.js, Express',
-    skillsDatabases: 'MongoDB, Redis',
-    languages: 'English (Fluent), Telugu (Native)',
-    certificates: '• AWS Certified Cloud Practitioner (2025)',
-    interests: '• Open Source contributing\n• Competitive Programming',
-    courses: '• Advanced Data Structures & Algorithms',
-    awards: '• 1st Place Winner - Smart India Hackathon (2025)',
-    organisations: '• Lead Organizer at College Open Source Developers Guild',
-    publications: '• "Review of Speech Synthesis APIs in Modern Web Apps"',
-    references: 'Dr. R. Prasad (prasad@college.edu)',
-    declaration: 'I hereby declare that the details provided are authentic.',
-    customTitle: 'Volunteering & Open Source',
-    customContent: '• Contributed to React and Webpack codebases.'
+    name: candidateName,
+    email: emailMatch ? emailMatch[1].trim() : (user ? user.email : ''),
+    phone: phoneMatch ? phoneMatch[1].trim() : '',
+    github: githubMatch ? githubMatch[1].trim() : '',
+    linkedin: linkedinMatch ? linkedinMatch[1].trim() : '',
+    education: educationStr,
+    experienceCompany: '',
+    experienceRole: '',
+    experienceDuration: '',
+    experienceBullets: '',
+    projectTitle: projectTitle,
+    projectStack: projectStack,
+    projectBullets: projectBullets,
+    skillsLanguages: matchedSkills.filter(s => ['Java', 'Python', 'C++', 'Javascript'].includes(s)).join(', '),
+    skillsFrameworks: matchedSkills.filter(s => ['React', 'Node', 'Express', 'Spring boot'].includes(s)).join(', '),
+    skillsDatabases: matchedSkills.filter(s => ['MySQL', 'Postgresql', 'Mongodb', 'Redis', 'Firebase'].includes(s)).join(', '),
+    languages: 'English',
+    certificates: '',
+    interests: '',
+    courses: '',
+    awards: '',
+    organisations: '',
+    publications: '',
+    references: '',
+    declaration: '',
+    customTitle: '',
+    customContent: ''
   };
 }
 

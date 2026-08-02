@@ -12,37 +12,33 @@ const ResumeATS = () => {
 
   // Resume state values
   const [resumeData, setResumeData] = useState({
-    name: 'Hemanth Kumar',
-    email: 'hemanth@placementprep.com',
-    phone: '+91 98765 43210',
-    github: 'github.com/hemanth',
-    linkedin: 'linkedin.com/in/hemanth',
-    
-    // Default sections
-    education: 'B.Tech in Computer Science, 2027 (GPA: 8.9/10)',
-    experienceCompany: 'Tech Solutions Ltd.',
-    experienceRole: 'Software Developer Intern',
-    experienceDuration: 'May 2026 - July 2026',
-    experienceBullets: '• Developed robust web portals using React and Express.\n• Designed relational databases and optimized indexes in MongoDB.\n• Decreased api load times by 20% by implementing caching layers.',
-    projectTitle: 'E-Learning Portal',
-    projectStack: 'MERN Stack, JWT, Gemini API',
-    projectBullets: '• Integrated Google Gemini AI to analyze resumes and conduct mock chats.\n• Styled responsive interfaces in Vanilla CSS with glassmorphism layout.\n• Created secure login protocols using bcrypt and JSON Web Tokens.',
-    skillsLanguages: 'Javascript, Python, Java, C++',
-    skillsFrameworks: 'React, Node.js, Express, Redux',
-    skillsDatabases: 'MongoDB, MySQL, PostgreSQL, Redis',
-
-    // Optional sections
-    languages: 'English (Fluent), Hindi (Conversational), Telugu (Native)',
-    certificates: '• AWS Certified Cloud Practitioner (2025)\n• Google Advanced Data Analytics Certificate (2025)',
-    interests: '• Open Source contributing\n• Competitive Programming\n• Cryptography & Cryptanalysis',
-    courses: '• Advanced Data Structures & Algorithms\n• Distributed Systems & Cloud Infrastructure\n• Machine Learning Operations (MLOps)',
-    awards: '• 1st Place Winner - Smart India Hackathon (2025)\n• 5-Star Competitor on CodeChef (Max Rating: 2150)',
-    organisations: '• Lead Organizer at College Open Source Developers Guild\n• Volunteer Tech Lead at Code for Community NGO',
-    publications: '• "Review of Speech Synthesis APIs in Modern Web Apps" (IEEE Conference 2026)',
-    references: 'Dr. R. Prasad, Senior Professor - CSE Department (prasad@college.edu | +91 99988 88899)',
-    declaration: 'I hereby declare that the details provided in this curriculum vitae are authentic to the best of my knowledge.',
-    customTitle: 'Volunteering & Open Source',
-    customContent: '• Contributed 10+ PRs to React and Webpack codebases.\n• Hosted technical bootcamps training over 500 freshman students in DSA.'
+    name: '',
+    email: '',
+    phone: '',
+    github: '',
+    linkedin: '',
+    education: '',
+    experienceCompany: '',
+    experienceRole: '',
+    experienceDuration: '',
+    experienceBullets: '',
+    projectTitle: '',
+    projectStack: '',
+    projectBullets: '',
+    skillsLanguages: '',
+    skillsFrameworks: '',
+    skillsDatabases: '',
+    languages: '',
+    certificates: '',
+    interests: '',
+    courses: '',
+    awards: '',
+    organisations: '',
+    publications: '',
+    references: '',
+    declaration: '',
+    customTitle: '',
+    customContent: ''
   });
 
   // Active section list
@@ -439,22 +435,6 @@ const ResumeATS = () => {
                 </span>
               </div>
               <div style={{ display: 'flex', gap: '8px' }}>
-                <button 
-                  type="button" 
-                  onClick={() => document.getElementById('resume-builder-file-upload').click()} 
-                  className="warroom-btn" 
-                  style={{ background: 'rgba(6, 182, 212, 0.15)', borderColor: '#22d3ee', color: '#22d3ee', fontWeight: 600 }}
-                  disabled={isParsingResume}
-                >
-                  {isParsingResume ? '⏳ Parsing...' : '📤 Upload Resume'}
-                </button>
-                <input 
-                  type="file" 
-                  id="resume-builder-file-upload" 
-                  style={{ display: 'none' }} 
-                  onChange={handleResumeBuilderUpload}
-                  accept=".pdf,.txt,.json"
-                />
                 <button 
                   type="button" 
                   onClick={() => setShowAddContentModal(true)} 

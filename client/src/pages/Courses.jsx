@@ -414,10 +414,8 @@ const Courses = () => {
     if (courses.length > 0) {
       const searchParams = new URLSearchParams(location.search);
       const autoCourseTitle = searchParams.get('course');
-      if (autoCourseTitle) {
+      if (autoCourseTitle && autoCourseTitle !== 'fullstack-web-dev' && autoCourseTitle !== 'fullstack') {
         const found = courses.find(c => 
-          c.title.toLowerCase().includes('full-stack') || 
-          c.title.toLowerCase().includes('fullstack') ||
           c.slug === autoCourseTitle ||
           c.title.toLowerCase().includes(autoCourseTitle.toLowerCase())
         );
@@ -437,8 +435,8 @@ const Courses = () => {
     setQuizResult(null);
     setSelectedAnswers({});
     setExpandedQAs({});
-    setActiveSubTab('notes');
-    fetchProjectSubmission(course._id);
+    setActiveSubTab('dashboard');
+    fetchProjectSubmission(course._id, 1);
     try {
       const res = await fetch(`${API_URL}/courses/${course._id}/lessons`, {
         headers: { 'Authorization': `Bearer ${token}` }

@@ -1007,7 +1007,7 @@ const AdminDashboard = () => {
 
   const handleSaveDsa = async (e) => {
     e.preventDefault();
-    const url = dsaForm.id ? `${API_URL}/dsa/${dsaForm.id}` : `${API_URL}/dsa/admin/add`;
+    const url = dsaForm.id ? `${API_URL}/dsa/${dsaForm.id}` : `${API_URL}/dsa`;
     const method = dsaForm.id ? 'PUT' : 'POST';
 
     const examples = [
@@ -1282,6 +1282,106 @@ const AdminDashboard = () => {
       {/* RENDER DSA PROBLEMS MANAGEMENT TAB */}
       {activeTab === 'dsa' && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+          
+          {/* DAILY CHALLENGES WIDGET */}
+          <div className="glass-card" style={{ padding: '20px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <h4 style={{ color: 'white', fontWeight: 600, fontSize: '1.05rem', margin: 0, display: 'flex', alignItems: 'center', gap: '8px' }}>
+              📆 Daily Challenges Manager (Max 2 Active)
+            </h4>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', margin: 0 }}>
+              Set exactly 2 coding challenges to active status daily. Active challenges automatically expire after 24 hours.
+            </p>
+            
+            <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '24px' }}>
+              <div>
+                <h5 style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginBottom: '8px' }}>Active Daily Problems</h5>
+                {dsaProblems.filter(p => p.isDaily).length === 0 ? (
+                  <div style={{ color: 'var(--text-muted)', fontSize: '0.85rem', padding: '12px', background: 'rgba(255,255,255,0.02)', borderRadius: '6px' }}>
+                    No active daily problems. Pick from the list below to activate.
+                  </div>
+                ) : (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                    {dsaProblems.filter(p => p.isDaily).map(prob => (
+                      <div key={prob._id} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 12px', background: 'rgba(46, 204, 113, 0.05)', border: '1px solid rgba(46, 204, 113, 0.2)', borderRadius: '6px' }}>
+                        <div>
+                          <strong style={{ color: 'white', fontSize: '0.85rem' }}>{prob.title}</strong>
+                          <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginLeft: '8px' }}>({prob.topic})</span>
+                        </div>
+                        <button 
+                          onClick={async () => {
+                            try {
+                              const res = await fetch(`${API_URL}/dsa/${prob._id}`, {
+                                method: 'PUT',
+                                headers: {
+                                  'Content-Type': 'application/json',
+                                  'Authorization': `Bearer ${token}`
+                                },
+                                body: JSON.stringify({ isDaily: false })
+                              });
+                              if (res.ok) fetchDsaProblems();
+                            } catch (e) {
+                              console.error(e);
+                            }
+                          }}
+                          className="warroom-btn" 
+                          style={{ padding: '2px 8px', fontSize: '0.75rem', borderColor: '#f43f5e', color: '#f43f5e' }}
+                        >
+                          Deactivate
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <div>
+                <h5 style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginBottom: '8px' }}>Quick Activate Problem</h5>
+                <div style={{ display: 'flex', gap: '8px' }}>
+                  <select 
+                    id="quick-dsa-activate-select"
+                    className="form-input" 
+                    style={{ background: 'rgba(0,0,0,0.2)', color: 'white', border: '1px solid var(--border-glass)', borderRadius: '6px', padding: '6px 12px', flex: 1, fontSize: '0.85rem' }}
+                  >
+                    <option value="">-- Choose Problem --</option>
+                    {dsaProblems.filter(p => !p.isDaily).map(p => (
+                      <option key={p._id} value={p._id}>{p.title} ({p.topic})</option>
+                    ))}
+                  </select>
+                  <button 
+                    onClick={async () => {
+                      const selectEl = document.getElementById('quick-dsa-activate-select');
+                      const val = selectEl ? selectEl.value : '';
+                      if (!val) return;
+                      try {
+                        const res = await fetch(`${API_URL}/dsa/${val}`, {
+                          method: 'PUT',
+                          headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': `Bearer ${token}`
+                          },
+                          body: JSON.stringify({ isDaily: true })
+                        });
+                        if (res.ok) {
+                          fetchDsaProblems();
+                          if (selectEl) selectEl.value = '';
+                        } else {
+                          const err = await res.json();
+                          alert(err.message || 'Failed to activate');
+                        }
+                      } catch (e) {
+                        console.error(e);
+                      }
+                    }}
+                    className="primary-btn" 
+                    style={{ padding: '6px 12px', fontSize: '0.85rem' }}
+                  >
+                    Activate
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <h3 style={{ fontSize: '1.25rem', color: 'white' }}>Coding Challenge Directory</h3>
             <button onClick={handleOpenAddDsa} className="primary-btn" style={{ padding: '10px 20px', fontSize: '0.9rem' }}>

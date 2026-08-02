@@ -160,11 +160,16 @@ const DSAPractice = () => {
     }
     setCustomInput(initialInput);
     setCompilerResults(null);
-    const initialLang = 'javascript';
+    const initialLang = localStorage.getItem(`dsa_practice_lang_${prob._id}`) || 'javascript';
     setEditorLang(initialLang);
     
-    const template = getDefaultTemplate(prob.title, initialLang);
-    setEditorCode(template);
+    const stored = localStorage.getItem(`dsa_practice_code_${prob._id}_${initialLang}`);
+    if (stored) {
+      setEditorCode(stored);
+    } else {
+      const template = (prob.codeTemplates && prob.codeTemplates[initialLang]) || getDefaultTemplate(prob.title, initialLang);
+      setEditorCode(template);
+    }
   };
 
   useEffect(() => {
@@ -183,8 +188,14 @@ const DSAPractice = () => {
   const handleLangChange = (lang) => {
     setEditorLang(lang);
     if (activeProblem) {
-      const template = getDefaultTemplate(activeProblem.title, lang);
-      setEditorCode(template);
+      localStorage.setItem(`dsa_practice_lang_${activeProblem._id}`, lang);
+      const stored = localStorage.getItem(`dsa_practice_code_${activeProblem._id}_${lang}`);
+      if (stored) {
+        setEditorCode(stored);
+      } else {
+        const template = (activeProblem.codeTemplates && activeProblem.codeTemplates[lang]) || getDefaultTemplate(activeProblem.title, lang);
+        setEditorCode(template);
+      }
     }
   };
 
@@ -195,17 +206,26 @@ const DSAPractice = () => {
   };
 
   const getDefaultTemplate = (title, lang) => {
+    const cleanTitle = title.replace(/\s+/g, '');
+    const camelTitle = cleanTitle.charAt(0).toLowerCase() + cleanTitle.slice(1);
+    
     if (lang === 'javascript') {
-      return `// JavaScript normal compiler\n// Write your solution code here. Output using console.log\n\n`;
+      return `class Solution {\n    ${camelTitle}(nums) {\n        // Write your code here\n        \n    }\n}`;
     }
     if (lang === 'python') {
-      return `# Python 3 normal compiler\n# Write your solution code here. Output using print()\n\n`;
+      return `class Solution:\n    def ${camelTitle}(self, nums: List[int]) -> List[int]:\n        # Write your code here\n        pass\n`;
     }
     if (lang === 'java') {
-      return `import java.util.*;\n\npublic class Solution {\n    public static void main(String[] args) {\n        // Write your Java code here. Output using System.out.println\n    }\n}`;
+      return `import java.util.*;\n\npublic class Solution {\n    public int[] ${camelTitle}(int[] nums) {\n        // Write your code here\n        return nums;\n    }\n}`;
     }
-    return `#include <iostream>\nusing namespace std;\n\nint main() {\n    // Write your C++ code here. Output using cout\n    return 0;\n}`;
+    return `#include <iostream>\n#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> ${camelTitle}(vector<int>& nums) {\n        // Write your code here\n        \n    }\n};`;
   };
+
+  useEffect(() => {
+    if (activeProblem && editorCode) {
+      localStorage.setItem(`dsa_practice_code_${activeProblem._id}_${editorLang}`, editorCode);
+    }
+  }, [editorCode, activeProblem, editorLang]);
 
   const handleKeyDown = (e) => {
     const textarea = e.target;
@@ -533,6 +553,33 @@ const DSAPractice = () => {
                 </span>
                 
                 <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+                  {/* Reset Button */}
+                  <button
+                    onClick={() => {
+                      if (window.confirm('Reset code template to default? All changes will be lost.')) {
+                        const template = (activeProblem.codeTemplates && activeProblem.codeTemplates[editorLang]) || getDefaultTemplate(activeProblem.title, editorLang);
+                        setEditorCode(template);
+                        localStorage.removeItem(`dsa_practice_code_${activeProblem._id}_${editorLang}`);
+                      }
+                    }}
+                    type="button"
+                    style={{
+                      background: 'rgba(255,255,255,0.06)',
+                      border: '1px solid var(--border-glass)',
+                      color: '#f43f5e',
+                      padding: '6px 12px',
+                      borderRadius: '4px',
+                      cursor: 'pointer',
+                      fontSize: '0.82rem',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '6px',
+                      fontWeight: 600
+                    }}
+                  >
+                    🔄 Reset
+                  </button>
+
                   {/* Fullscreen Toggle */}
                   <button
                     onClick={() => setIsFullscreen(!isFullscreen)}

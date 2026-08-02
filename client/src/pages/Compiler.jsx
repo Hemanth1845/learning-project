@@ -30,7 +30,6 @@ const highlightCode = (code, lang) => {
       return match;
     });
   } else {
-    // C++ and Java
     const regex = /(\/\/[^\n]*|\/\*[\s\S]*?\*\/)|("[^"\\]*(?:\\.[^"\\]*)*"|'[^'\\]*(?:\\.[^'\\]*)*')|\b(class|public|private|protected|static|void|int|double|float|char|boolean|string|vector|return|if|else|for|while|do|switch|case|break|continue|try|catch|throw|new|true|false|null|include|using|namespace|std|System|out|println)\b|([()\[\]{}])|\b(\d+)\b/g;
     return escaped.replace(regex, (match, comment, string, keyword, bracket, number) => {
       if (comment) return `<span style="color: #6a9955; font-style: italic;">${comment}</span>`;
@@ -44,11 +43,11 @@ const highlightCode = (code, lang) => {
 };
 
 const boilerplates = {
-  javascript: `// JavaScript (Node.js) Environment\nconsole.log("Hello, World!");\n\n// Reading from Stdin Example:\n// const fs = require('fs');\n// const input = fs.readFileSync(0, 'utf-8');\n// console.log("Input received:", input);`,
-  python: `# Python 3 Environment\nprint("Hello, World!")\n\n# Reading from Stdin Example:\n# import sys\n# lines = sys.stdin.read().split()\n# print("Inputs:", lines)`,
-  java: `// Java 21 Environment\n// Keep class name as "Solution" for compilation\nimport java.util.*;\n\npublic class Solution {\n    public static void main(String[] args) {\n        System.out.println("Hello, World!");\n        \n        // Reading from Stdin Example:\n        // Scanner sc = new Scanner(System.in);\n        // if (sc.hasNext()) {\n        //     System.out.println("Input: " + sc.next());\n        // }\n    }\n}`,
-  cpp: `// C++ (GCC) Environment\n#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << "Hello, World!" << endl;\n    return 0;\n}`,
-  c: `// C (GCC) Environment\n#include <stdio.h>\n\nint main() {\n    printf("Hello, World!\\n");\n    return 0;\n}`
+  javascript: `// JavaScript (Node.js) Environment\nclass Solution {\n    solve(nums) {\n        // Write your code here\n        \n    }\n}\n\n// Usage example:\n// const sol = new Solution();\n// console.log(sol.solve([1,2,3]));`,
+  python: `# Python 3 Environment\nclass Solution:\n    def solve(self, nums: List[int]) -> List[int]:\n        # Write your code here\n        pass\n`,
+  java: `// Java 21 Environment\n// Keep class name as "Solution" for compilation\nimport java.util.*;\n\npublic class Solution {\n    public int[] solve(int[] nums) {\n        // Write your code here\n        return nums;\n    }\n    \n    public static void main(String[] args) {\n        Solution sol = new Solution();\n        System.out.println(Arrays.toString(sol.solve(new int[]{1, 2, 3})));\n    }\n}`,
+  cpp: `// C++ (GCC) Environment\n#include <iostream>\n#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> solve(vector<int>& nums) {\n        // Write your code here\n        return nums;\n    }\n};\n\nint main() {\n    Solution sol;\n    vector<int> res = sol.solve({1, 2, 3});\n    for (int x : res) cout << x << " ";\n    cout << endl;\n    return 0;\n}`,
+  c: `// C (GCC) Environment\n#include <stdio.h>\n#include <stdlib.h>\n\n// Solution structure style\nint* solve(int* nums, int numsSize, int* returnSize) {\n    *returnSize = numsSize;\n    int* res = (int*)malloc(numsSize * sizeof(int));\n    for (int i = 0; i < numsSize; i++) res[i] = nums[i];\n    return res;\n}\n\nint main() {\n    int nums[] = {1, 2, 3};\n    int returnSize;\n    int* res = solve(nums, 3, &returnSize);\n    for (int i = 0; i < returnSize; i++) printf("%d ", res[i]);\n    printf("\\n");\n    free(res);\n    return 0;\n}`
 };
 
 const themes = {
@@ -110,9 +109,9 @@ const themes = {
 
 const Compiler = () => {
   const { token, API_URL } = useContext(AuthContext);
-  const [lang, setLang] = useState('javascript');
+  const [lang, setLang] = useState(() => localStorage.getItem('compiler_lang') || 'javascript');
   const [themeKey, setThemeKey] = useState('vsdark');
-  const [code, setCode] = useState(boilerplates.javascript);
+  const [code, setCode] = useState(() => localStorage.getItem(`compiler_code_${localStorage.getItem('compiler_lang') || 'javascript'}`) || boilerplates[localStorage.getItem('compiler_lang') || 'javascript']);
   const [customInput, setCustomInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [output, setOutput] = useState('');
@@ -131,9 +130,18 @@ const Compiler = () => {
     }
   }, [code]);
 
+  useEffect(() => {
+    localStorage.setItem('compiler_lang', lang);
+  }, [lang]);
+
+  useEffect(() => {
+    localStorage.setItem(`compiler_code_${lang}`, code);
+  }, [code, lang]);
+
   const handleLangChange = (newLang) => {
     setLang(newLang);
-    setCode(boilerplates[newLang]);
+    const stored = localStorage.getItem(`compiler_code_${newLang}`);
+    setCode(stored || boilerplates[newLang]);
     setOutput('');
     setError('');
   };
@@ -200,6 +208,7 @@ const Compiler = () => {
   const handleReset = () => {
     if (window.confirm('Reset code template to default? All changes will be lost.')) {
       setCode(boilerplates[lang]);
+      localStorage.removeItem(`compiler_code_${lang}`);
       setOutput('');
       setError('');
     }
@@ -331,7 +340,7 @@ const Compiler = () => {
               ))}
             </div>
 
-            {/* Syntax highlight shadow pre */}
+            {/* Highlight shadow pre */}
             <pre
               ref={preRef}
               style={{
@@ -356,7 +365,7 @@ const Compiler = () => {
               dangerouslySetInnerHTML={{ __html: highlightCode(code, lang) }}
             />
 
-            {/* Code inputs text area */}
+            {/* TextArea editor */}
             <textarea
               ref={textareaRef}
               value={code}
@@ -474,7 +483,6 @@ const Compiler = () => {
           background: rgba(231, 76, 60, 0.1);
         }
       `}</style>
-
     </div>
   );
 };
