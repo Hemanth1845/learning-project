@@ -73,6 +73,87 @@ const InterviewSession = () => {
     }
   };
 
+  const downloadPDF = () => {
+    const printWindow = window.open('', '_blank');
+    const reportHtml = `
+      <html>
+        <head>
+          <title>Mock Interview Report - ${interview?.companyName || 'Evaluation'}</title>
+          <style>
+            body { font-family: 'Inter', sans-serif; color: #1f2937; padding: 40px; line-height: 1.6; }
+            h1 { color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; margin-bottom: 20px; }
+            .score-badge { font-size: 24px; font-weight: bold; color: #2563eb; background: #eff6ff; padding: 10px 20px; border-radius: 8px; display: inline-block; }
+            .section-title { font-size: 18px; font-weight: bold; margin-top: 30px; margin-bottom: 10px; color: #1e293b; border-left: 4px solid #3b82f6; padding-left: 10px; }
+            ul { padding-left: 20px; }
+            li { margin-bottom: 6px; }
+            .question-card { background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; margin-bottom: 20px; page-break-inside: avoid; }
+            .q-title { font-weight: bold; color: #0f172a; margin-bottom: 8px; }
+            .ans-box { font-style: italic; color: #475569; background: #ffffff; padding: 10px; border-radius: 4px; border: 1px solid #cbd5e1; margin-bottom: 12px; }
+            .metrics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 12px; font-size: 14px; }
+            .metric-item { background: #f1f5f9; padding: 8px; border-radius: 4px; text-align: center; }
+            .metric-val { font-weight: bold; color: #2563eb; }
+          </style>
+        </head>
+        <body>
+          <h1>Mock Interview Feedback Report</h1>
+          <p><strong>Company:</strong> ${interview?.companyName}</p>
+          <p><strong>Difficulty:</strong> ${interview?.difficulty}</p>
+          <p><strong>Date:</strong> ${new Date(interview?.createdAt || Date.now()).toLocaleDateString()}</p>
+          <div class="score-badge">Overall Score: ${feedback?.overallScore || 0}%</div>
+          
+          <div class="section-title">Summary</div>
+          <p>${feedback?.summary || 'No summary generated.'}</p>
+          
+          <div class="section-title">Strengths</div>
+          <ul>
+            \${feedback?.strengths?.map(s => \`<li>\${s}</li>\`).join('') || '<li>N/A</li>'}
+          </ul>
+          
+          <div class="section-title">Areas to Improve</div>
+          <ul>
+            \${feedback?.weaknesses?.map(w => \`<li>\${w}</li>\`).join('') || '<li>N/A</li>'}
+          </ul>
+          
+          <div class="section-title">Recommendations</div>
+          <ul>
+            \${feedback?.tips?.map(t => \`<li>\${t}</li>\`).join('') || '<li>N/A</li>'}
+          </ul>
+          
+          \${feedback?.questionsReport && feedback.questionsReport.length > 0 ? \`
+            <div class="section-title">Question-wise Evaluation Report</div>
+            \${feedback.questionsReport.map((q, idx) => \`
+              <div class="question-card">
+                <div class="q-title">Q\${idx + 1}: \${q.question}</div>
+                <p><strong>Your Answer:</strong></p>
+                <div class="ans-box">\${q.userAnswer}</div>
+                <p><strong>Expected Ideal Answer:</strong></p>
+                <div class="ans-box" style="background:#f0fdf4; border-color:#bbf7d0;">\${q.expectedAnswer}</div>
+                <div class="metrics-grid">
+                  <div class="metric-item">Relevance: <span class="metric-val">\${q.relevance}%</span></div>
+                  <div class="metric-item">Technical: <span class="metric-val">\${q.technical}%</span></div>
+                  <div class="metric-item">Grammar: <span class="metric-val">\${q.grammar}%</span></div>
+                  <div class="metric-item">Confidence: <span class="metric-val">\${q.confidence}%</span></div>
+                </div>
+                <p><strong>Suggestions:</strong> \${q.suggestions}</p>
+                <p><strong>Model Response:</strong> \${q.improvedAnswer}</p>
+                <p><strong>Recommended Study Resources:</strong> \${q.resources}</p>
+              </div>
+            \`).join('')}
+          \` : ''}
+          
+          <script>
+            window.onload = function() {
+              window.print();
+              setTimeout(function() { window.close(); }, 500);
+            };
+          </script>
+        </body>
+      </html>
+    `;
+    printWindow.document.write(reportHtml);
+    printWindow.document.close();
+  };
+
   if (loading) {
     return <div style={{ color: 'white', padding: '32px' }}>Joining War Room...</div>;
   }
@@ -232,7 +313,53 @@ const InterviewSession = () => {
 
           </div>
 
+          {feedback?.questionsReport && feedback.questionsReport.length > 0 && (
+            <div style={{ borderTop: '1px solid var(--border-glass)', paddingTop: '24px', marginTop: '16px' }}>
+              <h3 style={{ color: 'white', fontSize: '1.4rem', marginBottom: '16px' }}>📝 Question-wise Evaluation Report</h3>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                {feedback.questionsReport.map((q, idx) => (
+                  <div key={idx} className="glass-card" style={{ padding: '20px', background: 'rgba(255,255,255,0.01)', border: '1px solid var(--border-glass)' }}>
+                    <h4 style={{ color: 'white', fontWeight: 700, fontSize: '1.05rem', marginBottom: '8px' }}>Q{idx + 1}: {q.question}</h4>
+                    
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', margin: '12px 0' }}>
+                      <div style={{ background: 'rgba(255,255,255,0.02)', padding: '12px', borderRadius: '8px', border: '1px solid var(--border-glass)' }}>
+                        <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Your Answer</span>
+                        <p style={{ color: 'white', fontSize: '0.9rem', marginTop: '4px', fontStyle: 'italic' }}>"{q.userAnswer}"</p>
+                      </div>
+                      <div style={{ background: 'rgba(16, 185, 129, 0.03)', padding: '12px', borderRadius: '8px', border: '1px solid rgba(16, 185, 129, 0.1)' }}>
+                        <span style={{ fontSize: '0.75rem', color: 'var(--color-solved)', textTransform: 'uppercase' }}>Expected Ideal Answer</span>
+                        <p style={{ color: 'white', fontSize: '0.9rem', marginTop: '4px' }}>{q.expectedAnswer}</p>
+                      </div>
+                    </div>
+
+                    <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginBottom: '12px' }}>
+                      <span style={{ fontSize: '0.8rem', background: 'rgba(255,255,255,0.05)', padding: '4px 10px', borderRadius: '12px', color: 'white' }}>Relevance: <strong>{q.relevance}%</strong></span>
+                      <span style={{ fontSize: '0.8rem', background: 'rgba(255,255,255,0.05)', padding: '4px 10px', borderRadius: '12px', color: 'white' }}>Technical: <strong>{q.technical}%</strong></span>
+                      <span style={{ fontSize: '0.8rem', background: 'rgba(255,255,255,0.05)', padding: '4px 10px', borderRadius: '12px', color: 'white' }}>Grammar: <strong>{q.grammar}%</strong></span>
+                      <span style={{ fontSize: '0.8rem', background: 'rgba(255,255,255,0.05)', padding: '4px 10px', borderRadius: '12px', color: 'white' }}>Confidence: <strong>{q.confidence}%</strong></span>
+                    </div>
+
+                    <p style={{ fontSize: '0.88rem', color: 'var(--text-main)', marginTop: '8px' }}>
+                      <strong style={{ color: 'var(--accent-secondary)' }}>Suggestions:</strong> {q.suggestions}
+                    </p>
+                    <p style={{ fontSize: '0.88rem', color: 'var(--text-main)', marginTop: '4px' }}>
+                      <strong style={{ color: 'var(--color-solved)' }}>Model Response:</strong> {q.improvedAnswer}
+                    </p>
+                    {q.resources && (
+                      <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '4px' }}>
+                        📚 <strong>Recommended Resources:</strong> {q.resources}
+                      </p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', marginTop: '16px' }}>
+            <button onClick={downloadPDF} className="warroom-btn" style={{ padding: '12px 24px', fontSize: '0.95rem', background: 'var(--accent-gradient)', border: 'none', color: 'white' }}>
+              📥 Download PDF Report
+            </button>
             <button onClick={() => navigate('/interviews')} className="warroom-btn" style={{ padding: '12px 24px', fontSize: '0.95rem' }}>
               Return to Interview Hub
             </button>

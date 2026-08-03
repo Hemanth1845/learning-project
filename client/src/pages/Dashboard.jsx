@@ -7,6 +7,7 @@ const Dashboard = () => {
   const [stats, setStats] = useState(null);
   const [leaderboard, setLeaderboard] = useState([]);
   const [bookmarks, setBookmarks] = useState({ courses: [], dsa: [], theory: [], aptitude: [] });
+  const [recommendations, setRecommendations] = useState(null);
   const [loading, setLoading] = useState(true);
 
   const [yearOfStudy, setYearOfStudy] = useState(user?.yearOfStudy || '3rd Year');
@@ -60,6 +61,15 @@ const Dashboard = () => {
       const bookData = await bookRes.json();
       setBookmarks(bookData);
 
+      // 4. Fetch Recommendations & predictions
+      const recRes = await fetch(`${API_URL}/dashboard/recommendations`, {
+        headers: { 'Authorization': `Bearer ${token}` }
+      });
+      if (recRes.ok) {
+        const recData = await recRes.json();
+        setRecommendations(recData);
+      }
+
       // Sync user profile state
       await reloadProfile();
     } catch (error) {
@@ -92,6 +102,59 @@ const Dashboard = () => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+
+      {/* Personalized AI Placement Advisor Banner */}
+      {recommendations && (
+        <section className="glass-card" style={{ display: 'flex', flexDirection: 'column', gap: '20px', padding: '24px', background: 'var(--accent-gradient-subtle, rgba(0, 242, 254, 0.03))', border: '1px solid var(--border-glass)' }}>
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--accent-secondary)', fontSize: '0.82rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1px' }}>
+              <span>🧠</span> AI Career Mentor Recommendation
+            </div>
+            <h2 style={{ fontSize: '1.6rem', color: 'white', marginTop: '6px', fontFamily: 'var(--font-heading)' }}>
+              {recommendations.welcomeMessage}
+            </h2>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '32px' }} className="scorecard-panel">
+            {/* Today's Action Plan */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <h4 style={{ color: 'white', fontSize: '1rem', fontWeight: 600 }}>📅 Today's Action Roadmap</h4>
+              <ul style={{ display: 'flex', flexDirection: 'column', gap: '8px', padding: 0, margin: 0 }}>
+                {recommendations.dailyRoadmap.map((task, idx) => (
+                  <li key={idx} style={{ listStyle: 'none', background: 'rgba(255,255,255,0.02)', padding: '10px 14px', borderRadius: '8px', borderLeft: '3px solid var(--accent-secondary)', fontSize: '0.88rem', color: 'white' }}>
+                    {task}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Placement Readiness Prediction */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <h4 style={{ color: 'white', fontSize: '1rem', fontWeight: 600 }}>📊 Placement Readiness Score</h4>
+                <span style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--accent-secondary)' }}>{recommendations.placementReadinessScore}%</span>
+              </div>
+              
+              <div style={{ height: '8px', background: 'rgba(255,255,255,0.05)', borderRadius: '4px' }}>
+                <div style={{ width: `${recommendations.placementReadinessScore}%`, height: '100%', background: 'var(--accent-gradient)', borderRadius: '4px' }} />
+              </div>
+
+              {/* Company Readiness breakdown */}
+              <div style={{ marginTop: '8px' }}>
+                <span style={{ fontSize: '0.78rem', color: 'var(--text-muted)', display: 'block', marginBottom: '8px' }}>TARGET COMPANY READINESS:</span>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px 16px' }}>
+                  {Object.entries(recommendations.companyReadiness).map(([company, score]) => (
+                    <div key={company} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.82rem' }}>
+                      <span style={{ color: 'var(--text-main)' }}>{company}</span>
+                      <span style={{ fontWeight: 700, color: score > 75 ? 'var(--color-solved)' : score > 50 ? 'var(--accent-secondary)' : '#f43f5e' }}>{score}%</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
       
       {/* 1. Stats Row */}
       <section className="dashboard-grid">

@@ -98,6 +98,18 @@ ${r.experienceBullets || ''}
 Project: ${r.projectTitle || ''} using ${r.projectStack || ''}
 ${r.projectBullets || ''}`;
           setResumeText(formatted);
+
+          // Populate parsedProfile so that resume skills are picked up by the simulator
+          setParsedProfile({
+            fullName: r.name || '',
+            collegeName: r.education || 'KL University',
+            degree: 'B.Tech',
+            cgpa: '',
+            skills: [r.skillsLanguages, r.skillsFrameworks, r.skillsDatabases].filter(Boolean).join(', ') || '',
+            internship: '',
+            projects: r.projectTitle || '',
+            careerGoal: 'Software Engineer'
+          });
         }
       }
     } catch (err) {
@@ -334,11 +346,11 @@ ${r.projectBullets || ''}`;
                     ✓ Extracted Candidate Information
                   </h5>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '0.85rem' }}>
-                    <div><strong style={{ color: 'var(--text-muted)' }}>Name:</strong> <span style={{ color: 'white' }}>{parsedProfile.fullName}</span></div>
-                    <div><strong style={{ color: 'var(--text-muted)' }}>College:</strong> <span style={{ color: 'white' }}>{parsedProfile.collegeName}</span></div>
-                    <div><strong style={{ color: 'var(--text-muted)' }}>Degree/Grades:</strong> <span style={{ color: 'white' }}>{parsedProfile.degree} (CGPA: {parsedProfile.cgpa})</span></div>
-                    <div><strong style={{ color: 'var(--text-muted)' }}>Key Skills:</strong> <span style={{ color: 'var(--accent-secondary)' }}>{parsedProfile.skills}</span></div>
-                    <div><strong style={{ color: 'var(--text-muted)' }}>Projects:</strong> <span style={{ color: 'white' }}>{parsedProfile.projects}</span></div>
+                    {parsedProfile.fullName && <div><strong style={{ color: 'var(--text-muted)' }}>Name:</strong> <span style={{ color: 'white' }}>{parsedProfile.fullName}</span></div>}
+                    {parsedProfile.collegeName && <div><strong style={{ color: 'var(--text-muted)' }}>College:</strong> <span style={{ color: 'white' }}>{parsedProfile.collegeName}</span></div>}
+                    {parsedProfile.degree && <div><strong style={{ color: 'var(--text-muted)' }}>Degree/Grades:</strong> <span style={{ color: 'white' }}>{parsedProfile.degree} {parsedProfile.cgpa && `(CGPA: ${parsedProfile.cgpa})`}</span></div>}
+                    {parsedProfile.skills && <div><strong style={{ color: 'var(--text-muted)' }}>Key Skills:</strong> <span style={{ color: 'var(--accent-secondary)' }}>{parsedProfile.skills}</span></div>}
+                    {parsedProfile.projects && <div><strong style={{ color: 'var(--text-muted)' }}>Projects:</strong> <span style={{ color: 'white' }}>{parsedProfile.projects}</span></div>}
                   </div>
                 </div>
               )}

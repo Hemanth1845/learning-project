@@ -224,34 +224,48 @@ const CommunicationCoach = () => {
   };
 
   // Generate Daily Challenge Coach Report
-  const generateDailyReport = () => {
+  const generateDailyReport = async () => {
     const finalWpm = speakingTime > 0 ? Math.round((wordsCountRef.current / speakingTime) * 60) : 120;
     const fillers = liveMetrics.fillerCount;
     
-    // Calculate scoring
-    const confidenceScore = Math.max(50, 95 - (liveMetrics.pauses * 8));
-    const fluencyScore = Math.max(40, 100 - (fillers * 5) - (liveMetrics.pauses * 5));
-    const grammarScore = Math.max(60, 98 - (fillers * 2));
-    const vocabScore = Math.min(95, 75 + (wordsCountRef.current / 10));
-    const pronunciationScoreVal = Math.max(55, 92 - (fillers * 3));
-    const overallScore = Math.round((confidenceScore + fluencyScore + grammarScore + vocabScore + pronunciationScoreVal) / 5);
-
-    setReport({
-      overallScore,
-      confidenceScore,
-      fluencyScore,
-      grammarScore,
-      vocabScore,
-      pronunciationScore: pronunciationScoreVal,
-      wpm: finalWpm || 135,
-      fillerCount: fillers,
-      longestPause: liveMetrics.pauses > 0 ? `${Math.round(2 + Math.random() * 4)}s` : '0s',
-      eyeContact: 'Good (88%)',
-      smile: 'Detected (5 times)',
-      strengths: ['Great confidence and vocal energy', 'Solid pacing structure', 'Good vocabulary choices'],
-      weaknesses: fillers > 3 ? ['High filler word count', 'Slight nervous pauses'] : ['Could enrich technical terminologies'],
-      advice: 'Try to practice mirror speaking for 2 minutes daily to reduce the usage of filler words like "like" and "actually".'
-    });
+    try {
+      const res = await fetch(`${API_URL}/dashboard/evaluate-communication`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify({
+          topic: currentTopic,
+          transcript: transcriptText || 'Silence/No input detected.',
+          speakingTime: speakingTime || 10
+        })
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setReport({
+          overallScore: data.overallScore,
+          relevanceScore: data.relevanceScore,
+          flowScore: data.flowScore,
+          grammarScore: data.grammarScore,
+          vocabScore: data.vocabScore,
+          confidenceScore: data.confidenceScore,
+          pronunciationScore: data.pronunciationScore,
+          toneScore: data.toneScore,
+          structureScore: data.structureScore,
+          wpm: finalWpm || 135,
+          fillerCount: fillers,
+          longestPause: liveMetrics.pauses > 0 ? `${Math.round(2 + Math.random() * 4)}s` : '0s',
+          eyeContact: 'Good (88%)',
+          smile: 'Detected (5 times)',
+          strengths: data.strengths || [],
+          weaknesses: data.weaknesses || [],
+          advice: data.advice || ''
+        });
+      }
+    } catch (err) {
+      console.error('Error generating daily report:', err);
+    }
     setSpeakingTime(0);
   };
 
@@ -409,27 +423,51 @@ const CommunicationCoach = () => {
 
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
                   <div>
-                    <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Fluency Score:</span>
+                    <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Topic Relevance:</span>
                     <div style={{ height: '6px', background: 'rgba(255,255,255,0.05)', borderRadius: '3px', marginTop: '6px' }}>
-                      <div style={{ width: `${report.fluencyScore}%`, height: '100%', background: 'var(--color-easy)', borderRadius: '3px' }} />
+                      <div style={{ width: `${report.relevanceScore || 0}%`, height: '100%', background: 'var(--color-easy)', borderRadius: '3px' }} />
+                    </div>
+                  </div>
+                  <div>
+                    <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Logical Flow:</span>
+                    <div style={{ height: '6px', background: 'rgba(255,255,255,0.05)', borderRadius: '3px', marginTop: '6px' }}>
+                      <div style={{ width: `${report.flowScore || 0}%`, height: '100%', background: 'var(--color-easy)', borderRadius: '3px' }} />
                     </div>
                   </div>
                   <div>
                     <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Grammar Accuracy:</span>
                     <div style={{ height: '6px', background: 'rgba(255,255,255,0.05)', borderRadius: '3px', marginTop: '6px' }}>
-                      <div style={{ width: `${report.grammarScore}%`, height: '100%', background: 'var(--color-easy)', borderRadius: '3px' }} />
-                    </div>
-                  </div>
-                  <div>
-                    <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Vocal Confidence:</span>
-                    <div style={{ height: '6px', background: 'rgba(255,255,255,0.05)', borderRadius: '3px', marginTop: '6px' }}>
-                      <div style={{ width: `${report.confidenceScore}%`, height: '100%', background: 'var(--color-easy)', borderRadius: '3px' }} />
+                      <div style={{ width: `${report.grammarScore || 0}%`, height: '100%', background: 'var(--color-easy)', borderRadius: '3px' }} />
                     </div>
                   </div>
                   <div>
                     <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Vocabulary Score:</span>
                     <div style={{ height: '6px', background: 'rgba(255,255,255,0.05)', borderRadius: '3px', marginTop: '6px' }}>
-                      <div style={{ width: `${report.vocabScore}%`, height: '100%', background: 'var(--color-easy)', borderRadius: '3px' }} />
+                      <div style={{ width: `${report.vocabScore || 0}%`, height: '100%', background: 'var(--color-easy)', borderRadius: '3px' }} />
+                    </div>
+                  </div>
+                  <div>
+                    <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Confidence Score:</span>
+                    <div style={{ height: '6px', background: 'rgba(255,255,255,0.05)', borderRadius: '3px', marginTop: '6px' }}>
+                      <div style={{ width: `${report.confidenceScore || 0}%`, height: '100%', background: 'var(--color-easy)', borderRadius: '3px' }} />
+                    </div>
+                  </div>
+                  <div>
+                    <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Pronunciation Match:</span>
+                    <div style={{ height: '6px', background: 'rgba(255,255,255,0.05)', borderRadius: '3px', marginTop: '6px' }}>
+                      <div style={{ width: `${report.pronunciationScore || 0}%`, height: '100%', background: 'var(--color-easy)', borderRadius: '3px' }} />
+                    </div>
+                  </div>
+                  <div>
+                    <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Professional Tone:</span>
+                    <div style={{ height: '6px', background: 'rgba(255,255,255,0.05)', borderRadius: '3px', marginTop: '6px' }}>
+                      <div style={{ width: `${report.toneScore || 0}%`, height: '100%', background: 'var(--color-easy)', borderRadius: '3px' }} />
+                    </div>
+                  </div>
+                  <div>
+                    <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Structure Score:</span>
+                    <div style={{ height: '6px', background: 'rgba(255,255,255,0.05)', borderRadius: '3px', marginTop: '6px' }}>
+                      <div style={{ width: `${report.structureScore || 0}%`, height: '100%', background: 'var(--color-easy)', borderRadius: '3px' }} />
                     </div>
                   </div>
                 </div>

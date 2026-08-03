@@ -107,12 +107,10 @@ const getFallbackQuestion = (companyName, difficulty, chatHistory, resumeText) =
 // Generates feedback scorecard in fallback mode
 const getFallbackFeedback = (companyName, difficulty, chatHistory, resumeText) => {
   const skills = extractSkills(resumeText);
-  // Calculate average score based on difficulty and length of responses
   let score = 75;
   if (difficulty === 'Easy') score = 82;
   if (difficulty === 'Hard') score = 68;
 
-  // Enhance score slightly if user gave detailed responses
   let totalLength = 0;
   chatHistory.forEach(msg => {
     if (msg.sender === 'user') totalLength += msg.message.length;
@@ -120,23 +118,73 @@ const getFallbackFeedback = (companyName, difficulty, chatHistory, resumeText) =
   if (totalLength > 300) score += 8;
   if (score > 98) score = 98;
 
+  const qnaList = [];
+  for (let i = 0; i < chatHistory.length - 1; i += 2) {
+    const q = chatHistory[i]?.sender === 'ai' ? chatHistory[i].message : '';
+    const a = chatHistory[i+1]?.sender === 'user' ? chatHistory[i+1].message : '';
+    if (q && a) {
+      qnaList.push({ q, a });
+    }
+  }
+
+  const questionsReport = qnaList.map((item) => {
+    const lowerAnswer = item.a.toLowerCase();
+    const isOffTopic = lowerAnswer.length < 5 || 
+                      lowerAnswer.includes('naatu naatu') || 
+                      lowerAnswer.includes('lalala') || 
+                      lowerAnswer.includes('cricket') || 
+                      lowerAnswer.includes('song') || 
+                      lowerAnswer.includes('movie') ||
+                      lowerAnswer.includes('twinkle twinkle') ||
+                      lowerAnswer.includes('hometown') ||
+                      lowerAnswer.includes('singing');
+                      
+    const relevance = isOffTopic ? 2 : 80;
+    const technical = isOffTopic ? 0 : 75;
+    const grammar = isOffTopic ? 15 : 90;
+    const confidence = isOffTopic ? 20 : 85;
+
+    return {
+      question: item.q,
+      userAnswer: item.a,
+      expectedAnswer: `Detailed explanation of the topic matching standard technical definitions for ${companyName}.`,
+      relevance,
+      technical,
+      grammar,
+      confidence,
+      suggestions: isOffTopic 
+        ? "Your response did not answer the interview question. Please explain Project, Technology, Challenges, Outcome." 
+        : "Explain with more granular system architecture details and space/time complexity metrics.",
+      improvedAnswer: isOffTopic 
+        ? "Please provide a valid technical response instead of singing or talking off-topic." 
+        : `An ideal response would explain the core architecture, stack choices, trade-offs, and output metrics.`,
+      resources: "Check standard DSA sheets and system design interview books."
+    };
+  });
+
+  const hasOffTopic = questionsReport.some(q => q.relevance < 10);
+  const finalScore = hasOffTopic ? 5 : score;
+
   return {
-    overallScore: score,
-    summary: `You completed a ${difficulty} difficulty mock interview for ${companyName}. You showed solid knowledge in foundational areas, especially relating to your resume stack (${skills.slice(0, 2).join(', ')}). Your communications were clear, though technical details can be expanded.`,
-    strengths: [
+    overallScore: finalScore,
+    summary: hasOffTopic 
+      ? "Your response did not answer the interview question. Songs, random dialogues, or off-topic talking received extremely low scores."
+      : `You completed a ${difficulty} difficulty mock interview for ${companyName}. You showed solid knowledge in foundational areas, especially relating to your resume stack (${skills.slice(0, 2).join(', ')}). Your communications were clear, though technical details can be expanded.`,
+    strengths: hasOffTopic ? ["None - Irrelevant responses"] : [
       `Familiarity with core stack: ${skills.slice(0, 3).join(', ')}`,
       `Clear structured communication during technical explanations`,
       `Good understanding of practical application in projects`
     ],
-    weaknesses: [
+    weaknesses: hasOffTopic ? ["Did not answer technical questions"] : [
       `Could provide deeper explanations of algorithmic complexity`,
       difficulty === 'Hard' ? `Needs deeper systems architecture understanding under high loads` : `Could elaborate more on edge case handling in programming questions`
     ],
-    tips: [
+    tips: hasOffTopic ? ["Please answer interview questions seriously using professional/technical terminology."] : [
       `Practice explaining your code line-by-line while considering space/time optimization`,
       `Review system architecture patterns like caching, replication, and load balancing`,
       `Review standard behavioral frameworks (STAR method) for Amazon and product-firm interviews`
-    ]
+    ],
+    questionsReport
   };
 };
 

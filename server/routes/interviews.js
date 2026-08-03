@@ -130,10 +130,23 @@ Chat History:
 ${chatHistoryFormatted}
 
 CRITICAL SCORING CONSTRAINTS:
-1. You must check each user answer for relevance to the actual question asked. 
-2. If any response is completely off-topic, nonsense, a song (e.g. singing 'Twinkle Twinkle', movie dialogues), or talks about completely unrelated topics (e.g., cricket, food like biryani, when asked about technical coding/projects), you MUST set "overallScore" to less than 10 (between 0 and 9).
-3. Do not award high communication scores for fluent but irrelevant answers.
-4. Calculate the score breakdown: Relevance (35%), Technical Accuracy (25%), Communication (15%), Grammar (10%), Confidence (10%), Vocabulary (5%).
+1. Every answer must be evaluated through the following pipeline:
+   - Question Intent Detection: What is the question asking?
+   - Expected Answer Generation: What is the ideal correct answer?
+   - Answer Relevance Check: Did the candidate actually answer the question? Check for songs, movie dialogues, random talking, off-topic discussion, repeated words, silence, or nonsense.
+   - Semantic Similarity & Topic Relevance: Compare user response against expected answer.
+   - Technical Accuracy: If user says something incorrect (e.g., "JWT is a database"), the technical score must be very low. Good grammar cannot compensate.
+   - Resume Validation: Verify if the candidate correctly references tech stacks or details from their resume where applicable.
+   - Completeness & Communication (Grammar, Vocabulary, Tone).
+2. Overall Score weighting MUST strictly be:
+   - Relevance: 40%
+   - Technical Accuracy: 25%
+   - Completeness: 15%
+   - Communication: 10%
+   - Grammar: 5%
+   - Confidence: 5%
+3. If ANY answer is detected as off-topic, a song, movie dialogue, nonsense, or random talking, set Relevance = 0%, Technical = 0%, Communication = 15%, Overall Score = 5% for that question, and overallScore for the entire interview must be set between 0 and 9. Include this feedback: "Your response did not answer the interview question. Please explain Project, Technology, Challenges, and Outcome."
+4. Generate a detailed question-wise report.
 
 Provide a detailed evaluation scorecard. Return ONLY a JSON object. Do not wrap in markdown tags or backticks. Format must match:
 {
@@ -141,7 +154,21 @@ Provide a detailed evaluation scorecard. Return ONLY a JSON object. Do not wrap 
   "summary": "Detailed paragraph evaluating their performance and communication skill.",
   "strengths": ["Strength 1", "Strength 2", "Strength 3"],
   "weaknesses": ["Weakness 1", "Weakness 2"],
-  "tips": ["Tip 1", "Tip 2", "Tip 3"]
+  "tips": ["Tip 1", "Tip 2", "Tip 3"],
+  "questionsReport": [
+    {
+      "question": "Question text asked by AI",
+      "userAnswer": "User's verbal or typed response",
+      "expectedAnswer": "Brief summary of the correct expected answer",
+      "relevance": 95,
+      "technical": 90,
+      "grammar": 90,
+      "confidence": 85,
+      "suggestions": "Suggestions for improvement",
+      "improvedAnswer": "An improved model answer the candidate should have given",
+      "resources": "Recommended references, books or links"
+    }
+  ]
 }`;
 
           const evaluation = await callGemini(prompt);
@@ -239,14 +266,21 @@ router.post('/parse-resume', protect, async (req, res) => {
       try {
         const pdf = require('pdf-parse');
         const buffer = Buffer.from(fileBase64, 'base64');
-        const pdfData = await pdf(buffer);
-        rawText = pdfData.text;
+        const uint8Array = new Uint8Array(buffer);
+        if (typeof pdf === 'function') {
+          const pdfData = await pdf(buffer);
+          rawText = pdfData.text || '';
+        } else if (pdf && pdf.PDFParse) {
+          const parser = new pdf.PDFParse(uint8Array);
+          const result = await parser.getText();
+          rawText = result.text || '';
+        }
       } catch (err) {
         console.error('PDF parsing in interviews failed:', err);
       }
     }
 
-    if (!rawText) {
+    if (!rawText && !(fileName && fileName.toLowerCase().endsWith('.pdf')) && !mimeType.includes('pdf')) {
       try {
         rawText = Buffer.from(fileBase64, 'base64').toString('utf-8');
       } catch (e) {
@@ -312,19 +346,19 @@ router.post('/parse-resume', protect, async (req, res) => {
     }
 
     let parsedInfo = {
-      fullName: candidateName,
-      collegeName: collegeMatch ? collegeMatch[0].trim() : 'KL University',
-      degree: degreeMatch ? degreeMatch[0].trim() : 'B.Tech in Computer Science',
-      cgpa: cgpaMatch ? cgpaMatch[1].trim() : '9.0',
-      skills: matchedSkills.join(', ') || 'React, Node.js, Express, MongoDB, Java, C++',
+      fullName: candidateName || '',
+      collegeName: collegeMatch ? collegeMatch[0].trim() : '',
+      degree: degreeMatch ? degreeMatch[0].trim() : '',
+      cgpa: cgpaMatch ? cgpaMatch[1].trim() : '',
+      skills: matchedSkills.join(', ') || '',
       internship: '',
-      projects: projectTitle || 'Placement Prep Portal, Code Compiler Sandbox',
+      projects: projectTitle || '',
       careerGoal: 'Software Engineer'
     };
 
     if (process.env.GEMINI_API_KEY) {
       try {
-        const prompt = `Analyze this resume and extract candidate's details.
+        const prompt = `Analyze this resume and extract the candidate's details. Only extract information that is explicitly present in the provided resume. If a detail (like collegeName, degree, cgpa, skills, internship, or projects) is NOT present in the resume, return an empty string "" for that field. Do not invent, guess, or default any values.
         
         Return ONLY valid JSON matching this schema:
         {

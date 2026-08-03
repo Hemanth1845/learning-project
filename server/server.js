@@ -13,6 +13,7 @@ const dashboardRoutes = require('./routes/dashboard');
 const notesRoutes = require('./routes/notes');
 const theoryRoutes = require('./routes/theory');
 const aptitudeRoutes = require('./routes/aptitude');
+const aichatRoutes = require('./routes/aichat');
 
 const app = express();
 
@@ -29,6 +30,7 @@ app.use('/api/dashboard', dashboardRoutes);
 app.use('/api/notes', notesRoutes);
 app.use('/api/theory', theoryRoutes);
 app.use('/api/aptitude', aptitudeRoutes);
+app.use('/api/aichat', aichatRoutes);
 
 // Health check endpoint
 app.get('/health', (req, res) => {

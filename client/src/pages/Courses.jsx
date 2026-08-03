@@ -37,6 +37,17 @@ const parseMarkdown = (text) => {
   return html;
 };
 
+const getEmbedUrl = (url) => {
+  if (!url) return '';
+  if (url.includes('/embed/')) return url;
+  const watchRegex = /(?:youtube\.com\/watch\?v=|youtube\.com\/embed\/|youtu\.be\/|youtube\.com\/v\/)([^&\s?]+)/;
+  const match = url.match(watchRegex);
+  if (match && match[1]) {
+    return `https://www.youtube.com/embed/${match[1]}`;
+  }
+  return url;
+};
+
 // High-Fidelity Placement Studio Style Textbook Content Parser
 const TextbookContentParser = ({ text }) => {
   if (!text) return null;
@@ -578,11 +589,16 @@ const Courses = () => {
         
         {/* Breadcrumb path */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.85rem', color: 'var(--text-muted)' }}>
-          <span style={{ cursor: 'pointer' }} onClick={() => { setActiveCourse(null); setSelectedFullStackCat(null); }}>Full Stack Course</span>
-          <span>&gt;</span>
-          {activeCourse.parentCategory && (
+          {activeCourse.parentCategory ? (
             <>
+              <span style={{ cursor: 'pointer' }} onClick={() => { setActiveCourse(null); setSelectedFullStackCat(null); }}>Full Stack Course</span>
+              <span>&gt;</span>
               <span style={{ cursor: 'pointer' }} onClick={() => { setActiveCourse(null); setSelectedFullStackCat(activeCourse.parentCategory); }}>{activeCourse.parentCategory}</span>
+              <span>&gt;</span>
+            </>
+          ) : (
+            <>
+              <span style={{ cursor: 'pointer' }} onClick={() => { setActiveCourse(null); setSelectedFullStackCat(null); }}>Courses</span>
               <span>&gt;</span>
             </>
           )}
@@ -674,7 +690,7 @@ const Courses = () => {
               </div>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px', marginTop: '12px' }} className="scorecard-panel">
+            <div style={{ display: 'grid', gridTemplateColumns: activeCourse.parentCategory ? '1fr 1fr' : 'repeat(3, 1fr)', gap: '24px', marginTop: '12px' }} className="scorecard-panel">
               <div 
                 className="glass-card" 
                 onClick={() => setActiveSubTab('notes')}
@@ -711,20 +727,22 @@ const Courses = () => {
                 <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem' }}>Master placement technical interview question rubrics, common mistakes, and ideal responses.</p>
               </div>
 
-              <div 
-                className="glass-card" 
-                onClick={() => {
-                  setActiveSubTab('project');
-                  fetchProjectSubmission(activeCourse._id, selectedProjectIndex);
-                }}
-                style={{ padding: '30px', cursor: 'pointer', background: 'rgba(139, 92, 246, 0.03)', border: '1px solid rgba(139, 92, 246, 0.15)', transition: 'all 0.2s' }}
-                onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-4px)'}
-                onMouseLeave={e => e.currentTarget.style.transform = 'none'}
-              >
-                <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>💻</div>
-                <h3 style={{ fontSize: '1.3rem', color: 'white', marginBottom: '8px' }}>Projects Workshop</h3>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem' }}>Upload project submissions (Roadmap steps 1 to 10) to earn points and receive code feedback report.</p>
-              </div>
+              {activeCourse.parentCategory && (
+                <div 
+                  className="glass-card" 
+                  onClick={() => {
+                    setActiveSubTab('project');
+                    fetchProjectSubmission(activeCourse._id, selectedProjectIndex);
+                  }}
+                  style={{ padding: '30px', cursor: 'pointer', background: 'rgba(139, 92, 246, 0.03)', border: '1px solid rgba(139, 92, 246, 0.15)', transition: 'all 0.2s' }}
+                  onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-4px)'}
+                  onMouseLeave={e => e.currentTarget.style.transform = 'none'}
+                >
+                  <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>💻</div>
+                  <h3 style={{ fontSize: '1.3rem', color: 'white', marginBottom: '8px' }}>Projects Workshop</h3>
+                  <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem' }}>Upload project submissions (Roadmap steps 1 to 10) to earn points and receive code feedback report.</p>
+                </div>
+              )}
             </div>
           </div>
         )}
@@ -842,7 +860,7 @@ const Courses = () => {
               {(selectedVideoLesson?.videoUrl || activeCourse.externalLink) ? (
                 <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '8px', border: '1px solid var(--border-glass)' }}>
                   <iframe
-                    src={selectedVideoLesson?.videoUrl || activeCourse.externalLink}
+                    src={getEmbedUrl(selectedVideoLesson?.videoUrl || activeCourse.externalLink)}
                     style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
                     title={selectedVideoLesson?.title || activeCourse.title}
                     frameBorder="0"

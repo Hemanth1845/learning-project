@@ -47,6 +47,99 @@ const ResumeATS = () => {
   const [isFetched, setIsFetched] = useState(false);
   const [saveStatus, setSaveStatus] = useState('Saved');
   const [isParsingResume, setIsParsingResume] = useState(false);
+  const [currentStep, setCurrentStep] = useState(0);
+  const [aiRewriting, setAiRewriting] = useState(false);
+  const [atsScoreReport, setAtsScoreReport] = useState(null);
+  const [atsRunning, setAtsRunning] = useState(false);
+
+  const handleAIEnhance = async (fieldText, fieldKey, type = 'star') => {
+    if (!fieldText.trim()) return alert('Please enter some text to enhance.');
+    setAiRewriting(true);
+    try {
+      const res = await fetch(`${API_URL}/dashboard/rewrite-bullet`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify({ text: fieldText, type })
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setResumeData(prev => ({
+          ...prev,
+          [fieldKey]: data.rewritten
+        }));
+      }
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setAiRewriting(false);
+    }
+  };
+
+  const runAtsAudit = async () => {
+    if (!jobDescription.trim()) return alert('Please enter a target Job Description.');
+    setAtsRunning(true);
+    try {
+      const res = await fetch(`${API_URL}/dashboard/evaluate-ats`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify({ resumeData, jobDescription })
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setAtsScoreReport(data);
+      }
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setAtsRunning(false);
+    }
+  };
+
+  const exportMarkdown = () => {
+    const mdContent = `
+# ${resumeData.name}
+Email: ${resumeData.email} | Phone: ${resumeData.phone}
+GitHub: ${resumeData.github} | LinkedIn: ${resumeData.linkedin}
+
+## Education
+${resumeData.education}
+
+## Professional Experience
+### ${resumeData.experienceCompany}
+**Role:** ${resumeData.experienceRole} (${resumeData.experienceDuration})
+${resumeData.experienceBullets}
+
+## Projects
+### ${resumeData.projectTitle}
+**Tech Stack:** ${resumeData.projectStack}
+${resumeData.projectBullets}
+
+## Technical Skills
+- **Languages:** ${resumeData.skillsLanguages}
+- **Frameworks:** ${resumeData.skillsFrameworks}
+- **Databases:** ${resumeData.skillsDatabases}
+    `;
+    const blob = new Blob([mdContent], { type: 'text/markdown' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = `${resumeData.name || 'Resume'}.md`;
+    link.click();
+  };
+
+  const exportJSON = () => {
+    const jsonStr = JSON.stringify(resumeData, null, 2);
+    const blob = new Blob([jsonStr], { type: 'application/json' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = `${resumeData.name || 'Resume'}.json`;
+    link.click();
+  };
 
   React.useEffect(() => {
     if (token) {
@@ -439,192 +532,170 @@ const ResumeATS = () => {
                   type="button" 
                   onClick={() => setShowAddContentModal(true)} 
                   className="warroom-btn" 
-                  style={{ background: 'rgba(124, 58, 237, 0.15)', borderColor: '#a78bfa', color: '#a78bfa', fontWeight: 600 }}
+                  style={{ padding: '6px 14px', fontSize: '0.8rem', background: 'rgba(124, 58, 237, 0.15)', borderColor: '#a78bfa', color: '#a78bfa', fontWeight: 600 }}
                 >
-                  ➕ Add/Remove Sections
+                  ➕ Add Sections
                 </button>
               </div>
             </div>
 
-            {/* Name and contact info */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
-              <div className="form-group">
-                <label>Full Name</label>
-                <input 
-                  type="text" 
-                  className="form-input" 
-                  value={resumeData.name} 
-                  onChange={(e) => setResumeData({ ...resumeData, name: e.target.value })} 
-                />
-              </div>
-              <div className="form-group">
-                <label>Email Address</label>
-                <input 
-                  type="email" 
-                  className="form-input" 
-                  value={resumeData.email} 
-                  onChange={(e) => setResumeData({ ...resumeData, email: e.target.value })} 
-                />
-              </div>
+            {/* Stepper Progress Indicator */}
+            <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid var(--border-glass)', paddingBottom: '12px' }}>
+              {['Contact', 'Education', 'Experience', 'Projects', 'Skills', 'Extra', 'ATS Audit'].map((stepName, idx) => (
+                <span 
+                  key={stepName} 
+                  onClick={() => setCurrentStep(idx)}
+                  style={{ 
+                    fontSize: '0.8rem', 
+                    color: currentStep === idx ? 'var(--accent-secondary)' : 'var(--text-muted)', 
+                    fontWeight: currentStep === idx ? 700 : 500,
+                    cursor: 'pointer',
+                    borderBottom: currentStep === idx ? '2px solid var(--accent-secondary)' : 'none',
+                    paddingBottom: '4px'
+                  }}
+                >
+                  {stepName}
+                </span>
+              ))}
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '12px' }}>
-              <div className="form-group">
-                <label>Contact Phone</label>
-                <input 
-                  type="text" 
-                  className="form-input" 
-                  value={resumeData.phone} 
-                  onChange={(e) => setResumeData({ ...resumeData, phone: e.target.value })} 
-                />
-              </div>
-              <div className="form-group">
-                <label>GitHub Handle</label>
-                <input 
-                  type="text" 
-                  className="form-input" 
-                  value={resumeData.github} 
-                  onChange={(e) => setResumeData({ ...resumeData, github: e.target.value })} 
-                />
-              </div>
-              <div className="form-group">
-                <label>LinkedIn URL</label>
-                <input 
-                  type="text" 
-                  className="form-input" 
-                  value={resumeData.linkedin} 
-                  onChange={(e) => setResumeData({ ...resumeData, linkedin: e.target.value })} 
-                />
-              </div>
-            </div>
+            {/* Step 0: Personal Info */}
+            {currentStep === 0 && (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+                  <div className="form-group">
+                    <label>Full Name</label>
+                    <input 
+                      type="text" 
+                      className="form-input" 
+                      value={resumeData.name} 
+                      onChange={(e) => setResumeData({ ...resumeData, name: e.target.value })} 
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label>Email Address</label>
+                    <input 
+                      type="email" 
+                      className="form-input" 
+                      value={resumeData.email} 
+                      onChange={(e) => setResumeData({ ...resumeData, email: e.target.value })} 
+                    />
+                  </div>
+                </div>
 
-            <div className="form-group">
-              <label>Custom Profile Photo (Base64/Image URL for templates with photo)</label>
-              <input 
-                type="text" 
-                className="form-input" 
-                value={resumeData.photo || ''} 
-                onChange={(e) => setResumeData({ ...resumeData, photo: e.target.value })} 
-                placeholder="Pasted image URL or Base64 data..."
-              />
-            </div>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '12px' }}>
+                  <div className="form-group">
+                    <label>Contact Phone</label>
+                    <input 
+                      type="text" 
+                      className="form-input" 
+                      value={resumeData.phone} 
+                      onChange={(e) => setResumeData({ ...resumeData, phone: e.target.value })} 
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label>GitHub Handle</label>
+                    <input 
+                      type="text" 
+                      className="form-input" 
+                      value={resumeData.github} 
+                      onChange={(e) => setResumeData({ ...resumeData, github: e.target.value })} 
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label>LinkedIn URL</label>
+                    <input 
+                      type="text" 
+                      className="form-input" 
+                      value={resumeData.linkedin} 
+                      onChange={(e) => setResumeData({ ...resumeData, linkedin: e.target.value })} 
+                    />
+                  </div>
+                </div>
 
-            {/* Dynamic sections render in form */}
-            {activeSections.includes('education') && (
-              <div style={{ borderTop: '1px solid var(--border-glass)', paddingTop: '16px' }}>
-                <label style={{ color: 'white', fontWeight: 600, fontSize: '0.95rem' }}>🎓 Education Details</label>
+                <div className="form-group">
+                  <label>Custom Profile Photo (Base64/Image URL for templates with photo)</label>
+                  <input 
+                    type="text" 
+                    className="form-input" 
+                    value={resumeData.photo || ''} 
+                    onChange={(e) => setResumeData({ ...resumeData, photo: e.target.value })} 
+                    placeholder="Pasted image URL or Base64 data..."
+                  />
+                </div>
+              </div>
+            )}
+
+            {/* Step 1: Education */}
+            {currentStep === 1 && (
+              <div className="form-group">
+                <label>🎓 Education details</label>
                 <input 
                   type="text" 
                   className="form-input" 
                   style={{ marginTop: '8px' }}
                   value={resumeData.education} 
                   onChange={(e) => setResumeData({ ...resumeData, education: e.target.value })} 
+                  placeholder="e.g. B.Tech in CSE at KL University (CGPA: 9.39)"
                 />
               </div>
             )}
 
-            {activeSections.includes('experience') && (
-              <div style={{ borderTop: '1px solid var(--border-glass)', paddingTop: '16px' }}>
+            {/* Step 2: Experience */}
+            {currentStep === 2 && (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 <label style={{ color: 'white', fontWeight: 600, fontSize: '0.95rem' }}>💼 Professional Experience</label>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '12px', marginTop: '8px', marginBottom: '8px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '12px' }}>
                   <input type="text" className="form-input" placeholder="Company Name" value={resumeData.experienceCompany} onChange={(e) => setResumeData({ ...resumeData, experienceCompany: e.target.value })} />
                   <input type="text" className="form-input" placeholder="Role Title" value={resumeData.experienceRole} onChange={(e) => setResumeData({ ...resumeData, experienceRole: e.target.value })} />
                   <input type="text" className="form-input" placeholder="Duration" value={resumeData.experienceDuration} onChange={(e) => setResumeData({ ...resumeData, experienceDuration: e.target.value })} />
                 </div>
-                <textarea className="form-input" placeholder="Key Achievements (one per line)" rows="3" value={resumeData.experienceBullets} onChange={(e) => setResumeData({ ...resumeData, experienceBullets: e.target.value })} />
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '6px' }}>
+                  <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Key Achievements (one per line)</span>
+                  <button 
+                    type="button" 
+                    onClick={() => handleAIEnhance(resumeData.experienceBullets, 'experienceBullets', 'star')} 
+                    className="warroom-btn" 
+                    style={{ fontSize: '0.75rem', padding: '4px 10px', background: 'rgba(0, 242, 254, 0.1)', borderColor: 'var(--accent-secondary)', color: 'var(--accent-secondary)' }}
+                    disabled={aiRewriting}
+                  >
+                    ✨ AI STAR Rewrite
+                  </button>
+                </div>
+                <textarea className="form-input" placeholder="Key Achievements" rows="5" value={resumeData.experienceBullets} onChange={(e) => setResumeData({ ...resumeData, experienceBullets: e.target.value })} />
               </div>
             )}
 
-            {activeSections.includes('projects') && (
-              <div style={{ borderTop: '1px solid var(--border-glass)', paddingTop: '16px' }}>
+            {/* Step 3: Projects */}
+            {currentStep === 3 && (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 <label style={{ color: 'white', fontWeight: 600, fontSize: '0.95rem' }}>📁 Projects Portfolio</label>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginTop: '8px', marginBottom: '8px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
                   <input type="text" className="form-input" placeholder="Project Name" value={resumeData.projectTitle} onChange={(e) => setResumeData({ ...resumeData, projectTitle: e.target.value })} />
                   <input type="text" className="form-input" placeholder="Tech Stack used" value={resumeData.projectStack} onChange={(e) => setResumeData({ ...resumeData, projectStack: e.target.value })} />
                 </div>
-                <textarea className="form-input" placeholder="Project details and impact (one per line)" rows="3" value={resumeData.projectBullets} onChange={(e) => setResumeData({ ...resumeData, projectBullets: e.target.value })} />
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '6px' }}>
+                  <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Project details and impact (one per line)</span>
+                  <button 
+                    type="button" 
+                    onClick={() => handleAIEnhance(resumeData.projectBullets, 'projectBullets', 'metrics')} 
+                    className="warroom-btn" 
+                    style={{ fontSize: '0.75rem', padding: '4px 10px', background: 'rgba(0, 242, 254, 0.1)', borderColor: 'var(--accent-secondary)', color: 'var(--accent-secondary)' }}
+                    disabled={aiRewriting}
+                  >
+                    ✨ Add Metrics & Impact
+                  </button>
+                </div>
+                <textarea className="form-input" placeholder="Project details" rows="5" value={resumeData.projectBullets} onChange={(e) => setResumeData({ ...resumeData, projectBullets: e.target.value })} />
               </div>
             )}
 
-            {activeSections.includes('skills') && (
-              <div style={{ borderTop: '1px solid var(--border-glass)', paddingTop: '16px' }}>
+            {/* Step 4: Skills */}
+            {currentStep === 4 && (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 <label style={{ color: 'white', fontWeight: 600, fontSize: '0.95rem' }}>🍳 Technical Skills</label>
-                <input type="text" className="form-input" style={{ marginTop: '8px' }} placeholder="Languages (e.g. C++, Java, JS)" value={resumeData.skillsLanguages} onChange={(e) => setResumeData({ ...resumeData, skillsLanguages: e.target.value })} />
-                <input type="text" className="form-input" style={{ marginTop: '8px' }} placeholder="Frameworks (e.g. React, Express)" value={resumeData.skillsFrameworks} onChange={(e) => setResumeData({ ...resumeData, skillsFrameworks: e.target.value })} />
-                <input type="text" className="form-input" style={{ marginTop: '8px' }} placeholder="Databases (e.g. MongoDB, Redis)" value={resumeData.skillsDatabases} onChange={(e) => setResumeData({ ...resumeData, skillsDatabases: e.target.value })} />
-              </div>
-            )}
-
-            {/* Optional Form sections */}
-            {activeSections.includes('languages') && (
-              <div style={{ borderTop: '1px solid var(--border-glass)', paddingTop: '16px' }}>
-                <label style={{ color: 'white', fontWeight: 600, fontSize: '0.95rem' }}>🌐 Languages Proficiency</label>
-                <input type="text" className="form-input" style={{ marginTop: '8px' }} value={resumeData.languages} onChange={(e) => setResumeData({ ...resumeData, languages: e.target.value })} />
-              </div>
-            )}
-
-            {activeSections.includes('certificates') && (
-              <div style={{ borderTop: '1px solid var(--border-glass)', paddingTop: '16px' }}>
-                <label style={{ color: 'white', fontWeight: 600, fontSize: '0.95rem' }}>🏅 Certificates & Licences</label>
-                <textarea className="form-input" style={{ marginTop: '8px' }} rows="2" value={resumeData.certificates} onChange={(e) => setResumeData({ ...resumeData, certificates: e.target.value })} />
-              </div>
-            )}
-
-            {activeSections.includes('interests') && (
-              <div style={{ borderTop: '1px solid var(--border-glass)', paddingTop: '16px' }}>
-                <label style={{ color: 'white', fontWeight: 600, fontSize: '0.95rem' }}>✔ Personal Interests</label>
-                <textarea className="form-input" style={{ marginTop: '8px' }} rows="2" value={resumeData.interests} onChange={(e) => setResumeData({ ...resumeData, interests: e.target.value })} />
-              </div>
-            )}
-
-            {activeSections.includes('courses') && (
-              <div style={{ borderTop: '1px solid var(--border-glass)', paddingTop: '16px' }}>
                 <label style={{ color: 'white', fontWeight: 600, fontSize: '0.95rem' }}>📚 Training Courses</label>
                 <textarea className="form-input" style={{ marginTop: '8px' }} rows="2" value={resumeData.courses} onChange={(e) => setResumeData({ ...resumeData, courses: e.target.value })} />
-              </div>
-            )}
-
-            {activeSections.includes('awards') && (
-              <div style={{ borderTop: '1px solid var(--border-glass)', paddingTop: '16px' }}>
-                <label style={{ color: 'white', fontWeight: 600, fontSize: '0.95rem' }}>🏆 Honors & Awards</label>
-                <textarea className="form-input" style={{ marginTop: '8px' }} rows="2" value={resumeData.awards} onChange={(e) => setResumeData({ ...resumeData, awards: e.target.value })} />
-              </div>
-            )}
-
-            {activeSections.includes('organisations') && (
-              <div style={{ borderTop: '1px solid var(--border-glass)', paddingTop: '16px' }}>
-                <label style={{ color: 'white', fontWeight: 600, fontSize: '0.95rem' }}>🏫 Organisations & Memberships</label>
-                <textarea className="form-input" style={{ marginTop: '8px' }} rows="2" value={resumeData.organisations} onChange={(e) => setResumeData({ ...resumeData, organisations: e.target.value })} />
-              </div>
-            )}
-
-            {activeSections.includes('publications') && (
-              <div style={{ borderTop: '1px solid var(--border-glass)', paddingTop: '16px' }}>
-                <label style={{ color: 'white', fontWeight: 600, fontSize: '0.95rem' }}>📖 Publications & Research Papers</label>
-                <textarea className="form-input" style={{ marginTop: '8px' }} rows="2" value={resumeData.publications} onChange={(e) => setResumeData({ ...resumeData, publications: e.target.value })} />
-              </div>
-            )}
-
-            {activeSections.includes('references') && (
-              <div style={{ borderTop: '1px solid var(--border-glass)', paddingTop: '16px' }}>
-                <label style={{ color: 'white', fontWeight: 600, fontSize: '0.95rem' }}>🤝 Contact References</label>
-                <textarea className="form-input" style={{ marginTop: '8px' }} rows="2" value={resumeData.references} onChange={(e) => setResumeData({ ...resumeData, references: e.target.value })} />
-              </div>
-            )}
-
-            {activeSections.includes('declaration') && (
-              <div style={{ borderTop: '1px solid var(--border-glass)', paddingTop: '16px' }}>
-                <label style={{ color: 'white', fontWeight: 600, fontSize: '0.95rem' }}>📝 Declaration Statement</label>
-                <textarea className="form-input" style={{ marginTop: '8px' }} rows="2" value={resumeData.declaration} onChange={(e) => setResumeData({ ...resumeData, declaration: e.target.value })} />
-              </div>
-            )}
-
-            {activeSections.includes('custom') && (
-              <div style={{ borderTop: '1px solid var(--border-glass)', paddingTop: '16px' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '8px', marginBottom: '8px' }}>
-                  <input type="text" className="form-input" placeholder="Custom Section Title" value={resumeData.customTitle} onChange={(e) => setResumeData({ ...resumeData, customTitle: e.target.value })} />
-                </div>
-                <textarea className="form-input" placeholder="Custom contents (one per line)" rows="3" value={resumeData.customContent} onChange={(e) => setResumeData({ ...resumeData, customContent: e.target.value })} />
               </div>
             )}
 
@@ -637,9 +708,17 @@ const ResumeATS = () => {
             <div className="glass-card" style={{ display: 'flex', flexDirection: 'column', gap: '12px', padding: '16px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 600 }}>Browse Style Templates</span>
-                <button onClick={handlePrint} className="primary-btn" style={{ padding: '6px 14px', fontSize: '0.8rem', background: 'var(--accent-gradient)' }}>
-                  🖨️ Export PDF
-                </button>
+                <div style={{ display: 'flex', gap: '6px' }}>
+                  <button onClick={handlePrint} className="primary-btn" style={{ padding: '6px 10px', fontSize: '0.78rem', background: 'var(--accent-gradient)' }}>
+                    🖨️ PDF
+                  </button>
+                  <button onClick={exportMarkdown} className="warroom-btn" style={{ padding: '6px 10px', fontSize: '0.78rem' }}>
+                    📝 MD
+                  </button>
+                  <button onClick={exportJSON} className="warroom-btn" style={{ padding: '6px 10px', fontSize: '0.78rem' }}>
+                    ⚙️ JSON
+                  </button>
+                </div>
               </div>
 
               {/* Template selector buttons */}

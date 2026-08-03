@@ -33,7 +33,36 @@ router.post('/register', async (req, res) => {
       branch: branch || 'Computer Science & Engineering',
       selectedCourse: selectedCourse || 'Full Stack Development',
       streak: 1,
-      lastLoginDate: new Date()
+      lastLoginDate: new Date(),
+      resume: {
+        name: username,
+        email: email,
+        phone: phoneNumber || '',
+        education: `${branch || 'Computer Science & Engineering'}, ${yearOfStudy || '3rd Year'}`,
+        skillsLanguages: '',
+        skillsFrameworks: '',
+        skillsDatabases: '',
+        experienceCompany: '',
+        experienceRole: '',
+        experienceDuration: '',
+        experienceBullets: '',
+        projectTitle: '',
+        projectStack: '',
+        projectBullets: '',
+        github: '',
+        linkedin: '',
+        languages: '',
+        certificates: '',
+        interests: '',
+        courses: '',
+        awards: '',
+        organisations: '',
+        publications: '',
+        references: '',
+        declaration: '',
+        customTitle: '',
+        customContent: ''
+      }
     });
 
     // Log to CSV sheet

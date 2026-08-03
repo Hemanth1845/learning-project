@@ -5,9 +5,11 @@ const { osTheoryChapters } = require('./osTheoryData');
 const { synonymsData, oneWordSubData, idiomsData, spellCheckData, prepositionsData, articlesData, readingCompData, errorSpottingData, voiceData, speechData, bloodRelationsData, seatingArrangementData, mirrorImagesData, analogyData, classificationData } = require('./aptitudeQuestionsData');
 
 const seedTheoryData = async () => {
-  // Always clear existing theory subjects and chapters to apply our rich new seeder content!
-  await TheorySubject.deleteMany({});
-  await TheoryChapter.deleteMany({});
+  const count = await TheorySubject.countDocuments();
+  if (count > 0) {
+    console.log('Theory subjects already seeded. Skipping...');
+    return;
+  }
 
   // Define subjects
   const subjects = [
@@ -633,8 +635,8 @@ const generateDetailedTextbook = (category, title) => {
 const seedAptitudeData = async () => {
   const topicCount = await AptitudeTopic.countDocuments();
   if (topicCount > 0) {
-    await AptitudeTopic.deleteMany({});
-    console.log('Cleared old aptitude topics.');
+    console.log('Aptitude topics already seeded. Skipping...');
+    return;
   }
 
   const { generateQuestions } = require('./aptitudeQuestionsGenerator');

@@ -30,7 +30,11 @@ const seedAdmin = async () => {
 };
 
 const seedDSAProblems = async () => {
-  await DSAProblem.deleteMany({});
+  const count = await DSAProblem.countDocuments();
+  if (count > 0) {
+    console.log('DSA Problems already seeded. Skipping...');
+    return;
+  }
   const problems = [
     { problemId: 1, title: 'Two Sum', topic: 'Arrays', difficulty: 'Easy', xp: 10, solveUrl: 'https://leetcode.com/problems/two-sum/' },
     { problemId: 2, title: 'Maximum Subarray', topic: 'Dynamic Programming', difficulty: 'Medium', xp: 30, solveUrl: 'https://leetcode.com/problems/maximum-subarray/' },
@@ -65,9 +69,11 @@ const seedDSAProblems = async () => {
 };
 
 const seedCoursesAndLessons = async () => {
-  // Always clear existing courses and lessons to apply our rich new seeder content!
-  await Course.deleteMany({});
-  await Lesson.deleteMany({});
+  const count = await Course.countDocuments();
+  if (count > 0) {
+    console.log('Courses already seeded. Skipping...');
+    return;
+  }
 
   // Define courses
   const coursesData = [

@@ -91,6 +91,7 @@ const AdminDashboard = () => {
   // Project submissions states
   const [submissions, setSubmissions] = useState([]);
   const [submissionsLoading, setSubmissionsLoading] = useState(false);
+  const [activeFullStackCategory, setActiveFullStackCategory] = useState('Frontend');
 
   // Modals visibility
   const [showCourseModal, setShowCourseModal] = useState(false);
@@ -798,6 +799,11 @@ const AdminDashboard = () => {
     setShowCourseModal(true);
   };
 
+  const handleOpenAddFullStackCourse = (category) => {
+    setCourseForm({ id: null, title: '', description: '', category: 'Core CS', parentCategory: category, difficulty: 'Easy', thumbnail: '', pdfUrl: '', externalLink: '', practicePageUrl: '' });
+    setShowCourseModal(true);
+  };
+
   const handleOpenEditCourse = (course) => {
     setCourseForm({
       id: course._id,
@@ -1136,11 +1142,11 @@ const AdminDashboard = () => {
             📋 Course Requests
           </button>
           <button 
-            className={`filter-tag ${activeTab === 'projects' ? 'active' : ''}`}
-            onClick={() => setActiveTab('projects')}
+            className={`filter-tag ${activeTab === 'fullstack' ? 'active' : ''}`}
+            onClick={() => { setActiveTab('fullstack'); setActiveFullStackCategory('Frontend'); setSelectedCourse(null); }}
             style={{ padding: '10px 20px', fontSize: '0.9rem', fontWeight: 600 }}
           >
-            💻 Project Submissions
+            🌐 Full Stack Course
           </button>
           <button 
             className={`filter-tag ${activeTab === 'doubts' ? 'active' : ''}`}
@@ -1186,7 +1192,7 @@ const AdminDashboard = () => {
             <div className="glass-card">
               <h3 style={{ fontSize: '1.25rem', marginBottom: '20px' }}>Course Inventory</h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                {courses.map((course) => {
+                {courses.filter(course => !course.parentCategory).map((course) => {
                   const isSelected = selectedCourse?._id === course._id;
                   return (
                     <div 
@@ -1675,121 +1681,252 @@ const AdminDashboard = () => {
         </div>
       )}
 
-      {/* RENDER PROJECT SUBMISSIONS TAB */}
-      {activeTab === 'projects' && (
+      {/* RENDER FULL STACK COURSE TAB */}
+      {activeTab === 'fullstack' && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-          <div style={{ padding: '24px', borderBottom: '1px solid var(--border-glass)' }} className="glass-card">
-            <h3 style={{ fontSize: '1.25rem', color: 'white' }}>Full-Stack Project Evaluations</h3>
-            <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginTop: '4px' }}>
-              Inspect files uploaded by students, assign scores (UI, Logic, Code Quality), and write comments.
-            </p>
+          
+          {/* Sub category tabs */}
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div style={{ display: 'flex', gap: '8px' }}>
+              {['Frontend', 'Backend', 'Database'].map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => {
+                    setActiveFullStackCategory(cat);
+                    setSelectedCourse(null);
+                  }}
+                  className={`filter-tag ${activeFullStackCategory === cat ? 'active' : ''}`}
+                  style={{ padding: '8px 16px', fontSize: '0.85rem' }}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+            <button 
+              onClick={() => handleOpenAddFullStackCourse(activeFullStackCategory)} 
+              className="primary-btn" 
+              style={{ padding: '10px 20px', fontSize: '0.9rem' }}
+            >
+              + Add {activeFullStackCategory} Course
+            </button>
           </div>
 
-          <section className="glass-card" style={{ padding: '0px', overflow: 'hidden' }}>
-            {submissionsLoading ? (
-              <div style={{ color: 'white', padding: '40px', textAlign: 'center' }}>Querying project database...</div>
-            ) : (
-              <div className="table-container">
-                <table className="custom-table">
-                  <thead>
-                    <tr>
-                      <th>Student</th>
-                      <th>Project Title</th>
-                      <th>Submission Assets</th>
-                      <th>Submitted Date</th>
-                      <th>Status</th>
-                      <th>Scores</th>
-                      <th>Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {submissions.length > 0 ? (
-                      submissions.map((sub) => (
-                        <tr key={sub._id}>
-                          <td style={{ fontWeight: 600, color: 'white' }}>{sub.username}</td>
-                          <td>
-                            <div style={{ color: 'white', fontWeight: 600 }}>{sub.projectTitle || 'Project'}</div>
-                            <div style={{ fontSize: '0.75rem', color: 'var(--accent-secondary)' }}>Index: {sub.projectIndex || 1}</div>
-                          </td>
-                          <td>
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                              {sub.fileUrl && (
-                                <a
-                                  href={sub.fileUrl}
-                                  download={sub.fileName}
-                                  style={{ color: 'var(--accent-secondary)', textDecoration: 'underline', fontSize: '0.85rem' }}
-                                >
-                                  📁 ZIP File
-                                </a>
-                              )}
-                              {sub.githubLink && (
-                                <a href={sub.githubLink} target="_blank" rel="noopener noreferrer" style={{ color: '#818cf8', fontSize: '0.82rem' }}>
-                                  🔗 GitHub Link ↗
-                                </a>
-                              )}
-                              {sub.liveDemoLink && (
-                                <a href={sub.liveDemoLink} target="_blank" rel="noopener noreferrer" style={{ color: '#10b981', fontSize: '0.82rem' }}>
-                                  🌐 Live Demo ↗
-                                </a>
-                              )}
-                            </div>
-                          </td>
-                          <td>{new Date(sub.createdAt).toLocaleDateString()}</td>
-                          <td>
-                            <span style={{
-                              padding: '4px 8px',
-                              borderRadius: '4px',
-                              fontWeight: 'bold',
-                              fontSize: '0.78rem',
-                              background: sub.status === 'Approved' ? 'rgba(16, 185, 129, 0.15)' : sub.status === 'Rejected' ? 'rgba(239, 68, 68, 0.15)' : 'rgba(245, 158, 11, 0.15)',
-                              color: sub.status === 'Approved' ? 'var(--color-solved)' : sub.status === 'Rejected' ? 'var(--color-hard)' : '#f59e0b'
-                            }}>
-                              {sub.status}
-                            </span>
-                          </td>
-                          <td>
-                            {sub.scores && sub.scores.overall ? (
-                              <span style={{ fontWeight: 600, color: 'var(--color-points)' }}>
-                                {sub.scores.overall}% (UI: {sub.scores.ui}%, CQ: {sub.scores.codeQuality}%)
-                              </span>
-                            ) : (
-                              <span style={{ color: 'var(--text-muted)', fontSize: '0.82rem' }}>Not Graded</span>
-                            )}
-                          </td>
-                          <td>
-                            <button
-                              onClick={() => {
-                                setEvaluatingSub(sub);
-                                setEvalScores({
-                                  ui: sub.scores?.ui || 80,
-                                  codeQuality: sub.scores?.codeQuality || 80,
-                                  logic: sub.scores?.logic || 80
-                                });
-                                setEvalRemarks(sub.remarks || '');
-                                setEvalStrengths(sub.aiSuggestions?.strengths || '');
-                                setEvalWeaknesses(sub.aiSuggestions?.weaknesses || '');
-                                setEvalSuggestions(sub.aiSuggestions?.suggestions || '');
-                              }}
-                              className="warroom-btn"
-                              style={{ background: 'var(--accent-gradient)', border: 'none', color: 'white', padding: '6px 12px', fontSize: '0.8rem' }}
-                            >
-                              Grade / Evaluate
-                            </button>
-                          </td>
-                        </tr>
-                      ))
-                    ) : (
-                      <tr>
-                        <td colSpan="7" style={{ textAlign: 'center', color: 'var(--text-muted)', padding: '32px' }}>
-                          No project files uploaded yet.
-                        </td>
-                      </tr>
-                    )}
-                  </tbody>
-                </table>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '32px' }} className="scorecard-panel">
+            {/* Course Inventory */}
+            <div className="glass-card">
+              <h3 style={{ fontSize: '1.25rem', marginBottom: '20px' }}>{activeFullStackCategory} Courses</h3>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                {courses.filter(course => course.parentCategory === activeFullStackCategory).map((course) => {
+                  const isSelected = selectedCourse?._id === course._id;
+                  return (
+                    <div 
+                      key={course._id} 
+                      style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        padding: '16px',
+                        borderRadius: '10px',
+                        background: isSelected ? 'rgba(111, 66, 193, 0.1)' : 'rgba(255,255,255,0.01)',
+                        border: `1px solid ${isSelected ? 'var(--accent-secondary)' : 'var(--border-glass)'}`,
+                        cursor: 'pointer'
+                      }}
+                      onClick={() => handleSelectCourse(course)}
+                    >
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <span style={{ fontWeight: 700, color: 'white', fontSize: '0.95rem' }}>{course.title}</span>
+                        <span className={`difficulty-pill ${course.difficulty.toLowerCase()}`} style={{ fontSize: '0.7rem' }}>
+                          {course.difficulty}
+                        </span>
+                      </div>
+                      <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '8px', height: '36px', overflow: 'hidden' }}>
+                        {course.description}
+                      </p>
+                      
+                      <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '12px', borderTop: '1px solid rgba(255,255,255,0.03)', paddingTop: '8px' }}>
+                        <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Cat: {course.category}</span>
+                        <div style={{ display: 'flex', gap: '10px' }}>
+                          <button onClick={(e) => { e.stopPropagation(); handleOpenEditCourse(course); }} style={{ background: 'transparent', border: 'none', color: 'var(--accent-secondary)', fontSize: '0.75rem', fontWeight: 600, cursor: 'pointer' }}>
+                            Edit
+                          </button>
+                          <button onClick={(e) => { e.stopPropagation(); handleDeleteCourse(course._id); }} style={{ background: 'transparent', border: 'none', color: 'var(--color-hard)', fontSize: '0.75rem', fontWeight: 600, cursor: 'pointer' }}>
+                            Delete
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+                {courses.filter(course => course.parentCategory === activeFullStackCategory).length === 0 && (
+                  <p style={{ color: 'var(--text-muted)', textAlign: 'center', padding: '24px 0' }}>No courses in this category yet.</p>
+                )}
               </div>
-            )}
-          </section>
+            </div>
+
+            {/* Selected Course details */}
+            <div className="glass-card">
+              {selectedCourse ? (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+                  
+                  {/* Part 1: Lessons */}
+                  <div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
+                      <div>
+                        <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Managing Syllabus For</span>
+                        <h3 style={{ fontSize: '1.3rem', color: 'white' }}>{selectedCourse.title}</h3>
+                      </div>
+                      <button onClick={handleOpenAddLesson} className="warroom-btn" style={{ background: 'rgba(0, 242, 254, 0.15)', borderColor: 'var(--accent-secondary)', color: 'var(--accent-secondary)' }}>
+                        + Add Lesson
+                      </button>
+                    </div>
+
+                    <div className="syllabus-list" style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                      {lessons.length > 0 ? (
+                        lessons.map((les) => (
+                          <div key={les._id} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'rgba(255,255,255,0.02)', padding: '16px', border: '1px solid var(--border-glass)', borderRadius: '8px' }}>
+                            <div>
+                              <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Lesson {les.order}</span>
+                              <h4 style={{ fontSize: '0.95rem', fontWeight: 600, color: 'white', marginTop: '2px' }}>{les.title}</h4>
+                            </div>
+                            
+                            <div style={{ display: 'flex', gap: '12px' }}>
+                              <button onClick={() => handleOpenEditLesson(les)} className="warroom-btn" style={{ background: 'transparent', border: '1px solid var(--border-glass)', color: 'white' }}>
+                                Edit
+                              </button>
+                              <button onClick={() => handleDeleteLesson(les._id)} className="warroom-btn" style={{ background: 'rgba(239,68,68,0.05)', border: '1px solid rgba(239,68,68,0.2)', color: 'var(--color-hard)' }}>
+                                Delete
+                              </button>
+                            </div>
+                          </div>
+                        ))
+                      ) : (
+                        <p style={{ color: 'var(--text-muted)', padding: '16px 0', textAlign: 'center', fontSize: '0.9rem' }}>
+                          No lessons created for this course yet. Click "Add Lesson" to build the syllabus.
+                        </p>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Part 2: Project Submissions */}
+                  <div style={{ borderTop: '1px solid var(--border-glass)', paddingTop: '24px' }}>
+                    <h3 style={{ fontSize: '1.2rem', color: 'white', marginBottom: '8px' }}>Project Submissions ({selectedCourse.title})</h3>
+                    <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginBottom: '16px' }}>
+                      Grade and evaluate files uploaded by students for this specific technology track.
+                    </p>
+
+                    {submissionsLoading ? (
+                      <div style={{ color: 'white', padding: '20px', textAlign: 'center' }}>Querying project database...</div>
+                    ) : (
+                      <div className="table-container" style={{ overflowX: 'auto' }}>
+                        <table className="custom-table" style={{ width: '100%' }}>
+                          <thead>
+                            <tr>
+                              <th>Student</th>
+                              <th>Project Title</th>
+                              <th>Submission Assets</th>
+                              <th>Submitted Date</th>
+                              <th>Status</th>
+                              <th>Scores</th>
+                              <th>Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {submissions.filter(sub => sub.courseId === selectedCourse._id).length > 0 ? (
+                              submissions.filter(sub => sub.courseId === selectedCourse._id).map((sub) => (
+                                <tr key={sub._id}>
+                                  <td style={{ fontWeight: 600, color: 'white' }}>{sub.username}</td>
+                                  <td>
+                                    <div style={{ color: 'white', fontWeight: 600 }}>{sub.projectTitle || 'Project'}</div>
+                                    <div style={{ fontSize: '0.75rem', color: 'var(--accent-secondary)' }}>Index: {sub.projectIndex || 1}</div>
+                                  </td>
+                                  <td>
+                                    <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                                      {sub.fileUrl && (
+                                        <a
+                                          href={sub.fileUrl}
+                                          download={sub.fileName}
+                                          style={{ color: 'var(--accent-secondary)', textDecoration: 'underline', fontSize: '0.85rem' }}
+                                        >
+                                          📁 ZIP File
+                                        </a>
+                                      )}
+                                      {sub.githubLink && (
+                                        <a href={sub.githubLink} target="_blank" rel="noopener noreferrer" style={{ color: '#818cf8', fontSize: '0.82rem' }}>
+                                          🔗 GitHub Link ↗
+                                        </a>
+                                      )}
+                                      {sub.liveDemoLink && (
+                                        <a href={sub.liveDemoLink} target="_blank" rel="noopener noreferrer" style={{ color: '#10b981', fontSize: '0.82rem' }}>
+                                          🌐 Live Demo ↗
+                                        </a>
+                                      )}
+                                    </div>
+                                  </td>
+                                  <td>{new Date(sub.createdAt).toLocaleDateString()}</td>
+                                  <td>
+                                    <span style={{
+                                      padding: '4px 8px',
+                                      borderRadius: '4px',
+                                      fontWeight: 'bold',
+                                      fontSize: '0.78rem',
+                                      background: sub.status === 'Approved' ? 'rgba(16, 185, 129, 0.15)' : sub.status === 'Rejected' ? 'rgba(239, 68, 68, 0.15)' : 'rgba(245, 158, 11, 0.15)',
+                                      color: sub.status === 'Approved' ? 'var(--color-solved)' : sub.status === 'Rejected' ? 'var(--color-hard)' : '#f59e0b'
+                                    }}>
+                                      {sub.status}
+                                    </span>
+                                  </td>
+                                  <td>
+                                    {sub.scores && sub.scores.overall ? (
+                                      <span style={{ fontWeight: 600, color: 'var(--color-points)' }}>
+                                        {sub.scores.overall}% (UI: {sub.scores.ui}%, CQ: {sub.scores.codeQuality}%)
+                                      </span>
+                                    ) : (
+                                      <span style={{ color: 'var(--text-muted)', fontSize: '0.82rem' }}>Not Graded</span>
+                                    )}
+                                  </td>
+                                  <td>
+                                    <button
+                                      onClick={() => {
+                                        setEvaluatingSub(sub);
+                                        setEvalScores({
+                                          ui: sub.scores?.ui || 80,
+                                          codeQuality: sub.scores?.codeQuality || 80,
+                                          logic: sub.scores?.logic || 80
+                                        });
+                                        setEvalRemarks(sub.remarks || '');
+                                        setEvalStrengths(sub.aiSuggestions?.strengths || '');
+                                        setEvalWeaknesses(sub.aiSuggestions?.weaknesses || '');
+                                        setEvalSuggestions(sub.aiSuggestions?.suggestions || '');
+                                      }}
+                                      className="warroom-btn"
+                                      style={{ background: 'var(--accent-gradient)', border: 'none', color: 'white', padding: '6px 12px', fontSize: '0.8rem' }}
+                                    >
+                                      Grade / Evaluate
+                                    </button>
+                                  </td>
+                                </tr>
+                              ))
+                            ) : (
+                              <tr>
+                                <td colSpan="7" style={{ textAlign: 'center', color: 'var(--text-muted)', padding: '32px' }}>
+                                  No project files submitted by students for this technology track yet.
+                                </td>
+                              </tr>
+                            )}
+                          </tbody>
+                        </table>
+                      </div>
+                    )}
+                  </div>
+
+                </div>
+              ) : (
+                <div style={{ padding: '40px', textAlign: 'center', color: 'var(--text-muted)' }}>
+                  Please select a Full Stack Course from the left side panel to manage syllabus and review student projects.
+                </div>
+              )}
+            </div>
+
+          </div>
         </div>
       )}
 
