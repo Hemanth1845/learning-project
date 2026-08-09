@@ -25,6 +25,8 @@ import FurtherDoubts from './pages/FurtherDoubts';
 import CommunicationCoach from './pages/CommunicationCoach';
 import Profile from './pages/Profile';
 import Pricing from './pages/Pricing';
+import CompanyPrep from './pages/CompanyPrep';
+import Community from './pages/Community';
 import SplashIntro from './components/SplashIntro';
 
 // Protected Route Guard for normal users (Students)
@@ -167,6 +169,9 @@ const MainLayout = ({ children }) => {
               </Link>
               <Link to="/resume-ats" className={`nav-item ${isActive('/resume-ats')}`}>
                 <span>📄</span> Resume & ATS
+              </Link>
+              <Link to="/community" className={`nav-item ${isActive('/community')}`}>
+                <span>👥</span> Community & GD
               </Link>
               <Link to="/request-course" className={`nav-item ${isActive('/request-course')}`}>
                 <span>💡</span> Request Course
@@ -364,6 +369,7 @@ function App() {
           <Route path="/request-course" element={<ProtectedRoute><MainLayout><RequestCourse /></MainLayout></ProtectedRoute>} />
           <Route path="/further-doubts" element={<ProtectedRoute><MainLayout><FurtherDoubts /></MainLayout></ProtectedRoute>} />
           <Route path="/communication-coach" element={<ProtectedRoute><MainLayout><CommunicationCoach /></MainLayout></ProtectedRoute>} />
+          <Route path="/community" element={<ProtectedRoute><MainLayout><Community /></MainLayout></ProtectedRoute>} />
           <Route path="/profile" element={<ProtectedRoute><MainLayout><Profile /></MainLayout></ProtectedRoute>} />
           <Route path="/pricing" element={<ProtectedRoute><MainLayout><Pricing /></MainLayout></ProtectedRoute>} />
 

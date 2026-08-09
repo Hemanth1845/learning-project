@@ -23,6 +23,20 @@ const CommunicationCoach = () => {
   });
   const [liveCoachMessage, setLiveCoachMessage] = useState('Position your camera and speak clearly when ready.');
   
+  // Video recording states
+  const [videoStream, setVideoStream] = useState(null);
+  const [recordedBlobUrl, setRecordedBlobUrl] = useState('');
+  const [showVideoLibrary, setShowVideoLibrary] = useState(false);
+  const [progressHistory, setProgressHistory] = useState([
+    { date: 'Aug 1', score: 72 },
+    { date: 'Aug 3', score: 78 },
+    { date: 'Aug 5', score: 85 },
+    { date: 'Aug 7', score: 92 }
+  ]);
+  const videoPreviewRef = useRef(null);
+  const recorderRef = useRef(null);
+  const chunksRef = useRef([]);
+
   // Challenge & Report states
   const [currentTopic, setCurrentTopic] = useState(() => {
     const pool = [
@@ -95,13 +109,40 @@ const CommunicationCoach = () => {
   };
 
   // Speech Recognition Hook and Real-Time analysis
-  const startRecording = (modeType = 'daily') => {
+  // Speech Recognition Hook and Real-Time analysis
+  const startRecording = async (modeType = 'daily') => {
     if (isRecording) return;
     
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SpeechRecognition) {
       alert('Web Speech API is not supported in this browser. Please use Chrome or Edge.');
       return;
+    }
+
+    // Initialize Camera Video Recording
+    let activeStream = null;
+    try {
+      activeStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+      setVideoStream(activeStream);
+      setRecordedBlobUrl('');
+      chunksRef.current = [];
+      
+      // Start media recorder
+      const recorder = new MediaRecorder(activeStream, { mimeType: 'video/webm' });
+      recorder.ondataavailable = (e) => {
+        if (e.data && e.data.size > 0) {
+          chunksRef.current.push(e.data);
+        }
+      };
+      recorder.onstop = () => {
+        const blob = new Blob(chunksRef.current, { type: 'video/webm' });
+        const url = URL.createObjectURL(blob);
+        setRecordedBlobUrl(url);
+      };
+      recorderRef.current = recorder;
+      recorder.start();
+    } catch (err) {
+      console.warn('Failed to access webcam/mic for communication coach:', err);
     }
 
     const recognition = new SpeechRecognition();
@@ -173,10 +214,16 @@ const CommunicationCoach = () => {
           }
         });
 
+        // Simulate eye contact and smile metrics
+        const eyeVal = Math.floor(Math.random() * 10) + 85;
+        const hasSmile = Math.random() > 0.4 ? 'Detected' : 'Neutral';
+
         setLiveMetrics(prev => ({
           ...prev,
           wpm: currentWpm || prev.wpm,
-          fillerCount: localFillerCount
+          fillerCount: localFillerCount,
+          eyeContact: `Maintaining (${eyeVal}%)`,
+          smile: hasSmile
         }));
       }
     };
@@ -188,6 +235,13 @@ const CommunicationCoach = () => {
     recognition.onend = () => {
       setIsRecording(false);
     };
+
+    // Assign stream to video preview element
+    setTimeout(() => {
+      if (activeStream && videoPreviewRef.current) {
+        videoPreviewRef.current.srcObject = activeStream;
+      }
+    }, 150);
 
     recognition.start();
     const startTime = Date.now();
@@ -214,6 +268,16 @@ const CommunicationCoach = () => {
     if (timerRef.current) {
       clearInterval(timerRef.current);
     }
+    
+    // Stop camera video recorder
+    if (recorderRef.current && recorderRef.current.state !== 'inactive') {
+      recorderRef.current.stop();
+    }
+    if (videoStream) {
+      videoStream.getTracks().forEach(t => t.stop());
+      setVideoStream(null);
+    }
+
     setIsRecording(false);
 
     if (modeType === 'daily') {
@@ -363,6 +427,15 @@ const CommunicationCoach = () => {
             </blockquote>
 
             <div style={{ background: 'rgba(0,0,0,0.15)', padding: '24px', borderRadius: '12px', border: '1px solid var(--border-glass)', textAlign: 'center', minHeight: '180px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '16px' }}>
+              {/* Webcam live preview container */}
+              <video 
+                ref={videoPreviewRef} 
+                autoPlay 
+                playsInline 
+                muted 
+                style={{ width: '100%', height: '180px', objectFit: 'cover', borderRadius: '8px', background: '#000', display: isRecording ? 'block' : 'none' }} 
+              />
+
               {isRecording ? (
                 <>
                   <div className="pulse-circle" style={{ width: '48px', height: '48px', background: '#f43f5e', borderRadius: '50%', animation: 'pulse 1.5s infinite' }} />
@@ -388,6 +461,14 @@ const CommunicationCoach = () => {
               )}
             </div>
 
+            {/* Playback Recorded Session */}
+            {recordedBlobUrl && !isRecording && (
+              <div style={{ background: 'rgba(255,255,255,0.01)', padding: '16px', borderRadius: '8px', border: '1px solid var(--border-glass)' }}>
+                <span style={{ fontSize: '0.8rem', color: 'var(--accent-secondary)', fontWeight: 700, display: 'block', marginBottom: '8px', textTransform: 'uppercase' }}>📹 Playback Recorded Session</span>
+                <video src={recordedBlobUrl} controls style={{ width: '100%', borderRadius: '8px', maxHeight: '180px', background: '#000' }} />
+              </div>
+            )}
+
             {/* Live Suggestion Coach Bar */}
             <div style={{ padding: '16px', background: 'rgba(99,102,241,0.06)', borderRadius: '8px', borderLeft: '4px solid var(--accent-primary)' }}>
               <strong style={{ fontSize: '0.85rem', color: 'white', display: 'block' }}>🔊 Live Speech Coach Tips:</strong>
@@ -407,6 +488,47 @@ const CommunicationCoach = () => {
               <div style={{ padding: '12px', background: 'rgba(255,255,255,0.01)', border: '1px solid var(--border-glass)', borderRadius: '6px', textAlign: 'center' }}>
                 <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', display: 'block' }}>Silent Pauses</span>
                 <strong style={{ color: 'white', fontSize: '1rem', marginTop: '4px', display: 'block' }}>{liveMetrics.pauses}</strong>
+              </div>
+            </div>
+
+            {/* Video Tips Library */}
+            <div style={{ borderTop: '1px solid var(--border-glass)', paddingTop: '16px', marginTop: '10px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <span style={{ fontSize: '0.85rem', color: 'white', fontWeight: 600 }}>📚 Communication Video Tips Library</span>
+                <button type="button" onClick={() => setShowVideoLibrary(!showVideoLibrary)} className="warroom-btn" style={{ padding: '4px 10px', fontSize: '0.72rem' }}>
+                  {showVideoLibrary ? 'Hide Library' : 'Browse Videos'}
+                </button>
+              </div>
+
+              {showVideoLibrary && (
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginTop: '12px' }}>
+                  <div className="glass-card" style={{ padding: '12px', background: 'rgba(255,255,255,0.01)', border: '1px solid var(--border-glass)' }}>
+                    <strong style={{ fontSize: '0.82rem', color: 'white', display: 'block' }}>STAR Method Blueprint</strong>
+                    <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '4px', display: 'block' }}>How to structure behavioral responses cleanly.</span>
+                    <button type="button" className="primary-btn" style={{ width: '100%', padding: '4px 0', fontSize: '0.72rem', marginTop: '10px' }} onClick={() => alert('Playing Video: Mastering the STAR Method...')}>Play Video</button>
+                  </div>
+                  <div className="glass-card" style={{ padding: '12px', background: 'rgba(255,255,255,0.01)', border: '1px solid var(--border-glass)' }}>
+                    <strong style={{ fontSize: '0.82rem', color: 'white', display: 'block' }}>Reducing Filler Phrases</strong>
+                    <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '4px', display: 'block' }}>Tips on replacing "um", "like", "you know" with natural pauses.</span>
+                    <button type="button" className="primary-btn" style={{ width: '100%', padding: '4px 0', fontSize: '0.72rem', marginTop: '10px' }} onClick={() => alert('Playing Video: Reducing Filler Words...')}>Play Video</button>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Progress History over Time */}
+            <div style={{ borderTop: '1px solid var(--border-glass)', paddingTop: '16px', marginTop: '10px' }}>
+              <span style={{ fontSize: '0.85rem', color: 'white', fontWeight: 600 }}>📈 Your Improvement History</span>
+              <div style={{ display: 'flex', justifyContent: 'space-between', background: 'rgba(255,255,255,0.02)', padding: '12px', borderRadius: '8px', border: '1px solid var(--border-glass)', marginTop: '8px' }}>
+                {progressHistory.map((h, i) => (
+                  <div key={i} style={{ textAlign: 'center' }}>
+                    <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>{h.date}</div>
+                    <div style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--accent-secondary)', marginTop: '4px' }}>{h.score}%</div>
+                    <div style={{ height: '30px', width: '6px', background: 'rgba(255,255,255,0.05)', borderRadius: '3px', margin: '6px auto 0', position: 'relative' }}>
+                      <div style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', height: `${h.score}%`, background: 'var(--color-easy)', borderRadius: '3px' }} />
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
 

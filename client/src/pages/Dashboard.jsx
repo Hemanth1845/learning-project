@@ -188,6 +188,61 @@ const Dashboard = () => {
         </div>
       </section>
 
+      {/* Skill Tree & Leveling */}
+      <section className="glass-card" style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+        <h2 style={{ fontSize: '1.4rem', color: 'white', display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <span>🌳</span> Placement Skill Tree & Branches
+        </h2>
+        <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem' }}>Unlock branches of your placement readiness journey by gaining XP points.</p>
+        
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '24px' }} className="scorecard-panel">
+          <div style={{ background: 'rgba(255,255,255,0.01)', border: '1px solid var(--border-glass)', padding: '16px', borderRadius: '12px' }}>
+            <strong style={{ color: 'white', display: 'block', fontSize: '0.95rem', marginBottom: '12px' }}>💻 DSA Branch</strong>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', color: 'var(--color-solved)' }}>
+                <span>Arrays & Strings</span> <span>✓ Unlocked</span>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', color: 'var(--color-solved)' }}>
+                <span>Linked Lists & Stacks</span> <span>✓ Unlocked</span>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', color: (stats?.xp || 0) >= 300 ? 'var(--color-solved)' : 'var(--text-muted)' }}>
+                <span>Dynamic Programming</span> <span>{(stats?.xp || 0) >= 300 ? '✓ Unlocked' : '🔒 Requires 300 XP'}</span>
+              </div>
+            </div>
+          </div>
+
+          <div style={{ background: 'rgba(255,255,255,0.01)', border: '1px solid var(--border-glass)', padding: '16px', borderRadius: '12px' }}>
+            <strong style={{ color: 'white', display: 'block', fontSize: '0.95rem', marginBottom: '12px' }}>🎤 Communication Branch</strong>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', color: 'var(--color-solved)' }}>
+                <span>Self Introduction</span> <span>✓ Unlocked</span>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', color: (stats?.xp || 0) >= 200 ? 'var(--color-solved)' : 'var(--text-muted)' }}>
+                <span>STAR Method Pitching</span> <span>{(stats?.xp || 0) >= 200 ? '✓ Unlocked' : '🔒 Requires 200 XP'}</span>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', color: (stats?.xp || 0) >= 400 ? 'var(--color-solved)' : 'var(--text-muted)' }}>
+                <span>Group Discussions</span> <span>{(stats?.xp || 0) >= 400 ? '✓ Unlocked' : '🔒 Requires 400 XP'}</span>
+              </div>
+            </div>
+          </div>
+
+          <div style={{ background: 'rgba(255,255,255,0.01)', border: '1px solid var(--border-glass)', padding: '16px', borderRadius: '12px' }}>
+            <strong style={{ color: 'white', display: 'block', fontSize: '0.95rem', marginBottom: '12px' }}>📈 Aptitude Branch</strong>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', color: 'var(--color-solved)' }}>
+                <span>Quantitative basics</span> <span>✓ Unlocked</span>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', color: (stats?.xp || 0) >= 250 ? 'var(--color-solved)' : 'var(--text-muted)' }}>
+                <span>Logical reasoning</span> <span>{(stats?.xp || 0) >= 250 ? '✓ Unlocked' : '🔒 Requires 250 XP'}</span>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', color: (stats?.xp || 0) >= 500 ? 'var(--color-solved)' : 'var(--text-muted)' }}>
+                <span>Data Interpretation</span> <span>{(stats?.xp || 0) >= 500 ? '✓ Unlocked' : '🔒 Requires 500 XP'}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 2. Leaderboard & Notifications Row */}
       <section style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: '32px' }} className="scorecard-panel">
         

@@ -52,18 +52,32 @@ router.get('/sessions/:id', protect, async (req, res) => {
 // @route   POST /api/aichat/sessions/:id/message
 router.post('/sessions/:id/message', protect, async (req, res) => {
   try {
-    const { message } = req.body;
-    if (!message) return res.status(400).json({ message: 'Message is required' });
+    const { message, fileContent, fileName } = req.body;
+    if (!message && !fileContent) return res.status(400).json({ message: 'Message or file content is required' });
 
     const session = await ChatSession.findOne({ _id: req.params.id, userId: req.user._id });
     if (!session) return res.status(404).json({ message: 'Session not found' });
 
     // 1. Add User Message
-    session.messages.push({ sender: 'user', message });
+    const userMsgText = fileContent 
+      ? `[Uploaded File: ${fileName || 'document.txt'}]\n${message || ''}\n\nContent:\n${fileContent}`
+      : message;
+
+    session.messages.push({ sender: 'user', message: userMsgText });
 
     // 2. Fetch context (RAG)
     const courses = await Course.find();
     const aptTopics = await AptitudeTopic.find();
+
+    // Student Profile context injection
+    const studentContext = {
+      name: req.user.username || 'Student',
+      college: req.user.collegeName || 'N/A',
+      year: req.user.yearOfStudy || '3rd Year',
+      branch: req.user.branch || 'Computer Science & Engineering',
+      xp: req.user.xp || 0,
+      streak: req.user.streak || 1
+    };
 
     const dbContext = {
       courses: courses.map(c => ({
@@ -95,7 +109,7 @@ router.post('/sessions/:id/message', protect, async (req, res) => {
 
     let topMatches = [];
     try {
-      const queryEmbedding = await getEmbedding(message);
+      const queryEmbedding = await getEmbedding(message || fileContent);
       const vectorDocs = await VectorDocument.find({});
       const scoredDocs = vectorDocs.map(doc => {
         let score = 0;
@@ -120,10 +134,16 @@ router.post('/sessions/:id/message', protect, async (req, res) => {
       console.warn('Embedding retrieval failed during persistent chat, using simple prompt fallback:', embErr);
     }
 
-    const systemInstruction = `ACADEMIC & CAREER RAG ASSISTANT
+    const systemInstruction = `ACADEMIC & CAREER RAG ASSISTANT (WORLD-CLASS PERSONAL MENTOR)
 
 You are the official AI Academic & Placement Advisor for "PrepPortal".
-Your core task is to guide students (e.g., 1st to 4th-year engineering students) on career preparation, placement roadmaps, skill development, and jobs.
+You are conversing with:
+Name: ${studentContext.name}
+College: ${studentContext.college}
+Year of Study: ${studentContext.year}
+Branch: ${studentContext.branch}
+XP level: ${studentContext.xp}
+Daily Streak: ${studentContext.streak}
 
 ==================================================
 CRITICAL RAG CONSTRAINTS (STRICTLY ENFORCED)
@@ -132,21 +152,24 @@ CRITICAL RAG CONSTRAINTS (STRICTLY ENFORCED)
    - You MUST ONLY recommend courses, modules, tasks, and practice sets that exist within the provided [DATABASE_CONTEXT] below.
    - NEVER suggest or refer to external platforms directly unless explicitly present in [DATABASE_CONTEXT].
 
-2. DETAILED ROADMAP GENERATION (MANDATORY FOR CAREER/ROADMAP QUERIES):
-   If the student asks for a study plan, career plan, job roadmap:
-   You MUST generate a massive, highly detailed response containing: Student Profile, Target Goal, Required Skills, Skill Gap Analysis, 12-Month Multi-Phase Roadmap (monthly breakdown), Weekly Study Plan (Monday to Sunday), Daily Goal Schedule, and Estimated Readiness score.
-   Also include internal Route links:
-   - \`[Practice DSA Now](/dsa)\`
-   - \`[Start Mock Interview](/mock-interview)\`
-   - \`[ATS Resume Builder](/resume-ats)\`
-   - \`[Theory Hub](/theory)\`
-   - \`[Notes & Syllabus](/notes)\`
-   - \`[Courses Library](/courses)\`
+2. PROACTIVE INTERACTIVE BUTTONS:
+   Include custom routes using markdown links where applicable:
+   - [Practice DSA Now](/dsa)
+   - [Start Mock Interview](/mock-interview)
+   - [ATS Resume Builder](/resume-ats)
+   - [Theory Hub](/theory)
+   - [Notes & Syllabus](/notes)
+   - [Courses Library](/courses)
+   - [Join Community & GD](/community)
 
-3. RESPONSE FORMATTING:
-   - Output beautiful, extensive structured Markdown with bold titles, headers, clear bullet points, code snippets, tables, or mermaid diagrams if requested.`;
+3. CITATION SYSTEM:
+   - You MUST cite your source using inline citations like [1] or [2].
+   - At the bottom of the response, generate a section "Sources:" listing the clicked document paths.
 
-    const prompt = `The student has queried: "${message}".
+4. RESPONSE FORMATTING:
+   - Output beautiful, extensive structured Markdown with bold titles, headers, clear bullet points, code snippets (use standard markdown backticks with language tags e.g. \`\`\`java), tables, or mermaid diagrams if requested.`;
+
+    const prompt = `The student has queried: "${message || 'Evaluate my uploaded document content.'}".
 
 ==================================================
 RETRIEVED DATABASE CONTEXT (CATALOG AVAILABLE)
@@ -157,7 +180,7 @@ ${JSON.stringify(dbContext, null, 2)}
 ==================================================
 RELEVANT SYLLABUS & ROADMAP NOTES (VECTOR RETRIEVAL)
 ==================================================
-${topMatches.map(m => `- [${m.type.toUpperCase()}] ${m.title}: ${m.content}`).join('\n')}
+${topMatches.map((m, index) => `[${index + 1}] [${m.type.toUpperCase()}] ${m.title}: ${m.content}`).join('\n')}
 
 Please formulate a structured response.`;
 
@@ -171,7 +194,7 @@ Please formulate a structured response.`;
     }
 
     if (!aiResponse) {
-      aiResponse = `I received your doubt about "${message}". As an AI Placement Advisor, I recommend that you check our standard courses or solve DSA problems to strengthen your preparation. For immediate practice, you can visit the [Practice DSA Now](/dsa) page.`;
+      aiResponse = `I received your query about "${message || 'file contents'}". As an AI Placement Advisor, I recommend that you check our standard courses or solve DSA problems to strengthen your preparation. For immediate practice, you can visit the [Practice DSA Now](/dsa) page.`;
     }
 
     // 3. Add AI Response
@@ -180,7 +203,8 @@ Please formulate a structured response.`;
     // 4. Auto rename session title if it's the first message from user
     const userMsgsCount = session.messages.filter(m => m.sender === 'user').length;
     if (userMsgsCount === 1) {
-      session.title = message.length > 30 ? message.substring(0, 30) + '...' : message;
+      const titleSeed = message || fileName || 'Conversation';
+      session.title = titleSeed.length > 30 ? titleSeed.substring(0, 30) + '...' : titleSeed;
     }
 
     session.updatedAt = new Date();

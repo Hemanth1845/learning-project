@@ -34,6 +34,8 @@ const VideoCallSimulator = () => {
   const [chatLog, setChatLog] = useState([]);
   const [interviewStatus, setInterviewStatus] = useState('call'); // 'call', 'generating', 'report'
   const [report, setReport] = useState(null);
+  const [recordingStartTime, setRecordingStartTime] = useState(null);
+  const [fillerWordsList, setFillerWordsList] = useState([]);
 
   // Live Coach & Intro analysis metrics state
   const [metrics, setMetrics] = useState({
@@ -180,34 +182,64 @@ const VideoCallSimulator = () => {
     if (transcriptText) {
       const text = transcriptText.toLowerCase();
 
-      // Count fillers
-      const fillers = (transcriptText.match(/\b(um|uh|like|actually|basically|so|you know)\b/gi) || []).length;
+      // Singing/Incoherence Check: Ignore singing, background humming, or non-speech repetition
+      const isCoherent = !text.includes('naatu naatu') && 
+                         !text.includes('la la') && 
+                         !text.includes('lalala') && 
+                         !text.includes('twinkle twinkle') && 
+                         !text.includes('song') &&
+                         !/(\b\w+\b)( \1){2,}/.test(text); // No word repeated 3+ times in a row
+
+      // Filler words extraction
+      const matchedFillers = transcriptText.match(/\b(um|uh|like|actually|basically|so|you know)\b/gi) || [];
+      const fillersCount = matchedFillers.length;
+      
+      // Update filler words list state
+      const uniqueFillers = Array.from(new Set(matchedFillers.map(w => w.toLowerCase())));
+      setFillerWordsList(uniqueFillers);
 
       // Count pauses
       const pauses = (transcriptText.match(/\.{2,}/g) || []).length + (transcriptText.match(/\s{3,}/g) || []).length;
 
-      // Words count
+      // Words count & Pacing (WPM)
       const wordCount = transcriptText.trim().split(/\s+/).length;
-      let speed = 'Good';
-      if (wordCount > 10) {
-        if (wordCount < 30) speed = 'Too Slow';
-        else if (wordCount > 160) speed = 'Too Fast';
+      let wpm = 135; // Default average
+      if (recordingStartTime) {
+        const elapsedMin = (Date.now() - recordingStartTime) / 60000;
+        if (elapsedMin > 0.05) {
+          wpm = Math.round(wordCount / elapsedMin);
+        }
       }
 
-      // Confidence drops with fillers and pauses
-      const confidence = Math.max(40, Math.min(99, 90 - fillers * 6 - pauses * 10));
-      const grammar = Math.max(50, Math.min(100, 96 - fillers * 2));
+      let speedAlert = 'Good Pace';
+      if (wpm < 100) speedAlert = 'Too Slow';
+      else if (wpm > 180) speedAlert = 'Too Fast';
+
+      // Confidence & Grammar drops immediately to 5% if singing or incoherent
+      let confidence = Math.max(40, Math.min(99, 92 - fillersCount * 6 - pauses * 8));
+      let grammar = Math.max(50, Math.min(100, 98 - fillersCount * 2));
+
+      if (!isCoherent) {
+        confidence = 5;
+        grammar = 5;
+      }
+
+      // Simulate eye contact fluctuation and smile detection
+      const eyeScore = Math.floor(Math.random() * 15) + 82; // 82-97% eye contact
+      const hasSmile = Math.random() > 0.35 ? 'Detected' : 'Neutral';
 
       setMetrics(prev => ({
         ...prev,
         confidence,
-        speed,
+        speed: `${wpm} WPM (${speedAlert})`,
         grammar,
-        fillers,
-        pauses
+        fillers: fillersCount,
+        pauses,
+        eyeContact: `Maintaining (${eyeScore}%)`,
+        smile: hasSmile
       }));
     }
-  }, [transcriptText]);
+  }, [transcriptText, recordingStartTime]);
 
   // 2. AI Voice Synthesis (Text-to-Speech)
   const speakQuestion = (text) => {
@@ -258,6 +290,8 @@ const VideoCallSimulator = () => {
     recognition.onstart = () => {
       setIsRecording(true);
       setTranscriptText('');
+      setRecordingStartTime(Date.now());
+      setFillerWordsList([]);
     };
 
     recognition.onresult = (event) => {
@@ -408,16 +442,25 @@ const VideoCallSimulator = () => {
           {/* Left Column: AI Frame & User Webcam Stack */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             
-            {/* AI Interviewer Video Card */}
+            {/* Prominent User Video Card (Webcam Integration) */}
             <div className="glass-card" style={{ flex: 1.5, position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '320px', overflow: 'hidden', padding: 0 }}>
-              <img 
-                src={interviewer.avatar} 
-                alt={interviewer.name} 
-                style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', filter: 'brightness(0.6)' }} 
-              />
+              {cameraOn ? (
+                <video 
+                  ref={videoRef} 
+                  autoPlay 
+                  playsInline 
+                  muted 
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scaleX(-1)' }} 
+                />
+              ) : (
+                <div style={{ textAlign: 'center', color: 'var(--text-muted)' }}>
+                  <span style={{ fontSize: '3rem' }}>🚫</span>
+                  <div style={{ fontSize: '1rem', marginTop: '8px' }}>Webcam Feed Off</div>
+                </div>
+              )}
               
-              {/* Overlay waveforms if speaking */}
-              {aiSpeaking ? (
+              {/* Overlay waveforms if AI is speaking */}
+              {aiSpeaking && (
                 <div style={{ position: 'absolute', display: 'flex', gap: '8px', alignItems: 'center', background: 'rgba(11,12,16,0.7)', padding: '16px 24px', borderRadius: '30px', border: '1px solid var(--accent-secondary)' }}>
                   <div style={{ width: '4px', height: '24px', background: 'var(--accent-secondary)', animation: 'wave 0.8s infinite alternate' }}></div>
                   <div style={{ width: '4px', height: '40px', background: 'var(--accent-secondary)', animation: 'wave 0.8s infinite alternate 0.2s' }}></div>
@@ -425,39 +468,31 @@ const VideoCallSimulator = () => {
                   <div style={{ width: '4px', height: '32px', background: 'var(--accent-secondary)', animation: 'wave 0.8s infinite alternate 0.1s' }}></div>
                   <span style={{ fontSize: '0.9rem', color: 'white', fontWeight: 600, marginLeft: '8px' }}>{interviewer.name} is speaking...</span>
                 </div>
-              ) : (
-                <div style={{ position: 'absolute', bottom: '20px', left: '20px', display: 'flex', alignItems: 'center', gap: '8px', background: 'rgba(0,0,0,0.5)', padding: '6px 14px', borderRadius: '20px' }}>
-                  <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#ffb800' }}></div>
-                  <span style={{ fontSize: '0.85rem', color: 'white', fontWeight: 600 }}>{interviewer.name} (Listening)</span>
-                </div>
               )}
+
+              {/* Status indicator */}
+              <div style={{ position: 'absolute', bottom: '20px', left: '20px', display: 'flex', alignItems: 'center', gap: '8px', background: 'rgba(0,0,0,0.5)', padding: '6px 14px', borderRadius: '20px' }}>
+                <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: cameraOn ? '#2ecc71' : '#ef4444' }}></div>
+                <span style={{ fontSize: '0.85rem', color: 'white', fontWeight: 600 }}>Candidate Video Feed (Real-Time)</span>
+              </div>
 
               {/* Top Title Tag */}
               <div style={{ position: 'absolute', top: '20px', left: '20px', background: 'rgba(0,0,0,0.6)', padding: '8px 16px', borderRadius: '6px', border: '1px solid var(--border-glass)' }}>
-                <span style={{ color: 'white', fontWeight: 700, fontSize: '0.9rem' }}>{interviewer.name} | {interviewer.role}</span>
+                <span style={{ color: 'white', fontWeight: 700, fontSize: '0.9rem' }}>You (Candidate)</span>
               </div>
             </div>
 
-            {/* User Webcam Frame & Controls Stack */}
+            {/* AI Interviewer Frame & Controls Stack */}
             <div style={{ display: 'grid', gridTemplateColumns: voiceOnly ? '1fr' : '1fr 2fr', gap: '16px' }}>
               {!voiceOnly && (
                 <div className="glass-card" style={{ height: '140px', padding: 0, overflow: 'hidden', position: 'relative', background: '#11141a', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  {cameraOn ? (
-                    <video 
-                      ref={videoRef} 
-                      autoPlay 
-                      playsInline 
-                      muted 
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
-                    />
-                  ) : (
-                    <div style={{ textAlign: 'center', color: 'var(--text-muted)' }}>
-                      <span style={{ fontSize: '1.5rem' }}>🚫</span>
-                      <div style={{ fontSize: '0.75rem', marginTop: '4px' }}>Webcam Off</div>
-                    </div>
-                  )}
+                  <img 
+                    src={interviewer.avatar} 
+                    alt={interviewer.name} 
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.7)' }} 
+                  />
                   <div style={{ position: 'absolute', bottom: '6px', left: '6px', background: 'rgba(0,0,0,0.6)', padding: '2px 6px', borderRadius: '4px', fontSize: '0.65rem', color: 'white' }}>
-                    You (Candidate)
+                    Interviewer: {interviewer.name} (AI)
                   </div>
                 </div>
               )}
@@ -617,6 +652,11 @@ const VideoCallSimulator = () => {
                   <div style={{ fontSize: '1.25rem', fontWeight: 700, color: metrics.fillers > 2 ? '#ef4444' : 'white', marginTop: '4px' }}>
                     {metrics.fillers} <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>used</span>
                   </div>
+                  {fillerWordsList.length > 0 && (
+                    <div style={{ fontSize: '0.65rem', color: '#ffb800', marginTop: '4px', fontWeight: 600 }}>
+                      ({fillerWordsList.join(', ')})
+                    </div>
+                  )}
                 </div>
               </div>
 
